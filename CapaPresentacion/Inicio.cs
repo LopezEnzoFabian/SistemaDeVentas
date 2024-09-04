@@ -57,65 +57,6 @@ namespace CapaPresentacion
 
         }
 
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip3_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip8_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void acercaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void menuStrip7_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void menuUsuario_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-           
-        }
-
-        private void menuUsuario_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-           
-        }
-
-        private void iconMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void iconMenuItem3_Click(object sender, EventArgs e)
         {
@@ -132,15 +73,6 @@ namespace CapaPresentacion
             AbrirFormulario((IconMenuItem)sender, new formProductos());
         }
 
-        private void iconMenuItem1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconMenuItem1_Click_2(object sender, EventArgs e)
-        {
-
-        }
 
         private void menuUsuarios_Click(object sender, EventArgs e)
         {

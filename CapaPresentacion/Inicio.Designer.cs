@@ -30,6 +30,7 @@
         {
             this.contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menuProductos = new FontAwesome.Sharp.IconMenuItem();
             this.menuCompras = new FontAwesome.Sharp.IconMenuItem();
             this.menuVentas = new FontAwesome.Sharp.IconMenuItem();
@@ -37,7 +38,6 @@
             this.menuProveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
             this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
-            this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,17 @@
             this.menuStrip1.Size = new System.Drawing.Size(160, 168);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuUsuarios
+            // 
+            this.menuUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.menuUsuarios.IconColor = System.Drawing.Color.Black;
+            this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuUsuarios.Name = "menuUsuarios";
+            this.menuUsuarios.Size = new System.Drawing.Size(153, 20);
+            this.menuUsuarios.Text = "Usuarios";
+            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
             // menuProductos
             // 
@@ -146,17 +157,6 @@
             this.menuAcercade.Size = new System.Drawing.Size(153, 20);
             this.menuAcercade.Text = "Acerca de";
             this.menuAcercade.Click += new System.EventHandler(this.menuAcercade_Click);
-            // 
-            // menuUsuarios
-            // 
-            this.menuUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.menuUsuarios.IconColor = System.Drawing.Color.Black;
-            this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(153, 20);
-            this.menuUsuarios.Text = "Usuarios";
-            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
             // Inicio
             // 
