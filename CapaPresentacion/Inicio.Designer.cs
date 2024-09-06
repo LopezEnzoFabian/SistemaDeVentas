@@ -77,7 +77,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.User;
             this.menuUsuarios.IconColor = System.Drawing.Color.Black;
             this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuUsuarios.Name = "menuUsuarios";

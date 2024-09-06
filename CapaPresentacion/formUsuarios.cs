@@ -46,5 +46,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void lblEstado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

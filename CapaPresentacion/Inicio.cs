@@ -38,7 +38,7 @@ namespace CapaPresentacion
             {
                 MenuActivo.BackColor = Color.White;
             }
-            menu.BackColor = Color.Silver;
+            menu.BackColor = Color.Black;
             MenuActivo = menu;
 
             if (FormularioActivo != null)
