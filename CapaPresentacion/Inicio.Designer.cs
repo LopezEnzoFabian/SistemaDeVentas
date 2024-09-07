@@ -47,10 +47,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contenedor.AutoSize = true;
-            this.contenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.contenedor.Location = new System.Drawing.Point(172, 6);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(612, 445);
+            this.contenedor.Size = new System.Drawing.Size(824, 445);
             this.contenedor.TabIndex = 1;
             // 
             // menuStrip1
@@ -68,20 +68,21 @@
             this.menuReportes,
             this.menuAcercade});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(9, 129);
+            this.menuStrip1.Location = new System.Drawing.Point(-4, 125);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(160, 168);
+            this.menuStrip1.Size = new System.Drawing.Size(173, 326);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuUsuarios
             // 
-            this.menuUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuUsuarios.ForeColor = System.Drawing.SystemColors.Control;
             this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.menuUsuarios.IconColor = System.Drawing.Color.Black;
+            this.menuUsuarios.IconColor = System.Drawing.Color.White;
             this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(153, 20);
+            this.menuUsuarios.Size = new System.Drawing.Size(166, 20);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -162,7 +163,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ClientSize = new System.Drawing.Size(996, 461);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Inicio";
