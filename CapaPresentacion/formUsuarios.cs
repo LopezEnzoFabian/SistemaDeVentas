@@ -22,17 +22,39 @@ namespace CapaPresentacion
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btnclean_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+       
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblListaUsuarios_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,12 +64,82 @@ namespace CapaPresentacion
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void lblEstado_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblEstado_Click(object sender, EventArgs e)
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfirContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

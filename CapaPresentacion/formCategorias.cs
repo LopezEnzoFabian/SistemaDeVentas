@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class formProductos : Form
+    public partial class formCategorias : Form
     {
-        public formProductos()
+        public formCategorias()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void formCategorias_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-      
+     
     }
 }

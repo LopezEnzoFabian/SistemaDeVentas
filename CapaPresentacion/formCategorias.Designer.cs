@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class formClientes
+    partial class formCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -34,28 +34,20 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.lblListaCliente = new System.Windows.Forms.Label();
+            this.lblListaCate = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDescrip = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.lblTel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +59,10 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(501, 1);
+            this.btnsearch.Location = new System.Drawing.Point(559, 8);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(32, 30);
-            this.btnsearch.TabIndex = 70;
+            this.btnsearch.Size = new System.Drawing.Size(31, 30);
+            this.btnsearch.TabIndex = 69;
             this.btnsearch.UseVisualStyleBackColor = false;
             // 
             // btnclean
@@ -80,10 +72,10 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(538, 3);
+            this.btnclean.Location = new System.Drawing.Point(596, 10);
             this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(40, 28);
-            this.btnclean.TabIndex = 69;
+            this.btnclean.Size = new System.Drawing.Size(39, 28);
+            this.btnclean.TabIndex = 68;
             this.btnclean.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
@@ -93,10 +85,10 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 20;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(586, 93);
+            this.btnGuardar.Location = new System.Drawing.Point(464, 97);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 25);
-            this.btnGuardar.TabIndex = 68;
+            this.btnGuardar.TabIndex = 67;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -109,10 +101,10 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 20;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(586, 139);
+            this.btnEditar.Location = new System.Drawing.Point(464, 143);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
-            this.btnEditar.TabIndex = 67;
+            this.btnEditar.TabIndex = 66;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -124,10 +116,10 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 20;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(586, 184);
+            this.btnEliminar.Location = new System.Drawing.Point(464, 188);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 25);
-            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.TabIndex = 65;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -135,149 +127,107 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(59, 5);
+            this.txtID.Location = new System.Drawing.Point(117, 12);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(32, 20);
-            this.txtID.TabIndex = 64;
+            this.txtID.Size = new System.Drawing.Size(31, 20);
+            this.txtID.TabIndex = 63;
             this.txtID.Visible = false;
             // 
-            // lblListaCliente
+            // lblListaCate
             // 
-            this.lblListaCliente.AutoEllipsis = true;
-            this.lblListaCliente.BackColor = System.Drawing.SystemColors.Window;
-            this.lblListaCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblListaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCliente.Location = new System.Drawing.Point(12, 242);
-            this.lblListaCliente.Name = "lblListaCliente";
-            this.lblListaCliente.Size = new System.Drawing.Size(148, 28);
-            this.lblListaCliente.TabIndex = 63;
-            this.lblListaCliente.Text = "Lista de clientes";
+            this.lblListaCate.AutoEllipsis = true;
+            this.lblListaCate.BackColor = System.Drawing.SystemColors.Window;
+            this.lblListaCate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblListaCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaCate.Location = new System.Drawing.Point(39, 237);
+            this.lblListaCate.Name = "lblListaCate";
+            this.lblListaCate.Size = new System.Drawing.Size(172, 28);
+            this.lblListaCate.TabIndex = 62;
+            this.lblListaCate.Text = "Lista de categorias";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEstado.Location = new System.Drawing.Point(371, 118);
+            this.lblEstado.Location = new System.Drawing.Point(250, 146);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(48, 17);
-            this.lblEstado.TabIndex = 61;
+            this.lblEstado.TabIndex = 60;
             this.lblEstado.Text = "Estado";
             // 
             // cbEstado
             // 
             this.cbEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(374, 139);
+            this.cbEstado.Location = new System.Drawing.Point(253, 167);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(131, 25);
-            this.cbEstado.TabIndex = 60;
+            this.cbEstado.TabIndex = 59;
             // 
             // cbFiltro
             // 
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(226, 5);
+            this.cbFiltro.Location = new System.Drawing.Point(284, 12);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Size = new System.Drawing.Size(122, 25);
-            this.cbFiltro.TabIndex = 59;
+            this.cbFiltro.Size = new System.Drawing.Size(121, 25);
+            this.cbFiltro.TabIndex = 58;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(365, 5);
+            this.txtBuscar.Location = new System.Drawing.Point(423, 12);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(122, 25);
-            this.txtBuscar.TabIndex = 58;
+            this.txtBuscar.Size = new System.Drawing.Size(121, 25);
+            this.txtBuscar.TabIndex = 57;
             // 
-            // lblFiltrar
+            // label11
             // 
-            this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltrar.Location = new System.Drawing.Point(140, 9);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(66, 17);
-            this.lblFiltrar.TabIndex = 57;
-            this.lblFiltrar.Text = "Filtrar por";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(198, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 17);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Filtrar por";
+            // 
+            // txtDescrip
+            // 
+            this.txtDescrip.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescrip.Location = new System.Drawing.Point(253, 117);
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.Size = new System.Drawing.Size(131, 25);
+            this.txtDescrip.TabIndex = 50;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDescripcion.Location = new System.Drawing.Point(250, 97);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(76, 17);
+            this.lblDescripcion.TabIndex = 47;
+            this.lblDescripcion.Text = "Descripcion";
             // 
             // dgListarUsuario
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
-            this.colUsuario,
-            this.colDNI,
+            this.colIdCate,
             this.colNombre,
-            this.colEmail,
             this.Estado,
             this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(12, 273);
+            this.dgListarUsuario.Location = new System.Drawing.Point(12, 282);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.ReadOnly = true;
-            this.dgListarUsuario.Size = new System.Drawing.Size(717, 238);
-            this.dgListarUsuario.TabIndex = 56;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(374, 89);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(131, 25);
-            this.txtEmail.TabIndex = 53;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNI.Location = new System.Drawing.Point(198, 62);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(131, 25);
-            this.txtDNI.TabIndex = 50;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(198, 111);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(131, 25);
-            this.txtNombre.TabIndex = 49;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(371, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 17);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Email";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(195, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 17);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "DNI";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(195, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Nombre completo";
+            this.dgListarUsuario.Size = new System.Drawing.Size(776, 238);
+            this.dgListarUsuario.TabIndex = 70;
             // 
             // btnSeleccionar
             // 
@@ -287,35 +237,21 @@
             this.btnSeleccionar.ReadOnly = true;
             this.btnSeleccionar.Width = 68;
             // 
-            // colUsuario
+            // colIdCate
             // 
-            this.colUsuario.HeaderText = "id";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.ReadOnly = true;
-            this.colUsuario.Visible = false;
-            this.colUsuario.Width = 84;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 101;
+            this.colIdCate.HeaderText = "id";
+            this.colIdCate.Name = "colIdCate";
+            this.colIdCate.ReadOnly = true;
+            this.colIdCate.Visible = false;
+            this.colIdCate.Width = 84;
             // 
             // colNombre
             // 
             this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.HeaderText = "Descripcion";
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
             this.colNombre.Width = 101;
-            // 
-            // colEmail
-            // 
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
             // 
             // Estado
             // 
@@ -334,55 +270,30 @@
             this.EstadoValor.Visible = false;
             this.EstadoValor.Width = 101;
             // 
-            // txtTel
-            // 
-            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTel.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(198, 159);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(131, 25);
-            this.txtTel.TabIndex = 72;
-            // 
-            // lblTel
-            // 
-            this.lblTel.AutoSize = true;
-            this.lblTel.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTel.Location = new System.Drawing.Point(195, 139);
-            this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(59, 17);
-            this.lblTel.TabIndex = 71;
-            this.lblTel.Text = "Telefono";
-            // 
-            // formClientes
+            // formCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(740, 523);
-            this.Controls.Add(this.txtTel);
-            this.Controls.Add(this.lblTel);
+            this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.dgListarUsuario);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblListaCliente);
+            this.Controls.Add(this.lblListaCate);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.lblFiltrar);
-            this.Controls.Add(this.dgListarUsuario);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Name = "formClientes";
-            this.Text = "formClientes";
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtDescrip);
+            this.Controls.Add(this.lblDescripcion);
+            this.Name = "formCategorias";
+            this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.formCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -397,27 +308,19 @@
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label lblListaCliente;
+        private System.Windows.Forms.Label lblListaCate;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDescrip;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.DataGridView dgListarUsuario;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtDNI;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.Label lblTel;
     }
 }

@@ -53,17 +53,35 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compras\formRegistrarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\formRegistrarCompra.Designer.cs">
+      <DependentUpon>formRegistrarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategorias.Designer.cs">
+      <DependentUpon>formCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="formClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formClientes.Designer.cs">
       <DependentUpon>formClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="formCompras.cs">
+    <Compile Include="Compras\formCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formCompras.Designer.cs">
+    <Compile Include="Compras\formCompras.Designer.cs">
       <DependentUpon>formCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\formDetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\formDetalleCompra.Designer.cs">
+      <DependentUpon>formDetalleCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="formInfo.cs">
       <SubType>Form</SubType>
@@ -109,11 +127,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
+      <DependentUpon>formRegistrarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategorias.resx">
+      <DependentUpon>formCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formClientes.resx">
       <DependentUpon>formClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formCompras.resx">
+    <EmbeddedResource Include="Compras\formCompras.resx">
       <DependentUpon>formCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\formDetalleCompra.resx">
+      <DependentUpon>formDetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formInfo.resx">
       <DependentUpon>formInfo.cs</DependentUpon>
@@ -159,5 +186,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

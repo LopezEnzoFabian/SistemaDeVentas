@@ -22,10 +22,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+      
 
         private void Inicio_Load(object sender, EventArgs e)
         {
