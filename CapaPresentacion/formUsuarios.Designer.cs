@@ -76,7 +76,6 @@
             this.lblNombre.Size = new System.Drawing.Size(116, 17);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre completo";
-            this.lblNombre.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblDNI
             // 
@@ -88,7 +87,6 @@
             this.lblDNI.Size = new System.Drawing.Size(30, 17);
             this.lblDNI.TabIndex = 2;
             this.lblDNI.Text = "DNI";
-            this.lblDNI.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblEmail
             // 
@@ -100,7 +98,6 @@
             this.lblEmail.Size = new System.Drawing.Size(39, 17);
             this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "Email";
-            this.lblEmail.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtNombre
             // 
@@ -110,7 +107,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(131, 25);
             this.txtNombre.TabIndex = 5;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDNI
             // 
@@ -119,7 +116,6 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(131, 25);
             this.txtDNI.TabIndex = 7;
-            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // lblContra
             // 
@@ -131,7 +127,6 @@
             this.lblContra.Size = new System.Drawing.Size(74, 17);
             this.lblContra.TabIndex = 14;
             this.lblContra.Text = "Contraseña";
-            this.lblContra.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblConfContra
             // 
@@ -143,7 +138,6 @@
             this.lblConfContra.Size = new System.Drawing.Size(134, 17);
             this.lblConfContra.TabIndex = 16;
             this.lblConfContra.Text = "Confirmar contraseña";
-            this.lblConfContra.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtEmail
             // 
@@ -152,7 +146,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(131, 25);
             this.txtEmail.TabIndex = 22;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtContra
             // 
@@ -162,7 +155,6 @@
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(131, 25);
             this.txtContra.TabIndex = 23;
-            this.txtContra.TextChanged += new System.EventHandler(this.txtContra_TextChanged);
             // 
             // txtConfirContra
             // 
@@ -172,7 +164,6 @@
             this.txtConfirContra.PasswordChar = '*';
             this.txtConfirContra.Size = new System.Drawing.Size(131, 25);
             this.txtConfirContra.TabIndex = 24;
-            this.txtConfirContra.TextChanged += new System.EventHandler(this.txtConfirContra_TextChanged);
             // 
             // btnsearch
             // 
@@ -198,7 +189,6 @@
             this.label11.Size = new System.Drawing.Size(66, 17);
             this.label11.TabIndex = 29;
             this.label11.Text = "Filtrar por";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtBuscar
             // 
@@ -207,28 +197,34 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 31;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // cbFiltro
             // 
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
+            this.cbFiltro.Items.AddRange(new object[] {
+            "Nombre",
+            "DNI",
+            "Rol",
+            "Estado",
+            "Email"});
             this.cbFiltro.Location = new System.Drawing.Point(250, 12);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(121, 25);
             this.cbFiltro.TabIndex = 33;
-            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // cbEstado
             // 
             this.cbEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
             this.cbEstado.Location = new System.Drawing.Point(223, 143);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(131, 25);
             this.cbEstado.TabIndex = 34;
-            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -240,7 +236,6 @@
             this.lblEstado.Size = new System.Drawing.Size(48, 17);
             this.lblEstado.TabIndex = 35;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
             // 
             // lblRol
             // 
@@ -252,7 +247,6 @@
             this.lblRol.Size = new System.Drawing.Size(27, 17);
             this.lblRol.TabIndex = 36;
             this.lblRol.Text = "Rol";
-            this.lblRol.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblListaUsuarios
             // 
@@ -265,7 +259,6 @@
             this.lblListaUsuarios.Size = new System.Drawing.Size(162, 28);
             this.lblListaUsuarios.TabIndex = 38;
             this.lblListaUsuarios.Text = "Lista de usuarios";
-            this.lblListaUsuarios.Click += new System.EventHandler(this.lblListaUsuarios_Click);
             // 
             // txtID
             // 
@@ -274,16 +267,18 @@
             this.txtID.Size = new System.Drawing.Size(31, 20);
             this.txtID.TabIndex = 39;
             this.txtID.Visible = false;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // cbRol
             // 
             this.cbRol.FormattingEnabled = true;
+            this.cbRol.Items.AddRange(new object[] {
+            "Vendedor",
+            "Administrador",
+            "Supervisor"});
             this.cbRol.Location = new System.Drawing.Point(223, 97);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(131, 21);
             this.cbRol.TabIndex = 40;
-            this.cbRol.SelectedIndexChanged += new System.EventHandler(this.cbRol_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -333,6 +328,7 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnclean
             // 
@@ -447,16 +443,15 @@
             this.dgListarUsuario.Location = new System.Drawing.Point(13, 268);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.ReadOnly = true;
-            this.dgListarUsuario.Size = new System.Drawing.Size(717, 238);
+            this.dgListarUsuario.Size = new System.Drawing.Size(717, 212);
             this.dgListarUsuario.TabIndex = 28;
-            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
             // formUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(742, 518);
+            this.ClientSize = new System.Drawing.Size(742, 490);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
             this.Controls.Add(this.btnGuardar);
