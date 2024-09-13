@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.Reportes
 {
-    public partial class formReportes : Form
+    public partial class formReporteCompra : Form
     {
-        public formReportes()
+        public formReporteCompra()
         {
             InitializeComponent();
         }
+
     }
 }

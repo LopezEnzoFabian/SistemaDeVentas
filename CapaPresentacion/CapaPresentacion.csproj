@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassePrueba.cs" />
     <Compile Include="Compras\formRegistrarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,10 +102,10 @@
     <Compile Include="formProveedores.Designer.cs">
       <DependentUpon>formProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="formReportes.cs">
+    <Compile Include="Reportes\formReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formReportes.Designer.cs">
+    <Compile Include="Reportes\formReportes.Designer.cs">
       <DependentUpon>formReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="formUsuarios.cs">
@@ -127,6 +128,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\formReporteCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\formReporteCompras.Designer.cs">
+      <DependentUpon>formReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\formReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\formReporteVentas.Designer.cs">
+      <DependentUpon>formReporteVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +164,7 @@
     <EmbeddedResource Include="formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formReportes.resx">
+    <EmbeddedResource Include="Reportes\formReportes.resx">
       <DependentUpon>formReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formUsuarios.resx">
@@ -172,6 +185,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\formReporteCompras.resx">
+      <DependentUpon>formReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\formReporteVentas.resx">
+      <DependentUpon>formReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
