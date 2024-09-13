@@ -23,12 +23,46 @@ namespace CapaPresentacion
 
         }
 
+        public static class Validaciones
+        {
+            public static bool ValidarSoloNumeros(KeyPressEventArgs e)
+            {
+                if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                    return false;
+                }
+                return true;
+            }
+
+            public static bool ValidarSoloLetras(KeyPressEventArgs e)
+            {
+                if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                {
+                    e.Handled = true;
+                    return false;
+                }
+                return true;
+            }
+
+            public static bool EsEmailValido(string email)
+            {
+                try
+                {
+                    var mail = new System.Net.Mail.MailAddress(email);
+                    return mail.Address == email;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true; // Evitar que el carácter se introduzca en el TextBox
-            }
+            Validaciones.ValidarSoloLetras((KeyPressEventArgs)e);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -44,9 +78,20 @@ namespace CapaPresentacion
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            if (txtContra.Text != txtConfirContra.Text)
             {
-                DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // Mostrar un mensaje de error
+                MessageBox.Show("Las contraseñas deben coincidir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Validaciones.EsEmailValido(txtEmail.Text))
+            {
+                // Mostrar un mensaje de error
+                MessageBox.Show("El email no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 // Tomar decisiones basadas en la respuesta del usuario
                 if (ask == DialogResult.Yes)
@@ -54,7 +99,6 @@ namespace CapaPresentacion
                     // Si el usuario hizo clic en "Sí"
                     MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -68,10 +112,23 @@ namespace CapaPresentacion
                   string.IsNullOrWhiteSpace(txtConfirContra.Text))
             {
                 // Mostrar un mensaje de error
-                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+           if(txtContra.Text != txtConfirContra.Text)
             {
+                // Mostrar un mensaje de error
+                MessageBox.Show("Las contraseñas deben coincidir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Validaciones.EsEmailValido(txtEmail.Text))
+            {
+                // Mostrar un mensaje de error
+                MessageBox.Show("El email no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            
                 DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 // Tomar decisiones basadas en la respuesta del usuario
@@ -80,7 +137,7 @@ namespace CapaPresentacion
                     // Si el usuario hizo clic en "Sí"
                     MessageBox.Show("Cambios guardados correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -105,6 +162,16 @@ namespace CapaPresentacion
                 
                 
             }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

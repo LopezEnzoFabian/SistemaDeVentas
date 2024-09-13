@@ -116,6 +116,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(131, 25);
             this.txtDNI.TabIndex = 7;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // lblContra
             // 
@@ -350,7 +351,6 @@
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 101;
             // 
             // Estado
             // 
@@ -358,7 +358,6 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 101;
             // 
             // colRol
             // 
@@ -366,7 +365,6 @@
             this.colRol.HeaderText = "Rol";
             this.colRol.Name = "colRol";
             this.colRol.ReadOnly = true;
-            this.colRol.Width = 101;
             // 
             // idRol
             // 
@@ -374,7 +372,6 @@
             this.idRol.Name = "idRol";
             this.idRol.ReadOnly = true;
             this.idRol.Visible = false;
-            this.idRol.Width = 96;
             // 
             // colNombre
             // 
@@ -382,7 +379,6 @@
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 101;
             // 
             // colContraseña
             // 
@@ -390,7 +386,6 @@
             this.colContraseña.Name = "colContraseña";
             this.colContraseña.ReadOnly = true;
             this.colContraseña.Visible = false;
-            this.colContraseña.Width = 96;
             // 
             // colEmail
             // 
@@ -398,7 +393,6 @@
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 101;
             // 
             // colDNI
             // 
@@ -406,7 +400,6 @@
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
             this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 101;
             // 
             // colUsuario
             // 
@@ -414,7 +407,6 @@
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.ReadOnly = true;
             this.colUsuario.Visible = false;
-            this.colUsuario.Width = 84;
             // 
             // btnSeleccionar
             // 
@@ -422,11 +414,14 @@
             this.btnSeleccionar.HeaderText = "";
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 68;
             // 
             // dgListarUsuario
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
+            this.dgListarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -445,6 +440,7 @@
             this.dgListarUsuario.ReadOnly = true;
             this.dgListarUsuario.Size = new System.Drawing.Size(717, 212);
             this.dgListarUsuario.TabIndex = 28;
+            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
             // formUsuarios
             // 
