@@ -102,6 +102,15 @@
     <Compile Include="formProveedores.Designer.cs">
       <DependentUpon>formProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inputtest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\formReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +155,17 @@
     <Compile Include="Reportes\formReporteVentas.Designer.cs">
       <DependentUpon>formReporteVentas.cs</DependentUpon>
     </Compile>
+	  <Compile Include="RoundedButton.cs">
+		  <SubType>Component</SubType>
+	  </Compile>
     <Compile Include="Ventas\RegistrarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventas\RegistrarVenta.Designer.cs">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
@@ -175,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\formReportes.resx">
       <DependentUpon>formReportes.cs</DependentUpon>
