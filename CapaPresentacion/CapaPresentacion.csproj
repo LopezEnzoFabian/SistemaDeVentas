@@ -114,10 +114,16 @@
     <Compile Include="formUsuarios.Designer.cs">
       <DependentUpon>formUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="formVentas.cs">
+    <Compile Include="Ventas\DetalleVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formVentas.Designer.cs">
+    <Compile Include="Ventas\DetalleVenta.Designer.cs">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\formVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\formVentas.Designer.cs">
       <DependentUpon>formVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
@@ -139,6 +145,12 @@
     </Compile>
     <Compile Include="Reportes\formReporteVentas.Designer.cs">
       <DependentUpon>formReporteVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\RegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\RegistrarVenta.Designer.cs">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
@@ -170,7 +182,10 @@
     <EmbeddedResource Include="formUsuarios.resx">
       <DependentUpon>formUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formVentas.resx">
+    <EmbeddedResource Include="Ventas\DetalleVenta.resx">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\formVentas.resx">
       <DependentUpon>formVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
@@ -190,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\formReporteVentas.resx">
       <DependentUpon>formReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\RegistrarVenta.resx">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
