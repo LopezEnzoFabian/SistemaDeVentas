@@ -79,6 +79,7 @@
             this.LoginBTN.TabIndex = 3;
             this.LoginBTN.Text = "Ingresar";
             this.LoginBTN.UseVisualStyleBackColor = false;
+            this.LoginBTN.Click += new System.EventHandler(this.LoginBTN_Click);
             // 
             // LabelUser
             // 

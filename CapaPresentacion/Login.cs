@@ -16,5 +16,14 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void LoginBTN_Click(object sender, EventArgs e)
+        {
+            Inicio formularioInicio = new Inicio();
+
+            formularioInicio.Show();
+
+            this.Hide();
+        }
     }
 }
