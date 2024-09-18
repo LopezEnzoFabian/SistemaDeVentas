@@ -111,7 +111,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(698, 280);
+            this.textBox3.Location = new System.Drawing.Point(697, 280);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(77, 20);
             this.textBox3.TabIndex = 84;
@@ -120,7 +120,7 @@
             // 
             this.lblTotalCambio.AutoSize = true;
             this.lblTotalCambio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalCambio.Location = new System.Drawing.Point(697, 264);
+            this.lblTotalCambio.Location = new System.Drawing.Point(696, 264);
             this.lblTotalCambio.Name = "lblTotalCambio";
             this.lblTotalCambio.Size = new System.Drawing.Size(68, 13);
             this.lblTotalCambio.TabIndex = 83;
@@ -128,7 +128,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(698, 235);
+            this.textBox2.Location = new System.Drawing.Point(697, 235);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(77, 20);
             this.textBox2.TabIndex = 82;
@@ -137,7 +137,7 @@
             // 
             this.lblTotalPago.AutoSize = true;
             this.lblTotalPago.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalPago.Location = new System.Drawing.Point(697, 219);
+            this.lblTotalPago.Location = new System.Drawing.Point(696, 219);
             this.lblTotalPago.Name = "lblTotalPago";
             this.lblTotalPago.Size = new System.Drawing.Size(58, 13);
             this.lblTotalPago.TabIndex = 81;
@@ -147,7 +147,7 @@
             // 
             this.lblMontoTotal.AutoSize = true;
             this.lblMontoTotal.ForeColor = System.Drawing.Color.White;
-            this.lblMontoTotal.Location = new System.Drawing.Point(697, 180);
+            this.lblMontoTotal.Location = new System.Drawing.Point(696, 180);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(60, 13);
             this.lblMontoTotal.TabIndex = 80;
@@ -155,7 +155,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(700, 196);
+            this.textBox1.Location = new System.Drawing.Point(699, 196);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(75, 20);
             this.textBox1.TabIndex = 79;

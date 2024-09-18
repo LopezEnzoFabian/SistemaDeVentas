@@ -78,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(808, 522);
+            this.ClientSize = new System.Drawing.Size(762, 404);
             this.Controls.Add(this.panelCompras);
             this.Controls.Add(this.ibtnVerDetalle);
             this.Controls.Add(this.ibtnRegis);
