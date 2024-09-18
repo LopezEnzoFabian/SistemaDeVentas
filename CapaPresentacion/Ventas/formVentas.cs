@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Compras;
+using CapaPresentacion.Ventas;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
@@ -53,12 +54,12 @@ namespace CapaPresentacion
 
         private void ibtnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new formRegistrarCompra());
+            AbrirFormulario((IconButton)sender, new RegistrarVenta());
         }
 
         private void ibtnDetalleVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new formDetalleCompra());
+            AbrirFormulario((IconButton)sender, new DetalleVenta());
         }
     }
 }
