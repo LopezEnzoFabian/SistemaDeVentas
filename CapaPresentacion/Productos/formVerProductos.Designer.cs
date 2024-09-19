@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class formProductos
+    partial class formVerProductos
     {
         /// <summary>
         /// Required designer variable.

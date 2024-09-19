@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.Perfiles
 {
-    public partial class formInfo : Form
+    public partial class Supervisor : Form
     {
-        public formInfo()
+        public Supervisor()
         {
             InitializeComponent();
-        }
-
-        private void txtiNFO_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

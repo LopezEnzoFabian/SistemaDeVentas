@@ -8,25 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.Perfiles
 {
-    public partial class formProductos : Form
+    public partial class Vendedor : Form
     {
-        public formProductos()
+        public Vendedor()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

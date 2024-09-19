@@ -28,25 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formInfo));
+            this.txtiNFO = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // txtiNFO
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "formulario informacion";
+            this.txtiNFO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.txtiNFO.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtiNFO.ForeColor = System.Drawing.Color.White;
+            this.txtiNFO.Location = new System.Drawing.Point(23, 48);
+            this.txtiNFO.Multiline = true;
+            this.txtiNFO.Name = "txtiNFO";
+            this.txtiNFO.ReadOnly = true;
+            this.txtiNFO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtiNFO.Size = new System.Drawing.Size(758, 472);
+            this.txtiNFO.TabIndex = 0;
+            this.txtiNFO.Text = resources.GetString("txtiNFO.Text");
+            this.txtiNFO.TextChanged += new System.EventHandler(this.txtiNFO_TextChanged);
             // 
             // formInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 406);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ClientSize = new System.Drawing.Size(793, 511);
+            this.Controls.Add(this.txtiNFO);
             this.Name = "formInfo";
             this.Text = "formInfo";
             this.ResumeLayout(false);
@@ -56,6 +63,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtiNFO;
     }
 }

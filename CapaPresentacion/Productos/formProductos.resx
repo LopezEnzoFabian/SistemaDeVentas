@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtiNFO.Text" xml:space="preserve">
-    <value>Acerca de
-Nombre de la Aplicación: ElectroHub (productos tecnològicos).
-Versión: 1.0.0
-Fecha de Lanzamiento: 30-9-2024
-
-Descripción:
-EletroHub es un sistema de ventas diseñado para facilitar la compra y gestión de artículos de informática. 
-Ofrecemos una interfaz intuitiva y herramientas poderosas para ayudar a minoristas y distribuidores a gestionar su inventario, 
-procesar pedidos y realizar un seguimiento de las ventas.
-
-Características Principales:
-Gestión de Inventario: Mantén un control efectivo sobre tus productos y usuarios.
-Procesamiento de Pedidos: Realiza ventas rápidas y eficientes.
-Informes y Análisis: Accede a informes detallados sobre el rendimiento de ventas.
-Interfaz Intuitiva: Diseñada para una fácil navegación.
-
-Términos y Condiciones:
-Al utilizar ElectroHub, aceptas cumplir con los términos y condiciones establecidos. 
-Te recomendamos leer estos términos cuidadosamente antes de utilizar el software.
-
-Política de Privacidad:
-Nos comprometemos a proteger tu información personal.
-Para más detalles sobre cómo recopilamos, usamos y protegemos tus datos, consulta nuestra Política de Privacidad.
-
-Soporte:
-Si necesitas asistencia, no dudes en contactarnos:
-
-Correo Electrónico: enzolopez789@gmail.com
-Teléfono: 3794774477
-Créditos:
-Este software fue desarrollado por Enzo Fabián López y Enzo Damián Alderete. 
-Agradecemos a todos los usuarios por su apoyo y confianza en ElectroHub.</value>
-  </data>
 </root>

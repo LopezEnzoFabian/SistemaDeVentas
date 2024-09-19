@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using CapaPresentacion.Productos;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace CapaPresentacion
         {
             if(MenuActivo != null)
             {
-                MenuActivo.BackColor = Color.White;
+                MenuActivo.BackColor = Color.Transparent;
             }
             menu.BackColor = Color.Black;
             MenuActivo = menu;
@@ -47,7 +48,7 @@ namespace CapaPresentacion
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            
+
 
             contenedor.Controls.Add(formulario);
             formulario.Show();

@@ -1,16 +1,16 @@
-﻿namespace CapaPresentacion
+﻿namespace CapaPresentacion.Perfiles
 {
-    partial class Inicio
+    partial class Administrador
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,15 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
@@ -39,11 +40,21 @@
             this.menuProveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
             this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSalir = new FontAwesome.Sharp.IconButton();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 184);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // contenedor
             // 
@@ -52,10 +63,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contenedor.AutoSize = true;
             this.contenedor.BackColor = System.Drawing.Color.White;
-            this.contenedor.Location = new System.Drawing.Point(172, -1);
+            this.contenedor.Location = new System.Drawing.Point(176, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(824, 565);
-            this.contenedor.TabIndex = 1;
+            this.contenedor.Size = new System.Drawing.Size(623, 483);
+            this.contenedor.TabIndex = 4;
             // 
             // menuStrip1
             // 
@@ -74,10 +85,10 @@
             this.menuReportes,
             this.menuAcercade});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(-4, 175);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 184);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(173, 326);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Size = new System.Drawing.Size(173, 337);
+            this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuUsuarios
@@ -91,7 +102,6 @@
             this.menuUsuarios.Name = "menuUsuarios";
             this.menuUsuarios.Size = new System.Drawing.Size(166, 24);
             this.menuUsuarios.Text = "Usuarios";
-            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
             // menuProductos
             // 
@@ -103,7 +113,6 @@
             this.menuProductos.Name = "menuProductos";
             this.menuProductos.Size = new System.Drawing.Size(166, 24);
             this.menuProductos.Text = "Productos";
-            this.menuProductos.Click += new System.EventHandler(this.menuProductos_Click);
             // 
             // menuCompras
             // 
@@ -116,7 +125,6 @@
             this.menuCompras.Name = "menuCompras";
             this.menuCompras.Size = new System.Drawing.Size(166, 24);
             this.menuCompras.Text = "Compras";
-            this.menuCompras.Click += new System.EventHandler(this.iconMenuItem3_Click);
             // 
             // menuVentas
             // 
@@ -130,7 +138,6 @@
             this.menuVentas.Size = new System.Drawing.Size(166, 24);
             this.menuVentas.Text = "Ventas";
             this.menuVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuVentas.Click += new System.EventHandler(this.iconMenuItem4_Click);
             // 
             // menuClientes
             // 
@@ -143,7 +150,6 @@
             this.menuClientes.Name = "menuClientes";
             this.menuClientes.Size = new System.Drawing.Size(166, 24);
             this.menuClientes.Text = "Clientes";
-            this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
             // menuProveedores
             // 
@@ -155,7 +161,6 @@
             this.menuProveedores.Name = "menuProveedores";
             this.menuProveedores.Size = new System.Drawing.Size(166, 24);
             this.menuProveedores.Text = "Proveedores";
-            this.menuProveedores.Click += new System.EventHandler(this.menuProveedores_Click);
             // 
             // menuReportes
             // 
@@ -168,7 +173,6 @@
             this.menuReportes.Name = "menuReportes";
             this.menuReportes.Size = new System.Drawing.Size(166, 24);
             this.menuReportes.Text = "Reportes";
-            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
             // 
             // menuAcercade
             // 
@@ -180,61 +184,50 @@
             this.menuAcercade.Name = "menuAcercade";
             this.menuAcercade.Size = new System.Drawing.Size(166, 24);
             this.menuAcercade.Text = "Acerca de";
-            this.menuAcercade.Click += new System.EventHandler(this.menuAcercade_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 173);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ibtnSalir
             // 
+            this.ibtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ibtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.ibtnSalir.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.ibtnSalir.IconColor = System.Drawing.Color.Cyan;
             this.ibtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSalir.IconSize = 30;
-            this.ibtnSalir.Location = new System.Drawing.Point(12, 497);
+            this.ibtnSalir.Location = new System.Drawing.Point(31, 404);
             this.ibtnSalir.Name = "ibtnSalir";
             this.ibtnSalir.Size = new System.Drawing.Size(89, 52);
-            this.ibtnSalir.TabIndex = 3;
+            this.ibtnSalir.TabIndex = 7;
             this.ibtnSalir.Text = "Cerrar sesiòn";
             this.ibtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ibtnSalir.UseVisualStyleBackColor = true;
+            this.ibtnSalir.UseVisualStyleBackColor = false;
             // 
-            // Inicio
+            // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(996, 561);
+            this.ClientSize = new System.Drawing.Size(800, 486);
             this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Inicio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ElectroHub";
-            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.Name = "Administrador";
+            this.Text = "Administrador";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private FontAwesome.Sharp.IconMenuItem menuUsuarios;
         private FontAwesome.Sharp.IconMenuItem menuProductos;
         private FontAwesome.Sharp.IconMenuItem menuCompras;
         private FontAwesome.Sharp.IconMenuItem menuVentas;
@@ -242,9 +235,6 @@
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
         private FontAwesome.Sharp.IconMenuItem menuReportes;
         private FontAwesome.Sharp.IconMenuItem menuAcercade;
-        private FontAwesome.Sharp.IconMenuItem menuUsuarios;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton ibtnSalir;
     }
 }
-
