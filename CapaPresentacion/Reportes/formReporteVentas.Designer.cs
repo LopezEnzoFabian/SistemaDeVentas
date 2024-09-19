@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.ibtnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            this.cbProvee = new System.Windows.Forms.ComboBox();
+            this.cbProveedor = new System.Windows.Forms.ComboBox();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.ibtnBuscarPorFec = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dgReporteVentas = new System.Windows.Forms.DataGridView();
             this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +48,8 @@
             this.colNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblRepoCompras = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblReporteVentas = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReporteVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // ibtnBuscarProveedor
@@ -66,13 +66,13 @@
             this.ibtnBuscarProveedor.TabIndex = 59;
             this.ibtnBuscarProveedor.UseVisualStyleBackColor = false;
             // 
-            // cbProvee
+            // cbProveedor
             // 
-            this.cbProvee.FormattingEnabled = true;
-            this.cbProvee.Location = new System.Drawing.Point(358, 86);
-            this.cbProvee.Name = "cbProvee";
-            this.cbProvee.Size = new System.Drawing.Size(121, 21);
-            this.cbProvee.TabIndex = 58;
+            this.cbProveedor.FormattingEnabled = true;
+            this.cbProveedor.Location = new System.Drawing.Point(358, 86);
+            this.cbProveedor.Name = "cbProveedor";
+            this.cbProveedor.Size = new System.Drawing.Size(121, 21);
+            this.cbProveedor.TabIndex = 58;
             // 
             // lblProveedor
             // 
@@ -98,45 +98,45 @@
             this.ibtnBuscarPorFec.TabIndex = 56;
             this.ibtnBuscarPorFec.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker2
+            // dtFechaFin
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(443, 45);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePicker2.TabIndex = 55;
+            this.dtFechaFin.Location = new System.Drawing.Point(443, 45);
+            this.dtFechaFin.Name = "dtFechaFin";
+            this.dtFechaFin.Size = new System.Drawing.Size(143, 20);
+            this.dtFechaFin.TabIndex = 55;
             // 
-            // dateTimePicker1
+            // dtFechaInicio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(221, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePicker1.TabIndex = 54;
+            this.dtFechaInicio.Location = new System.Drawing.Point(221, 45);
+            this.dtFechaInicio.Name = "dtFechaInicio";
+            this.dtFechaInicio.Size = new System.Drawing.Size(144, 20);
+            this.dtFechaInicio.TabIndex = 54;
             // 
-            // label3
+            // lblFechaFin
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Cyan;
-            this.label3.Location = new System.Drawing.Point(386, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 53;
-            this.label3.Text = "Fecha fin";
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.ForeColor = System.Drawing.Color.Cyan;
+            this.lblFechaFin.Location = new System.Drawing.Point(386, 52);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(51, 13);
+            this.lblFechaFin.TabIndex = 53;
+            this.lblFechaFin.Text = "Fecha fin";
             // 
-            // label2
+            // lblFechaInicio
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(139, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Fecha de inicio";
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.Cyan;
+            this.lblFechaInicio.Location = new System.Drawing.Point(139, 51);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(79, 13);
+            this.lblFechaInicio.TabIndex = 52;
+            this.lblFechaInicio.Text = "Fecha de inicio";
             // 
-            // dataGridView1
+            // dgReporteVentas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgReporteVentas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgReporteVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgReporteVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFechaDeRegistro,
             this.colTipoDocumento,
             this.colNumeroDocumento,
@@ -148,10 +148,10 @@
             this.colNomPro,
             this.colCate,
             this.colPrecioCom});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 134);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(834, 241);
-            this.dataGridView1.TabIndex = 51;
+            this.dgReporteVentas.Location = new System.Drawing.Point(6, 134);
+            this.dgReporteVentas.Name = "dgReporteVentas";
+            this.dgReporteVentas.Size = new System.Drawing.Size(834, 241);
+            this.dgReporteVentas.TabIndex = 51;
             // 
             // colFechaDeRegistro
             // 
@@ -208,17 +208,17 @@
             this.colPrecioCom.HeaderText = "Precio compra";
             this.colPrecioCom.Name = "colPrecioCom";
             // 
-            // lblRepoCompras
+            // lblReporteVentas
             // 
-            this.lblRepoCompras.AutoSize = true;
-            this.lblRepoCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRepoCompras.ForeColor = System.Drawing.Color.Cyan;
-            this.lblRepoCompras.Location = new System.Drawing.Point(321, 9);
-            this.lblRepoCompras.Name = "lblRepoCompras";
-            this.lblRepoCompras.Size = new System.Drawing.Size(167, 24);
-            this.lblRepoCompras.TabIndex = 50;
-            this.lblRepoCompras.Text = "Reporte de Ventas";
-            this.lblRepoCompras.Click += new System.EventHandler(this.lblRepoCompras_Click);
+            this.lblReporteVentas.AutoSize = true;
+            this.lblReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReporteVentas.ForeColor = System.Drawing.Color.Cyan;
+            this.lblReporteVentas.Location = new System.Drawing.Point(321, 9);
+            this.lblReporteVentas.Name = "lblReporteVentas";
+            this.lblReporteVentas.Size = new System.Drawing.Size(167, 24);
+            this.lblReporteVentas.TabIndex = 50;
+            this.lblReporteVentas.Text = "Reporte de Ventas";
+            this.lblReporteVentas.Click += new System.EventHandler(this.lblRepoCompras_Click);
             // 
             // formReporteVentas
             // 
@@ -227,18 +227,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(846, 377);
             this.Controls.Add(this.ibtnBuscarProveedor);
-            this.Controls.Add(this.cbProvee);
+            this.Controls.Add(this.cbProveedor);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.ibtnBuscarPorFec);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblRepoCompras);
+            this.Controls.Add(this.dtFechaFin);
+            this.Controls.Add(this.dtFechaInicio);
+            this.Controls.Add(this.lblFechaFin);
+            this.Controls.Add(this.lblFechaInicio);
+            this.Controls.Add(this.dgReporteVentas);
+            this.Controls.Add(this.lblReporteVentas);
             this.Name = "formReporteVentas";
             this.Text = "Reporte de Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReporteVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,14 +247,14 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton ibtnBuscarProveedor;
-        private System.Windows.Forms.ComboBox cbProvee;
+        private System.Windows.Forms.ComboBox cbProveedor;
         private System.Windows.Forms.Label lblProveedor;
         private FontAwesome.Sharp.IconButton ibtnBuscarPorFec;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtFechaFin;
+        private System.Windows.Forms.DateTimePicker dtFechaInicio;
+        private System.Windows.Forms.Label lblFechaFin;
+        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.DataGridView dgReporteVentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumeroDocumento;
@@ -266,6 +266,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomPro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
-        private System.Windows.Forms.Label lblRepoCompras;
+        private System.Windows.Forms.Label lblReporteVentas;
     }
 }

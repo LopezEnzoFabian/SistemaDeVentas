@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.lblRepoCompras = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.ibtnBuscarPorFec = new FontAwesome.Sharp.IconButton();
+            this.dgReporteCompras = new System.Windows.Forms.DataGridView();
             this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +41,15 @@
             this.colNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.ibtnBuscarPorFec = new FontAwesome.Sharp.IconButton();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.cbProvee = new System.Windows.Forms.ComboBox();
             this.ibtnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRepoCompras
@@ -63,11 +63,11 @@
             this.lblRepoCompras.TabIndex = 0;
             this.lblRepoCompras.Text = "Reporte de Compras";
             // 
-            // dataGridView1
+            // dgReporteCompras
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgReporteCompras.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgReporteCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgReporteCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFechaDeRegistro,
             this.colTipoDocumento,
             this.colNumeroDocumento,
@@ -79,58 +79,10 @@
             this.colNomPro,
             this.colCate,
             this.colPrecioCom});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 135);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(834, 249);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(172, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha de inicio";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Cyan;
-            this.label3.Location = new System.Drawing.Point(419, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Fecha fin";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(254, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(476, 45);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // ibtnBuscarPorFec
-            // 
-            this.ibtnBuscarPorFec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscarPorFec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscarPorFec.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscarPorFec.IconColor = System.Drawing.Color.White;
-            this.ibtnBuscarPorFec.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscarPorFec.IconSize = 20;
-            this.ibtnBuscarPorFec.Location = new System.Drawing.Point(625, 41);
-            this.ibtnBuscarPorFec.Name = "ibtnBuscarPorFec";
-            this.ibtnBuscarPorFec.Size = new System.Drawing.Size(31, 30);
-            this.ibtnBuscarPorFec.TabIndex = 46;
-            this.ibtnBuscarPorFec.UseVisualStyleBackColor = false;
+            this.dgReporteCompras.Location = new System.Drawing.Point(3, 135);
+            this.dgReporteCompras.Name = "dgReporteCompras";
+            this.dgReporteCompras.Size = new System.Drawing.Size(834, 249);
+            this.dgReporteCompras.TabIndex = 1;
             // 
             // colFechaDeRegistro
             // 
@@ -187,6 +139,54 @@
             this.colPrecioCom.HeaderText = "Precio compra";
             this.colPrecioCom.Name = "colPrecioCom";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Cyan;
+            this.label2.Location = new System.Drawing.Point(172, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Fecha de inicio";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Cyan;
+            this.label3.Location = new System.Drawing.Point(419, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Fecha fin";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(254, 45);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(476, 45);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(143, 20);
+            this.dateTimePicker2.TabIndex = 5;
+            // 
+            // ibtnBuscarPorFec
+            // 
+            this.ibtnBuscarPorFec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnBuscarPorFec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnBuscarPorFec.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.ibtnBuscarPorFec.IconColor = System.Drawing.Color.White;
+            this.ibtnBuscarPorFec.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnBuscarPorFec.IconSize = 20;
+            this.ibtnBuscarPorFec.Location = new System.Drawing.Point(625, 41);
+            this.ibtnBuscarPorFec.Name = "ibtnBuscarPorFec";
+            this.ibtnBuscarPorFec.Size = new System.Drawing.Size(31, 30);
+            this.ibtnBuscarPorFec.TabIndex = 46;
+            this.ibtnBuscarPorFec.UseVisualStyleBackColor = false;
+            // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
@@ -233,11 +233,11 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgReporteCompras);
             this.Controls.Add(this.lblRepoCompras);
             this.Name = "formReporteCompra";
             this.Text = "Reporte de Compras";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +246,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblRepoCompras;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgReporteCompras;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

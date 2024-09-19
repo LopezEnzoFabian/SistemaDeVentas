@@ -65,7 +65,7 @@
             this.contenedor.BackColor = System.Drawing.Color.White;
             this.contenedor.Location = new System.Drawing.Point(176, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(623, 483);
+            this.contenedor.Size = new System.Drawing.Size(984, 675);
             this.contenedor.TabIndex = 4;
             // 
             // menuStrip1
@@ -85,9 +85,9 @@
             this.menuReportes,
             this.menuAcercade});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 184);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 178);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(173, 337);
+            this.menuStrip1.Size = new System.Drawing.Size(173, 384);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,7 +194,7 @@
             this.ibtnSalir.IconColor = System.Drawing.Color.Cyan;
             this.ibtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSalir.IconSize = 30;
-            this.ibtnSalir.Location = new System.Drawing.Point(31, 404);
+            this.ibtnSalir.Location = new System.Drawing.Point(12, 497);
             this.ibtnSalir.Name = "ibtnSalir";
             this.ibtnSalir.Size = new System.Drawing.Size(89, 52);
             this.ibtnSalir.TabIndex = 7;
@@ -207,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contenedor);

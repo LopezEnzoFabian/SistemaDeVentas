@@ -54,7 +54,7 @@
             this.contenedor.BackColor = System.Drawing.Color.White;
             this.contenedor.Location = new System.Drawing.Point(172, -1);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(824, 565);
+            this.contenedor.Size = new System.Drawing.Size(712, 565);
             this.contenedor.TabIndex = 1;
             // 
             // menuStrip1
@@ -215,14 +215,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(996, 561);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuStrip1);
+            this.MinimizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ElectroHub";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

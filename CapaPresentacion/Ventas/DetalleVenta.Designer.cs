@@ -59,6 +59,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblDetalleVenta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDetalleVenta)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,7 +73,7 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(494, 7);
+            this.btnsearch.Location = new System.Drawing.Point(494, 40);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 75;
@@ -85,7 +86,7 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(531, 9);
+            this.btnclean.Location = new System.Drawing.Point(531, 42);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(39, 28);
             this.btnclean.TabIndex = 74;
@@ -94,7 +95,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(358, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(358, 44);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 72;
@@ -104,7 +105,7 @@
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltro.Location = new System.Drawing.Point(204, 19);
+            this.lblFiltro.Location = new System.Drawing.Point(204, 52);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(148, 17);
             this.lblFiltro.TabIndex = 71;
@@ -112,7 +113,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(697, 280);
+            this.textBox3.Location = new System.Drawing.Point(697, 313);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(77, 20);
             this.textBox3.TabIndex = 84;
@@ -121,7 +122,7 @@
             // 
             this.lblTotalCambio.AutoSize = true;
             this.lblTotalCambio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalCambio.Location = new System.Drawing.Point(696, 264);
+            this.lblTotalCambio.Location = new System.Drawing.Point(696, 297);
             this.lblTotalCambio.Name = "lblTotalCambio";
             this.lblTotalCambio.Size = new System.Drawing.Size(68, 13);
             this.lblTotalCambio.TabIndex = 83;
@@ -129,7 +130,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(697, 235);
+            this.textBox2.Location = new System.Drawing.Point(697, 268);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(77, 20);
             this.textBox2.TabIndex = 82;
@@ -138,7 +139,7 @@
             // 
             this.lblTotalPago.AutoSize = true;
             this.lblTotalPago.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalPago.Location = new System.Drawing.Point(696, 219);
+            this.lblTotalPago.Location = new System.Drawing.Point(696, 252);
             this.lblTotalPago.Name = "lblTotalPago";
             this.lblTotalPago.Size = new System.Drawing.Size(58, 13);
             this.lblTotalPago.TabIndex = 81;
@@ -148,7 +149,7 @@
             // 
             this.lblMontoTotal.AutoSize = true;
             this.lblMontoTotal.ForeColor = System.Drawing.Color.White;
-            this.lblMontoTotal.Location = new System.Drawing.Point(696, 180);
+            this.lblMontoTotal.Location = new System.Drawing.Point(696, 213);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(60, 13);
             this.lblMontoTotal.TabIndex = 80;
@@ -156,7 +157,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(699, 196);
+            this.textBox1.Location = new System.Drawing.Point(699, 229);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(75, 20);
             this.textBox1.TabIndex = 79;
@@ -174,7 +175,7 @@
             this.colCantidad,
             this.colSubTotal,
             this.colEliminarPro});
-            this.dgListaDetalleVenta.Location = new System.Drawing.Point(12, 145);
+            this.dgListaDetalleVenta.Location = new System.Drawing.Point(12, 178);
             this.dgListaDetalleVenta.Name = "dgListaDetalleVenta";
             this.dgListaDetalleVenta.ReadOnly = true;
             this.dgListaDetalleVenta.Size = new System.Drawing.Size(667, 205);
@@ -245,7 +246,7 @@
             this.groupBox2.Controls.Add(this.txtTipoDoc);
             this.groupBox2.Controls.Add(this.txtFechaVenta);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 42);
+            this.groupBox2.Location = new System.Drawing.Point(12, 75);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(392, 87);
             this.groupBox2.TabIndex = 76;
@@ -307,7 +308,7 @@
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(410, 42);
+            this.groupBox1.Location = new System.Drawing.Point(410, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(318, 87);
             this.groupBox1.TabIndex = 85;
@@ -349,18 +350,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.Location = new System.Drawing.Point(24, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 86;
             this.label1.Text = "Detalle de Venta";
+            // 
+            // lblDetalleVenta
+            // 
+            this.lblDetalleVenta.AutoSize = true;
+            this.lblDetalleVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetalleVenta.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDetalleVenta.Location = new System.Drawing.Point(294, 9);
+            this.lblDetalleVenta.Name = "lblDetalleVenta";
+            this.lblDetalleVenta.Size = new System.Drawing.Size(153, 24);
+            this.lblDetalleVenta.TabIndex = 87;
+            this.lblDetalleVenta.Text = "Detalle de ventas";
             // 
             // DetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(786, 361);
+            this.ClientSize = new System.Drawing.Size(786, 397);
+            this.Controls.Add(this.lblDetalleVenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox3);
@@ -421,5 +434,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDetalleVenta;
     }
 }

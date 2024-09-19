@@ -68,23 +68,23 @@ namespace CapaPresentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
-                     string.IsNullOrWhiteSpace(Tbt_Nombre.Text) ||
+                     string.IsNullOrWhiteSpace(txtNombre.Text) ||
                      string.IsNullOrWhiteSpace(cbRol.Text) ||
                      string.IsNullOrWhiteSpace(cbEstado.Text) ||
-                     string.IsNullOrWhiteSpace(Tbt_pass.Text) ||
-                     string.IsNullOrWhiteSpace(Tbt_email.Text) ||
-                     string.IsNullOrWhiteSpace(Tbt_confirmpass.Text))
+                     string.IsNullOrWhiteSpace(txtPass.Text) ||
+                     string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                     string.IsNullOrWhiteSpace(txt_Confirmpass.Text))
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (Tbt_pass.Text != Tbt_confirmpass.Text)
+            if (txtPass.Text != txt_Confirmpass.Text)
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Las contraseñas deben coincidir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!Validaciones.EsEmailValido(Tbt_email.Text))
+            if (!Validaciones.EsEmailValido(txtEmail.Text))
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("El email no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -104,24 +104,24 @@ namespace CapaPresentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (  string.IsNullOrWhiteSpace(txtDNI.Text) ||
-                  string.IsNullOrWhiteSpace(Tbt_Nombre.Text) ||
+                  string.IsNullOrWhiteSpace(txtNombre.Text) ||
                   string.IsNullOrWhiteSpace(cbRol.Text) ||
                   string.IsNullOrWhiteSpace(cbEstado.Text) ||
-                  string.IsNullOrWhiteSpace(Tbt_pass.Text) ||
-                  string.IsNullOrWhiteSpace(Tbt_email.Text) ||
-                  string.IsNullOrWhiteSpace(Tbt_confirmpass.Text))
+                  string.IsNullOrWhiteSpace(txtPass.Text) ||
+                  string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                  string.IsNullOrWhiteSpace(txt_Confirmpass.Text))
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           if(Tbt_pass.Text != Tbt_confirmpass.Text)
+           if(txtPass.Text != txt_Confirmpass.Text)
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Las contraseñas deben coincidir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!Validaciones.EsEmailValido(Tbt_email.Text))
+            if (!Validaciones.EsEmailValido(txtEmail.Text))
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("El email no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,12 +153,12 @@ namespace CapaPresentacion
                 MessageBox.Show(msj, titulo2, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 txtDNI.Clear();
-                Tbt_Nombre.Clear();
+                txtNombre.Clear();
                 cbEstado.Items.Clear();
                 cbRol.Items.Clear();
-                Tbt_email.Clear();
-                Tbt_pass.Clear();
-                Tbt_confirmpass.Clear();
+                txtEmail.Clear();
+                txtPass.Clear();
+                txt_Confirmpass.Clear();
                 
                 
             }

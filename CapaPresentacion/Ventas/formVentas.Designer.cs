@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelCompras = new System.Windows.Forms.Panel();
+            this.panelVentas = new System.Windows.Forms.Panel();
             this.ibtnDetalleVenta = new FontAwesome.Sharp.IconButton();
             this.ibtnRegistrarVenta = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
-            // panelCompras
+            // panelVentas
             // 
-            this.panelCompras.Location = new System.Drawing.Point(8, 59);
-            this.panelCompras.Name = "panelCompras";
-            this.panelCompras.Size = new System.Drawing.Size(720, 463);
-            this.panelCompras.TabIndex = 6;
+            this.panelVentas.Location = new System.Drawing.Point(8, 59);
+            this.panelVentas.Name = "panelVentas";
+            this.panelVentas.Size = new System.Drawing.Size(720, 463);
+            this.panelVentas.TabIndex = 6;
             // 
             // ibtnDetalleVenta
             // 
@@ -50,9 +50,9 @@
             this.ibtnDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnDetalleVenta.Location = new System.Drawing.Point(365, 12);
             this.ibtnDetalleVenta.Name = "ibtnDetalleVenta";
-            this.ibtnDetalleVenta.Size = new System.Drawing.Size(198, 40);
+            this.ibtnDetalleVenta.Size = new System.Drawing.Size(248, 40);
             this.ibtnDetalleVenta.TabIndex = 5;
-            this.ibtnDetalleVenta.Text = "Ver detalle compra";
+            this.ibtnDetalleVenta.Text = "Ver detalle de ventas";
             this.ibtnDetalleVenta.UseVisualStyleBackColor = true;
             this.ibtnDetalleVenta.Click += new System.EventHandler(this.ibtnDetalleVenta_Click);
             // 
@@ -68,7 +68,7 @@
             this.ibtnRegistrarVenta.Name = "ibtnRegistrarVenta";
             this.ibtnRegistrarVenta.Size = new System.Drawing.Size(198, 40);
             this.ibtnRegistrarVenta.TabIndex = 4;
-            this.ibtnRegistrarVenta.Text = "Registrar Venta";
+            this.ibtnRegistrarVenta.Text = "Registrar Ventas";
             this.ibtnRegistrarVenta.UseVisualStyleBackColor = true;
             this.ibtnRegistrarVenta.Click += new System.EventHandler(this.ibtnRegistrarVenta_Click);
             // 
@@ -79,7 +79,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(740, 423);
             this.Controls.Add(this.ibtnDetalleVenta);
-            this.Controls.Add(this.panelCompras);
+            this.Controls.Add(this.panelVentas);
             this.Controls.Add(this.ibtnRegistrarVenta);
             this.Name = "formVentas";
             this.Text = "Ventas";
@@ -90,7 +90,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelCompras;
+        private System.Windows.Forms.Panel panelVentas;
         private FontAwesome.Sharp.IconButton ibtnDetalleVenta;
         private FontAwesome.Sharp.IconButton ibtnRegistrarVenta;
     }

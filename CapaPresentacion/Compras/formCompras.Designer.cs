@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ibtnRegis = new FontAwesome.Sharp.IconButton();
+            this.ibtnRegistrarCom = new FontAwesome.Sharp.IconButton();
             this.ibtnVerDetalle = new FontAwesome.Sharp.IconButton();
             this.panelCompras = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // ibtnRegis
+            // ibtnRegistrarCom
             // 
-            this.ibtnRegis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnRegis.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnRegis.ForeColor = System.Drawing.Color.White;
-            this.ibtnRegis.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ibtnRegis.IconColor = System.Drawing.Color.Black;
-            this.ibtnRegis.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnRegis.Location = new System.Drawing.Point(200, 10);
-            this.ibtnRegis.Name = "ibtnRegis";
-            this.ibtnRegis.Size = new System.Drawing.Size(151, 40);
-            this.ibtnRegis.TabIndex = 1;
-            this.ibtnRegis.Text = "Registrar Compra";
-            this.ibtnRegis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibtnRegis.UseVisualStyleBackColor = true;
-            this.ibtnRegis.Click += new System.EventHandler(this.ibtnRegis_Click);
+            this.ibtnRegistrarCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnRegistrarCom.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnRegistrarCom.ForeColor = System.Drawing.Color.White;
+            this.ibtnRegistrarCom.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibtnRegistrarCom.IconColor = System.Drawing.Color.Black;
+            this.ibtnRegistrarCom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnRegistrarCom.Location = new System.Drawing.Point(200, 10);
+            this.ibtnRegistrarCom.Name = "ibtnRegistrarCom";
+            this.ibtnRegistrarCom.Size = new System.Drawing.Size(151, 40);
+            this.ibtnRegistrarCom.TabIndex = 1;
+            this.ibtnRegistrarCom.Text = "Registrar Compra";
+            this.ibtnRegistrarCom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibtnRegistrarCom.UseVisualStyleBackColor = true;
+            this.ibtnRegistrarCom.Click += new System.EventHandler(this.ibtnRegis_Click);
             // 
             // ibtnVerDetalle
             // 
@@ -81,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(762, 404);
             this.Controls.Add(this.panelCompras);
             this.Controls.Add(this.ibtnVerDetalle);
-            this.Controls.Add(this.ibtnRegis);
+            this.Controls.Add(this.ibtnRegistrarCom);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "formCompras";
@@ -92,7 +92,7 @@
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton ibtnRegis;
+        private FontAwesome.Sharp.IconButton ibtnRegistrarCom;
         private FontAwesome.Sharp.IconButton ibtnVerDetalle;
         private System.Windows.Forms.Panel panelCompras;
     }

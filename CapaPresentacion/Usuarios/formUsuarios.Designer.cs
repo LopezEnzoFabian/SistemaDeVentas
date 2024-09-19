@@ -35,8 +35,8 @@
             this.lblConfContra = new System.Windows.Forms.Label();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cbFiltro = new System.Windows.Forms.ComboBox();
+            this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
+            this.cbFiltroTipoUsuario = new System.Windows.Forms.ComboBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -58,10 +58,10 @@
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.Tbt_pass = new RoundedTextBox();
-            this.Tbt_confirmpass = new RoundedTextBox();
-            this.Tbt_email = new RoundedTextBox();
-            this.Tbt_Nombre = new RoundedTextBox();
+            this.txtPass = new RoundedTextBox();
+            this.txt_Confirmpass = new RoundedTextBox();
+            this.txtEmail = new RoundedTextBox();
+            this.txtNombre = new RoundedTextBox();
             this.roundedButton1 = new RoundedButton();
             this.txtDNI = new RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
@@ -149,31 +149,31 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Filtrar por";
             // 
-            // txtBuscar
+            // txtBuscarUsuario
             // 
-            this.txtBuscar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtBuscar.Location = new System.Drawing.Point(389, 12);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(121, 23);
-            this.txtBuscar.TabIndex = 31;
+            this.txtBuscarUsuario.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(389, 12);
+            this.txtBuscarUsuario.Name = "txtBuscarUsuario";
+            this.txtBuscarUsuario.Size = new System.Drawing.Size(121, 23);
+            this.txtBuscarUsuario.TabIndex = 31;
             // 
-            // cbFiltro
+            // cbFiltroTipoUsuario
             // 
-            this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltro.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFiltro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Items.AddRange(new object[] {
+            this.cbFiltroTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFiltroTipoUsuario.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltroTipoUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbFiltroTipoUsuario.FormattingEnabled = true;
+            this.cbFiltroTipoUsuario.Items.AddRange(new object[] {
             "Nombre",
             "DNI",
             "Rol",
             "Estado",
             "Email"});
-            this.cbFiltro.Location = new System.Drawing.Point(250, 12);
-            this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Size = new System.Drawing.Size(121, 24);
-            this.cbFiltro.TabIndex = 33;
+            this.cbFiltroTipoUsuario.Location = new System.Drawing.Point(250, 12);
+            this.cbFiltroTipoUsuario.Name = "cbFiltroTipoUsuario";
+            this.cbFiltroTipoUsuario.Size = new System.Drawing.Size(121, 24);
+            this.cbFiltroTipoUsuario.TabIndex = 33;
             // 
             // cbEstado
             // 
@@ -409,41 +409,41 @@
             this.dgListarUsuario.TabIndex = 28;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
-            // Tbt_pass
+            // txtPass
             // 
-            this.Tbt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Tbt_pass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbt_pass.Location = new System.Drawing.Point(142, 132);
-            this.Tbt_pass.Name = "Tbt_pass";
-            this.Tbt_pass.Size = new System.Drawing.Size(195, 20);
-            this.Tbt_pass.TabIndex = 51;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(142, 132);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(195, 20);
+            this.txtPass.TabIndex = 51;
             // 
-            // Tbt_confirmpass
+            // txt_Confirmpass
             // 
-            this.Tbt_confirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Tbt_confirmpass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbt_confirmpass.Location = new System.Drawing.Point(142, 158);
-            this.Tbt_confirmpass.Name = "Tbt_confirmpass";
-            this.Tbt_confirmpass.Size = new System.Drawing.Size(195, 20);
-            this.Tbt_confirmpass.TabIndex = 50;
+            this.txt_Confirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Confirmpass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Confirmpass.Location = new System.Drawing.Point(142, 158);
+            this.txt_Confirmpass.Name = "txt_Confirmpass";
+            this.txt_Confirmpass.Size = new System.Drawing.Size(195, 20);
+            this.txt_Confirmpass.TabIndex = 50;
             // 
-            // Tbt_email
+            // txtEmail
             // 
-            this.Tbt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Tbt_email.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbt_email.Location = new System.Drawing.Point(70, 102);
-            this.Tbt_email.Name = "Tbt_email";
-            this.Tbt_email.Size = new System.Drawing.Size(267, 20);
-            this.Tbt_email.TabIndex = 49;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(70, 102);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(267, 20);
+            this.txtEmail.TabIndex = 49;
             // 
-            // Tbt_Nombre
+            // txtNombre
             // 
-            this.Tbt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Tbt_Nombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbt_Nombre.Location = new System.Drawing.Point(70, 46);
-            this.Tbt_Nombre.Name = "Tbt_Nombre";
-            this.Tbt_Nombre.Size = new System.Drawing.Size(267, 20);
-            this.Tbt_Nombre.TabIndex = 48;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(70, 46);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(267, 20);
+            this.txtNombre.TabIndex = 48;
             // 
             // roundedButton1
             // 
@@ -481,10 +481,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(742, 490);
-            this.Controls.Add(this.Tbt_pass);
-            this.Controls.Add(this.Tbt_confirmpass);
-            this.Controls.Add(this.Tbt_email);
-            this.Controls.Add(this.Tbt_Nombre);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txt_Confirmpass);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.btnsearch);
@@ -498,8 +498,8 @@
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.cbFiltro);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cbFiltroTipoUsuario);
+            this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgListarUsuario);
             this.Controls.Add(this.lblConfContra);
@@ -526,8 +526,8 @@
         private System.Windows.Forms.Label lblConfContra;
         private FontAwesome.Sharp.IconButton btnsearch;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.ComboBox cbFiltro;
+        private System.Windows.Forms.TextBox txtBuscarUsuario;
+        private System.Windows.Forms.ComboBox cbFiltroTipoUsuario;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblRol;
@@ -551,9 +551,9 @@
         private System.Windows.Forms.DataGridView dgListarUsuario;
         private RoundedTextBox txtDNI;
         private RoundedButton roundedButton1;
-        private RoundedTextBox Tbt_Nombre;
-        private RoundedTextBox Tbt_email;
-        private RoundedTextBox Tbt_confirmpass;
-        private RoundedTextBox Tbt_pass;
+        private RoundedTextBox txtNombre;
+        private RoundedTextBox txtEmail;
+        private RoundedTextBox txt_Confirmpass;
+        private RoundedTextBox txtPass;
     }
 }

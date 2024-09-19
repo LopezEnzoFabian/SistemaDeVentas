@@ -42,13 +42,7 @@
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
-            this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.txtDescri = new System.Windows.Forms.TextBox();
-            this.txtCodigoPro = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblDescri = new System.Windows.Forms.Label();
-            this.lblCodPro = new System.Windows.Forms.Label();
-            this.lblNomPro = new System.Windows.Forms.Label();
+            this.dgListarPorductos = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +55,13 @@
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
+            this.txtDescri = new System.Windows.Forms.TextBox();
+            this.txtCodigoPro = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblDescri = new System.Windows.Forms.Label();
+            this.lblCodPro = new System.Windows.Forms.Label();
+            this.lblNomPro = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsearch
@@ -165,7 +165,6 @@
             this.lblListaPorducto.Size = new System.Drawing.Size(178, 28);
             this.lblListaPorducto.TabIndex = 63;
             this.lblListaPorducto.Text = "Lista de productos";
-            
             // 
             // lblCategoria
             // 
@@ -227,11 +226,11 @@
             this.lblFiltro.TabIndex = 57;
             this.lblFiltro.Text = "Filtrar por";
             // 
-            // dgListarUsuario
+            // dgListarPorductos
             // 
-            this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgListarPorductos.AllowUserToOrderColumns = true;
+            this.dgListarPorductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListarPorductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.colID,
             this.colCod,
@@ -244,69 +243,11 @@
             this.colPrecioVenta,
             this.colEstadoValor,
             this.ColEstad});
-            this.dgListarUsuario.Location = new System.Drawing.Point(12, 248);
-            this.dgListarUsuario.Name = "dgListarUsuario";
-            this.dgListarUsuario.Size = new System.Drawing.Size(745, 238);
-            this.dgListarUsuario.TabIndex = 56;
-            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
-            // 
-            // txtDescri
-            // 
-            this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescri.Location = new System.Drawing.Point(200, 164);
-            this.txtDescri.Name = "txtDescri";
-            this.txtDescri.Size = new System.Drawing.Size(131, 25);
-            this.txtDescri.TabIndex = 53;
-            // 
-            // txtCodigoPro
-            // 
-            this.txtCodigoPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPro.Location = new System.Drawing.Point(200, 65);
-            this.txtCodigoPro.Name = "txtCodigoPro";
-            this.txtCodigoPro.Size = new System.Drawing.Size(131, 25);
-            this.txtCodigoPro.TabIndex = 50;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(200, 114);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(131, 25);
-            this.txtNombre.TabIndex = 49;
-            // 
-            // lblDescri
-            // 
-            this.lblDescri.AutoSize = true;
-            this.lblDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescri.Location = new System.Drawing.Point(197, 143);
-            this.lblDescri.Name = "lblDescri";
-            this.lblDescri.Size = new System.Drawing.Size(76, 17);
-            this.lblDescri.TabIndex = 48;
-            this.lblDescri.Text = "Descripcion";
-            // 
-            // lblCodPro
-            // 
-            this.lblCodPro.AutoSize = true;
-            this.lblCodPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodPro.Location = new System.Drawing.Point(197, 45);
-            this.lblCodPro.Name = "lblCodPro";
-            this.lblCodPro.Size = new System.Drawing.Size(51, 17);
-            this.lblCodPro.TabIndex = 47;
-            this.lblCodPro.Text = "Codigo";
-            // 
-            // lblNomPro
-            // 
-            this.lblNomPro.AutoSize = true;
-            this.lblNomPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNomPro.Location = new System.Drawing.Point(197, 94);
-            this.lblNomPro.Name = "lblNomPro";
-            this.lblNomPro.Size = new System.Drawing.Size(57, 17);
-            this.lblNomPro.TabIndex = 46;
-            this.lblNomPro.Text = "Nombre";
+            this.dgListarPorductos.Location = new System.Drawing.Point(12, 248);
+            this.dgListarPorductos.Name = "dgListarPorductos";
+            this.dgListarPorductos.Size = new System.Drawing.Size(745, 238);
+            this.dgListarPorductos.TabIndex = 56;
+            this.dgListarPorductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
             // btnSeleccionar
             // 
@@ -388,7 +329,65 @@
             this.ColEstad.Name = "ColEstad";
             this.ColEstad.Width = 80;
             // 
-            // formProductos
+            // txtDescri
+            // 
+            this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescri.Location = new System.Drawing.Point(200, 164);
+            this.txtDescri.Name = "txtDescri";
+            this.txtDescri.Size = new System.Drawing.Size(131, 25);
+            this.txtDescri.TabIndex = 53;
+            // 
+            // txtCodigoPro
+            // 
+            this.txtCodigoPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoPro.Location = new System.Drawing.Point(200, 65);
+            this.txtCodigoPro.Name = "txtCodigoPro";
+            this.txtCodigoPro.Size = new System.Drawing.Size(131, 25);
+            this.txtCodigoPro.TabIndex = 50;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(200, 114);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(131, 25);
+            this.txtNombre.TabIndex = 49;
+            // 
+            // lblDescri
+            // 
+            this.lblDescri.AutoSize = true;
+            this.lblDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescri.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDescri.Location = new System.Drawing.Point(197, 143);
+            this.lblDescri.Name = "lblDescri";
+            this.lblDescri.Size = new System.Drawing.Size(76, 17);
+            this.lblDescri.TabIndex = 48;
+            this.lblDescri.Text = "Descripcion";
+            // 
+            // lblCodPro
+            // 
+            this.lblCodPro.AutoSize = true;
+            this.lblCodPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCodPro.Location = new System.Drawing.Point(197, 45);
+            this.lblCodPro.Name = "lblCodPro";
+            this.lblCodPro.Size = new System.Drawing.Size(51, 17);
+            this.lblCodPro.TabIndex = 47;
+            this.lblCodPro.Text = "Codigo";
+            // 
+            // lblNomPro
+            // 
+            this.lblNomPro.AutoSize = true;
+            this.lblNomPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblNomPro.Location = new System.Drawing.Point(197, 94);
+            this.lblNomPro.Name = "lblNomPro";
+            this.lblNomPro.Size = new System.Drawing.Size(57, 17);
+            this.lblNomPro.TabIndex = 46;
+            this.lblNomPro.Text = "Nombre";
+            // 
+            // formVerProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -409,16 +408,16 @@
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblFiltro);
-            this.Controls.Add(this.dgListarUsuario);
+            this.Controls.Add(this.dgListarPorductos);
             this.Controls.Add(this.txtDescri);
             this.Controls.Add(this.txtCodigoPro);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDescri);
             this.Controls.Add(this.lblCodPro);
             this.Controls.Add(this.lblNomPro);
-            this.Name = "formProductos";
+            this.Name = "formVerProductos";
             this.Text = "formProductos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +439,7 @@
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblFiltro;
-        private System.Windows.Forms.DataGridView dgListarUsuario;
+        private System.Windows.Forms.DataGridView dgListarPorductos;
         private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.TextBox txtCodigoPro;
         private System.Windows.Forms.TextBox txtNombre;

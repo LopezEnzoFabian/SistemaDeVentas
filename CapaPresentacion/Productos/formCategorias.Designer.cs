@@ -42,13 +42,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDescrip = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.dgListarUsuario = new System.Windows.Forms.DataGridView();
+            this.dgListaCategorias = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsearch
@@ -213,21 +213,21 @@
             this.lblDescripcion.TabIndex = 47;
             this.lblDescripcion.Text = "Descripcion";
             // 
-            // dgListarUsuario
+            // dgListaCategorias
             // 
-            this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgListaCategorias.AllowUserToOrderColumns = true;
+            this.dgListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.colIdCate,
             this.colNombre,
             this.Estado,
             this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(12, 282);
-            this.dgListarUsuario.Name = "dgListarUsuario";
-            this.dgListarUsuario.ReadOnly = true;
-            this.dgListarUsuario.Size = new System.Drawing.Size(776, 238);
-            this.dgListarUsuario.TabIndex = 70;
+            this.dgListaCategorias.Location = new System.Drawing.Point(12, 282);
+            this.dgListaCategorias.Name = "dgListaCategorias";
+            this.dgListaCategorias.ReadOnly = true;
+            this.dgListaCategorias.Size = new System.Drawing.Size(776, 238);
+            this.dgListaCategorias.TabIndex = 70;
             // 
             // btnSeleccionar
             // 
@@ -276,7 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(800, 529);
-            this.Controls.Add(this.dgListarUsuario);
+            this.Controls.Add(this.dgListaCategorias);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
             this.Controls.Add(this.btnGuardar);
@@ -294,7 +294,7 @@
             this.Name = "formCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.formCategorias_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,7 +316,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDescrip;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.DataGridView dgListarUsuario;
+        private System.Windows.Forms.DataGridView dgListaCategorias;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;

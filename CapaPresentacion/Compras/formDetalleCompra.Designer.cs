@@ -35,28 +35,28 @@
             this.lblRazonSoc = new System.Windows.Forms.Label();
             this.lblNumDoc = new System.Windows.Forms.Label();
             this.gbInfoCompra = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
-            this.lblRegistrarCompra = new System.Windows.Forms.Label();
+            this.lblDetalleCompra = new System.Windows.Forms.Label();
             this.ibtnBuscar = new FontAwesome.Sharp.IconButton();
             this.ibtnLimpiar = new FontAwesome.Sharp.IconButton();
             this.txtDocNum = new System.Windows.Forms.TextBox();
             this.lblDocNum = new System.Windows.Forms.Label();
-            this.dgListarUsuario = new System.Windows.Forms.DataGridView();
+            this.dgDetalleCompra = new System.Windows.Forms.DataGridView();
             this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotalPag = new System.Windows.Forms.Label();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ibtnAgregar = new FontAwesome.Sharp.IconButton();
+            this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
             this.gbInfoProve.SuspendLayout();
             this.gbInfoCompra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInfoProve
@@ -125,9 +125,9 @@
             // gbInfoCompra
             // 
             this.gbInfoCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.gbInfoCompra.Controls.Add(this.label1);
+            this.gbInfoCompra.Controls.Add(this.lblUsuario);
             this.gbInfoCompra.Controls.Add(this.textBox2);
-            this.gbInfoCompra.Controls.Add(this.textBox1);
+            this.gbInfoCompra.Controls.Add(this.txtUsuario);
             this.gbInfoCompra.Controls.Add(this.lblTipoDoc);
             this.gbInfoCompra.Controls.Add(this.lblFecha);
             this.gbInfoCompra.Controls.Add(this.txtFecha);
@@ -139,14 +139,14 @@
             this.gbInfoCompra.TabStop = false;
             this.gbInfoCompra.Text = "información de compra";
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Tipo Documento";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(345, 26);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "Usuario";
             // 
             // textBox2
             // 
@@ -155,12 +155,12 @@
             this.textBox2.Size = new System.Drawing.Size(130, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtUsuario.Location = new System.Drawing.Point(348, 42);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(130, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
             // lblTipoDoc
             // 
@@ -187,16 +187,16 @@
             this.txtFecha.Size = new System.Drawing.Size(130, 20);
             this.txtFecha.TabIndex = 1;
             // 
-            // lblRegistrarCompra
+            // lblDetalleCompra
             // 
-            this.lblRegistrarCompra.BackColor = System.Drawing.Color.Black;
-            this.lblRegistrarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrarCompra.ForeColor = System.Drawing.Color.White;
-            this.lblRegistrarCompra.Location = new System.Drawing.Point(105, 21);
-            this.lblRegistrarCompra.Name = "lblRegistrarCompra";
-            this.lblRegistrarCompra.Size = new System.Drawing.Size(194, 28);
-            this.lblRegistrarCompra.TabIndex = 5;
-            this.lblRegistrarCompra.Text = "Detalle de compra";
+            this.lblDetalleCompra.BackColor = System.Drawing.Color.Black;
+            this.lblDetalleCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetalleCompra.ForeColor = System.Drawing.Color.White;
+            this.lblDetalleCompra.Location = new System.Drawing.Point(105, 21);
+            this.lblDetalleCompra.Name = "lblDetalleCompra";
+            this.lblDetalleCompra.Size = new System.Drawing.Size(194, 28);
+            this.lblDetalleCompra.TabIndex = 5;
+            this.lblDetalleCompra.Text = "Detalle de compra";
             // 
             // ibtnBuscar
             // 
@@ -243,21 +243,21 @@
             this.lblDocNum.TabIndex = 49;
             this.lblDocNum.Text = "Numero de documento";
             // 
-            // dgListarUsuario
+            // dgDetalleCompra
             // 
-            this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
-            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgDetalleCompra.AllowUserToOrderColumns = true;
+            this.dgDetalleCompra.BackgroundColor = System.Drawing.Color.White;
+            this.dgDetalleCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDetalleCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colProducto,
             this.colPrecioCompra,
             this.colCant,
             this.colSubTotal});
-            this.dgListarUsuario.Location = new System.Drawing.Point(101, 266);
-            this.dgListarUsuario.Name = "dgListarUsuario";
-            this.dgListarUsuario.ReadOnly = true;
-            this.dgListarUsuario.Size = new System.Drawing.Size(562, 138);
-            this.dgListarUsuario.TabIndex = 50;
+            this.dgDetalleCompra.Location = new System.Drawing.Point(101, 266);
+            this.dgDetalleCompra.Name = "dgDetalleCompra";
+            this.dgDetalleCompra.ReadOnly = true;
+            this.dgDetalleCompra.Size = new System.Drawing.Size(562, 138);
+            this.dgDetalleCompra.TabIndex = 50;
             // 
             // colProducto
             // 
@@ -290,15 +290,15 @@
             this.colSubTotal.ReadOnly = true;
             this.colSubTotal.Width = 101;
             // 
-            // lblTotalPag
+            // lblMontoTotal
             // 
-            this.lblTotalPag.AutoSize = true;
-            this.lblTotalPag.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalPag.Location = new System.Drawing.Point(98, 419);
-            this.lblTotalPag.Name = "lblTotalPag";
-            this.lblTotalPag.Size = new System.Drawing.Size(64, 13);
-            this.lblTotalPag.TabIndex = 52;
-            this.lblTotalPag.Text = "Monto Total";
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMontoTotal.Location = new System.Drawing.Point(98, 419);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(64, 13);
+            this.lblMontoTotal.TabIndex = 52;
+            this.lblMontoTotal.Text = "Monto Total";
             // 
             // textBox3
             // 
@@ -308,21 +308,21 @@
             this.textBox3.TabIndex = 51;
             this.textBox3.Text = "0";
             // 
-            // ibtnAgregar
+            // ibtnPDFDetalleCompra
             // 
-            this.ibtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnAgregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.ibtnAgregar.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.ibtnAgregar.IconColor = System.Drawing.Color.White;
-            this.ibtnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnAgregar.IconSize = 30;
-            this.ibtnAgregar.Location = new System.Drawing.Point(540, 419);
-            this.ibtnAgregar.Name = "ibtnAgregar";
-            this.ibtnAgregar.Size = new System.Drawing.Size(123, 36);
-            this.ibtnAgregar.TabIndex = 53;
-            this.ibtnAgregar.Text = "descargar PDF";
-            this.ibtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnAgregar.UseVisualStyleBackColor = true;
+            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.White;
+            this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnPDFDetalleCompra.IconSize = 30;
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(540, 419);
+            this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 36);
+            this.ibtnPDFDetalleCompra.TabIndex = 53;
+            this.ibtnPDFDetalleCompra.Text = "descargar PDF";
+            this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = true;
             // 
             // formDetalleCompra
             // 
@@ -330,15 +330,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(753, 461);
-            this.Controls.Add(this.ibtnAgregar);
-            this.Controls.Add(this.lblTotalPag);
+            this.Controls.Add(this.ibtnPDFDetalleCompra);
+            this.Controls.Add(this.lblMontoTotal);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dgListarUsuario);
+            this.Controls.Add(this.dgDetalleCompra);
             this.Controls.Add(this.lblDocNum);
             this.Controls.Add(this.ibtnBuscar);
             this.Controls.Add(this.ibtnLimpiar);
             this.Controls.Add(this.txtDocNum);
-            this.Controls.Add(this.lblRegistrarCompra);
+            this.Controls.Add(this.lblDetalleCompra);
             this.Controls.Add(this.gbInfoProve);
             this.Controls.Add(this.gbInfoCompra);
             this.Name = "formDetalleCompra";
@@ -348,7 +348,7 @@
             this.gbInfoProve.PerformLayout();
             this.gbInfoCompra.ResumeLayout(false);
             this.gbInfoCompra.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,18 +366,18 @@
         private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.Label lblRegistrarCompra;
+        private System.Windows.Forms.Label lblDetalleCompra;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
         private FontAwesome.Sharp.IconButton ibtnBuscar;
         private FontAwesome.Sharp.IconButton ibtnLimpiar;
         private System.Windows.Forms.TextBox txtDocNum;
         private System.Windows.Forms.Label lblDocNum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgListarUsuario;
-        private System.Windows.Forms.Label lblTotalPag;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.DataGridView dgDetalleCompra;
+        private System.Windows.Forms.Label lblMontoTotal;
         private System.Windows.Forms.TextBox textBox3;
-        private FontAwesome.Sharp.IconButton ibtnAgregar;
+        private FontAwesome.Sharp.IconButton ibtnPDFDetalleCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCant;

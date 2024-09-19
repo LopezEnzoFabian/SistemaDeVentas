@@ -47,7 +47,7 @@ namespace CapaPresentacion
             formulario.Dock = DockStyle.Fill;
 
 
-            panelCompras.Controls.Add(formulario);
+            panelVentas.Controls.Add(formulario);
             formulario.Show();
 
         }
