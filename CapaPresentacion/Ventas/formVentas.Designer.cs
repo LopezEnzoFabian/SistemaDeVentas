@@ -48,7 +48,7 @@
             this.ibtnDetalleVenta.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.ibtnDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnDetalleVenta.Location = new System.Drawing.Point(365, 12);
+            this.ibtnDetalleVenta.Location = new System.Drawing.Point(352, 4);
             this.ibtnDetalleVenta.Name = "ibtnDetalleVenta";
             this.ibtnDetalleVenta.Size = new System.Drawing.Size(248, 40);
             this.ibtnDetalleVenta.TabIndex = 5;
@@ -64,7 +64,7 @@
             this.ibtnRegistrarVenta.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.ibtnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(140, 12);
+            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(150, 4);
             this.ibtnRegistrarVenta.Name = "ibtnRegistrarVenta";
             this.ibtnRegistrarVenta.Size = new System.Drawing.Size(198, 40);
             this.ibtnRegistrarVenta.TabIndex = 4;

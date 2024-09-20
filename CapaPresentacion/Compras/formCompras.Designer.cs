@@ -41,7 +41,7 @@
             this.ibtnRegistrarCom.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnRegistrarCom.IconColor = System.Drawing.Color.Black;
             this.ibtnRegistrarCom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnRegistrarCom.Location = new System.Drawing.Point(200, 10);
+            this.ibtnRegistrarCom.Location = new System.Drawing.Point(150, 4);
             this.ibtnRegistrarCom.Name = "ibtnRegistrarCom";
             this.ibtnRegistrarCom.Size = new System.Drawing.Size(151, 40);
             this.ibtnRegistrarCom.TabIndex = 1;
@@ -58,7 +58,7 @@
             this.ibtnVerDetalle.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnVerDetalle.IconColor = System.Drawing.Color.Black;
             this.ibtnVerDetalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnVerDetalle.Location = new System.Drawing.Point(402, 10);
+            this.ibtnVerDetalle.Location = new System.Drawing.Point(352, 4);
             this.ibtnVerDetalle.Name = "ibtnVerDetalle";
             this.ibtnVerDetalle.Size = new System.Drawing.Size(151, 40);
             this.ibtnVerDetalle.TabIndex = 2;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.panelCompras);
             this.Controls.Add(this.ibtnVerDetalle);
             this.Controls.Add(this.ibtnRegistrarCom);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "formCompras";
             this.Text = "formCompras";

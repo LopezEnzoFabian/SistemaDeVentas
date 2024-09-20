@@ -81,7 +81,7 @@
             this.btnVentasRepo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnVentasRepo.IconColor = System.Drawing.Color.Black;
             this.btnVentasRepo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVentasRepo.Location = new System.Drawing.Point(389, 5);
+            this.btnVentasRepo.Location = new System.Drawing.Point(368, 4);
             this.btnVentasRepo.Name = "btnVentasRepo";
             this.btnVentasRepo.Size = new System.Drawing.Size(203, 40);
             this.btnVentasRepo.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.btnComprasRepo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnComprasRepo.IconColor = System.Drawing.Color.Black;
             this.btnComprasRepo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnComprasRepo.Location = new System.Drawing.Point(171, 5);
+            this.btnComprasRepo.Location = new System.Drawing.Point(150, 4);
             this.btnComprasRepo.Name = "btnComprasRepo";
             this.btnComprasRepo.Size = new System.Drawing.Size(212, 40);
             this.btnComprasRepo.TabIndex = 6;

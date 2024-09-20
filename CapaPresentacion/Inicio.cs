@@ -27,7 +27,7 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
@@ -95,6 +95,16 @@ namespace CapaPresentacion
         private void menuAcercade_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new formInfo());
+        }
+
+        private void ibtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // Minimizar el formulario
         }
     }
 }

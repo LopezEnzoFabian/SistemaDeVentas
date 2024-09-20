@@ -95,7 +95,7 @@
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.ForeColor = System.Drawing.Color.White;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
             this.btnsearch.Location = new System.Drawing.Point(145, 46);
@@ -203,7 +203,7 @@
             this.ibtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ibtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscar.IconColor = System.Drawing.Color.White;
+            this.ibtnBuscar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnBuscar.IconSize = 20;
             this.ibtnBuscar.Location = new System.Drawing.Point(513, 60);
@@ -216,7 +216,7 @@
             // 
             this.ibtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.ibtnLimpiar.IconColor = System.Drawing.Color.White;
+            this.ibtnLimpiar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLimpiar.IconSize = 20;
             this.ibtnLimpiar.Location = new System.Drawing.Point(550, 62);
@@ -311,9 +311,9 @@
             // ibtnPDFDetalleCompra
             // 
             this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
             this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.White;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Aqua;
             this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnPDFDetalleCompra.IconSize = 30;
             this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(540, 419);

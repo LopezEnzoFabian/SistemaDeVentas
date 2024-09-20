@@ -79,7 +79,7 @@
             // 
             this.lblTotalPag.AutoSize = true;
             this.lblTotalPag.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPag.Location = new System.Drawing.Point(694, 226);
+            this.lblTotalPag.Location = new System.Drawing.Point(1, 496);
             this.lblTotalPag.Name = "lblTotalPag";
             this.lblTotalPag.Size = new System.Drawing.Size(70, 13);
             this.lblTotalPag.TabIndex = 51;
@@ -87,39 +87,42 @@
             // 
             // txtTotalPagar
             // 
-            this.txtTotalPagar.Location = new System.Drawing.Point(697, 242);
+            this.txtTotalPagar.Location = new System.Drawing.Point(4, 512);
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(75, 20);
             this.txtTotalPagar.TabIndex = 50;
             // 
             // ibtnRegistrarVenta
             // 
-            this.ibtnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnRegistrarVenta.ForeColor = System.Drawing.Color.White;
+            this.ibtnRegistrarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnRegistrarVenta.ForeColor = System.Drawing.Color.Aqua;
             this.ibtnRegistrarVenta.IconChar = FontAwesome.Sharp.IconChar.Ticket;
-            this.ibtnRegistrarVenta.IconColor = System.Drawing.Color.White;
+            this.ibtnRegistrarVenta.IconColor = System.Drawing.Color.Aqua;
             this.ibtnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(697, 366);
+            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(560, 355);
             this.ibtnRegistrarVenta.Name = "ibtnRegistrarVenta";
-            this.ibtnRegistrarVenta.Size = new System.Drawing.Size(75, 65);
+            this.ibtnRegistrarVenta.Size = new System.Drawing.Size(78, 75);
             this.ibtnRegistrarVenta.TabIndex = 49;
-            this.ibtnRegistrarVenta.Text = "Registrar";
+            this.ibtnRegistrarVenta.Text = "Registrar venta";
             this.ibtnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ibtnRegistrarVenta.UseVisualStyleBackColor = true;
             // 
             // ibtnAgregarVenta
             // 
-            this.ibtnAgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnAgregarVenta.ForeColor = System.Drawing.Color.White;
+            this.ibtnAgregarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnAgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnAgregarVenta.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.ibtnAgregarVenta.ForeColor = System.Drawing.Color.Aqua;
             this.ibtnAgregarVenta.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.ibtnAgregarVenta.IconColor = System.Drawing.Color.White;
+            this.ibtnAgregarVenta.IconColor = System.Drawing.Color.Aqua;
             this.ibtnAgregarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAgregarVenta.IconSize = 35;
-            this.ibtnAgregarVenta.Location = new System.Drawing.Point(697, 145);
+            this.ibtnAgregarVenta.Location = new System.Drawing.Point(298, 240);
             this.ibtnAgregarVenta.Name = "ibtnAgregarVenta";
-            this.ibtnAgregarVenta.Size = new System.Drawing.Size(75, 53);
+            this.ibtnAgregarVenta.Size = new System.Drawing.Size(112, 53);
             this.ibtnAgregarVenta.TabIndex = 48;
-            this.ibtnAgregarVenta.Text = "Agregar";
+            this.ibtnAgregarVenta.Text = "Agregar prodcuto";
             this.ibtnAgregarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ibtnAgregarVenta.UseVisualStyleBackColor = true;
             // 
@@ -136,10 +139,10 @@
             this.colCantidad,
             this.colSubTotal,
             this.colEliminarPro});
-            this.dgRegistrarVenta.Location = new System.Drawing.Point(12, 226);
+            this.dgRegistrarVenta.Location = new System.Drawing.Point(4, 299);
             this.dgRegistrarVenta.Name = "dgRegistrarVenta";
             this.dgRegistrarVenta.ReadOnly = true;
-            this.dgRegistrarVenta.Size = new System.Drawing.Size(667, 205);
+            this.dgRegistrarVenta.Size = new System.Drawing.Size(550, 178);
             this.dgRegistrarVenta.TabIndex = 47;
             // 
             // colIdProducto
@@ -212,9 +215,9 @@
             this.gbInfoProducto.Controls.Add(this.txtProducto);
             this.gbInfoProducto.Controls.Add(this.txtCodProd);
             this.gbInfoProducto.ForeColor = System.Drawing.Color.White;
-            this.gbInfoProducto.Location = new System.Drawing.Point(12, 133);
+            this.gbInfoProducto.Location = new System.Drawing.Point(14, 132);
             this.gbInfoProducto.Name = "gbInfoProducto";
-            this.gbInfoProducto.Size = new System.Drawing.Size(667, 87);
+            this.gbInfoProducto.Size = new System.Drawing.Size(624, 102);
             this.gbInfoProducto.TabIndex = 46;
             this.gbInfoProducto.TabStop = false;
             this.gbInfoProducto.Text = "información de producto";
@@ -222,7 +225,7 @@
             // lblCant
             // 
             this.lblCant.AutoSize = true;
-            this.lblCant.Location = new System.Drawing.Point(569, 31);
+            this.lblCant.Location = new System.Drawing.Point(509, 32);
             this.lblCant.Name = "lblCant";
             this.lblCant.Size = new System.Drawing.Size(49, 13);
             this.lblCant.TabIndex = 52;
@@ -231,7 +234,7 @@
             // lblPrecioVen
             // 
             this.lblPrecioVen.AutoSize = true;
-            this.lblPrecioVen.Location = new System.Drawing.Point(474, 31);
+            this.lblPrecioVen.Location = new System.Drawing.Point(414, 32);
             this.lblPrecioVen.Name = "lblPrecioVen";
             this.lblPrecioVen.Size = new System.Drawing.Size(68, 13);
             this.lblPrecioVen.TabIndex = 51;
@@ -240,7 +243,7 @@
             // lblPrecioCom
             // 
             this.lblPrecioCom.AutoSize = true;
-            this.lblPrecioCom.Location = new System.Drawing.Point(381, 31);
+            this.lblPrecioCom.Location = new System.Drawing.Point(321, 32);
             this.lblPrecioCom.Name = "lblPrecioCom";
             this.lblPrecioCom.Size = new System.Drawing.Size(75, 13);
             this.lblPrecioCom.TabIndex = 50;
@@ -266,7 +269,7 @@
             // 
             // nudCant
             // 
-            this.nudCant.Location = new System.Drawing.Point(572, 47);
+            this.nudCant.Location = new System.Drawing.Point(512, 48);
             this.nudCant.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -293,7 +296,7 @@
             this.ibtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnSearch.ForeColor = System.Drawing.Color.White;
             this.ibtnSearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnSearch.IconColor = System.Drawing.Color.White;
+            this.ibtnSearch.IconColor = System.Drawing.Color.Aqua;
             this.ibtnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSearch.IconSize = 20;
             this.ibtnSearch.Location = new System.Drawing.Point(143, 48);
@@ -304,14 +307,14 @@
             // 
             // txtPrecioVen
             // 
-            this.txtPrecioVen.Location = new System.Drawing.Point(477, 47);
+            this.txtPrecioVen.Location = new System.Drawing.Point(417, 48);
             this.txtPrecioVen.Name = "txtPrecioVen";
             this.txtPrecioVen.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioVen.TabIndex = 5;
             // 
             // txtPrecioCom
             // 
-            this.txtPrecioCom.Location = new System.Drawing.Point(384, 47);
+            this.txtPrecioCom.Location = new System.Drawing.Point(324, 48);
             this.txtPrecioCom.Name = "txtPrecioCom";
             this.txtPrecioCom.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioCom.TabIndex = 4;
@@ -320,14 +323,14 @@
             // 
             this.txtProducto.Location = new System.Drawing.Point(188, 48);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(190, 20);
+            this.txtProducto.Size = new System.Drawing.Size(122, 20);
             this.txtProducto.TabIndex = 3;
             // 
             // txtCodProd
             // 
             this.txtCodProd.Location = new System.Drawing.Point(11, 48);
             this.txtCodProd.Name = "txtCodProd";
-            this.txtCodProd.Size = new System.Drawing.Size(128, 20);
+            this.txtCodProd.Size = new System.Drawing.Size(126, 20);
             this.txtCodProd.TabIndex = 2;
             // 
             // gbInfoCliente
@@ -339,25 +342,25 @@
             this.gbInfoCliente.Controls.Add(this.lblNombreCompleto);
             this.gbInfoCliente.Controls.Add(this.lblNumDoc);
             this.gbInfoCliente.ForeColor = System.Drawing.Color.White;
-            this.gbInfoCliente.Location = new System.Drawing.Point(330, 40);
+            this.gbInfoCliente.Location = new System.Drawing.Point(332, 39);
             this.gbInfoCliente.Name = "gbInfoCliente";
-            this.gbInfoCliente.Size = new System.Drawing.Size(349, 87);
+            this.gbInfoCliente.Size = new System.Drawing.Size(306, 100);
             this.gbInfoCliente.TabIndex = 45;
             this.gbInfoCliente.TabStop = false;
             this.gbInfoCliente.Text = "información del cliente";
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(182, 53);
+            this.txtNombreCliente.Location = new System.Drawing.Point(161, 53);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(147, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(132, 20);
             this.txtNombreCliente.TabIndex = 48;
             // 
             // txtNumDoc
             // 
             this.txtNumDoc.Location = new System.Drawing.Point(9, 53);
             this.txtNumDoc.Name = "txtNumDoc";
-            this.txtNumDoc.Size = new System.Drawing.Size(130, 20);
+            this.txtNumDoc.Size = new System.Drawing.Size(109, 20);
             this.txtNumDoc.TabIndex = 47;
             // 
             // btnsearch
@@ -366,10 +369,10 @@
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.ForeColor = System.Drawing.Color.White;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(145, 53);
+            this.btnsearch.Location = new System.Drawing.Point(124, 53);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 20);
             this.btnsearch.TabIndex = 46;
@@ -378,7 +381,7 @@
             // lblNombreCompleto
             // 
             this.lblNombreCompleto.AutoSize = true;
-            this.lblNombreCompleto.Location = new System.Drawing.Point(179, 33);
+            this.lblNombreCompleto.Location = new System.Drawing.Point(158, 33);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
             this.lblNombreCompleto.Size = new System.Drawing.Size(90, 13);
             this.lblNombreCompleto.TabIndex = 1;
@@ -403,7 +406,7 @@
             this.gbInfoVenta.ForeColor = System.Drawing.Color.White;
             this.gbInfoVenta.Location = new System.Drawing.Point(12, 40);
             this.gbInfoVenta.Name = "gbInfoVenta";
-            this.gbInfoVenta.Size = new System.Drawing.Size(312, 87);
+            this.gbInfoVenta.Size = new System.Drawing.Size(312, 100);
             this.gbInfoVenta.TabIndex = 44;
             this.gbInfoVenta.TabStop = false;
             this.gbInfoVenta.Text = "información de la venta";
@@ -456,7 +459,7 @@
             // 
             this.lblPagaCon.AutoSize = true;
             this.lblPagaCon.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPagaCon.Location = new System.Drawing.Point(694, 265);
+            this.lblPagaCon.Location = new System.Drawing.Point(101, 496);
             this.lblPagaCon.Name = "lblPagaCon";
             this.lblPagaCon.Size = new System.Drawing.Size(59, 13);
             this.lblPagaCon.TabIndex = 52;
@@ -464,14 +467,14 @@
             // 
             // txtPagaCon
             // 
-            this.txtPagaCon.Location = new System.Drawing.Point(695, 281);
+            this.txtPagaCon.Location = new System.Drawing.Point(104, 512);
             this.txtPagaCon.Name = "txtPagaCon";
             this.txtPagaCon.Size = new System.Drawing.Size(77, 20);
             this.txtPagaCon.TabIndex = 53;
             // 
             // txtCambio
             // 
-            this.txtCambio.Location = new System.Drawing.Point(695, 323);
+            this.txtCambio.Location = new System.Drawing.Point(203, 512);
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.Size = new System.Drawing.Size(77, 20);
             this.txtCambio.TabIndex = 55;
@@ -480,7 +483,7 @@
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCambio.Location = new System.Drawing.Point(694, 307);
+            this.lblCambio.Location = new System.Drawing.Point(202, 496);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(42, 13);
             this.lblCambio.TabIndex = 54;
@@ -491,7 +494,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(784, 443);
+            this.ClientSize = new System.Drawing.Size(644, 539);
             this.Controls.Add(this.txtCambio);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.txtPagaCon);

@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ibtnSalir = new FontAwesome.Sharp.IconButton();
             this.LoginBTN = new RoundedButton();
             this.rtxtContraseña = new RoundedTextBox();
             this.rtxtCorreo = new RoundedTextBox();
@@ -69,6 +70,24 @@
             this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Contraseña";
+            // 
+            // ibtnSalir
+            // 
+            this.ibtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnSalir.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.ibtnSalir.IconColor = System.Drawing.Color.Cyan;
+            this.ibtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnSalir.IconSize = 40;
+            this.ibtnSalir.Location = new System.Drawing.Point(428, 304);
+            this.ibtnSalir.Name = "ibtnSalir";
+            this.ibtnSalir.Size = new System.Drawing.Size(61, 59);
+            this.ibtnSalir.TabIndex = 6;
+            this.ibtnSalir.Text = "Salir";
+            this.ibtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ibtnSalir.UseVisualStyleBackColor = true;
+            this.ibtnSalir.Click += new System.EventHandler(this.ibtnSalir_Click);
             // 
             // LoginBTN
             // 
@@ -112,12 +131,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(540, 375);
+            this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.LoginBTN);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rtxtContraseña);
             this.Controls.Add(this.rtxtCorreo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -135,5 +157,6 @@
         private RoundedButton LoginBTN;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton ibtnSalir;
     }
 }

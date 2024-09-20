@@ -41,6 +41,7 @@
             this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSalir = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +52,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contenedor.BackColor = System.Drawing.Color.White;
-            this.contenedor.Location = new System.Drawing.Point(172, -1);
+            this.contenedor.Location = new System.Drawing.Point(172, 31);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(660, 610);
+            this.contenedor.Size = new System.Drawing.Size(660, 578);
             this.contenedor.TabIndex = 1;
             // 
             // menuStrip1
@@ -187,7 +188,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 173);
+            this.pictureBox1.Size = new System.Drawing.Size(173, 191);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -208,6 +209,22 @@
             this.ibtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ibtnSalir.UseVisualStyleBackColor = true;
+            this.ibtnSalir.Click += new System.EventHandler(this.ibtnSalir_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(796, -1);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(36, 31);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Inicio
             // 
@@ -215,11 +232,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(834, 611);
+            this.ControlBox = false;
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuStrip1);
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ElectroHub";
@@ -244,6 +264,7 @@
         private FontAwesome.Sharp.IconMenuItem menuUsuarios;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton ibtnSalir;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
 

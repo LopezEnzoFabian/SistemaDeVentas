@@ -223,7 +223,7 @@
             this.colNombre,
             this.Estado,
             this.EstadoValor});
-            this.dgListaCategorias.Location = new System.Drawing.Point(2, 303);
+            this.dgListaCategorias.Location = new System.Drawing.Point(2, 292);
             this.dgListaCategorias.Name = "dgListaCategorias";
             this.dgListaCategorias.ReadOnly = true;
             this.dgListaCategorias.Size = new System.Drawing.Size(623, 185);
