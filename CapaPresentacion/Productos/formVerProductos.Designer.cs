@@ -72,7 +72,7 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(513, 0);
+            this.btnsearch.Location = new System.Drawing.Point(485, 31);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 70;
@@ -85,7 +85,7 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(550, 2);
+            this.btnclean.Location = new System.Drawing.Point(522, 33);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(39, 28);
             this.btnclean.TabIndex = 69;
@@ -98,7 +98,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 20;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(559, 75);
+            this.btnGuardar.Location = new System.Drawing.Point(475, 96);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 25);
             this.btnGuardar.TabIndex = 68;
@@ -114,7 +114,7 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 20;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(559, 121);
+            this.btnEditar.Location = new System.Drawing.Point(475, 142);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
             this.btnEditar.TabIndex = 67;
@@ -129,7 +129,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 20;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(559, 166);
+            this.btnEliminar.Location = new System.Drawing.Point(475, 187);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 25);
             this.btnEliminar.TabIndex = 66;
@@ -141,14 +141,14 @@
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(377, 88);
+            this.cbCategoria.Location = new System.Drawing.Point(251, 119);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(131, 21);
             this.cbCategoria.TabIndex = 65;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(71, 4);
+            this.txtID.Location = new System.Drawing.Point(43, 35);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 20);
             this.txtID.TabIndex = 64;
@@ -160,18 +160,19 @@
             this.lblListaPorducto.BackColor = System.Drawing.SystemColors.Window;
             this.lblListaPorducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblListaPorducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaPorducto.Location = new System.Drawing.Point(28, 217);
+            this.lblListaPorducto.Location = new System.Drawing.Point(216, 248);
             this.lblListaPorducto.Name = "lblListaPorducto";
             this.lblListaPorducto.Size = new System.Drawing.Size(178, 28);
             this.lblListaPorducto.TabIndex = 63;
             this.lblListaPorducto.Text = "Lista de productos";
+            this.lblListaPorducto.Click += new System.EventHandler(this.lblListaPorducto_Click);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCategoria.Location = new System.Drawing.Point(374, 65);
+            this.lblCategoria.Location = new System.Drawing.Point(248, 96);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(65, 17);
             this.lblCategoria.TabIndex = 62;
@@ -182,7 +183,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEstado.Location = new System.Drawing.Point(374, 113);
+            this.lblEstado.Location = new System.Drawing.Point(248, 144);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(48, 17);
             this.lblEstado.TabIndex = 61;
@@ -192,7 +193,7 @@
             // 
             this.cbEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(377, 134);
+            this.cbEstado.Location = new System.Drawing.Point(251, 165);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(131, 25);
             this.cbEstado.TabIndex = 60;
@@ -202,7 +203,7 @@
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(238, 4);
+            this.cbFiltro.Location = new System.Drawing.Point(210, 35);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(121, 25);
             this.cbFiltro.TabIndex = 59;
@@ -210,7 +211,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(377, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(349, 35);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 58;
@@ -220,7 +221,7 @@
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltro.Location = new System.Drawing.Point(152, 8);
+            this.lblFiltro.Location = new System.Drawing.Point(124, 39);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(66, 17);
             this.lblFiltro.TabIndex = 57;
@@ -243,9 +244,9 @@
             this.colPrecioVenta,
             this.colEstadoValor,
             this.ColEstad});
-            this.dgListarPorductos.Location = new System.Drawing.Point(12, 248);
+            this.dgListarPorductos.Location = new System.Drawing.Point(3, 279);
             this.dgListarPorductos.Name = "dgListarPorductos";
-            this.dgListarPorductos.Size = new System.Drawing.Size(745, 238);
+            this.dgListarPorductos.Size = new System.Drawing.Size(626, 224);
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
@@ -332,7 +333,7 @@
             // txtDescri
             // 
             this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescri.Location = new System.Drawing.Point(200, 164);
+            this.txtDescri.Location = new System.Drawing.Point(74, 195);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(131, 25);
             this.txtDescri.TabIndex = 53;
@@ -340,7 +341,7 @@
             // txtCodigoPro
             // 
             this.txtCodigoPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPro.Location = new System.Drawing.Point(200, 65);
+            this.txtCodigoPro.Location = new System.Drawing.Point(74, 96);
             this.txtCodigoPro.Name = "txtCodigoPro";
             this.txtCodigoPro.Size = new System.Drawing.Size(131, 25);
             this.txtCodigoPro.TabIndex = 50;
@@ -349,7 +350,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(200, 114);
+            this.txtNombre.Location = new System.Drawing.Point(74, 145);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(131, 25);
             this.txtNombre.TabIndex = 49;
@@ -359,7 +360,7 @@
             this.lblDescri.AutoSize = true;
             this.lblDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescri.Location = new System.Drawing.Point(197, 143);
+            this.lblDescri.Location = new System.Drawing.Point(71, 174);
             this.lblDescri.Name = "lblDescri";
             this.lblDescri.Size = new System.Drawing.Size(76, 17);
             this.lblDescri.TabIndex = 48;
@@ -370,7 +371,7 @@
             this.lblCodPro.AutoSize = true;
             this.lblCodPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodPro.Location = new System.Drawing.Point(197, 45);
+            this.lblCodPro.Location = new System.Drawing.Point(71, 76);
             this.lblCodPro.Name = "lblCodPro";
             this.lblCodPro.Size = new System.Drawing.Size(51, 17);
             this.lblCodPro.TabIndex = 47;
@@ -381,7 +382,7 @@
             this.lblNomPro.AutoSize = true;
             this.lblNomPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNomPro.Location = new System.Drawing.Point(197, 94);
+            this.lblNomPro.Location = new System.Drawing.Point(71, 125);
             this.lblNomPro.Name = "lblNomPro";
             this.lblNomPro.Size = new System.Drawing.Size(57, 17);
             this.lblNomPro.TabIndex = 46;
@@ -393,7 +394,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(769, 487);
+            this.ClientSize = new System.Drawing.Size(627, 481);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
             this.Controls.Add(this.btnGuardar);

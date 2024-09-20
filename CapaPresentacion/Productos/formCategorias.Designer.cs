@@ -59,7 +59,7 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(559, 8);
+            this.btnsearch.Location = new System.Drawing.Point(479, 16);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 69;
@@ -72,7 +72,7 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(596, 10);
+            this.btnclean.Location = new System.Drawing.Point(516, 18);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(39, 28);
             this.btnclean.TabIndex = 68;
@@ -85,7 +85,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 20;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(464, 97);
+            this.btnGuardar.Location = new System.Drawing.Point(386, 93);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 25);
             this.btnGuardar.TabIndex = 67;
@@ -101,7 +101,7 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 20;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(464, 143);
+            this.btnEditar.Location = new System.Drawing.Point(386, 139);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
             this.btnEditar.TabIndex = 66;
@@ -116,7 +116,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 20;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(464, 188);
+            this.btnEliminar.Location = new System.Drawing.Point(386, 184);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 25);
             this.btnEliminar.TabIndex = 65;
@@ -127,7 +127,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(117, 12);
+            this.txtID.Location = new System.Drawing.Point(37, 20);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 20);
             this.txtID.TabIndex = 63;
@@ -139,7 +139,7 @@
             this.lblListaCate.BackColor = System.Drawing.SystemColors.Window;
             this.lblListaCate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblListaCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCate.Location = new System.Drawing.Point(39, 237);
+            this.lblListaCate.Location = new System.Drawing.Point(228, 261);
             this.lblListaCate.Name = "lblListaCate";
             this.lblListaCate.Size = new System.Drawing.Size(172, 28);
             this.lblListaCate.TabIndex = 62;
@@ -150,7 +150,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEstado.Location = new System.Drawing.Point(250, 146);
+            this.lblEstado.Location = new System.Drawing.Point(172, 142);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(48, 17);
             this.lblEstado.TabIndex = 60;
@@ -160,7 +160,7 @@
             // 
             this.cbEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(253, 167);
+            this.cbEstado.Location = new System.Drawing.Point(175, 163);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(131, 25);
             this.cbEstado.TabIndex = 59;
@@ -170,7 +170,7 @@
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(284, 12);
+            this.cbFiltro.Location = new System.Drawing.Point(204, 20);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(121, 25);
             this.cbFiltro.TabIndex = 58;
@@ -178,7 +178,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(423, 12);
+            this.txtBuscar.Location = new System.Drawing.Point(343, 20);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 57;
@@ -188,7 +188,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(198, 16);
+            this.label11.Location = new System.Drawing.Point(118, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 17);
             this.label11.TabIndex = 56;
@@ -197,7 +197,7 @@
             // txtDescrip
             // 
             this.txtDescrip.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescrip.Location = new System.Drawing.Point(253, 117);
+            this.txtDescrip.Location = new System.Drawing.Point(175, 113);
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(131, 25);
             this.txtDescrip.TabIndex = 50;
@@ -207,7 +207,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDescripcion.Location = new System.Drawing.Point(250, 97);
+            this.lblDescripcion.Location = new System.Drawing.Point(172, 93);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(76, 17);
             this.lblDescripcion.TabIndex = 47;
@@ -223,10 +223,10 @@
             this.colNombre,
             this.Estado,
             this.EstadoValor});
-            this.dgListaCategorias.Location = new System.Drawing.Point(12, 282);
+            this.dgListaCategorias.Location = new System.Drawing.Point(2, 303);
             this.dgListaCategorias.Name = "dgListaCategorias";
             this.dgListaCategorias.ReadOnly = true;
-            this.dgListaCategorias.Size = new System.Drawing.Size(776, 238);
+            this.dgListaCategorias.Size = new System.Drawing.Size(623, 185);
             this.dgListaCategorias.TabIndex = 70;
             // 
             // btnSeleccionar
@@ -275,7 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(800, 529);
+            this.ClientSize = new System.Drawing.Size(627, 481);
             this.Controls.Add(this.dgListaCategorias);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);

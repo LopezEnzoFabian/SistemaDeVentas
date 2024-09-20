@@ -27,6 +27,9 @@ namespace CapaPresentacion
 
         }
 
-      
+        private void lblListaPorducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

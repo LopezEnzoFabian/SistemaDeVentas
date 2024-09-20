@@ -35,9 +35,9 @@
             // 
             // panelProductos
             // 
-            this.panelProductos.Location = new System.Drawing.Point(7, 50);
+            this.panelProductos.Location = new System.Drawing.Point(1, 50);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(784, 463);
+            this.panelProductos.Size = new System.Drawing.Size(643, 520);
             this.panelProductos.TabIndex = 6;
             // 
             // ibtnCategorias
@@ -48,7 +48,7 @@
             this.ibtnCategorias.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnCategorias.IconColor = System.Drawing.Color.Black;
             this.ibtnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnCategorias.Location = new System.Drawing.Point(397, 3);
+            this.ibtnCategorias.Location = new System.Drawing.Point(352, 4);
             this.ibtnCategorias.Name = "ibtnCategorias";
             this.ibtnCategorias.Size = new System.Drawing.Size(151, 40);
             this.ibtnCategorias.TabIndex = 5;
@@ -65,7 +65,7 @@
             this.ibtnProductos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnProductos.IconColor = System.Drawing.Color.Black;
             this.ibtnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnProductos.Location = new System.Drawing.Point(195, 3);
+            this.ibtnProductos.Location = new System.Drawing.Point(150, 4);
             this.ibtnProductos.Name = "ibtnProductos";
             this.ibtnProductos.Size = new System.Drawing.Size(151, 40);
             this.ibtnProductos.TabIndex = 4;
@@ -74,16 +74,16 @@
             this.ibtnProductos.UseVisualStyleBackColor = true;
             this.ibtnProductos.Click += new System.EventHandler(this.ibtnProductos_Click);
             // 
-            // Productos
+            // formProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(644, 571);
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.ibtnCategorias);
             this.Controls.Add(this.ibtnProductos);
-            this.Name = "Productos";
+            this.Name = "formProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.ResumeLayout(false);
