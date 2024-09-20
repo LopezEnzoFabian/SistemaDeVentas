@@ -48,10 +48,8 @@
             // 
             // contenedor
             // 
-            this.contenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.contenedor.BackColor = System.Drawing.Color.White;
+            this.contenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.contenedor.Location = new System.Drawing.Point(172, 31);
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(660, 578);
@@ -74,7 +72,7 @@
             this.menuReportes,
             this.menuAcercade});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(-4, 213);
+            this.menuStrip1.Location = new System.Drawing.Point(-4, 220);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(173, 217);
             this.menuStrip1.TabIndex = 2;
@@ -219,7 +217,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(796, -1);
+            this.iconButton1.Location = new System.Drawing.Point(811, -1);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(36, 31);
             this.iconButton1.TabIndex = 0;
@@ -231,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(834, 611);
+            this.ClientSize = new System.Drawing.Size(846, 625);
             this.ControlBox = false;
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.ibtnSalir);
@@ -252,7 +250,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private FontAwesome.Sharp.IconMenuItem menuProductos;
         private FontAwesome.Sharp.IconMenuItem menuCompras;
@@ -265,6 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton ibtnSalir;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel contenedor;
     }
 }
 

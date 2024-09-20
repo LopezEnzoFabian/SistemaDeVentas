@@ -215,7 +215,7 @@
             this.lblListaUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblListaUsuarios.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaUsuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaUsuarios.Location = new System.Drawing.Point(27, 373);
+            this.lblListaUsuarios.Location = new System.Drawing.Point(13, 360);
             this.lblListaUsuarios.Name = "lblListaUsuarios";
             this.lblListaUsuarios.Size = new System.Drawing.Size(160, 26);
             this.lblListaUsuarios.TabIndex = 38;
@@ -317,6 +317,7 @@
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 89;
             // 
             // Estado
             // 
@@ -340,6 +341,7 @@
             this.idRol.Name = "idRol";
             this.idRol.ReadOnly = true;
             this.idRol.Visible = false;
+            this.idRol.Width = 56;
             // 
             // colNombre
             // 
@@ -347,7 +349,7 @@
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 117;
+            this.colNombre.Width = 107;
             // 
             // colContraseña
             // 
@@ -355,6 +357,7 @@
             this.colContraseña.Name = "colContraseña";
             this.colContraseña.ReadOnly = true;
             this.colContraseña.Visible = false;
+            this.colContraseña.Width = 86;
             // 
             // colEmail
             // 
@@ -378,6 +381,7 @@
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.ReadOnly = true;
             this.colUsuario.Visible = false;
+            this.colUsuario.Width = 79;
             // 
             // btnSeleccionar
             // 
@@ -405,7 +409,7 @@
             this.colRol,
             this.Estado,
             this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(16, 418);
+            this.dgListarUsuario.Location = new System.Drawing.Point(12, 389);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.ReadOnly = true;
             this.dgListarUsuario.Size = new System.Drawing.Size(631, 170);
@@ -466,7 +470,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(644, 571);
+            this.ClientSize = new System.Drawing.Size(654, 571);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txt_Confirmpass);
             this.Controls.Add(this.txtEmail);

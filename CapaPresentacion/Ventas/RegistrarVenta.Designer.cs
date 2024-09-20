@@ -59,10 +59,10 @@
             this.lblNombreCompleto = new System.Windows.Forms.Label();
             this.lblNumDoc = new System.Windows.Forms.Label();
             this.gbInfoVenta = new System.Windows.Forms.GroupBox();
-            this.lblTipoDoc = new System.Windows.Forms.Label();
+            this.dtFechaVenta = new System.Windows.Forms.DateTimePicker();
+            this.lblTipoFac = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.cbTIpoDoc = new System.Windows.Forms.ComboBox();
+            this.cbTIpoFac = new System.Windows.Forms.ComboBox();
             this.lblRegistrarVenta = new System.Windows.Forms.Label();
             this.lblPagaCon = new System.Windows.Forms.Label();
             this.txtPagaCon = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@
             // 
             this.lblTotalPag.AutoSize = true;
             this.lblTotalPag.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPag.Location = new System.Drawing.Point(1, 496);
+            this.lblTotalPag.Location = new System.Drawing.Point(557, 291);
             this.lblTotalPag.Name = "lblTotalPag";
             this.lblTotalPag.Size = new System.Drawing.Size(70, 13);
             this.lblTotalPag.TabIndex = 51;
@@ -87,7 +87,7 @@
             // 
             // txtTotalPagar
             // 
-            this.txtTotalPagar.Location = new System.Drawing.Point(4, 512);
+            this.txtTotalPagar.Location = new System.Drawing.Point(560, 307);
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(75, 20);
             this.txtTotalPagar.TabIndex = 50;
@@ -100,7 +100,7 @@
             this.ibtnRegistrarVenta.IconChar = FontAwesome.Sharp.IconChar.Ticket;
             this.ibtnRegistrarVenta.IconColor = System.Drawing.Color.Aqua;
             this.ibtnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(560, 355);
+            this.ibtnRegistrarVenta.Location = new System.Drawing.Point(561, 414);
             this.ibtnRegistrarVenta.Name = "ibtnRegistrarVenta";
             this.ibtnRegistrarVenta.Size = new System.Drawing.Size(78, 75);
             this.ibtnRegistrarVenta.TabIndex = 49;
@@ -142,7 +142,7 @@
             this.dgRegistrarVenta.Location = new System.Drawing.Point(4, 299);
             this.dgRegistrarVenta.Name = "dgRegistrarVenta";
             this.dgRegistrarVenta.ReadOnly = true;
-            this.dgRegistrarVenta.Size = new System.Drawing.Size(550, 178);
+            this.dgRegistrarVenta.Size = new System.Drawing.Size(550, 190);
             this.dgRegistrarVenta.TabIndex = 47;
             // 
             // colIdProducto
@@ -217,7 +217,7 @@
             this.gbInfoProducto.ForeColor = System.Drawing.Color.White;
             this.gbInfoProducto.Location = new System.Drawing.Point(14, 132);
             this.gbInfoProducto.Name = "gbInfoProducto";
-            this.gbInfoProducto.Size = new System.Drawing.Size(624, 102);
+            this.gbInfoProducto.Size = new System.Drawing.Size(624, 87);
             this.gbInfoProducto.TabIndex = 46;
             this.gbInfoProducto.TabStop = false;
             this.gbInfoProducto.Text = "información de producto";
@@ -392,33 +392,40 @@
             this.lblNumDoc.AutoSize = true;
             this.lblNumDoc.Location = new System.Drawing.Point(6, 33);
             this.lblNumDoc.Name = "lblNumDoc";
-            this.lblNumDoc.Size = new System.Drawing.Size(100, 13);
+            this.lblNumDoc.Size = new System.Drawing.Size(23, 13);
             this.lblNumDoc.TabIndex = 0;
-            this.lblNumDoc.Text = "Numero documento";
+            this.lblNumDoc.Text = "Dni";
             // 
             // gbInfoVenta
             // 
             this.gbInfoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.gbInfoVenta.Controls.Add(this.lblTipoDoc);
+            this.gbInfoVenta.Controls.Add(this.dtFechaVenta);
+            this.gbInfoVenta.Controls.Add(this.lblTipoFac);
             this.gbInfoVenta.Controls.Add(this.lblFecha);
-            this.gbInfoVenta.Controls.Add(this.txtFecha);
-            this.gbInfoVenta.Controls.Add(this.cbTIpoDoc);
+            this.gbInfoVenta.Controls.Add(this.cbTIpoFac);
             this.gbInfoVenta.ForeColor = System.Drawing.Color.White;
             this.gbInfoVenta.Location = new System.Drawing.Point(12, 40);
             this.gbInfoVenta.Name = "gbInfoVenta";
-            this.gbInfoVenta.Size = new System.Drawing.Size(312, 100);
+            this.gbInfoVenta.Size = new System.Drawing.Size(312, 86);
             this.gbInfoVenta.TabIndex = 44;
             this.gbInfoVenta.TabStop = false;
             this.gbInfoVenta.Text = "información de la venta";
             // 
-            // lblTipoDoc
+            // dtFechaVenta
             // 
-            this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(154, 33);
-            this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
-            this.lblTipoDoc.TabIndex = 3;
-            this.lblTipoDoc.Text = "Tipo Documento";
+            this.dtFechaVenta.Location = new System.Drawing.Point(9, 54);
+            this.dtFechaVenta.Name = "dtFechaVenta";
+            this.dtFechaVenta.Size = new System.Drawing.Size(130, 20);
+            this.dtFechaVenta.TabIndex = 4;
+            // 
+            // lblTipoFac
+            // 
+            this.lblTipoFac.AutoSize = true;
+            this.lblTipoFac.Location = new System.Drawing.Point(158, 32);
+            this.lblTipoFac.Name = "lblTipoFac";
+            this.lblTipoFac.Size = new System.Drawing.Size(79, 13);
+            this.lblTipoFac.TabIndex = 3;
+            this.lblTipoFac.Text = "Tipo de factura";
             // 
             // lblFecha
             // 
@@ -429,20 +436,13 @@
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             // 
-            // txtFecha
+            // cbTIpoFac
             // 
-            this.txtFecha.Location = new System.Drawing.Point(9, 54);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(130, 20);
-            this.txtFecha.TabIndex = 1;
-            // 
-            // cbTIpoDoc
-            // 
-            this.cbTIpoDoc.FormattingEnabled = true;
-            this.cbTIpoDoc.Location = new System.Drawing.Point(157, 54);
-            this.cbTIpoDoc.Name = "cbTIpoDoc";
-            this.cbTIpoDoc.Size = new System.Drawing.Size(143, 21);
-            this.cbTIpoDoc.TabIndex = 0;
+            this.cbTIpoFac.FormattingEnabled = true;
+            this.cbTIpoFac.Location = new System.Drawing.Point(161, 53);
+            this.cbTIpoFac.Name = "cbTIpoFac";
+            this.cbTIpoFac.Size = new System.Drawing.Size(143, 21);
+            this.cbTIpoFac.TabIndex = 0;
             // 
             // lblRegistrarVenta
             // 
@@ -459,7 +459,7 @@
             // 
             this.lblPagaCon.AutoSize = true;
             this.lblPagaCon.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPagaCon.Location = new System.Drawing.Point(101, 496);
+            this.lblPagaCon.Location = new System.Drawing.Point(557, 330);
             this.lblPagaCon.Name = "lblPagaCon";
             this.lblPagaCon.Size = new System.Drawing.Size(59, 13);
             this.lblPagaCon.TabIndex = 52;
@@ -467,14 +467,14 @@
             // 
             // txtPagaCon
             // 
-            this.txtPagaCon.Location = new System.Drawing.Point(104, 512);
+            this.txtPagaCon.Location = new System.Drawing.Point(560, 346);
             this.txtPagaCon.Name = "txtPagaCon";
             this.txtPagaCon.Size = new System.Drawing.Size(77, 20);
             this.txtPagaCon.TabIndex = 53;
             // 
             // txtCambio
             // 
-            this.txtCambio.Location = new System.Drawing.Point(203, 512);
+            this.txtCambio.Location = new System.Drawing.Point(561, 388);
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.Size = new System.Drawing.Size(77, 20);
             this.txtCambio.TabIndex = 55;
@@ -483,7 +483,7 @@
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCambio.Location = new System.Drawing.Point(202, 496);
+            this.lblCambio.Location = new System.Drawing.Point(560, 372);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(42, 13);
             this.lblCambio.TabIndex = 54;
@@ -494,7 +494,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(644, 539);
+            this.ClientSize = new System.Drawing.Size(644, 500);
             this.Controls.Add(this.txtCambio);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.txtPagaCon);
@@ -550,10 +550,9 @@
         private System.Windows.Forms.Label lblNombreCompleto;
         private System.Windows.Forms.Label lblNumDoc;
         private System.Windows.Forms.GroupBox gbInfoVenta;
-        private System.Windows.Forms.Label lblTipoDoc;
+        private System.Windows.Forms.Label lblTipoFac;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.ComboBox cbTIpoDoc;
+        private System.Windows.Forms.ComboBox cbTIpoFac;
         private System.Windows.Forms.Label lblRegistrarVenta;
         private System.Windows.Forms.Label lblPagaCon;
         private System.Windows.Forms.TextBox txtPagaCon;
@@ -566,5 +565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminarPro;
+        private System.Windows.Forms.DateTimePicker dtFechaVenta;
     }
 }

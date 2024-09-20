@@ -60,6 +60,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDetalleVenta = new System.Windows.Forms.Label();
+            this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDetalleVenta)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,7 +74,7 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(494, 40);
+            this.btnsearch.Location = new System.Drawing.Point(426, 37);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 75;
@@ -86,7 +87,7 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(531, 42);
+            this.btnclean.Location = new System.Drawing.Point(463, 39);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(39, 28);
             this.btnclean.TabIndex = 74;
@@ -95,7 +96,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(358, 44);
+            this.txtBuscar.Location = new System.Drawing.Point(290, 41);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 72;
@@ -105,7 +106,7 @@
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltro.Location = new System.Drawing.Point(204, 52);
+            this.lblFiltro.Location = new System.Drawing.Point(136, 49);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(148, 17);
             this.lblFiltro.TabIndex = 71;
@@ -113,7 +114,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(697, 313);
+            this.textBox3.Location = new System.Drawing.Point(210, 439);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(77, 20);
             this.textBox3.TabIndex = 84;
@@ -122,7 +123,7 @@
             // 
             this.lblTotalCambio.AutoSize = true;
             this.lblTotalCambio.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalCambio.Location = new System.Drawing.Point(696, 297);
+            this.lblTotalCambio.Location = new System.Drawing.Point(209, 423);
             this.lblTotalCambio.Name = "lblTotalCambio";
             this.lblTotalCambio.Size = new System.Drawing.Size(68, 13);
             this.lblTotalCambio.TabIndex = 83;
@@ -130,7 +131,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(697, 268);
+            this.textBox2.Location = new System.Drawing.Point(114, 439);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(77, 20);
             this.textBox2.TabIndex = 82;
@@ -139,7 +140,7 @@
             // 
             this.lblTotalPago.AutoSize = true;
             this.lblTotalPago.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalPago.Location = new System.Drawing.Point(696, 252);
+            this.lblTotalPago.Location = new System.Drawing.Point(113, 423);
             this.lblTotalPago.Name = "lblTotalPago";
             this.lblTotalPago.Size = new System.Drawing.Size(58, 13);
             this.lblTotalPago.TabIndex = 81;
@@ -149,7 +150,7 @@
             // 
             this.lblMontoTotal.AutoSize = true;
             this.lblMontoTotal.ForeColor = System.Drawing.Color.White;
-            this.lblMontoTotal.Location = new System.Drawing.Point(696, 213);
+            this.lblMontoTotal.Location = new System.Drawing.Point(13, 423);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(60, 13);
             this.lblMontoTotal.TabIndex = 80;
@@ -157,7 +158,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(699, 229);
+            this.textBox1.Location = new System.Drawing.Point(16, 439);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(75, 20);
             this.textBox1.TabIndex = 79;
@@ -175,10 +176,10 @@
             this.colCantidad,
             this.colSubTotal,
             this.colEliminarPro});
-            this.dgListaDetalleVenta.Location = new System.Drawing.Point(12, 178);
+            this.dgListaDetalleVenta.Location = new System.Drawing.Point(12, 261);
             this.dgListaDetalleVenta.Name = "dgListaDetalleVenta";
             this.dgListaDetalleVenta.ReadOnly = true;
-            this.dgListaDetalleVenta.Size = new System.Drawing.Size(667, 205);
+            this.dgListaDetalleVenta.Size = new System.Drawing.Size(620, 150);
             this.dgListaDetalleVenta.TabIndex = 77;
             // 
             // colIdProducto
@@ -246,9 +247,9 @@
             this.groupBox2.Controls.Add(this.txtTipoDoc);
             this.groupBox2.Controls.Add(this.txtFechaVenta);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 75);
+            this.groupBox2.Location = new System.Drawing.Point(116, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 87);
+            this.groupBox2.Size = new System.Drawing.Size(433, 87);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "información de venta";
@@ -256,16 +257,16 @@
             // lblPrecioCom
             // 
             this.lblPrecioCom.AutoSize = true;
-            this.lblPrecioCom.Location = new System.Drawing.Point(275, 32);
+            this.lblPrecioCom.Location = new System.Drawing.Point(307, 32);
             this.lblPrecioCom.Name = "lblPrecioCom";
-            this.lblPrecioCom.Size = new System.Drawing.Size(43, 13);
+            this.lblPrecioCom.Size = new System.Drawing.Size(96, 13);
             this.lblPrecioCom.TabIndex = 50;
-            this.lblPrecioCom.Text = "Usuario";
+            this.lblPrecioCom.Text = "Nombre de usuario";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(147, 32);
+            this.lblProducto.Location = new System.Drawing.Point(159, 32);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(99, 13);
             this.lblProducto.TabIndex = 49;
@@ -282,23 +283,26 @@
             // 
             // txtPrecioCom
             // 
-            this.txtPrecioCom.Location = new System.Drawing.Point(278, 48);
+            this.txtPrecioCom.Location = new System.Drawing.Point(310, 48);
             this.txtPrecioCom.Name = "txtPrecioCom";
-            this.txtPrecioCom.Size = new System.Drawing.Size(87, 20);
+            this.txtPrecioCom.ReadOnly = true;
+            this.txtPrecioCom.Size = new System.Drawing.Size(108, 20);
             this.txtPrecioCom.TabIndex = 4;
             // 
             // txtTipoDoc
             // 
-            this.txtTipoDoc.Location = new System.Drawing.Point(150, 48);
+            this.txtTipoDoc.Location = new System.Drawing.Point(162, 48);
             this.txtTipoDoc.Name = "txtTipoDoc";
-            this.txtTipoDoc.Size = new System.Drawing.Size(110, 20);
+            this.txtTipoDoc.ReadOnly = true;
+            this.txtTipoDoc.Size = new System.Drawing.Size(122, 20);
             this.txtTipoDoc.TabIndex = 3;
             // 
             // txtFechaVenta
             // 
             this.txtFechaVenta.Location = new System.Drawing.Point(11, 48);
             this.txtFechaVenta.Name = "txtFechaVenta";
-            this.txtFechaVenta.Size = new System.Drawing.Size(128, 20);
+            this.txtFechaVenta.ReadOnly = true;
+            this.txtFechaVenta.Size = new System.Drawing.Size(124, 20);
             this.txtFechaVenta.TabIndex = 2;
             // 
             // groupBox1
@@ -308,9 +312,9 @@
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(410, 75);
+            this.groupBox1.Location = new System.Drawing.Point(139, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 87);
+            this.groupBox1.Size = new System.Drawing.Size(392, 87);
             this.groupBox1.TabIndex = 85;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "información del cliente";
@@ -318,7 +322,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(147, 32);
+            this.label4.Location = new System.Drawing.Point(215, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 49;
@@ -327,7 +331,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 32);
+            this.label5.Location = new System.Drawing.Point(24, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 13);
             this.label5.TabIndex = 48;
@@ -335,15 +339,17 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(150, 48);
+            this.textBox5.Location = new System.Drawing.Point(218, 48);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(128, 20);
             this.textBox5.TabIndex = 3;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(11, 48);
+            this.textBox6.Location = new System.Drawing.Point(27, 48);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(128, 20);
             this.textBox6.TabIndex = 2;
             // 
@@ -361,18 +367,37 @@
             this.lblDetalleVenta.AutoSize = true;
             this.lblDetalleVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalleVenta.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDetalleVenta.Location = new System.Drawing.Point(294, 9);
+            this.lblDetalleVenta.Location = new System.Drawing.Point(12, 9);
             this.lblDetalleVenta.Name = "lblDetalleVenta";
             this.lblDetalleVenta.Size = new System.Drawing.Size(153, 24);
             this.lblDetalleVenta.TabIndex = 87;
             this.lblDetalleVenta.Text = "Detalle de ventas";
+            // 
+            // ibtnPDFDetalleCompra
+            // 
+            this.ibtnPDFDetalleCompra.AutoSize = true;
+            this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
+            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Aqua;
+            this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnPDFDetalleCompra.IconSize = 30;
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(509, 422);
+            this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 38);
+            this.ibtnPDFDetalleCompra.TabIndex = 88;
+            this.ibtnPDFDetalleCompra.Text = "descargar PDF";
+            this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = true;
             // 
             // DetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(786, 397);
+            this.ClientSize = new System.Drawing.Size(644, 472);
+            this.Controls.Add(this.ibtnPDFDetalleCompra);
             this.Controls.Add(this.lblDetalleVenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -435,5 +460,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDetalleVenta;
+        private FontAwesome.Sharp.IconButton ibtnPDFDetalleCompra;
     }
 }

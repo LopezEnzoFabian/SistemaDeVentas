@@ -40,7 +40,6 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblDetalleCompra = new System.Windows.Forms.Label();
             this.ibtnBuscar = new FontAwesome.Sharp.IconButton();
             this.ibtnLimpiar = new FontAwesome.Sharp.IconButton();
@@ -54,6 +53,7 @@
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.gbInfoProve.SuspendLayout();
             this.gbInfoCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).BeginInit();
@@ -68,9 +68,9 @@
             this.gbInfoProve.Controls.Add(this.lblRazonSoc);
             this.gbInfoProve.Controls.Add(this.lblNumDoc);
             this.gbInfoProve.ForeColor = System.Drawing.Color.White;
-            this.gbInfoProve.Location = new System.Drawing.Point(101, 177);
+            this.gbInfoProve.Location = new System.Drawing.Point(136, 162);
             this.gbInfoProve.Name = "gbInfoProve";
-            this.gbInfoProve.Size = new System.Drawing.Size(562, 83);
+            this.gbInfoProve.Size = new System.Drawing.Size(348, 83);
             this.gbInfoProve.TabIndex = 4;
             this.gbInfoProve.TabStop = false;
             this.gbInfoProve.Text = "información de proveedor";
@@ -92,6 +92,7 @@
             // btnsearch
             // 
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnsearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.ForeColor = System.Drawing.Color.White;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
@@ -132,9 +133,9 @@
             this.gbInfoCompra.Controls.Add(this.lblFecha);
             this.gbInfoCompra.Controls.Add(this.txtFecha);
             this.gbInfoCompra.ForeColor = System.Drawing.Color.White;
-            this.gbInfoCompra.Location = new System.Drawing.Point(101, 96);
+            this.gbInfoCompra.Location = new System.Drawing.Point(17, 80);
             this.gbInfoCompra.Name = "gbInfoCompra";
-            this.gbInfoCompra.Size = new System.Drawing.Size(562, 76);
+            this.gbInfoCompra.Size = new System.Drawing.Size(545, 76);
             this.gbInfoCompra.TabIndex = 3;
             this.gbInfoCompra.TabStop = false;
             this.gbInfoCompra.Text = "información de compra";
@@ -142,7 +143,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(345, 26);
+            this.lblUsuario.Location = new System.Drawing.Point(386, 26);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 6;
@@ -150,14 +151,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 42);
+            this.textBox2.Location = new System.Drawing.Point(216, 42);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(130, 20);
             this.textBox2.TabIndex = 5;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(348, 42);
+            this.txtUsuario.Location = new System.Drawing.Point(389, 42);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(130, 20);
             this.txtUsuario.TabIndex = 4;
@@ -165,7 +166,7 @@
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(192, 26);
+            this.lblTipoDoc.Location = new System.Drawing.Point(213, 26);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
             this.lblTipoDoc.TabIndex = 3;
@@ -174,25 +175,18 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(6, 26);
+            this.lblFecha.Location = new System.Drawing.Point(33, 26);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(9, 42);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(130, 20);
-            this.txtFecha.TabIndex = 1;
             // 
             // lblDetalleCompra
             // 
             this.lblDetalleCompra.BackColor = System.Drawing.Color.Black;
             this.lblDetalleCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalleCompra.ForeColor = System.Drawing.Color.White;
-            this.lblDetalleCompra.Location = new System.Drawing.Point(105, 21);
+            this.lblDetalleCompra.Location = new System.Drawing.Point(12, 9);
             this.lblDetalleCompra.Name = "lblDetalleCompra";
             this.lblDetalleCompra.Size = new System.Drawing.Size(194, 28);
             this.lblDetalleCompra.TabIndex = 5;
@@ -201,12 +195,13 @@
             // ibtnBuscar
             // 
             this.ibtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ibtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.ibtnBuscar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnBuscar.IconSize = 20;
-            this.ibtnBuscar.Location = new System.Drawing.Point(513, 60);
+            this.ibtnBuscar.Location = new System.Drawing.Point(429, 44);
             this.ibtnBuscar.Name = "ibtnBuscar";
             this.ibtnBuscar.Size = new System.Drawing.Size(31, 30);
             this.ibtnBuscar.TabIndex = 48;
@@ -214,12 +209,13 @@
             // 
             // ibtnLimpiar
             // 
+            this.ibtnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ibtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
             this.ibtnLimpiar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLimpiar.IconSize = 20;
-            this.ibtnLimpiar.Location = new System.Drawing.Point(550, 62);
+            this.ibtnLimpiar.Location = new System.Drawing.Point(466, 46);
             this.ibtnLimpiar.Name = "ibtnLimpiar";
             this.ibtnLimpiar.Size = new System.Drawing.Size(39, 28);
             this.ibtnLimpiar.TabIndex = 47;
@@ -228,7 +224,7 @@
             // txtDocNum
             // 
             this.txtDocNum.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocNum.Location = new System.Drawing.Point(368, 64);
+            this.txtDocNum.Location = new System.Drawing.Point(284, 48);
             this.txtDocNum.Name = "txtDocNum";
             this.txtDocNum.Size = new System.Drawing.Size(130, 25);
             this.txtDocNum.TabIndex = 46;
@@ -237,11 +233,11 @@
             // 
             this.lblDocNum.AutoSize = true;
             this.lblDocNum.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDocNum.Location = new System.Drawing.Point(246, 76);
+            this.lblDocNum.Location = new System.Drawing.Point(183, 60);
             this.lblDocNum.Name = "lblDocNum";
-            this.lblDocNum.Size = new System.Drawing.Size(115, 13);
+            this.lblDocNum.Size = new System.Drawing.Size(95, 13);
             this.lblDocNum.TabIndex = 49;
-            this.lblDocNum.Text = "Numero de documento";
+            this.lblDocNum.Text = "Numero de factura";
             // 
             // dgDetalleCompra
             // 
@@ -253,10 +249,10 @@
             this.colPrecioCompra,
             this.colCant,
             this.colSubTotal});
-            this.dgDetalleCompra.Location = new System.Drawing.Point(101, 266);
+            this.dgDetalleCompra.Location = new System.Drawing.Point(17, 251);
             this.dgDetalleCompra.Name = "dgDetalleCompra";
             this.dgDetalleCompra.ReadOnly = true;
-            this.dgDetalleCompra.Size = new System.Drawing.Size(562, 138);
+            this.dgDetalleCompra.Size = new System.Drawing.Size(615, 159);
             this.dgDetalleCompra.TabIndex = 50;
             // 
             // colProducto
@@ -294,7 +290,7 @@
             // 
             this.lblMontoTotal.AutoSize = true;
             this.lblMontoTotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMontoTotal.Location = new System.Drawing.Point(98, 419);
+            this.lblMontoTotal.Location = new System.Drawing.Point(14, 416);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(64, 13);
             this.lblMontoTotal.TabIndex = 52;
@@ -302,7 +298,8 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(101, 435);
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox3.Location = new System.Drawing.Point(17, 432);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(75, 20);
             this.textBox3.TabIndex = 51;
@@ -310,26 +307,36 @@
             // 
             // ibtnPDFDetalleCompra
             // 
+            this.ibtnPDFDetalleCompra.AutoSize = true;
+            this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
             this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
             this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Aqua;
             this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnPDFDetalleCompra.IconSize = 30;
-            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(540, 419);
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(509, 416);
             this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
-            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 36);
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 38);
             this.ibtnPDFDetalleCompra.TabIndex = 53;
             this.ibtnPDFDetalleCompra.Text = "descargar PDF";
             this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = true;
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(36, 42);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(130, 20);
+            this.txtFecha.TabIndex = 1;
+            // 
             // formDetalleCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(753, 461);
+            this.ClientSize = new System.Drawing.Size(644, 472);
             this.Controls.Add(this.ibtnPDFDetalleCompra);
             this.Controls.Add(this.lblMontoTotal);
             this.Controls.Add(this.textBox3);
@@ -343,7 +350,7 @@
             this.Controls.Add(this.gbInfoCompra);
             this.Name = "formDetalleCompra";
             this.Text = "formDetalleCompra";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.formDetalleCompra_Load);
             this.gbInfoProve.ResumeLayout(false);
             this.gbInfoProve.PerformLayout();
             this.gbInfoCompra.ResumeLayout(false);
@@ -365,7 +372,6 @@
         private System.Windows.Forms.GroupBox gbInfoCompra;
         private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lblDetalleCompra;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtUsuario;
@@ -382,5 +388,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }
