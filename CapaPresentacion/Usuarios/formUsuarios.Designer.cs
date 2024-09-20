@@ -62,7 +62,6 @@
             this.txt_Confirmpass = new RoundedTextBox();
             this.txtEmail = new RoundedTextBox();
             this.txtNombre = new RoundedTextBox();
-            this.roundedButton1 = new RoundedButton();
             this.txtDNI = new RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +71,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNombre.Location = new System.Drawing.Point(10, 46);
+            this.lblNombre.Location = new System.Drawing.Point(13, 79);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(54, 16);
             this.lblNombre.TabIndex = 0;
@@ -83,7 +82,7 @@
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDNI.Location = new System.Drawing.Point(13, 76);
+            this.lblDNI.Location = new System.Drawing.Point(16, 109);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(29, 16);
             this.lblDNI.TabIndex = 2;
@@ -94,7 +93,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(13, 102);
+            this.lblEmail.Location = new System.Drawing.Point(16, 135);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(40, 16);
             this.lblEmail.TabIndex = 4;
@@ -105,7 +104,7 @@
             this.lblContra.AutoSize = true;
             this.lblContra.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblContra.Location = new System.Drawing.Point(13, 132);
+            this.lblContra.Location = new System.Drawing.Point(16, 165);
             this.lblContra.Name = "lblContra";
             this.lblContra.Size = new System.Drawing.Size(74, 16);
             this.lblContra.TabIndex = 14;
@@ -116,7 +115,7 @@
             this.lblConfContra.AutoSize = true;
             this.lblConfContra.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblConfContra.Location = new System.Drawing.Point(10, 160);
+            this.lblConfContra.Location = new System.Drawing.Point(13, 193);
             this.lblConfContra.Name = "lblConfContra";
             this.lblConfContra.Size = new System.Drawing.Size(134, 16);
             this.lblConfContra.TabIndex = 16;
@@ -132,7 +131,7 @@
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(525, 8);
+            this.btnsearch.Location = new System.Drawing.Point(493, 18);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 45;
@@ -143,7 +142,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(164, 16);
+            this.label11.Location = new System.Drawing.Point(132, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 16);
             this.label11.TabIndex = 29;
@@ -153,7 +152,7 @@
             // 
             this.txtBuscarUsuario.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(389, 12);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(357, 22);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(121, 23);
             this.txtBuscarUsuario.TabIndex = 31;
@@ -170,7 +169,7 @@
             "Rol",
             "Estado",
             "Email"});
-            this.cbFiltroTipoUsuario.Location = new System.Drawing.Point(250, 12);
+            this.cbFiltroTipoUsuario.Location = new System.Drawing.Point(218, 22);
             this.cbFiltroTipoUsuario.Name = "cbFiltroTipoUsuario";
             this.cbFiltroTipoUsuario.Size = new System.Drawing.Size(121, 24);
             this.cbFiltroTipoUsuario.TabIndex = 33;
@@ -183,7 +182,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(439, 98);
+            this.cbEstado.Location = new System.Drawing.Point(421, 127);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(162, 24);
             this.cbEstado.TabIndex = 34;
@@ -193,7 +192,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEstado.Location = new System.Drawing.Point(386, 101);
+            this.lblEstado.Location = new System.Drawing.Point(368, 135);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(47, 16);
             this.lblEstado.TabIndex = 35;
@@ -204,7 +203,7 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRol.Location = new System.Drawing.Point(386, 50);
+            this.lblRol.Location = new System.Drawing.Point(368, 88);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(26, 16);
             this.lblRol.TabIndex = 36;
@@ -216,9 +215,9 @@
             this.lblListaUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblListaUsuarios.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaUsuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaUsuarios.Location = new System.Drawing.Point(13, 237);
+            this.lblListaUsuarios.Location = new System.Drawing.Point(27, 373);
             this.lblListaUsuarios.Name = "lblListaUsuarios";
-            this.lblListaUsuarios.Size = new System.Drawing.Size(160, 28);
+            this.lblListaUsuarios.Size = new System.Drawing.Size(160, 26);
             this.lblListaUsuarios.TabIndex = 38;
             this.lblListaUsuarios.Text = "Lista de usuarios";
             // 
@@ -226,7 +225,7 @@
             // 
             this.txtID.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtID.Location = new System.Drawing.Point(83, 12);
+            this.txtID.Location = new System.Drawing.Point(51, 22);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 23);
             this.txtID.TabIndex = 39;
@@ -241,9 +240,9 @@
             "Vendedor",
             "Administrador",
             "Supervisor"});
-            this.cbRol.Location = new System.Drawing.Point(418, 47);
+            this.cbRol.Location = new System.Drawing.Point(421, 80);
             this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(183, 24);
+            this.cbRol.Size = new System.Drawing.Size(162, 24);
             this.cbRol.TabIndex = 40;
             // 
             // btnEliminar
@@ -253,7 +252,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 20;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(586, 237);
+            this.btnEliminar.Location = new System.Drawing.Point(508, 255);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 25);
             this.btnEliminar.TabIndex = 41;
@@ -270,7 +269,7 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 20;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(586, 206);
+            this.btnEditar.Location = new System.Drawing.Point(508, 224);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
             this.btnEditar.TabIndex = 42;
@@ -286,7 +285,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 20;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(586, 166);
+            this.btnGuardar.Location = new System.Drawing.Point(508, 184);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 25);
             this.btnGuardar.TabIndex = 43;
@@ -305,7 +304,7 @@
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(562, 10);
+            this.btnclean.Location = new System.Drawing.Point(530, 20);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(39, 28);
             this.btnclean.TabIndex = 44;
@@ -325,6 +324,7 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 64;
             // 
             // colRol
             // 
@@ -332,6 +332,7 @@
             this.colRol.HeaderText = "Rol";
             this.colRol.Name = "colRol";
             this.colRol.ReadOnly = true;
+            this.colRol.Width = 47;
             // 
             // idRol
             // 
@@ -346,6 +347,7 @@
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 117;
             // 
             // colContraseña
             // 
@@ -360,6 +362,7 @@
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 58;
             // 
             // colDNI
             // 
@@ -367,6 +370,7 @@
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
             this.colDNI.ReadOnly = true;
+            this.colDNI.Width = 49;
             // 
             // colUsuario
             // 
@@ -381,14 +385,13 @@
             this.btnSeleccionar.HeaderText = "";
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 21;
             // 
             // dgListarUsuario
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgListarUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -402,10 +405,10 @@
             this.colRol,
             this.Estado,
             this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(13, 268);
+            this.dgListarUsuario.Location = new System.Drawing.Point(16, 418);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.ReadOnly = true;
-            this.dgListarUsuario.Size = new System.Drawing.Size(717, 212);
+            this.dgListarUsuario.Size = new System.Drawing.Size(631, 170);
             this.dgListarUsuario.TabIndex = 28;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
@@ -413,7 +416,7 @@
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(142, 132);
+            this.txtPass.Location = new System.Drawing.Point(145, 165);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(195, 20);
             this.txtPass.TabIndex = 51;
@@ -422,7 +425,7 @@
             // 
             this.txt_Confirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Confirmpass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Confirmpass.Location = new System.Drawing.Point(142, 158);
+            this.txt_Confirmpass.Location = new System.Drawing.Point(145, 191);
             this.txt_Confirmpass.Name = "txt_Confirmpass";
             this.txt_Confirmpass.Size = new System.Drawing.Size(195, 20);
             this.txt_Confirmpass.TabIndex = 50;
@@ -431,7 +434,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(70, 102);
+            this.txtEmail.Location = new System.Drawing.Point(73, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(267, 20);
             this.txtEmail.TabIndex = 49;
@@ -440,27 +443,10 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(70, 46);
+            this.txtNombre.Location = new System.Drawing.Point(73, 79);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(267, 20);
             this.txtNombre.TabIndex = 48;
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.roundedButton1.BorderRadius = 16;
-            this.roundedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundedButton1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.roundedButton1.Icon = null;
-            this.roundedButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.roundedButton1.Location = new System.Drawing.Point(624, 16);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(86, 29);
-            this.roundedButton1.TabIndex = 47;
-            this.roundedButton1.Text = "Agregar";
-            this.roundedButton1.UseVisualStyleBackColor = false;
             // 
             // txtDNI
             // 
@@ -469,7 +455,7 @@
             this.txtDNI.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDNI.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDNI.Location = new System.Drawing.Point(70, 72);
+            this.txtDNI.Location = new System.Drawing.Point(73, 105);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(267, 20);
             this.txtDNI.TabIndex = 46;
@@ -477,15 +463,14 @@
             // 
             // formUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(742, 490);
+            this.ClientSize = new System.Drawing.Size(644, 571);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txt_Confirmpass);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
@@ -508,7 +493,9 @@
             this.Controls.Add(this.lblDNI);
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBox = false;
             this.Name = "formUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.formUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).EndInit();
@@ -550,7 +537,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridView dgListarUsuario;
         private RoundedTextBox txtDNI;
-        private RoundedButton roundedButton1;
         private RoundedTextBox txtNombre;
         private RoundedTextBox txtEmail;
         private RoundedTextBox txt_Confirmpass;
