@@ -115,7 +115,7 @@
             this.ibtnSalir.Name = "ibtnSalir";
             this.ibtnSalir.Size = new System.Drawing.Size(89, 52);
             this.ibtnSalir.TabIndex = 6;
-            this.ibtnSalir.Text = "Cerrar sesiòn";
+            this.ibtnSalir.Text = "Cerrar sesión";
             this.ibtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ibtnSalir.UseVisualStyleBackColor = false;

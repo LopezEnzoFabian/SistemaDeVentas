@@ -36,6 +36,7 @@
             this.menuClientes = new FontAwesome.Sharp.IconMenuItem();
             this.menuProveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
+            this.ibtnSalir = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.contenedor.BackColor = System.Drawing.Color.White;
             this.contenedor.Location = new System.Drawing.Point(180, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(617, 447);
+            this.contenedor.Size = new System.Drawing.Size(617, 437);
             this.contenedor.TabIndex = 4;
             // 
             // menuStrip1
@@ -77,7 +78,7 @@
             this.menuProveedores,
             this.menuAcercade});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(1, 176);
+            this.menuStrip1.Location = new System.Drawing.Point(1, 171);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(173, 326);
             this.menuStrip1.TabIndex = 5;
@@ -131,11 +132,30 @@
             this.menuAcercade.Size = new System.Drawing.Size(166, 24);
             this.menuAcercade.Text = "Acerca de";
             // 
+            // ibtnSalir
+            // 
+            this.ibtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnSalir.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.ibtnSalir.IconColor = System.Drawing.Color.Cyan;
+            this.ibtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnSalir.IconSize = 30;
+            this.ibtnSalir.Location = new System.Drawing.Point(12, 376);
+            this.ibtnSalir.Name = "ibtnSalir";
+            this.ibtnSalir.Size = new System.Drawing.Size(89, 52);
+            this.ibtnSalir.TabIndex = 7;
+            this.ibtnSalir.Text = "Cerrar sesión";
+            this.ibtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ibtnSalir.UseVisualStyleBackColor = false;
+            // 
             // Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 440);
+            this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuStrip1);
@@ -158,5 +178,6 @@
         private FontAwesome.Sharp.IconMenuItem menuClientes;
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
         private FontAwesome.Sharp.IconMenuItem menuAcercade;
+        private FontAwesome.Sharp.IconButton ibtnSalir;
     }
 }
