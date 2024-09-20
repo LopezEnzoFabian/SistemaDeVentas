@@ -40,8 +40,15 @@ namespace CapaPresentacion
                 MessageBox.Show("El formato de email no es valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
+
+            DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Tomar decisiones basadas en la respuesta del usuario
+            if (ask == DialogResult.Yes)
             {
+                // Si el usuario hizo clic en "Sí"
+                MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 int fila = dgListarUsuario.Rows.Add();
                 TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
@@ -50,12 +57,11 @@ namespace CapaPresentacion
                 dgListarUsuario.Rows[fila].Cells[4].Value = textInfo.ToTitleCase(txtEmail.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower());
 
-                string estado = cbEstado.SelectedItem?.ToString();           
+                string estado = cbEstado.SelectedItem?.ToString();
                 if (estado != null)
                     dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(estado.ToLower());
-                
             }
-
+          
             limpiarCampos();
 
         }
@@ -83,6 +89,11 @@ namespace CapaPresentacion
             txtEmail.Clear();
             cbEstado.Items.Clear();
     
+        }
+
+        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -40,6 +40,7 @@ namespace CapaPresentacion
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (txtPass.Text != txt_Confirmpass.Text)
             {
@@ -75,7 +76,7 @@ namespace CapaPresentacion
                   string.IsNullOrWhiteSpace(txt_Confirmpass.Text))
             {
                 // Mostrar un mensaje de error
-                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe seleccionar un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
            if(txtPass.Text != txt_Confirmpass.Text)
