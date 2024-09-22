@@ -30,7 +30,7 @@
         {
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.txtBuscarNumFactura = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblTotalCambio = new System.Windows.Forms.Label();
@@ -46,24 +46,24 @@
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEliminarPro = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbInformacionVenta = new System.Windows.Forms.GroupBox();
             this.lblPrecioCom = new System.Windows.Forms.Label();
-            this.lblProducto = new System.Windows.Forms.Label();
+            this.lblTipoFACTURA = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.txtPrecioCom = new System.Windows.Forms.TextBox();
             this.txtTipoDoc = new System.Windows.Forms.TextBox();
             this.txtFechaVenta = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.gbInformacionCliente = new System.Windows.Forms.GroupBox();
+            this.lblNombreCompleto = new System.Windows.Forms.Label();
+            this.lblNumeroDeDocumento = new System.Windows.Forms.Label();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDetalleVenta = new System.Windows.Forms.Label();
             this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDetalleVenta)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbInformacionVenta.SuspendLayout();
+            this.gbInformacionCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsearch
@@ -71,7 +71,7 @@
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.White;
+            this.btnsearch.IconColor = System.Drawing.Color.Cyan;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
             this.btnsearch.Location = new System.Drawing.Point(426, 37);
@@ -84,7 +84,7 @@
             // 
             this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.btnclean.IconColor = System.Drawing.Color.White;
+            this.btnclean.IconColor = System.Drawing.Color.Cyan;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
             this.btnclean.Location = new System.Drawing.Point(463, 39);
@@ -93,24 +93,24 @@
             this.btnclean.TabIndex = 74;
             this.btnclean.UseVisualStyleBackColor = true;
             // 
-            // txtBuscar
+            // txtBuscarNumFactura
             // 
-            this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(290, 41);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(121, 25);
-            this.txtBuscar.TabIndex = 72;
+            this.txtBuscarNumFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarNumFactura.Location = new System.Drawing.Point(290, 41);
+            this.txtBuscarNumFactura.Name = "txtBuscarNumFactura";
+            this.txtBuscarNumFactura.Size = new System.Drawing.Size(121, 25);
+            this.txtBuscarNumFactura.TabIndex = 72;
             // 
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltro.Location = new System.Drawing.Point(136, 49);
+            this.lblFiltro.Location = new System.Drawing.Point(158, 49);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(148, 17);
+            this.lblFiltro.Size = new System.Drawing.Size(119, 17);
             this.lblFiltro.TabIndex = 71;
-            this.lblFiltro.Text = "Numero del documento";
+            this.lblFiltro.Text = "Numero de factura";
             // 
             // textBox3
             // 
@@ -238,21 +238,21 @@
             this.colEliminarPro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colEliminarPro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // groupBox2
+            // gbInformacionVenta
             // 
-            this.groupBox2.Controls.Add(this.lblPrecioCom);
-            this.groupBox2.Controls.Add(this.lblProducto);
-            this.groupBox2.Controls.Add(this.lblCod);
-            this.groupBox2.Controls.Add(this.txtPrecioCom);
-            this.groupBox2.Controls.Add(this.txtTipoDoc);
-            this.groupBox2.Controls.Add(this.txtFechaVenta);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(116, 75);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 87);
-            this.groupBox2.TabIndex = 76;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "información de venta";
+            this.gbInformacionVenta.Controls.Add(this.lblPrecioCom);
+            this.gbInformacionVenta.Controls.Add(this.lblTipoFACTURA);
+            this.gbInformacionVenta.Controls.Add(this.lblCod);
+            this.gbInformacionVenta.Controls.Add(this.txtPrecioCom);
+            this.gbInformacionVenta.Controls.Add(this.txtTipoDoc);
+            this.gbInformacionVenta.Controls.Add(this.txtFechaVenta);
+            this.gbInformacionVenta.ForeColor = System.Drawing.Color.White;
+            this.gbInformacionVenta.Location = new System.Drawing.Point(116, 75);
+            this.gbInformacionVenta.Name = "gbInformacionVenta";
+            this.gbInformacionVenta.Size = new System.Drawing.Size(433, 87);
+            this.gbInformacionVenta.TabIndex = 76;
+            this.gbInformacionVenta.TabStop = false;
+            this.gbInformacionVenta.Text = "información de venta";
             // 
             // lblPrecioCom
             // 
@@ -263,14 +263,14 @@
             this.lblPrecioCom.TabIndex = 50;
             this.lblPrecioCom.Text = "Nombre de usuario";
             // 
-            // lblProducto
+            // lblTipoFACTURA
             // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(159, 32);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(99, 13);
-            this.lblProducto.TabIndex = 49;
-            this.lblProducto.Text = "Tipo de documento";
+            this.lblTipoFACTURA.AutoSize = true;
+            this.lblTipoFACTURA.Location = new System.Drawing.Point(159, 32);
+            this.lblTipoFACTURA.Name = "lblTipoFACTURA";
+            this.lblTipoFACTURA.Size = new System.Drawing.Size(79, 13);
+            this.lblTipoFACTURA.TabIndex = 49;
+            this.lblTipoFACTURA.Text = "Tipo de factura";
             // 
             // lblCod
             // 
@@ -305,53 +305,53 @@
             this.txtFechaVenta.Size = new System.Drawing.Size(124, 20);
             this.txtFechaVenta.TabIndex = 2;
             // 
-            // groupBox1
+            // gbInformacionCliente
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(139, 168);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 87);
-            this.groupBox1.TabIndex = 85;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "información del cliente";
+            this.gbInformacionCliente.Controls.Add(this.lblNombreCompleto);
+            this.gbInformacionCliente.Controls.Add(this.lblNumeroDeDocumento);
+            this.gbInformacionCliente.Controls.Add(this.txtNombreCompleto);
+            this.gbInformacionCliente.Controls.Add(this.txtDNI);
+            this.gbInformacionCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbInformacionCliente.Location = new System.Drawing.Point(116, 168);
+            this.gbInformacionCliente.Name = "gbInformacionCliente";
+            this.gbInformacionCliente.Size = new System.Drawing.Size(433, 87);
+            this.gbInformacionCliente.TabIndex = 85;
+            this.gbInformacionCliente.TabStop = false;
+            this.gbInformacionCliente.Text = "información del cliente";
             // 
-            // label4
+            // lblNombreCompleto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(215, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Nombre completo";
+            this.lblNombreCompleto.AutoSize = true;
+            this.lblNombreCompleto.Location = new System.Drawing.Point(210, 32);
+            this.lblNombreCompleto.Name = "lblNombreCompleto";
+            this.lblNombreCompleto.Size = new System.Drawing.Size(90, 13);
+            this.lblNombreCompleto.TabIndex = 49;
+            this.lblNombreCompleto.Text = "Nombre completo";
             // 
-            // label5
+            // lblNumeroDeDocumento
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 13);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Numero de documento";
+            this.lblNumeroDeDocumento.AutoSize = true;
+            this.lblNumeroDeDocumento.Location = new System.Drawing.Point(24, 32);
+            this.lblNumeroDeDocumento.Name = "lblNumeroDeDocumento";
+            this.lblNumeroDeDocumento.Size = new System.Drawing.Size(115, 13);
+            this.lblNumeroDeDocumento.TabIndex = 48;
+            this.lblNumeroDeDocumento.Text = "Numero de documento";
             // 
-            // textBox5
+            // txtNombreCompleto
             // 
-            this.textBox5.Location = new System.Drawing.Point(218, 48);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(128, 20);
-            this.textBox5.TabIndex = 3;
+            this.txtNombreCompleto.Location = new System.Drawing.Point(213, 48);
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.ReadOnly = true;
+            this.txtNombreCompleto.Size = new System.Drawing.Size(151, 20);
+            this.txtNombreCompleto.TabIndex = 3;
             // 
-            // textBox6
+            // txtDNI
             // 
-            this.textBox6.Location = new System.Drawing.Point(27, 48);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(128, 20);
-            this.textBox6.TabIndex = 2;
+            this.txtDNI.Location = new System.Drawing.Point(27, 48);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.ReadOnly = true;
+            this.txtDNI.Size = new System.Drawing.Size(128, 20);
+            this.txtDNI.TabIndex = 2;
             // 
             // label1
             // 
@@ -400,7 +400,7 @@
             this.Controls.Add(this.ibtnPDFDetalleCompra);
             this.Controls.Add(this.lblDetalleVenta);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbInformacionCliente);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.lblTotalCambio);
             this.Controls.Add(this.textBox2);
@@ -408,19 +408,19 @@
             this.Controls.Add(this.lblMontoTotal);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgListaDetalleVenta);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbInformacionVenta);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.txtBuscarNumFactura);
             this.Controls.Add(this.lblFiltro);
             this.Name = "DetalleVenta";
             this.Text = "DetalleVenta";
             this.Load += new System.EventHandler(this.DetalleVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDetalleVenta)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbInformacionVenta.ResumeLayout(false);
+            this.gbInformacionVenta.PerformLayout();
+            this.gbInformacionCliente.ResumeLayout(false);
+            this.gbInformacionCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +430,7 @@
 
         private FontAwesome.Sharp.IconButton btnsearch;
         private FontAwesome.Sharp.IconButton btnclean;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.TextBox txtBuscarNumFactura;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblTotalCambio;
@@ -446,18 +446,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminarPro;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbInformacionVenta;
         private System.Windows.Forms.Label lblPrecioCom;
-        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.Label lblTipoFACTURA;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.TextBox txtPrecioCom;
         private System.Windows.Forms.TextBox txtTipoDoc;
         private System.Windows.Forms.TextBox txtFechaVenta;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.GroupBox gbInformacionCliente;
+        private System.Windows.Forms.Label lblNombreCompleto;
+        private System.Windows.Forms.Label lblNumeroDeDocumento;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
+        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDetalleVenta;
         private FontAwesome.Sharp.IconButton ibtnPDFDetalleCompra;

@@ -31,7 +31,6 @@
             this.gbInfoProve = new System.Windows.Forms.GroupBox();
             this.txtRazonSoc = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.lblRazonSoc = new System.Windows.Forms.Label();
             this.lblNumDoc = new System.Windows.Forms.Label();
             this.gbInfoCompra = new System.Windows.Forms.GroupBox();
@@ -64,7 +63,6 @@
             this.gbInfoProve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.gbInfoProve.Controls.Add(this.txtRazonSoc);
             this.gbInfoProve.Controls.Add(this.txtNumDoc);
-            this.gbInfoProve.Controls.Add(this.btnsearch);
             this.gbInfoProve.Controls.Add(this.lblRazonSoc);
             this.gbInfoProve.Controls.Add(this.lblNumDoc);
             this.gbInfoProve.ForeColor = System.Drawing.Color.White;
@@ -79,6 +77,7 @@
             // 
             this.txtRazonSoc.Location = new System.Drawing.Point(195, 46);
             this.txtRazonSoc.Name = "txtRazonSoc";
+            this.txtRazonSoc.ReadOnly = true;
             this.txtRazonSoc.Size = new System.Drawing.Size(130, 20);
             this.txtRazonSoc.TabIndex = 48;
             // 
@@ -86,24 +85,9 @@
             // 
             this.txtNumDoc.Location = new System.Drawing.Point(9, 47);
             this.txtNumDoc.Name = "txtNumDoc";
+            this.txtNumDoc.ReadOnly = true;
             this.txtNumDoc.Size = new System.Drawing.Size(130, 20);
             this.txtNumDoc.TabIndex = 47;
-            // 
-            // btnsearch
-            // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnsearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsearch.ForeColor = System.Drawing.Color.White;
-            this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
-            this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(145, 46);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(31, 21);
-            this.btnsearch.TabIndex = 46;
-            this.btnsearch.UseVisualStyleBackColor = false;
             // 
             // lblRazonSoc
             // 
@@ -145,14 +129,15 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Location = new System.Drawing.Point(386, 26);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(96, 13);
             this.lblUsuario.TabIndex = 6;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Nombre de usuario";
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(216, 42);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(130, 20);
             this.textBox2.TabIndex = 5;
             // 
@@ -160,6 +145,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(389, 42);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(130, 20);
             this.txtUsuario.TabIndex = 4;
             // 
@@ -168,9 +154,9 @@
             this.lblTipoDoc.AutoSize = true;
             this.lblTipoDoc.Location = new System.Drawing.Point(213, 26);
             this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
+            this.lblTipoDoc.Size = new System.Drawing.Size(79, 13);
             this.lblTipoDoc.TabIndex = 3;
-            this.lblTipoDoc.Text = "Tipo Documento";
+            this.lblTipoDoc.Text = "Tipo de factura";
             // 
             // lblFecha
             // 
@@ -185,6 +171,7 @@
             // 
             this.txtFecha.Location = new System.Drawing.Point(36, 42);
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(130, 20);
             this.txtFecha.TabIndex = 1;
             // 
@@ -195,9 +182,9 @@
             this.lblDetalleCompra.ForeColor = System.Drawing.Color.White;
             this.lblDetalleCompra.Location = new System.Drawing.Point(12, 9);
             this.lblDetalleCompra.Name = "lblDetalleCompra";
-            this.lblDetalleCompra.Size = new System.Drawing.Size(194, 28);
+            this.lblDetalleCompra.Size = new System.Drawing.Size(200, 28);
             this.lblDetalleCompra.TabIndex = 5;
-            this.lblDetalleCompra.Text = "Detalle de compra";
+            this.lblDetalleCompra.Text = "Detalle de compras";
             // 
             // ibtnBuscar
             // 
@@ -316,7 +303,7 @@
             // 
             this.ibtnPDFDetalleCompra.AutoSize = true;
             this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
             this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
             this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Red;
@@ -366,7 +353,6 @@
         private System.Windows.Forms.GroupBox gbInfoProve;
         private System.Windows.Forms.TextBox txtRazonSoc;
         private System.Windows.Forms.TextBox txtNumDoc;
-        private FontAwesome.Sharp.IconButton btnsearch;
         private System.Windows.Forms.Label lblRazonSoc;
         private System.Windows.Forms.Label lblNumDoc;
         private System.Windows.Forms.GroupBox gbInfoCompra;

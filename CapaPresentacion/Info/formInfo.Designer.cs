@@ -37,12 +37,12 @@
             this.txtiNFO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.txtiNFO.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtiNFO.ForeColor = System.Drawing.Color.White;
-            this.txtiNFO.Location = new System.Drawing.Point(23, 48);
+            this.txtiNFO.Location = new System.Drawing.Point(12, 12);
             this.txtiNFO.Multiline = true;
             this.txtiNFO.Name = "txtiNFO";
             this.txtiNFO.ReadOnly = true;
             this.txtiNFO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtiNFO.Size = new System.Drawing.Size(758, 472);
+            this.txtiNFO.Size = new System.Drawing.Size(620, 508);
             this.txtiNFO.TabIndex = 0;
             this.txtiNFO.Text = resources.GetString("txtiNFO.Text");
             this.txtiNFO.TextChanged += new System.EventHandler(this.txtiNFO_TextChanged);
@@ -52,7 +52,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(793, 511);
+            this.ClientSize = new System.Drawing.Size(644, 539);
             this.Controls.Add(this.txtiNFO);
             this.Name = "formInfo";
             this.Text = "formInfo";
