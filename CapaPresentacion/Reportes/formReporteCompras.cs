@@ -17,5 +17,9 @@ namespace CapaPresentacion.Reportes
             InitializeComponent();
         }
 
+        private void ibtnBuscarPorFec_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,9 +68,9 @@
             // 
             // panelReportes
             // 
-            this.panelReportes.Location = new System.Drawing.Point(5, 86);
+            this.panelReportes.Location = new System.Drawing.Point(0, 50);
             this.panelReportes.Name = "panelReportes";
-            this.panelReportes.Size = new System.Drawing.Size(801, 357);
+            this.panelReportes.Size = new System.Drawing.Size(661, 486);
             this.panelReportes.TabIndex = 8;
             // 
             // btnVentasRepo
@@ -112,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(818, 482);
+            this.ClientSize = new System.Drawing.Size(661, 539);
             this.Controls.Add(this.panelReportes);
             this.Controls.Add(this.btnVentasRepo);
             this.Controls.Add(this.btnComprasRepo);

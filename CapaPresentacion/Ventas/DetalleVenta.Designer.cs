@@ -377,17 +377,17 @@
             // 
             this.ibtnPDFDetalleCompra.AutoSize = true;
             this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
-            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Aqua;
+            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Red;
             this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnPDFDetalleCompra.IconSize = 30;
-            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(509, 422);
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(534, 423);
             this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
-            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 38);
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(98, 38);
             this.ibtnPDFDetalleCompra.TabIndex = 88;
-            this.ibtnPDFDetalleCompra.Text = "descargar PDF";
+            this.ibtnPDFDetalleCompra.Text = "Descargar";
             this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = true;
             // 

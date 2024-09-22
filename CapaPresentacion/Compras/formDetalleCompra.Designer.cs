@@ -40,6 +40,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblDetalleCompra = new System.Windows.Forms.Label();
             this.ibtnBuscar = new FontAwesome.Sharp.IconButton();
             this.ibtnLimpiar = new FontAwesome.Sharp.IconButton();
@@ -53,7 +54,6 @@
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.gbInfoProve.SuspendLayout();
             this.gbInfoCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).BeginInit();
@@ -180,6 +180,13 @@
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(36, 42);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(130, 20);
+            this.txtFecha.TabIndex = 1;
             // 
             // lblDetalleCompra
             // 
@@ -311,24 +318,17 @@
             this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.Aqua;
-            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Aqua;
+            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Red;
             this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnPDFDetalleCompra.IconSize = 30;
-            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(509, 416);
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(534, 422);
             this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
-            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(123, 38);
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(98, 38);
             this.ibtnPDFDetalleCompra.TabIndex = 53;
-            this.ibtnPDFDetalleCompra.Text = "descargar PDF";
+            this.ibtnPDFDetalleCompra.Text = "Descargar";
             this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = true;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(36, 42);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(130, 20);
-            this.txtFecha.TabIndex = 1;
             // 
             // formDetalleCompra
             // 

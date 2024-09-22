@@ -21,5 +21,10 @@ namespace CapaPresentacion.Reportes
         {
 
         }
+
+        private void lblRV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

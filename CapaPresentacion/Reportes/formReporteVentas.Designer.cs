@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ibtnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            this.cbProveedor = new System.Windows.Forms.ComboBox();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.ibtnBuscarPorFec = new FontAwesome.Sharp.IconButton();
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.dgReporteVentas = new System.Windows.Forms.DataGridView();
+            this.lblReporteVentas = new System.Windows.Forms.Label();
+            this.lblBuscarPor = new System.Windows.Forms.Label();
+            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
+            this.txtBuscarPor = new System.Windows.Forms.TextBox();
+            this.ibtnBuscarPor = new FontAwesome.Sharp.IconButton();
+            this.lblRV2 = new System.Windows.Forms.Label();
+            this.lblRV = new System.Windows.Forms.Label();
+            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
             this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,78 +49,33 @@
             this.colDocumentoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblReporteVentas = new System.Windows.Forms.Label();
+            this.icbtnBuscarFecha = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteVentas)).BeginInit();
             this.SuspendLayout();
             // 
-            // ibtnBuscarProveedor
-            // 
-            this.ibtnBuscarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscarProveedor.IconColor = System.Drawing.Color.White;
-            this.ibtnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscarProveedor.IconSize = 20;
-            this.ibtnBuscarProveedor.Location = new System.Drawing.Point(496, 85);
-            this.ibtnBuscarProveedor.Name = "ibtnBuscarProveedor";
-            this.ibtnBuscarProveedor.Size = new System.Drawing.Size(31, 30);
-            this.ibtnBuscarProveedor.TabIndex = 59;
-            this.ibtnBuscarProveedor.UseVisualStyleBackColor = false;
-            // 
-            // cbProveedor
-            // 
-            this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(358, 86);
-            this.cbProveedor.Name = "cbProveedor";
-            this.cbProveedor.Size = new System.Drawing.Size(121, 21);
-            this.cbProveedor.TabIndex = 58;
-            // 
-            // lblProveedor
-            // 
-            this.lblProveedor.AutoSize = true;
-            this.lblProveedor.ForeColor = System.Drawing.Color.Cyan;
-            this.lblProveedor.Location = new System.Drawing.Point(296, 94);
-            this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(56, 13);
-            this.lblProveedor.TabIndex = 57;
-            this.lblProveedor.Text = "Proveedor";
-            // 
-            // ibtnBuscarPorFec
-            // 
-            this.ibtnBuscarPorFec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscarPorFec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscarPorFec.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscarPorFec.IconColor = System.Drawing.Color.White;
-            this.ibtnBuscarPorFec.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscarPorFec.IconSize = 20;
-            this.ibtnBuscarPorFec.Location = new System.Drawing.Point(592, 41);
-            this.ibtnBuscarPorFec.Name = "ibtnBuscarPorFec";
-            this.ibtnBuscarPorFec.Size = new System.Drawing.Size(31, 30);
-            this.ibtnBuscarPorFec.TabIndex = 56;
-            this.ibtnBuscarPorFec.UseVisualStyleBackColor = false;
-            // 
             // dtFechaFin
             // 
-            this.dtFechaFin.Location = new System.Drawing.Point(443, 45);
+            this.dtFechaFin.Location = new System.Drawing.Point(279, 70);
             this.dtFechaFin.Name = "dtFechaFin";
-            this.dtFechaFin.Size = new System.Drawing.Size(143, 20);
+            this.dtFechaFin.Size = new System.Drawing.Size(123, 20);
             this.dtFechaFin.TabIndex = 55;
             // 
             // dtFechaInicio
             // 
-            this.dtFechaInicio.Location = new System.Drawing.Point(221, 45);
+            this.dtFechaInicio.Location = new System.Drawing.Point(94, 71);
             this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(144, 20);
+            this.dtFechaInicio.Size = new System.Drawing.Size(122, 20);
             this.dtFechaInicio.TabIndex = 54;
             // 
             // lblFechaFin
             // 
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.ForeColor = System.Drawing.Color.Cyan;
-            this.lblFechaFin.Location = new System.Drawing.Point(386, 52);
+            this.lblFechaFin.Location = new System.Drawing.Point(222, 77);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(51, 13);
             this.lblFechaFin.TabIndex = 53;
@@ -126,7 +85,7 @@
             // 
             this.lblFechaInicio.AutoSize = true;
             this.lblFechaInicio.ForeColor = System.Drawing.Color.Cyan;
-            this.lblFechaInicio.Location = new System.Drawing.Point(139, 51);
+            this.lblFechaInicio.Location = new System.Drawing.Point(9, 78);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(79, 13);
             this.lblFechaInicio.TabIndex = 52;
@@ -145,13 +104,108 @@
             this.colDocumentoProveedor,
             this.colRazonSocial,
             this.colCodProd,
+            this.colNombreCliente,
             this.colNomPro,
             this.colCate,
             this.colPrecioCom});
-            this.dgReporteVentas.Location = new System.Drawing.Point(6, 134);
+            this.dgReporteVentas.Location = new System.Drawing.Point(3, 178);
             this.dgReporteVentas.Name = "dgReporteVentas";
-            this.dgReporteVentas.Size = new System.Drawing.Size(834, 241);
+            this.dgReporteVentas.Size = new System.Drawing.Size(638, 215);
             this.dgReporteVentas.TabIndex = 51;
+            // 
+            // lblReporteVentas
+            // 
+            this.lblReporteVentas.AutoSize = true;
+            this.lblReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReporteVentas.ForeColor = System.Drawing.Color.Cyan;
+            this.lblReporteVentas.Location = new System.Drawing.Point(255, 9);
+            this.lblReporteVentas.Name = "lblReporteVentas";
+            this.lblReporteVentas.Size = new System.Drawing.Size(167, 24);
+            this.lblReporteVentas.TabIndex = 50;
+            this.lblReporteVentas.Text = "Reporte de Ventas";
+            this.lblReporteVentas.Click += new System.EventHandler(this.lblRepoCompras_Click);
+            // 
+            // lblBuscarPor
+            // 
+            this.lblBuscarPor.AutoSize = true;
+            this.lblBuscarPor.ForeColor = System.Drawing.Color.Cyan;
+            this.lblBuscarPor.Location = new System.Drawing.Point(9, 160);
+            this.lblBuscarPor.Name = "lblBuscarPor";
+            this.lblBuscarPor.Size = new System.Drawing.Size(0, 13);
+            this.lblBuscarPor.TabIndex = 60;
+            // 
+            // cbBuscarPor
+            // 
+            this.cbBuscarPor.FormattingEnabled = true;
+            this.cbBuscarPor.Items.AddRange(new object[] {
+            "Fecha de registro",
+            "Tipo de documento",
+            "Numero de factura"});
+            this.cbBuscarPor.Location = new System.Drawing.Point(12, 147);
+            this.cbBuscarPor.Name = "cbBuscarPor";
+            this.cbBuscarPor.Size = new System.Drawing.Size(121, 21);
+            this.cbBuscarPor.TabIndex = 61;
+            // 
+            // txtBuscarPor
+            // 
+            this.txtBuscarPor.Location = new System.Drawing.Point(149, 148);
+            this.txtBuscarPor.Name = "txtBuscarPor";
+            this.txtBuscarPor.Size = new System.Drawing.Size(124, 20);
+            this.txtBuscarPor.TabIndex = 62;
+            // 
+            // ibtnBuscarPor
+            // 
+            this.ibtnBuscarPor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnBuscarPor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnBuscarPor.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.ibtnBuscarPor.IconColor = System.Drawing.Color.Cyan;
+            this.ibtnBuscarPor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnBuscarPor.IconSize = 20;
+            this.ibtnBuscarPor.Location = new System.Drawing.Point(282, 142);
+            this.ibtnBuscarPor.Name = "ibtnBuscarPor";
+            this.ibtnBuscarPor.Size = new System.Drawing.Size(40, 30);
+            this.ibtnBuscarPor.TabIndex = 63;
+            this.ibtnBuscarPor.UseVisualStyleBackColor = false;
+            // 
+            // lblRV2
+            // 
+            this.lblRV2.AutoSize = true;
+            this.lblRV2.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRV2.Location = new System.Drawing.Point(9, 36);
+            this.lblRV2.Name = "lblRV2";
+            this.lblRV2.Size = new System.Drawing.Size(64, 13);
+            this.lblRV2.TabIndex = 64;
+            this.lblRV2.Text = "Buscar por :";
+            // 
+            // lblRV
+            // 
+            this.lblRV.AutoSize = true;
+            this.lblRV.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRV.Location = new System.Drawing.Point(9, 121);
+            this.lblRV.Name = "lblRV";
+            this.lblRV.Size = new System.Drawing.Size(64, 13);
+            this.lblRV.TabIndex = 65;
+            this.lblRV.Text = "Buscar por :";
+            this.lblRV.Click += new System.EventHandler(this.lblRV_Click);
+            // 
+            // ibtnDescargaExcel
+            // 
+            this.ibtnDescargaExcel.AutoSize = true;
+            this.ibtnDescargaExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnDescargaExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnDescargaExcel.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.ibtnDescargaExcel.ForeColor = System.Drawing.Color.Aqua;
+            this.ibtnDescargaExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.ibtnDescargaExcel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ibtnDescargaExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnDescargaExcel.IconSize = 30;
+            this.ibtnDescargaExcel.Location = new System.Drawing.Point(559, 399);
+            this.ibtnDescargaExcel.Name = "ibtnDescargaExcel";
+            this.ibtnDescargaExcel.Size = new System.Drawing.Size(75, 38);
+            this.ibtnDescargaExcel.TabIndex = 66;
+            this.ibtnDescargaExcel.Text = "Excel";
+            this.ibtnDescargaExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnDescargaExcel.UseVisualStyleBackColor = true;
             // 
             // colFechaDeRegistro
             // 
@@ -165,7 +219,7 @@
             // 
             // colNumeroDocumento
             // 
-            this.colNumeroDocumento.HeaderText = "Numero de documento";
+            this.colNumeroDocumento.HeaderText = "Numero de factura";
             this.colNumeroDocumento.Name = "colNumeroDocumento";
             // 
             // colMontoTotal
@@ -193,6 +247,11 @@
             this.colCodProd.HeaderText = "Codigo de producto";
             this.colCodProd.Name = "colCodProd";
             // 
+            // colNombreCliente
+            // 
+            this.colNombreCliente.HeaderText = "Nombre del cliente";
+            this.colNombreCliente.Name = "colNombreCliente";
+            // 
             // colNomPro
             // 
             this.colNomPro.HeaderText = "Nombre de producto";
@@ -208,28 +267,34 @@
             this.colPrecioCom.HeaderText = "Precio compra";
             this.colPrecioCom.Name = "colPrecioCom";
             // 
-            // lblReporteVentas
+            // icbtnBuscarFecha
             // 
-            this.lblReporteVentas.AutoSize = true;
-            this.lblReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReporteVentas.ForeColor = System.Drawing.Color.Cyan;
-            this.lblReporteVentas.Location = new System.Drawing.Point(321, 9);
-            this.lblReporteVentas.Name = "lblReporteVentas";
-            this.lblReporteVentas.Size = new System.Drawing.Size(167, 24);
-            this.lblReporteVentas.TabIndex = 50;
-            this.lblReporteVentas.Text = "Reporte de Ventas";
-            this.lblReporteVentas.Click += new System.EventHandler(this.lblRepoCompras_Click);
+            this.icbtnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.icbtnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.icbtnBuscarFecha.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.icbtnBuscarFecha.IconColor = System.Drawing.Color.Cyan;
+            this.icbtnBuscarFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnBuscarFecha.IconSize = 20;
+            this.icbtnBuscarFecha.Location = new System.Drawing.Point(408, 67);
+            this.icbtnBuscarFecha.Name = "icbtnBuscarFecha";
+            this.icbtnBuscarFecha.Size = new System.Drawing.Size(40, 30);
+            this.icbtnBuscarFecha.TabIndex = 67;
+            this.icbtnBuscarFecha.UseVisualStyleBackColor = false;
             // 
             // formReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(846, 377);
-            this.Controls.Add(this.ibtnBuscarProveedor);
-            this.Controls.Add(this.cbProveedor);
-            this.Controls.Add(this.lblProveedor);
-            this.Controls.Add(this.ibtnBuscarPorFec);
+            this.ClientSize = new System.Drawing.Size(645, 447);
+            this.Controls.Add(this.icbtnBuscarFecha);
+            this.Controls.Add(this.ibtnDescargaExcel);
+            this.Controls.Add(this.lblRV);
+            this.Controls.Add(this.lblRV2);
+            this.Controls.Add(this.ibtnBuscarPor);
+            this.Controls.Add(this.txtBuscarPor);
+            this.Controls.Add(this.cbBuscarPor);
+            this.Controls.Add(this.lblBuscarPor);
             this.Controls.Add(this.dtFechaFin);
             this.Controls.Add(this.dtFechaInicio);
             this.Controls.Add(this.lblFechaFin);
@@ -245,16 +310,19 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton ibtnBuscarProveedor;
-        private System.Windows.Forms.ComboBox cbProveedor;
-        private System.Windows.Forms.Label lblProveedor;
-        private FontAwesome.Sharp.IconButton ibtnBuscarPorFec;
         private System.Windows.Forms.DateTimePicker dtFechaFin;
         private System.Windows.Forms.DateTimePicker dtFechaInicio;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.DataGridView dgReporteVentas;
+        private System.Windows.Forms.Label lblReporteVentas;
+        private System.Windows.Forms.Label lblBuscarPor;
+        private System.Windows.Forms.ComboBox cbBuscarPor;
+        private System.Windows.Forms.TextBox txtBuscarPor;
+        private FontAwesome.Sharp.IconButton ibtnBuscarPor;
+        private System.Windows.Forms.Label lblRV2;
+        private System.Windows.Forms.Label lblRV;
+        private FontAwesome.Sharp.IconButton ibtnDescargaExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumeroDocumento;
@@ -263,9 +331,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDocumentoProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomPro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
-        private System.Windows.Forms.Label lblReporteVentas;
+        private FontAwesome.Sharp.IconButton icbtnBuscarFecha;
     }
 }
