@@ -63,6 +63,8 @@
             this.txtEmail = new RoundedTextBox();
             this.txtNombre = new RoundedTextBox();
             this.txtDNI = new RoundedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -465,12 +467,32 @@
             this.txtDNI.TabIndex = 46;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "telefono";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "direccion";
+            // 
             // formUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(654, 571);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txt_Confirmpass);
             this.Controls.Add(this.txtEmail);
@@ -545,5 +567,7 @@
         private RoundedTextBox txtEmail;
         private RoundedTextBox txt_Confirmpass;
         private RoundedTextBox txtPass;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

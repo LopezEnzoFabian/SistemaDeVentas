@@ -42,20 +42,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.lblTel = new System.Windows.Forms.Label();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblDomicilio = new System.Windows.Forms.Label();
-            this.lblCuidad = new System.Windows.Forms.Label();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.lblLocalidad = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +53,20 @@
             this.colCuidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.lblTel = new System.Windows.Forms.Label();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblCuidad = new System.Windows.Forms.Label();
+            this.txtCodPostal = new System.Windows.Forms.TextBox();
+            this.lblCodigoPostal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,6 +248,89 @@
             this.dgListarUsuario.TabIndex = 56;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
+            // btnSeleccionar
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkGreen;
+            this.btnSeleccionar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.btnSeleccionar.FillWeight = 57.2977F;
+            this.btnSeleccionar.HeaderText = "Seleccionar";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btnSeleccionar.Text = "";
+            this.btnSeleccionar.UseColumnTextForButtonValue = true;
+            this.btnSeleccionar.Width = 68;
+            // 
+            // colUsuario
+            // 
+            this.colUsuario.HeaderText = "id";
+            this.colUsuario.Name = "colUsuario";
+            this.colUsuario.Visible = false;
+            this.colUsuario.Width = 84;
+            // 
+            // colDNI
+            // 
+            this.colDNI.FillWeight = 84.5141F;
+            this.colDNI.HeaderText = "DNI";
+            this.colDNI.Name = "colDNI";
+            this.colDNI.ReadOnly = true;
+            this.colDNI.Width = 101;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 84.5141F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 101;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 84.5141F;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 101;
+            // 
+            // colEmail
+            // 
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            // 
+            // colDomicilio
+            // 
+            this.colDomicilio.HeaderText = "Domicilio";
+            this.colDomicilio.Name = "colDomicilio";
+            // 
+            // colCuidad
+            // 
+            this.colCuidad.HeaderText = "Cuidad";
+            this.colCuidad.Name = "colCuidad";
+            // 
+            // colLocalidad
+            // 
+            this.colLocalidad.HeaderText = "Localidad";
+            this.colLocalidad.Name = "colLocalidad";
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 101;
+            // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,14 +426,14 @@
             this.txtDomicilio.Size = new System.Drawing.Size(131, 25);
             this.txtDomicilio.TabIndex = 76;
             // 
-            // textBox2
+            // txtCiudad
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(258, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 25);
-            this.textBox2.TabIndex = 75;
+            this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCiudad.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(258, 125);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(131, 25);
+            this.txtCiudad.TabIndex = 75;
             // 
             // lblDomicilio
             // 
@@ -372,110 +455,27 @@
             this.lblCuidad.Name = "lblCuidad";
             this.lblCuidad.Size = new System.Drawing.Size(49, 17);
             this.lblCuidad.TabIndex = 73;
-            this.lblCuidad.Text = "Cuidad";
+            this.lblCuidad.Text = "Ciudad";
             // 
-            // txtLocalidad
+            // txtCodPostal
             // 
-            this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLocalidad.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalidad.Location = new System.Drawing.Point(258, 174);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(131, 25);
-            this.txtLocalidad.TabIndex = 78;
+            this.txtCodPostal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodPostal.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodPostal.Location = new System.Drawing.Point(258, 174);
+            this.txtCodPostal.Name = "txtCodPostal";
+            this.txtCodPostal.Size = new System.Drawing.Size(131, 25);
+            this.txtCodPostal.TabIndex = 78;
             // 
-            // lblLocalidad
+            // lblCodigoPostal
             // 
-            this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLocalidad.Location = new System.Drawing.Point(255, 155);
-            this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(64, 17);
-            this.lblLocalidad.TabIndex = 77;
-            this.lblLocalidad.Text = "Localidad";
-            // 
-            // btnSeleccionar
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkGreen;
-            this.btnSeleccionar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.btnSeleccionar.FillWeight = 57.2977F;
-            this.btnSeleccionar.HeaderText = "Seleccionar";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.btnSeleccionar.Text = "";
-            this.btnSeleccionar.UseColumnTextForButtonValue = true;
-            this.btnSeleccionar.Width = 68;
-            // 
-            // colUsuario
-            // 
-            this.colUsuario.HeaderText = "id";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.Visible = false;
-            this.colUsuario.Width = 84;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 101;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 101;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Nombre completo";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 101;
-            // 
-            // colEmail
-            // 
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
-            // 
-            // colDomicilio
-            // 
-            this.colDomicilio.HeaderText = "Domicilio";
-            this.colDomicilio.Name = "colDomicilio";
-            // 
-            // colCuidad
-            // 
-            this.colCuidad.HeaderText = "Cuidad";
-            this.colCuidad.Name = "colCuidad";
-            // 
-            // colLocalidad
-            // 
-            this.colLocalidad.HeaderText = "Localidad";
-            this.colLocalidad.Name = "colLocalidad";
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 101;
+            this.lblCodigoPostal.AutoSize = true;
+            this.lblCodigoPostal.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCodigoPostal.Location = new System.Drawing.Point(255, 155);
+            this.lblCodigoPostal.Name = "lblCodigoPostal";
+            this.lblCodigoPostal.Size = new System.Drawing.Size(91, 17);
+            this.lblCodigoPostal.TabIndex = 77;
+            this.lblCodigoPostal.Text = "Codigo postal";
             // 
             // formClientes
             // 
@@ -483,10 +483,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(644, 571);
-            this.Controls.Add(this.txtLocalidad);
-            this.Controls.Add(this.lblLocalidad);
+            this.Controls.Add(this.txtCodPostal);
+            this.Controls.Add(this.lblCodigoPostal);
             this.Controls.Add(this.txtDomicilio);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.lblDomicilio);
             this.Controls.Add(this.lblCuidad);
             this.Controls.Add(this.txtTel);
@@ -543,11 +543,11 @@
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.TextBox txtDomicilio;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label lblDomicilio;
         private System.Windows.Forms.Label lblCuidad;
-        private System.Windows.Forms.TextBox txtLocalidad;
-        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.TextBox txtCodPostal;
+        private System.Windows.Forms.Label lblCodigoPostal;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
