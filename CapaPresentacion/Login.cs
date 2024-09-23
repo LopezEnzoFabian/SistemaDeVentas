@@ -22,8 +22,9 @@ namespace CapaPresentacion
             Inicio formularioInicio = new Inicio();
 
             formularioInicio.Show();
-
             this.Hide();
+
+            formularioInicio.FormClosing += cerrar_form;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -34,6 +35,13 @@ namespace CapaPresentacion
         private void ibtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cerrar_form(object sender, FormClosingEventArgs e)
+        {
+            txttEmail.Text = "";
+            txttPass.Text = "";
+            this.Show();
         }
     }
 }

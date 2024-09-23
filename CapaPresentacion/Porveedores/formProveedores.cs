@@ -31,5 +31,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

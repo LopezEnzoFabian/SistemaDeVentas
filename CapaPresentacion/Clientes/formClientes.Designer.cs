@@ -61,7 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.lblDomicilio = new System.Windows.Forms.Label();
             this.lblCuidad = new System.Windows.Forms.Label();
@@ -415,16 +415,16 @@
             this.lblTel.TabIndex = 71;
             this.lblTel.Text = "Telefono";
             // 
-            // txtDomicilio
+            // txtDireccion
             // 
-            this.txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDomicilio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDomicilio.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDomicilio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDomicilio.Location = new System.Drawing.Point(258, 77);
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(131, 25);
-            this.txtDomicilio.TabIndex = 76;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDireccion.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtDireccion.Location = new System.Drawing.Point(258, 77);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(131, 25);
+            this.txtDireccion.TabIndex = 76;
             // 
             // txtCiudad
             // 
@@ -444,7 +444,7 @@
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(62, 17);
             this.lblDomicilio.TabIndex = 74;
-            this.lblDomicilio.Text = "Domicilio";
+            this.lblDomicilio.Text = "Direccion";
             // 
             // lblCuidad
             // 
@@ -485,7 +485,7 @@
             this.ClientSize = new System.Drawing.Size(644, 571);
             this.Controls.Add(this.txtCodPostal);
             this.Controls.Add(this.lblCodigoPostal);
-            this.Controls.Add(this.txtDomicilio);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.lblDomicilio);
             this.Controls.Add(this.lblCuidad);
@@ -542,7 +542,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.TextBox txtDomicilio;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label lblDomicilio;
         private System.Windows.Forms.Label lblCuidad;

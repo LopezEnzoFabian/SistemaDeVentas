@@ -99,7 +99,7 @@ namespace CapaPresentacion
 
         private void ibtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+         this.Close(); 
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
