@@ -52,7 +52,7 @@
             this.contenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.contenedor.Location = new System.Drawing.Point(172, 31);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(660, 578);
+            this.contenedor.Size = new System.Drawing.Size(662, 578);
             this.contenedor.TabIndex = 1;
             // 
             // menuStrip1
@@ -214,7 +214,7 @@
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconColor = System.Drawing.Color.Cyan;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
             this.iconButton1.Location = new System.Drawing.Point(811, -1);
