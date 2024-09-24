@@ -422,6 +422,7 @@
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtPass.Location = new System.Drawing.Point(145, 165);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(195, 20);
@@ -470,7 +471,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 236);
+            this.label1.Location = new System.Drawing.Point(16, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 52;
@@ -479,7 +480,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 267);
+            this.label2.Location = new System.Drawing.Point(16, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 53;

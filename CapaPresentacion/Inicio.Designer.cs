@@ -42,6 +42,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSalir = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUSER = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -224,6 +226,26 @@
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(200, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Usuario";
+            // 
+            // lblUSER
+            // 
+            this.lblUSER.AutoSize = true;
+            this.lblUSER.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblUSER.Location = new System.Drawing.Point(266, 9);
+            this.lblUSER.Name = "lblUSER";
+            this.lblUSER.Size = new System.Drawing.Size(35, 13);
+            this.lblUSER.TabIndex = 5;
+            this.lblUSER.Text = "label2";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +253,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(846, 625);
             this.ControlBox = false;
+            this.Controls.Add(this.lblUSER);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.ibtnSalir);
             this.Controls.Add(this.pictureBox1);
@@ -246,6 +270,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,6 +288,8 @@
         private FontAwesome.Sharp.IconButton ibtnSalir;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUSER;
     }
 }
 

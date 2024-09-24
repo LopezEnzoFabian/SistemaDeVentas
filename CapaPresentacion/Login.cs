@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using Capa_Entidad;
 
 namespace CapaPresentacion
 {
@@ -19,12 +21,25 @@ namespace CapaPresentacion
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
-            Inicio formularioInicio = new Inicio();
+            List<Usuario> TEST = new CN_usuario().Listar();
 
-            formularioInicio.Show();
-            this.Hide();
+            Usuario ousuario = new CN_usuario().Listar().Where(u => u.Email == txttEmail.Text && u.Pass == txttPass.Text).FirstOrDefault(); //expresion lambda
+                
+            if(ousuario != null)
+            {
+                Inicio formularioInicio = new Inicio(ousuario);
 
-            formularioInicio.FormClosing += cerrar_form;
+                formularioInicio.Show();
+                this.Hide();
+
+                formularioInicio.FormClosing += cerrar_form;
+            }
+            else
+            {
+                MessageBox.Show("Los datos son incorrectos","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
+           
         }
 
         private void Login_Load(object sender, EventArgs e)

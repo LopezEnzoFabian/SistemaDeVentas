@@ -28,7 +28,7 @@ CREATE TABLE Permiso
 
 CREATE TABLE Proveedor
 (
-  id_proveedor INT NOT NULL,
+  id_proveedor INT IDENTITY,
   DNI VARCHAR(100) NOT NULL,
   Razon_social VARCHAR(100) NOT NULL,
   Email VARCHAR(100) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE producto
 
 CREATE TABLE Cliente
 (
-  id_cliente INT NOT NULL,
+  id_cliente INT IDENTITY,
   DNI VARCHAR(100) NOT NULL,
   Nombre_completo VARCHAR(100) NOT NULL,
   Email VARCHAR(100) NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE Cliente
 
 CREATE TABLE Usuario
 (
-  id_usuario INT NOT NULL,
+  id_usuario INT IDENTITY,
   DNI VARCHAR(100),
   Nombre_completo VARCHAR(100) NOT NULL,
   Email VARCHAR(100) NOT NULL,

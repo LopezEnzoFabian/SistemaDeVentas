@@ -1,4 +1,5 @@
-﻿using CapaPresentacion.Productos;
+﻿using Capa_Entidad;
+using CapaPresentacion.Productos;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CapaPresentacion
 {
     public partial class Inicio : Form
@@ -17,9 +19,10 @@ namespace CapaPresentacion
 
         private static IconMenuItem MenuActivo = null;
         private static Form FormularioActivo = null;
-
-        public Inicio()
+        private static Usuario usuarioActual;
+        public Inicio(Usuario objusuario)
         {
+            usuarioActual = objusuario;
             InitializeComponent();
         }
 
@@ -27,7 +30,7 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-         
+            lblUSER.Text = usuarioActual.Nombre_completo;
         }
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
