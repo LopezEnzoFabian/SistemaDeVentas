@@ -8,7 +8,7 @@ namespace Capa_Entidad
 {
     public  class Rol
     {
-        public int I_rol { get; set; }
+        public int Id_rol { get; set; }
         public string Descripcion { get; set; }
         public string Fecha_registro { get; set; }
 

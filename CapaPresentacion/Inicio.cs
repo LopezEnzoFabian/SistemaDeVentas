@@ -1,4 +1,4 @@
-﻿using Capa_Entidad;
+﻿
 using CapaPresentacion.Productos;
 using FontAwesome.Sharp;
 using System;
@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Entidad;
+using CapaNegocio;
 
 
 namespace CapaPresentacion
@@ -31,6 +33,25 @@ namespace CapaPresentacion
         private void Inicio_Load(object sender, EventArgs e)
         {
             lblUSER.Text = usuarioActual.Nombre_completo;
+
+            if (usuarioActual.oRol.Id_rol == 1) //administrador
+            {
+               
+            }
+            if (usuarioActual.oRol.Id_rol == 2) //vendedor
+            {
+                menuUsuarios.Visible = false;
+                menuCompras.Visible = false;
+                menuReportes.Visible = false;
+                menuProveedores.Visible = false;
+            }
+            if (usuarioActual.oRol.Id_rol == 3)//supervisor
+            {
+                menuCompras.Visible=false;
+                menuVentas.Visible=false;
+                menuVentas.Visible = false;
+                menuCompras.Visible = false;
+            }
         }
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)

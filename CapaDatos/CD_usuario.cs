@@ -20,7 +20,7 @@ namespace CapaDatos
 
                 try
                 {
-                    string query = "select  Id_usuario,DNI,Nombre_completo,Email,Pass,telefono,direccion,estado from Usuario";
+                    string query = "select  Id_usuario,DNI,Nombre_completo,Email,Pass,telefono,direccion,estado,id_rol from Usuario";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
 
@@ -42,7 +42,8 @@ namespace CapaDatos
                                 Pass = dr["Pass"].ToString(),
                                 Telefono = dr["Telefono"].ToString(),
                                 Direccion = dr["Direccion"].ToString(),
-                                Estado = Convert.ToBoolean(dr["Estado"])
+                                Estado = Convert.ToBoolean(dr["Estado"]),
+                                oRol = new Rol() { Id_rol = Convert.ToInt32(dr["id_rol"]) }
                             });
                         }
 
