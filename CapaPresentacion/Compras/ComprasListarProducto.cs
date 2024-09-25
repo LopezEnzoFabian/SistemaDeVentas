@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Perfiles
+namespace CapaPresentacion.Compras
 {
-    public partial class Supervisor : Form
+    public partial class ComprasListarProducto : Form
     {
-        public Supervisor()
+        public ComprasListarProducto()
         {
             InitializeComponent();
         }

@@ -57,29 +57,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compras\ComprasListarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\ComprasListarProducto.Designer.cs">
+      <DependentUpon>ComprasListarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\ComprasListarProveedorcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\ComprasListarProveedorcs.Designer.cs">
+      <DependentUpon>ComprasListarProveedorcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\formRegistrarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compras\formRegistrarCompra.Designer.cs">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Perfiles\Administrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Perfiles\Administrador.Designer.cs">
-      <DependentUpon>Administrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Perfiles\Supervisor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Perfiles\Supervisor.Designer.cs">
-      <DependentUpon>Supervisor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Perfiles\Vendedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Perfiles\Vendedor.Designer.cs">
-      <DependentUpon>Vendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\formCategorias.cs">
       <SubType>Form</SubType>
@@ -195,17 +189,26 @@
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Ventas\VentasListarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\VentasListarCliente.Designer.cs">
+      <DependentUpon>VentasListarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\VentasListarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\VentasListarProducto.Designer.cs">
+      <DependentUpon>VentasListarProducto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Compras\ComprasListarProducto.resx">
+      <DependentUpon>ComprasListarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\ComprasListarProveedorcs.resx">
+      <DependentUpon>ComprasListarProveedorcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Perfiles\Administrador.resx">
-      <DependentUpon>Administrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Perfiles\Supervisor.resx">
-      <DependentUpon>Supervisor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Perfiles\Vendedor.resx">
-      <DependentUpon>Vendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\formCategorias.resx">
       <DependentUpon>formCategorias.cs</DependentUpon>
@@ -266,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\RegistrarVenta.resx">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\VentasListarCliente.resx">
+      <DependentUpon>VentasListarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\VentasListarProducto.resx">
+      <DependentUpon>VentasListarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

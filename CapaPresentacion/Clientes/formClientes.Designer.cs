@@ -242,7 +242,7 @@
             this.colCuidad,
             this.colLocalidad,
             this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(13, 343);
+            this.dgListarUsuario.Location = new System.Drawing.Point(8, 345);
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.Size = new System.Drawing.Size(624, 223);
             this.dgListarUsuario.TabIndex = 56;

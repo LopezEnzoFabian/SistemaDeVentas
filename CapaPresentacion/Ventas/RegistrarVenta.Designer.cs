@@ -139,10 +139,10 @@
             this.colCantidad,
             this.colSubTotal,
             this.colEliminarPro});
-            this.dgRegistrarVenta.Location = new System.Drawing.Point(4, 299);
+            this.dgRegistrarVenta.Location = new System.Drawing.Point(14, 299);
             this.dgRegistrarVenta.Name = "dgRegistrarVenta";
             this.dgRegistrarVenta.ReadOnly = true;
-            this.dgRegistrarVenta.Size = new System.Drawing.Size(550, 190);
+            this.dgRegistrarVenta.Size = new System.Drawing.Size(541, 190);
             this.dgRegistrarVenta.TabIndex = 47;
             // 
             // colIdProducto
@@ -304,6 +304,7 @@
             this.ibtnSearch.Size = new System.Drawing.Size(34, 21);
             this.ibtnSearch.TabIndex = 47;
             this.ibtnSearch.UseVisualStyleBackColor = false;
+            this.ibtnSearch.Click += new System.EventHandler(this.ibtnSearch_Click);
             // 
             // txtPrecioVen
             // 
@@ -377,6 +378,7 @@
             this.btnsearch.Size = new System.Drawing.Size(31, 20);
             this.btnsearch.TabIndex = 46;
             this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // lblNombreCompleto
             // 

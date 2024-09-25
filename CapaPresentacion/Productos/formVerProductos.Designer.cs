@@ -43,6 +43,12 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.dgListarPorductos = new System.Windows.Forms.DataGridView();
+            this.txtDescri = new System.Windows.Forms.TextBox();
+            this.txtCodigoPro = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblDescri = new System.Windows.Forms.Label();
+            this.lblCodPro = new System.Windows.Forms.Label();
+            this.lblNomPro = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +61,6 @@
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDescri = new System.Windows.Forms.TextBox();
-            this.txtCodigoPro = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblDescri = new System.Windows.Forms.Label();
-            this.lblCodPro = new System.Windows.Forms.Label();
-            this.lblNomPro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,86 +250,6 @@
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 35.53891F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Width = 50;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "id";
-            this.colID.Name = "colID";
-            this.colID.Visible = false;
-            this.colID.Width = 84;
-            // 
-            // colCod
-            // 
-            this.colCod.FillWeight = 52.41989F;
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.Width = 80;
-            // 
-            // colNom
-            // 
-            this.colNom.FillWeight = 52.41989F;
-            this.colNom.HeaderText = "Nombre";
-            this.colNom.Name = "colNom";
-            // 
-            // colDes
-            // 
-            this.colDes.HeaderText = "Descripcion";
-            this.colDes.Name = "colDes";
-            this.colDes.Visible = false;
-            this.colDes.Width = 96;
-            // 
-            // colIdcategoria
-            // 
-            this.colIdcategoria.FillWeight = 310.5997F;
-            this.colIdcategoria.HeaderText = "id categoria";
-            this.colIdcategoria.Name = "colIdcategoria";
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.Visible = false;
-            this.colCategoria.Width = 96;
-            // 
-            // colStock
-            // 
-            this.colStock.FillWeight = 52.41989F;
-            this.colStock.HeaderText = "Stock";
-            this.colStock.Name = "colStock";
-            this.colStock.Width = 52;
-            // 
-            // colPrecioCompra
-            // 
-            this.colPrecioCompra.FillWeight = 52.41989F;
-            this.colPrecioCompra.HeaderText = "Precio Compra";
-            this.colPrecioCompra.Name = "colPrecioCompra";
-            // 
-            // colPrecioVenta
-            // 
-            this.colPrecioVenta.FillWeight = 84.5141F;
-            this.colPrecioVenta.HeaderText = "Precio Venta";
-            this.colPrecioVenta.Name = "colPrecioVenta";
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 62.02502F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.Width = 80;
-            // 
-            // ColEstad
-            // 
-            this.ColEstad.FillWeight = 62.02502F;
-            this.ColEstad.HeaderText = "Estado";
-            this.ColEstad.Name = "ColEstad";
-            this.ColEstad.Width = 80;
-            // 
             // txtDescri
             // 
             this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,6 +307,86 @@
             this.lblNomPro.Size = new System.Drawing.Size(57, 17);
             this.lblNomPro.TabIndex = 46;
             this.lblNomPro.Text = "Nombre";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35.53891F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Width = 50;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.Name = "colID";
+            this.colID.Visible = false;
+            this.colID.Width = 84;
+            // 
+            // colCod
+            // 
+            this.colCod.FillWeight = 52.41989F;
+            this.colCod.HeaderText = "Codigo";
+            this.colCod.Name = "colCod";
+            this.colCod.Width = 80;
+            // 
+            // colNom
+            // 
+            this.colNom.FillWeight = 52.41989F;
+            this.colNom.HeaderText = "Nombre de producto";
+            this.colNom.Name = "colNom";
+            // 
+            // colDes
+            // 
+            this.colDes.HeaderText = "Descripcion";
+            this.colDes.Name = "colDes";
+            this.colDes.Visible = false;
+            this.colDes.Width = 96;
+            // 
+            // colIdcategoria
+            // 
+            this.colIdcategoria.FillWeight = 310.5997F;
+            this.colIdcategoria.HeaderText = "id categoria";
+            this.colIdcategoria.Name = "colIdcategoria";
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.Visible = false;
+            this.colCategoria.Width = 96;
+            // 
+            // colStock
+            // 
+            this.colStock.FillWeight = 52.41989F;
+            this.colStock.HeaderText = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.Width = 52;
+            // 
+            // colPrecioCompra
+            // 
+            this.colPrecioCompra.FillWeight = 52.41989F;
+            this.colPrecioCompra.HeaderText = "Precio Compra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.FillWeight = 84.5141F;
+            this.colPrecioVenta.HeaderText = "Precio Venta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 62.02502F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.Width = 80;
+            // 
+            // ColEstad
+            // 
+            this.ColEstad.FillWeight = 62.02502F;
+            this.ColEstad.HeaderText = "Estado";
+            this.ColEstad.Name = "ColEstad";
+            this.ColEstad.Width = 80;
             // 
             // formVerProductos
             // 
