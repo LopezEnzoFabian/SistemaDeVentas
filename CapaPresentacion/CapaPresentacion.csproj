@@ -105,11 +105,11 @@
     <Compile Include="Info\formInfo.Designer.cs">
       <DependentUpon>formInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Productos\formVerProductos.cs">
+    <Compile Include="Productos\formABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Productos\formVerProductos.Designer.cs">
-      <DependentUpon>formVerProductos.cs</DependentUpon>
+    <Compile Include="Productos\formABMProductos.Designer.cs">
+      <DependentUpon>formABMProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Porveedores\formProveedores.cs">
       <SubType>Form</SubType>
@@ -131,6 +131,12 @@
     </Compile>
     <Compile Include="Productos\formProductos.Designer.cs">
       <DependentUpon>formProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\VerProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\VerProductos.Designer.cs">
+      <DependentUpon>VerProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\formReportes.cs">
       <SubType>Form</SubType>
@@ -225,8 +231,8 @@
     <EmbeddedResource Include="Info\formInfo.resx">
       <DependentUpon>formInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\formVerProductos.resx">
-      <DependentUpon>formVerProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Productos\formABMProductos.resx">
+      <DependentUpon>formABMProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Porveedores\formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\formProductos.resx">
       <DependentUpon>formProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\VerProductos.resx">
+      <DependentUpon>VerProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\formReportes.resx">
       <DependentUpon>formReportes.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,21 +18,22 @@ namespace CapaPresentacion
     public partial class formClientes : Form
     {
         private int fila = 0;
-        public formClientes()
-        {
+        private Usuario usuarioActual;
+        public formClientes(Usuario usuario)
+        {       
+            usuarioActual = usuario;
             InitializeComponent();
         }
-
-  
+   
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
 
-            if (string.IsNullOrEmpty(txtDNI.Text) || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtTel.Text) || string.IsNullOrEmpty(cbEstado.Text))
+            if (ValidarCampos())
             {
-                MessageBox.Show("Debe completar todos los campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
             }
 
             if (!Validaciones.EsEmailValido(txtEmail.Text))
@@ -66,6 +68,19 @@ namespace CapaPresentacion
 
         }
 
+        public bool ValidarCampos()
+        {
+         // Verifica si alguno de los campos está vacío o nulo
+                return string.IsNullOrEmpty(txtDNI.Text) ||
+                       string.IsNullOrEmpty(txtNombre.Text) ||
+                       string.IsNullOrEmpty(txtEmail.Text) ||
+                       string.IsNullOrEmpty(txtTel.Text) ||
+                       string.IsNullOrEmpty(cbEstado.Text) ||
+                       string.IsNullOrEmpty(txtCiudad.Text) ||
+                       string.IsNullOrEmpty(txtDireccion.Text) ||
+                       string.IsNullOrEmpty(txtCodPostal.Text);         
+        }
+
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
@@ -94,6 +109,57 @@ namespace CapaPresentacion
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void formClientes_Load(object sender, EventArgs e)
+        {
+            if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
+            {
+                btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Está a punto de eliminar un cliente. ¿Está seguro?","Eliminar",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes){         
+                //EliminarUsuario();
+                // Mensaje de éxito
+                MessageBox.Show("Usuario eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete los campos del cliente", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea editar este cliente?","Editar Cliente",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Cliente editado correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

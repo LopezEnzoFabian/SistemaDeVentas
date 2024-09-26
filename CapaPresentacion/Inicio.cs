@@ -44,13 +44,13 @@ namespace CapaPresentacion
                 menuCompras.Visible = false;
                 menuReportes.Visible = false;
                 menuProveedores.Visible = false;
+                menuProductos.Visible = false;
             }
             if (usuarioActual.oRol.Id_rol == 3)//supervisor
             {
                 menuCompras.Visible=false;
                 menuVentas.Visible=false;
-                menuVentas.Visible = false;
-                menuCompras.Visible = false;
+                menuProductos.Visible=false;
             }
         }
 
@@ -103,7 +103,7 @@ namespace CapaPresentacion
 
         private void menuClientes_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new formClientes());
+            AbrirFormulario((IconMenuItem)sender, new formClientes(usuarioActual));
         }
 
         private void menuProveedores_Click(object sender, EventArgs e)
@@ -129,6 +129,11 @@ namespace CapaPresentacion
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized; // Minimizar el formulario
+        }
+
+        private void menuProductosVer_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new VerProductos());
         }
     }
 }

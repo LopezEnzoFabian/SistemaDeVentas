@@ -85,6 +85,7 @@
             // 
             this.txtTotalPagar.Location = new System.Drawing.Point(553, 345);
             this.txtTotalPagar.Name = "txtTotalPagar";
+            this.txtTotalPagar.ReadOnly = true;
             this.txtTotalPagar.Size = new System.Drawing.Size(75, 20);
             this.txtTotalPagar.TabIndex = 50;
             this.txtTotalPagar.Text = "0";
@@ -232,9 +233,9 @@
             this.lblPrecioVen.AutoSize = true;
             this.lblPrecioVen.Location = new System.Drawing.Point(426, 32);
             this.lblPrecioVen.Name = "lblPrecioVen";
-            this.lblPrecioVen.Size = new System.Drawing.Size(68, 13);
+            this.lblPrecioVen.Size = new System.Drawing.Size(67, 13);
             this.lblPrecioVen.TabIndex = 51;
-            this.lblPrecioVen.Text = "Precio Venta";
+            this.lblPrecioVen.Text = "Precio venta";
             // 
             // lblPrecioCom
             // 
@@ -301,11 +302,13 @@
             this.ibtnBuscarProducto.Size = new System.Drawing.Size(34, 21);
             this.ibtnBuscarProducto.TabIndex = 47;
             this.ibtnBuscarProducto.UseVisualStyleBackColor = false;
+            this.ibtnBuscarProducto.Click += new System.EventHandler(this.ibtnBuscarProducto_Click);
             // 
             // txtPrecioVen
             // 
             this.txtPrecioVen.Location = new System.Drawing.Point(429, 48);
             this.txtPrecioVen.Name = "txtPrecioVen";
+            this.txtPrecioVen.ReadOnly = true;
             this.txtPrecioVen.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioVen.TabIndex = 5;
             // 
@@ -313,6 +316,7 @@
             // 
             this.txtPrecioCom.Location = new System.Drawing.Point(336, 48);
             this.txtPrecioCom.Name = "txtPrecioCom";
+            this.txtPrecioCom.ReadOnly = true;
             this.txtPrecioCom.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioCom.TabIndex = 4;
             // 
@@ -320,6 +324,7 @@
             // 
             this.txtProducto.Location = new System.Drawing.Point(188, 48);
             this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(124, 20);
             this.txtProducto.TabIndex = 3;
             // 
@@ -327,6 +332,7 @@
             // 
             this.txtCodProd.Location = new System.Drawing.Point(11, 48);
             this.txtCodProd.Name = "txtCodProd";
+            this.txtCodProd.ReadOnly = true;
             this.txtCodProd.Size = new System.Drawing.Size(128, 20);
             this.txtCodProd.TabIndex = 2;
             // 
@@ -350,6 +356,7 @@
             // 
             this.txtRazonSoc.Location = new System.Drawing.Point(182, 53);
             this.txtRazonSoc.Name = "txtRazonSoc";
+            this.txtRazonSoc.ReadOnly = true;
             this.txtRazonSoc.Size = new System.Drawing.Size(104, 20);
             this.txtRazonSoc.TabIndex = 48;
             // 
@@ -375,6 +382,7 @@
             this.btnBuscarProveedor.Size = new System.Drawing.Size(31, 20);
             this.btnBuscarProveedor.TabIndex = 46;
             this.btnBuscarProveedor.UseVisualStyleBackColor = false;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // lblRazonSoc
             // 
@@ -470,6 +478,7 @@
             this.Controls.Add(this.lblRegistrarCompra);
             this.Name = "formRegistrarCompra";
             this.Text = "formRegistrarCompra";
+            this.Load += new System.EventHandler(this.formRegistrarCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarCompra)).EndInit();
             this.gbInfoProducto.ResumeLayout(false);
             this.gbInfoProducto.PerformLayout();

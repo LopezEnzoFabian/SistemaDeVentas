@@ -89,6 +89,7 @@
             // 
             this.txtTotalPagar.Location = new System.Drawing.Point(560, 307);
             this.txtTotalPagar.Name = "txtTotalPagar";
+            this.txtTotalPagar.ReadOnly = true;
             this.txtTotalPagar.Size = new System.Drawing.Size(75, 20);
             this.txtTotalPagar.TabIndex = 50;
             // 
@@ -310,6 +311,7 @@
             // 
             this.txtPrecioVen.Location = new System.Drawing.Point(417, 48);
             this.txtPrecioVen.Name = "txtPrecioVen";
+            this.txtPrecioVen.ReadOnly = true;
             this.txtPrecioVen.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioVen.TabIndex = 5;
             // 
@@ -317,6 +319,7 @@
             // 
             this.txtPrecioCom.Location = new System.Drawing.Point(324, 48);
             this.txtPrecioCom.Name = "txtPrecioCom";
+            this.txtPrecioCom.ReadOnly = true;
             this.txtPrecioCom.Size = new System.Drawing.Size(87, 20);
             this.txtPrecioCom.TabIndex = 4;
             // 
@@ -324,6 +327,7 @@
             // 
             this.txtProducto.Location = new System.Drawing.Point(188, 48);
             this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(122, 20);
             this.txtProducto.TabIndex = 3;
             // 
@@ -331,6 +335,7 @@
             // 
             this.txtCodProd.Location = new System.Drawing.Point(11, 48);
             this.txtCodProd.Name = "txtCodProd";
+            this.txtCodProd.ReadOnly = true;
             this.txtCodProd.Size = new System.Drawing.Size(126, 20);
             this.txtCodProd.TabIndex = 2;
             // 
@@ -354,6 +359,7 @@
             // 
             this.txtNombreCliente.Location = new System.Drawing.Point(161, 53);
             this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(132, 20);
             this.txtNombreCliente.TabIndex = 48;
             // 
@@ -361,6 +367,7 @@
             // 
             this.txtNumDoc.Location = new System.Drawing.Point(9, 53);
             this.txtNumDoc.Name = "txtNumDoc";
+            this.txtNumDoc.ReadOnly = true;
             this.txtNumDoc.Size = new System.Drawing.Size(109, 20);
             this.txtNumDoc.TabIndex = 47;
             // 
@@ -478,6 +485,7 @@
             // 
             this.txtCambio.Location = new System.Drawing.Point(561, 388);
             this.txtCambio.Name = "txtCambio";
+            this.txtCambio.ReadOnly = true;
             this.txtCambio.Size = new System.Drawing.Size(77, 20);
             this.txtCambio.TabIndex = 55;
             // 

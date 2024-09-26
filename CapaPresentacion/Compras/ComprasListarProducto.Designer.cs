@@ -33,16 +33,14 @@
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
-            this.dgListaClientes = new System.Windows.Forms.DataGridView();
+            this.dgListaProductos = new System.Windows.Forms.DataGridView();
             this.colSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreDeProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListaClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsearch
@@ -80,9 +78,8 @@
             this.cbFiltro.Items.AddRange(new object[] {
             "Codigo",
             "Nombre de producto",
-            "id categoria",
-            "Stock",
-            "Estado"});
+            "Categoria",
+            "Stock"});
             this.cbFiltro.Location = new System.Drawing.Point(276, 11);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(122, 25);
@@ -107,35 +104,26 @@
             this.lblFiltrar.TabIndex = 89;
             this.lblFiltrar.Text = "Filtrar por";
             // 
-            // dgListaClientes
+            // dgListaProductos
             // 
-            this.dgListaClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSeleccionar,
-            this.colCodigo,
             this.colNombreDeProducto,
+            this.colCodigo,
+            this.colCategoria,
             this.colIdCategoria,
-            this.colStock,
-            this.colPrecioCompra,
-            this.colPrecioVenta,
-            this.colEstado});
-            this.dgListaClientes.Location = new System.Drawing.Point(1, 70);
-            this.dgListaClientes.Name = "dgListaClientes";
-            this.dgListaClientes.Size = new System.Drawing.Size(810, 150);
-            this.dgListaClientes.TabIndex = 88;
+            this.colPrecioVenta});
+            this.dgListaProductos.Location = new System.Drawing.Point(1, 70);
+            this.dgListaProductos.Name = "dgListaProductos";
+            this.dgListaProductos.Size = new System.Drawing.Size(810, 150);
+            this.dgListaProductos.TabIndex = 88;
             // 
             // colSeleccionar
             // 
             this.colSeleccionar.HeaderText = "Seleccionar";
             this.colSeleccionar.Name = "colSeleccionar";
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colCodigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colNombreDeProducto
             // 
@@ -144,30 +132,27 @@
             this.colNombreDeProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNombreDeProducto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCodigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            // 
             // colIdCategoria
             // 
-            this.colIdCategoria.HeaderText = "Id categoria";
+            this.colIdCategoria.HeaderText = "Descripcion";
             this.colIdCategoria.Name = "colIdCategoria";
-            // 
-            // colStock
-            // 
-            this.colStock.HeaderText = "Stock";
-            this.colStock.Name = "colStock";
-            // 
-            // colPrecioCompra
-            // 
-            this.colPrecioCompra.HeaderText = "Precio compra";
-            this.colPrecioCompra.Name = "colPrecioCompra";
             // 
             // colPrecioVenta
             // 
             this.colPrecioVenta.HeaderText = "Precio venta";
             this.colPrecioVenta.Name = "colPrecioVenta";
-            // 
-            // colEstado
-            // 
-            this.colEstado.HeaderText = "Estado";
-            this.colEstado.Name = "colEstado";
             // 
             // ComprasListarProducto
             // 
@@ -180,10 +165,11 @@
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblFiltrar);
-            this.Controls.Add(this.dgListaClientes);
+            this.Controls.Add(this.dgListaProductos);
             this.Name = "ComprasListarProducto";
-            this.Text = "ComprasListarProducto";
-            ((System.ComponentModel.ISupportInitialize)(this.dgListaClientes)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista de Productos";
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,14 +182,12 @@
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblFiltrar;
-        private System.Windows.Forms.DataGridView dgListaClientes;
+        private System.Windows.Forms.DataGridView dgListaProductos;
         private System.Windows.Forms.DataGridViewButtonColumn colSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreDeProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
     }
 }

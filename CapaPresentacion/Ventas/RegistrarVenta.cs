@@ -15,8 +15,7 @@ namespace CapaPresentacion.Ventas
     public partial class RegistrarVenta : Form
     {
         private static IconButton Boton = null;
-        private static Form FormularioActivo = null;
-        private static Usuario usuarioActual;
+       
         public RegistrarVenta()
         {
             InitializeComponent();

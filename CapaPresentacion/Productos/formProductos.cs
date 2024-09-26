@@ -54,7 +54,7 @@ namespace CapaPresentacion.Productos
 
         private void ibtnProductos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new formVerProductos());
+            AbrirFormulario((IconButton)sender, new formABMProductos());
         }
 
         private void ibtnCategorias_Click(object sender, EventArgs e)
