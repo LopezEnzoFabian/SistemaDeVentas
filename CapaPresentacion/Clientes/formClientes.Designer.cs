@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -53,7 +56,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colSelec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -341,9 +344,20 @@
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
             this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
-            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgListarUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgListarUsuario.ColumnHeadersHeight = 35;
             this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSeleccionar,
+            this.colSelec,
             this.colUsuario,
             this.colDNI,
             this.Estado,
@@ -354,85 +368,100 @@
             this.colCuidad,
             this.colLocalidad,
             this.EstadoValor});
+            this.dgListarUsuario.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dgListarUsuario.Location = new System.Drawing.Point(8, 99);
+            this.dgListarUsuario.MultiSelect = false;
             this.dgListarUsuario.Name = "dgListarUsuario";
+            this.dgListarUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgListarUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgListarUsuario.RowHeadersWidth = 30;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgListarUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgListarUsuario.Size = new System.Drawing.Size(624, 223);
-            this.dgListarUsuario.TabIndex = 79;
+            this.dgListarUsuario.TabIndex = 78;
+            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick_1);
+            this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
             // 
-            // btnSeleccionar
+            // colSelec
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkGreen;
-            this.btnSeleccionar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.btnSeleccionar.FillWeight = 57.2977F;
-            this.btnSeleccionar.HeaderText = "Seleccionar";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.btnSeleccionar.Text = "";
-            this.btnSeleccionar.UseColumnTextForButtonValue = true;
-            this.btnSeleccionar.Width = 68;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.colSelec.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colSelec.HeaderText = "";
+            this.colSelec.Name = "colSelec";
+            this.colSelec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSelec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colSelec.Width = 35;
             // 
             // colUsuario
             // 
             this.colUsuario.HeaderText = "id";
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.Visible = false;
-            this.colUsuario.Width = 84;
+            this.colUsuario.Width = 44;
             // 
             // colDNI
             // 
             this.colDNI.FillWeight = 84.5141F;
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
-            this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 101;
+            this.colDNI.Width = 58;
             // 
             // Estado
             // 
             this.Estado.FillWeight = 84.5141F;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 101;
+            this.Estado.Width = 59;
             // 
             // colNombre
             // 
             this.colNombre.FillWeight = 84.5141F;
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 101;
+            this.colNombre.Width = 59;
             // 
             // colEmail
             // 
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 70;
             // 
             // colTelefono
             // 
             this.colTelefono.HeaderText = "Telefono";
             this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
+            this.colTelefono.Width = 69;
             // 
             // colDomicilio
             // 
             this.colDomicilio.HeaderText = "Domicilio";
             this.colDomicilio.Name = "colDomicilio";
+            this.colDomicilio.Width = 70;
             // 
             // colCuidad
             // 
             this.colCuidad.HeaderText = "Cuidad";
             this.colCuidad.Name = "colCuidad";
+            this.colCuidad.Width = 69;
             // 
             // colLocalidad
             // 
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
+            this.colLocalidad.Width = 70;
             // 
             // EstadoValor
             // 
@@ -440,7 +469,7 @@
             this.EstadoValor.HeaderText = "EstadoValor";
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 101;
+            this.EstadoValor.Width = 93;
             // 
             // lblEstado
             // 
@@ -545,8 +574,11 @@
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label lblListaCliente;
         private System.Windows.Forms.DataGridView dgListarUsuario;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewButtonColumn colSelec;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
@@ -557,8 +589,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCuidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.Label lblListaCliente;
     }
 }

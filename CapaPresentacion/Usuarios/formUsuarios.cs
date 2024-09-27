@@ -142,5 +142,33 @@ namespace CapaPresentacion
         {
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
+
+        private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var cellWidth = e.CellBounds.Width;
+                var cellHeight = e.CellBounds.Height;
+
+                var originalImage = Properties.Resources.check;
+
+                int margin = 4; // Ajusta este margen según lo necesites
+                var newWidth = cellWidth - margin;
+                var newHeight = cellHeight - margin;
+
+                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
+                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
+                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
+                {
+                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
+                }
+                e.Handled = true;
+            }
+        }
     }
 }

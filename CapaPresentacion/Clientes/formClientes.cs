@@ -20,11 +20,11 @@ namespace CapaPresentacion
         private int fila = 0;
         private Usuario usuarioActual;
         public formClientes(Usuario usuario)
-        {       
+        {
             usuarioActual = usuario;
             InitializeComponent();
         }
-   
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -63,22 +63,22 @@ namespace CapaPresentacion
                 if (estado != null)
                     dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(estado.ToLower());
             }
-          
+
             limpiarCampos();
 
         }
 
         public bool ValidarCampos()
         {
-         // Verifica si alguno de los campos está vacío o nulo
-                return string.IsNullOrEmpty(txtDNI.Text) ||
-                       string.IsNullOrEmpty(txtNombre.Text) ||
-                       string.IsNullOrEmpty(txtEmail.Text) ||
-                       string.IsNullOrEmpty(txtTel.Text) ||
-                       string.IsNullOrEmpty(cbEstado.Text) ||
-                       string.IsNullOrEmpty(txtCiudad.Text) ||
-                       string.IsNullOrEmpty(txtDireccion.Text) ||
-                       string.IsNullOrEmpty(txtCodPostal.Text);         
+            // Verifica si alguno de los campos está vacío o nulo
+            return string.IsNullOrEmpty(txtDNI.Text) ||
+                   string.IsNullOrEmpty(txtNombre.Text) ||
+                   string.IsNullOrEmpty(txtEmail.Text) ||
+                   string.IsNullOrEmpty(txtTel.Text) ||
+                   string.IsNullOrEmpty(cbEstado.Text) ||
+                   string.IsNullOrEmpty(txtCiudad.Text) ||
+                   string.IsNullOrEmpty(txtDireccion.Text) ||
+                   string.IsNullOrEmpty(txtCodPostal.Text);
         }
 
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -93,7 +93,7 @@ namespace CapaPresentacion
 
         private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
         {
-           Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
 
         private void limpiarCampos()
@@ -103,7 +103,7 @@ namespace CapaPresentacion
             txtTel.Clear();
             txtEmail.Clear();
             cbEstado.Items.Clear();
-    
+
         }
 
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -121,15 +121,17 @@ namespace CapaPresentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Está a punto de eliminar un cliente. ¿Está seguro?","Eliminar",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show("Está a punto de eliminar un cliente. ¿Está seguro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             // Comprobar la respuesta del usuario
-            if (resultado == DialogResult.Yes){         
+            if (resultado == DialogResult.Yes)
+            {
                 //EliminarUsuario();
                 // Mensaje de éxito
                 MessageBox.Show("Usuario eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else {
+            else
+            {
                 // Acción cancelada
                 MessageBox.Show("Operación cancelada", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -145,7 +147,7 @@ namespace CapaPresentacion
             // Mensaje de confirmación para editar
 
             DialogResult resultado = MessageBox.Show(
-                "¿Está seguro que desea editar este cliente?","Editar Cliente",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                "¿Está seguro que desea editar este cliente?", "Editar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Comprobar la respuesta del usuario
             if (resultado == DialogResult.Yes)
@@ -160,6 +162,41 @@ namespace CapaPresentacion
                 // Acción cancelada
                 MessageBox.Show("Operación cancelada", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)  
+                return;  
+
+            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+           
+                var cellWidth = e.CellBounds.Width;
+                var cellHeight = e.CellBounds.Height;
+                // Dimensiones de la imagen original
+                var originalImage = Properties.Resources.check;
+                // Reducir el tamaño de la imagen
+                int margin = 4; // Ajusta este margen según lo necesites
+                var newWidth = cellWidth - margin;
+                var newHeight = cellHeight - margin;
+                // Calcular la posición centrada
+                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
+                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
+                // Redimensionar la imagen
+                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
+                {
+                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
+                }
+                e.Handled = true;
+            }
+
+        }
+
+        private void dgListarUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

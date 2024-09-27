@@ -109,7 +109,7 @@
             // 
             // dgListaProveedores
             // 
-            this.dgListaProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaProveedores.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgListaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSeleccionar,
@@ -123,41 +123,49 @@
             this.dgListaProveedores.Name = "dgListaProveedores";
             this.dgListaProveedores.Size = new System.Drawing.Size(810, 150);
             this.dgListaProveedores.TabIndex = 82;
+            this.dgListaProveedores.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaProveedores_CellPainting);
             // 
             // colSeleccionar
             // 
-            this.colSeleccionar.HeaderText = "Seleccionar";
+            this.colSeleccionar.HeaderText = "";
             this.colSeleccionar.Name = "colSeleccionar";
+            this.colSeleccionar.Width = 40;
             // 
             // colEmail
             // 
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
+            this.colEmail.Width = 109;
             // 
             // colRazonSocial
             // 
             this.colRazonSocial.HeaderText = "Razon social";
             this.colRazonSocial.Name = "colRazonSocial";
+            this.colRazonSocial.Width = 110;
             // 
             // colTelefono
             // 
             this.colTelefono.HeaderText = "telefono";
             this.colTelefono.Name = "colTelefono";
+            this.colTelefono.Width = 109;
             // 
             // colNombre
             // 
             this.colNombre.HeaderText = "DNI";
             this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 110;
             // 
             // colCiudad
             // 
             this.colCiudad.HeaderText = "Ciudad";
             this.colCiudad.Name = "colCiudad";
+            this.colCiudad.Width = 109;
             // 
             // colDireccion
             // 
             this.colDireccion.HeaderText = "Direccion";
             this.colDireccion.Name = "colDireccion";
+            this.colDireccion.Width = 110;
             // 
             // ComprasListarProveedorcs
             // 

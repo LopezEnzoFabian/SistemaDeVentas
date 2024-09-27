@@ -30,19 +30,6 @@
         {
             this.lblRepoCompras = new System.Windows.Forms.Label();
             this.dgReporteCompras = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.cbProvee = new System.Windows.Forms.ComboBox();
-            this.ibtnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
-            this.lblRV = new System.Windows.Forms.Label();
-            this.ibtnBuscarPor = new FontAwesome.Sharp.IconButton();
-            this.txtBuscarPor = new System.Windows.Forms.TextBox();
-            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +41,18 @@
             this.colNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.cbProvee = new System.Windows.Forms.ComboBox();
+            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
+            this.lblRV = new System.Windows.Forms.Label();
+            this.ibtnBuscarPor = new FontAwesome.Sharp.IconButton();
+            this.txtBuscarPor = new System.Windows.Forms.TextBox();
+            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +87,61 @@
             this.dgReporteCompras.Name = "dgReporteCompras";
             this.dgReporteCompras.Size = new System.Drawing.Size(638, 215);
             this.dgReporteCompras.TabIndex = 1;
+            // 
+            // colFechaDeRegistro
+            // 
+            this.colFechaDeRegistro.HeaderText = "Fecha de registro";
+            this.colFechaDeRegistro.Name = "colFechaDeRegistro";
+            // 
+            // colTipoDocumento
+            // 
+            this.colTipoDocumento.HeaderText = "TIpo documento";
+            this.colTipoDocumento.Name = "colTipoDocumento";
+            // 
+            // colNumeroDocumento
+            // 
+            this.colNumeroDocumento.HeaderText = "Numero de factura";
+            this.colNumeroDocumento.Name = "colNumeroDocumento";
+            // 
+            // colMontoTotal
+            // 
+            this.colMontoTotal.HeaderText = "Monto Total";
+            this.colMontoTotal.Name = "colMontoTotal";
+            // 
+            // colUsuarioRegistro
+            // 
+            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
+            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
+            // 
+            // colDocumentoProveedor
+            // 
+            this.colDocumentoProveedor.HeaderText = "Documento del proveedor";
+            this.colDocumentoProveedor.Name = "colDocumentoProveedor";
+            // 
+            // colRazonSocial
+            // 
+            this.colRazonSocial.HeaderText = "Razon Social";
+            this.colRazonSocial.Name = "colRazonSocial";
+            // 
+            // colCodProd
+            // 
+            this.colCodProd.HeaderText = "Codigo de producto";
+            this.colCodProd.Name = "colCodProd";
+            // 
+            // colNomPro
+            // 
+            this.colNomPro.HeaderText = "Nombre de producto";
+            this.colNomPro.Name = "colNomPro";
+            // 
+            // colCate
+            // 
+            this.colCate.HeaderText = "Categoria";
+            this.colCate.Name = "colCate";
+            // 
+            // colPrecioCom
+            // 
+            this.colPrecioCom.HeaderText = "Precio compra";
+            this.colPrecioCom.Name = "colPrecioCom";
             // 
             // label2
             // 
@@ -140,20 +194,6 @@
             this.cbProvee.Name = "cbProvee";
             this.cbProvee.Size = new System.Drawing.Size(100, 21);
             this.cbProvee.TabIndex = 48;
-            // 
-            // ibtnBuscarProveedor
-            // 
-            this.ibtnBuscarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscarProveedor.IconColor = System.Drawing.Color.Cyan;
-            this.ibtnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscarProveedor.IconSize = 20;
-            this.ibtnBuscarProveedor.Location = new System.Drawing.Point(577, 63);
-            this.ibtnBuscarProveedor.Name = "ibtnBuscarProveedor";
-            this.ibtnBuscarProveedor.Size = new System.Drawing.Size(40, 30);
-            this.ibtnBuscarProveedor.TabIndex = 49;
-            this.ibtnBuscarProveedor.UseVisualStyleBackColor = false;
             // 
             // ibtnDescargaExcel
             // 
@@ -227,61 +267,6 @@
             this.label1.TabIndex = 72;
             this.label1.Text = "Buscar por :";
             // 
-            // colFechaDeRegistro
-            // 
-            this.colFechaDeRegistro.HeaderText = "Fecha de registro";
-            this.colFechaDeRegistro.Name = "colFechaDeRegistro";
-            // 
-            // colTipoDocumento
-            // 
-            this.colTipoDocumento.HeaderText = "TIpo documento";
-            this.colTipoDocumento.Name = "colTipoDocumento";
-            // 
-            // colNumeroDocumento
-            // 
-            this.colNumeroDocumento.HeaderText = "Numero de factura";
-            this.colNumeroDocumento.Name = "colNumeroDocumento";
-            // 
-            // colMontoTotal
-            // 
-            this.colMontoTotal.HeaderText = "Monto Total";
-            this.colMontoTotal.Name = "colMontoTotal";
-            // 
-            // colUsuarioRegistro
-            // 
-            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
-            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
-            // 
-            // colDocumentoProveedor
-            // 
-            this.colDocumentoProveedor.HeaderText = "Documento del proveedor";
-            this.colDocumentoProveedor.Name = "colDocumentoProveedor";
-            // 
-            // colRazonSocial
-            // 
-            this.colRazonSocial.HeaderText = "Razon Social";
-            this.colRazonSocial.Name = "colRazonSocial";
-            // 
-            // colCodProd
-            // 
-            this.colCodProd.HeaderText = "Codigo de producto";
-            this.colCodProd.Name = "colCodProd";
-            // 
-            // colNomPro
-            // 
-            this.colNomPro.HeaderText = "Nombre de producto";
-            this.colNomPro.Name = "colNomPro";
-            // 
-            // colCate
-            // 
-            this.colCate.HeaderText = "Categoria";
-            this.colCate.Name = "colCate";
-            // 
-            // colPrecioCom
-            // 
-            this.colPrecioCom.HeaderText = "Precio compra";
-            this.colPrecioCom.Name = "colPrecioCom";
-            // 
             // formReporteCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +279,6 @@
             this.Controls.Add(this.txtBuscarPor);
             this.Controls.Add(this.cbBuscarPor);
             this.Controls.Add(this.ibtnDescargaExcel);
-            this.Controls.Add(this.ibtnBuscarProveedor);
             this.Controls.Add(this.cbProvee);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.dateTimePicker2);
@@ -321,7 +305,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.ComboBox cbProvee;
-        private FontAwesome.Sharp.IconButton ibtnBuscarProveedor;
         private FontAwesome.Sharp.IconButton ibtnDescargaExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDocumento;

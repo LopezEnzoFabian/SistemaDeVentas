@@ -48,7 +48,7 @@
             // 
             // dgListaClientes
             // 
-            this.dgListaClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaClientes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSleccionar,
@@ -64,6 +64,7 @@
             this.dgListaClientes.Name = "dgListaClientes";
             this.dgListaClientes.Size = new System.Drawing.Size(810, 150);
             this.dgListaClientes.TabIndex = 0;
+            this.dgListaClientes.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaClientes_CellPainting);
             // 
             // btnsearch
             // 
@@ -128,48 +129,66 @@
             // 
             // colSleccionar
             // 
-            this.colSleccionar.HeaderText = "Seleccionar";
+            this.colSleccionar.FillWeight = 182.7411F;
+            this.colSleccionar.HeaderText = "";
             this.colSleccionar.Name = "colSleccionar";
+            this.colSleccionar.Width = 40;
             // 
             // colDNI
             // 
+            this.colDNI.FillWeight = 89.65737F;
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
+            this.colDNI.Width = 76;
             // 
             // colEstado
             // 
+            this.colEstado.FillWeight = 89.65737F;
             this.colEstado.HeaderText = "Estado";
             this.colEstado.Name = "colEstado";
+            this.colEstado.Width = 77;
             // 
             // colNombreCompleto
             // 
+            this.colNombreCompleto.FillWeight = 89.65737F;
             this.colNombreCompleto.HeaderText = "Nombre completo";
             this.colNombreCompleto.Name = "colNombreCompleto";
+            this.colNombreCompleto.Width = 76;
             // 
             // col
             // 
+            this.col.FillWeight = 89.65737F;
             this.col.HeaderText = "Email";
             this.col.Name = "col";
+            this.col.Width = 76;
             // 
             // colTelefono
             // 
+            this.colTelefono.FillWeight = 89.65737F;
             this.colTelefono.HeaderText = "Telefono";
             this.colTelefono.Name = "colTelefono";
+            this.colTelefono.Width = 77;
             // 
             // colDomicilio
             // 
+            this.colDomicilio.FillWeight = 89.65737F;
             this.colDomicilio.HeaderText = "Domicilio";
             this.colDomicilio.Name = "colDomicilio";
+            this.colDomicilio.Width = 76;
             // 
             // colCiudad
             // 
+            this.colCiudad.FillWeight = 89.65737F;
             this.colCiudad.HeaderText = "Ciudad";
             this.colCiudad.Name = "colCiudad";
+            this.colCiudad.Width = 77;
             // 
             // colLocalidad
             // 
+            this.colLocalidad.FillWeight = 89.65737F;
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
+            this.colLocalidad.Width = 76;
             // 
             // VentasListarCliente
             // 

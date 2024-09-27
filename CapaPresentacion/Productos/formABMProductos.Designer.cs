@@ -31,18 +31,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblListaPorducto = new System.Windows.Forms.Label();
             this.dgListarPorductos = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
@@ -61,6 +49,18 @@
             this.lblDescri = new System.Windows.Forms.Label();
             this.lblCodPro = new System.Windows.Forms.Label();
             this.lblNomPro = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,86 +107,7 @@
             this.dgListarPorductos.Size = new System.Drawing.Size(623, 224);
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 35.53891F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Width = 50;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "id";
-            this.colID.Name = "colID";
-            this.colID.Visible = false;
-            this.colID.Width = 84;
-            // 
-            // colCod
-            // 
-            this.colCod.FillWeight = 52.41989F;
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.Width = 80;
-            // 
-            // colNom
-            // 
-            this.colNom.FillWeight = 52.41989F;
-            this.colNom.HeaderText = "Nombre de producto";
-            this.colNom.Name = "colNom";
-            // 
-            // colDes
-            // 
-            this.colDes.HeaderText = "Descripcion";
-            this.colDes.Name = "colDes";
-            this.colDes.Visible = false;
-            this.colDes.Width = 96;
-            // 
-            // colIdcategoria
-            // 
-            this.colIdcategoria.FillWeight = 310.5997F;
-            this.colIdcategoria.HeaderText = "id categoria";
-            this.colIdcategoria.Name = "colIdcategoria";
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.Visible = false;
-            this.colCategoria.Width = 96;
-            // 
-            // colStock
-            // 
-            this.colStock.FillWeight = 52.41989F;
-            this.colStock.HeaderText = "Stock";
-            this.colStock.Name = "colStock";
-            this.colStock.Width = 52;
-            // 
-            // colPrecioCompra
-            // 
-            this.colPrecioCompra.FillWeight = 52.41989F;
-            this.colPrecioCompra.HeaderText = "Precio Compra";
-            this.colPrecioCompra.Name = "colPrecioCompra";
-            // 
-            // colPrecioVenta
-            // 
-            this.colPrecioVenta.FillWeight = 84.5141F;
-            this.colPrecioVenta.HeaderText = "Precio Venta";
-            this.colPrecioVenta.Name = "colPrecioVenta";
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 62.02502F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.Width = 80;
-            // 
-            // ColEstad
-            // 
-            this.ColEstad.FillWeight = 62.02502F;
-            this.ColEstad.HeaderText = "Estado";
-            this.ColEstad.Name = "ColEstad";
-            this.ColEstad.Width = 80;
+            this.dgListarPorductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarPorductos_CellPainting);
             // 
             // btnsearch
             // 
@@ -388,6 +309,86 @@
             this.lblNomPro.TabIndex = 76;
             this.lblNomPro.Text = "Nombre";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35.53891F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Width = 40;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.Name = "colID";
+            this.colID.Visible = false;
+            this.colID.Width = 84;
+            // 
+            // colCod
+            // 
+            this.colCod.FillWeight = 52.41989F;
+            this.colCod.HeaderText = "Codigo";
+            this.colCod.Name = "colCod";
+            this.colCod.Width = 80;
+            // 
+            // colNom
+            // 
+            this.colNom.FillWeight = 52.41989F;
+            this.colNom.HeaderText = "Nombre de producto";
+            this.colNom.Name = "colNom";
+            // 
+            // colDes
+            // 
+            this.colDes.HeaderText = "Descripcion";
+            this.colDes.Name = "colDes";
+            this.colDes.Visible = false;
+            this.colDes.Width = 96;
+            // 
+            // colIdcategoria
+            // 
+            this.colIdcategoria.FillWeight = 310.5997F;
+            this.colIdcategoria.HeaderText = "id categoria";
+            this.colIdcategoria.Name = "colIdcategoria";
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.Visible = false;
+            this.colCategoria.Width = 96;
+            // 
+            // colStock
+            // 
+            this.colStock.FillWeight = 52.41989F;
+            this.colStock.HeaderText = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.Width = 52;
+            // 
+            // colPrecioCompra
+            // 
+            this.colPrecioCompra.FillWeight = 52.41989F;
+            this.colPrecioCompra.HeaderText = "Precio Compra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.FillWeight = 84.5141F;
+            this.colPrecioVenta.HeaderText = "Precio Venta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 62.02502F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.Width = 80;
+            // 
+            // ColEstad
+            // 
+            this.ColEstad.FillWeight = 62.02502F;
+            this.ColEstad.HeaderText = "Estado";
+            this.ColEstad.Name = "ColEstad";
+            this.ColEstad.Width = 80;
+            // 
             // formABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,18 +429,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblListaPorducto;
         private System.Windows.Forms.DataGridView dgListarPorductos;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdcategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstad;
         private FontAwesome.Sharp.IconButton btnsearch;
         private FontAwesome.Sharp.IconButton btnclean;
         private System.Windows.Forms.ComboBox cbFiltro;
@@ -458,5 +447,17 @@
         private System.Windows.Forms.Label lblDescri;
         private System.Windows.Forms.Label lblCodPro;
         private System.Windows.Forms.Label lblNomPro;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdcategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstad;
     }
 }

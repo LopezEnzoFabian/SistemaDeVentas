@@ -33,7 +33,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContra = new System.Windows.Forms.Label();
             this.lblConfContra = new System.Windows.Forms.Label();
-            this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.cbFiltroTipoUsuario = new System.Windows.Forms.ComboBox();
@@ -43,20 +42,7 @@
             this.lblListaUsuarios = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbRol = new System.Windows.Forms.ComboBox();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.btnclean = new FontAwesome.Sharp.IconButton();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.txtPass = new RoundedTextBox();
-            this.txt_Confirmpass = new RoundedTextBox();
-            this.txtEmail = new RoundedTextBox();
-            this.txtNombre = new RoundedTextBox();
-            this.txtDNI = new RoundedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.roundedTextBox1 = new RoundedTextBox();
-            this.roundedTextBox2 = new RoundedTextBox();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +55,20 @@
             this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnsearch = new FontAwesome.Sharp.IconButton();
+            this.btnclean = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.roundedTextBox2 = new RoundedTextBox();
+            this.roundedTextBox1 = new RoundedTextBox();
+            this.txtPass = new RoundedTextBox();
+            this.txt_Confirmpass = new RoundedTextBox();
+            this.txtEmail = new RoundedTextBox();
+            this.txtNombre = new RoundedTextBox();
+            this.txtDNI = new RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,22 +126,6 @@
             this.lblConfContra.Size = new System.Drawing.Size(134, 16);
             this.lblConfContra.TabIndex = 16;
             this.lblConfContra.Text = "Confirmar contraseña";
-            // 
-            // btnsearch
-            // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsearch.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.White;
-            this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(493, 18);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(31, 30);
-            this.btnsearch.TabIndex = 45;
-            this.btnsearch.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
@@ -221,7 +205,7 @@
             this.lblListaUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblListaUsuarios.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaUsuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaUsuarios.Location = new System.Drawing.Point(13, 360);
+            this.lblListaUsuarios.Location = new System.Drawing.Point(12, 298);
             this.lblListaUsuarios.Name = "lblListaUsuarios";
             this.lblListaUsuarios.Size = new System.Drawing.Size(160, 26);
             this.lblListaUsuarios.TabIndex = 38;
@@ -251,38 +235,185 @@
             this.cbRol.Size = new System.Drawing.Size(162, 24);
             this.cbRol.TabIndex = 40;
             // 
-            // btnEliminar
+            // dgListarUsuario
             // 
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 20;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(508, 255);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 25);
-            this.btnEliminar.TabIndex = 41;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.dgListarUsuario.AllowUserToOrderColumns = true;
+            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
+            this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgListarUsuario.ColumnHeadersHeight = 35;
+            this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnSeleccionar,
+            this.colUsuario,
+            this.colDNI,
+            this.colEmail,
+            this.colContraseña,
+            this.colNombre,
+            this.colTelefono,
+            this.colDireccion,
+            this.idRol,
+            this.colRol,
+            this.Estado,
+            this.EstadoValor});
+            this.dgListarUsuario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgListarUsuario.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dgListarUsuario.Location = new System.Drawing.Point(11, 327);
+            this.dgListarUsuario.MultiSelect = false;
+            this.dgListarUsuario.Name = "dgListarUsuario";
+            this.dgListarUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgListarUsuario.RowHeadersWidth = 30;
+            this.dgListarUsuario.Size = new System.Drawing.Size(640, 212);
+            this.dgListarUsuario.TabIndex = 28;
+            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
+            this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
             // 
-            // btnEditar
+            // btnSeleccionar
             // 
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditar.IconColor = System.Drawing.Color.Black;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 20;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(508, 224);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 25);
-            this.btnEditar.TabIndex = 42;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnSeleccionar.FillWeight = 57.2977F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.MinimumWidth = 10;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 40;
+            // 
+            // colUsuario
+            // 
+            this.colUsuario.HeaderText = "id Usuario";
+            this.colUsuario.Name = "colUsuario";
+            this.colUsuario.ReadOnly = true;
+            this.colUsuario.Visible = false;
+            this.colUsuario.Width = 80;
+            // 
+            // colDNI
+            // 
+            this.colDNI.FillWeight = 84.5141F;
+            this.colDNI.HeaderText = "DNI";
+            this.colDNI.Name = "colDNI";
+            this.colDNI.ReadOnly = true;
+            this.colDNI.Width = 73;
+            // 
+            // colEmail
+            // 
+            this.colEmail.FillWeight = 84.5141F;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 73;
+            // 
+            // colContraseña
+            // 
+            this.colContraseña.HeaderText = "Contraseña";
+            this.colContraseña.Name = "colContraseña";
+            this.colContraseña.ReadOnly = true;
+            this.colContraseña.Visible = false;
+            this.colContraseña.Width = 87;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 84.5141F;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 73;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            this.colTelefono.Width = 87;
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.HeaderText = "Direccion";
+            this.colDireccion.Name = "colDireccion";
+            this.colDireccion.ReadOnly = true;
+            this.colDireccion.Width = 86;
+            // 
+            // idRol
+            // 
+            this.idRol.HeaderText = "idRol";
+            this.idRol.Name = "idRol";
+            this.idRol.ReadOnly = true;
+            this.idRol.Visible = false;
+            this.idRol.Width = 56;
+            // 
+            // colRol
+            // 
+            this.colRol.FillWeight = 84.5141F;
+            this.colRol.HeaderText = "Rol";
+            this.colRol.Name = "colRol";
+            this.colRol.ReadOnly = true;
+            this.colRol.Width = 73;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 84.5141F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 73;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F);
+            this.label1.Location = new System.Drawing.Point(16, 227);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "telefono";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F);
+            this.label2.Location = new System.Drawing.Point(16, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "direccion";
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsearch.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.btnsearch.IconColor = System.Drawing.Color.White;
+            this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnsearch.IconSize = 20;
+            this.btnsearch.Location = new System.Drawing.Point(493, 18);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(31, 30);
+            this.btnsearch.TabIndex = 45;
+            this.btnsearch.UseVisualStyleBackColor = false;
+            // 
+            // btnclean
+            // 
+            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnclean.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.btnclean.IconColor = System.Drawing.Color.White;
+            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnclean.IconSize = 20;
+            this.btnclean.Location = new System.Drawing.Point(530, 18);
+            this.btnclean.Name = "btnclean";
+            this.btnclean.Size = new System.Drawing.Size(34, 30);
+            this.btnclean.TabIndex = 44;
+            this.btnclean.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -301,46 +432,56 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnclean
+            // btnEditar
             // 
-            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnclean.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.btnclean.IconColor = System.Drawing.Color.White;
-            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(530, 18);
-            this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(34, 30);
-            this.btnclean.TabIndex = 44;
-            this.btnclean.UseVisualStyleBackColor = true;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.IconSize = 20;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.Location = new System.Drawing.Point(508, 224);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 25);
+            this.btnEditar.TabIndex = 42;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // dgListarUsuario
+            // btnEliminar
             // 
-            this.dgListarUsuario.AllowUserToOrderColumns = true;
-            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgListarUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
-            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSeleccionar,
-            this.colUsuario,
-            this.colDNI,
-            this.colEmail,
-            this.colContraseña,
-            this.colNombre,
-            this.colTelefono,
-            this.colDireccion,
-            this.idRol,
-            this.colRol,
-            this.Estado,
-            this.EstadoValor});
-            this.dgListarUsuario.Location = new System.Drawing.Point(12, 389);
-            this.dgListarUsuario.Name = "dgListarUsuario";
-            this.dgListarUsuario.Size = new System.Drawing.Size(631, 170);
-            this.dgListarUsuario.TabIndex = 28;
-            this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 20;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(508, 255);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 25);
+            this.btnEliminar.TabIndex = 41;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // roundedTextBox2
+            // 
+            this.roundedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.roundedTextBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedTextBox2.Location = new System.Drawing.Point(76, 250);
+            this.roundedTextBox2.Name = "roundedTextBox2";
+            this.roundedTextBox2.Size = new System.Drawing.Size(264, 20);
+            this.roundedTextBox2.TabIndex = 55;
+            // 
+            // roundedTextBox1
+            // 
+            this.roundedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.roundedTextBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedTextBox1.Location = new System.Drawing.Point(76, 223);
+            this.roundedTextBox1.Name = "roundedTextBox1";
+            this.roundedTextBox1.Size = new System.Drawing.Size(264, 20);
+            this.roundedTextBox1.TabIndex = 54;
             // 
             // txtPass
             // 
@@ -391,127 +532,6 @@
             this.txtDNI.Size = new System.Drawing.Size(267, 20);
             this.txtDNI.TabIndex = 46;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F);
-            this.label1.Location = new System.Drawing.Point(16, 227);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "telefono";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F);
-            this.label2.Location = new System.Drawing.Point(16, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "direccion";
-            // 
-            // roundedTextBox1
-            // 
-            this.roundedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.roundedTextBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedTextBox1.Location = new System.Drawing.Point(76, 223);
-            this.roundedTextBox1.Name = "roundedTextBox1";
-            this.roundedTextBox1.Size = new System.Drawing.Size(264, 20);
-            this.roundedTextBox1.TabIndex = 54;
-            // 
-            // roundedTextBox2
-            // 
-            this.roundedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.roundedTextBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedTextBox2.Location = new System.Drawing.Point(76, 250);
-            this.roundedTextBox2.Name = "roundedTextBox2";
-            this.roundedTextBox2.Size = new System.Drawing.Size(264, 20);
-            this.roundedTextBox2.TabIndex = 55;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 57.2977F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Width = 21;
-            // 
-            // colUsuario
-            // 
-            this.colUsuario.HeaderText = "id Usuario";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.Visible = false;
-            this.colUsuario.Width = 80;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            this.colDNI.Width = 49;
-            // 
-            // colEmail
-            // 
-            this.colEmail.FillWeight = 84.5141F;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Width = 58;
-            // 
-            // colContraseña
-            // 
-            this.colContraseña.HeaderText = "Contraseña";
-            this.colContraseña.Name = "colContraseña";
-            this.colContraseña.Visible = false;
-            this.colContraseña.Width = 87;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Nombre completo";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 107;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.Width = 72;
-            // 
-            // colDireccion
-            // 
-            this.colDireccion.HeaderText = "Direccion";
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.Width = 77;
-            // 
-            // idRol
-            // 
-            this.idRol.HeaderText = "idRol";
-            this.idRol.Name = "idRol";
-            this.idRol.Visible = false;
-            this.idRol.Width = 56;
-            // 
-            // colRol
-            // 
-            this.colRol.FillWeight = 84.5141F;
-            this.colRol.HeaderText = "Rol";
-            this.colRol.Name = "colRol";
-            this.colRol.Width = 47;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 64;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 88;
             // 
             // formUsuarios
             // 

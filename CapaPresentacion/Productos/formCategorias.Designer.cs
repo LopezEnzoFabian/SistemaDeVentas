@@ -36,11 +36,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dgListaCategorias = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -48,6 +43,11 @@
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,47 +142,7 @@
             this.dgListaCategorias.ReadOnly = true;
             this.dgListaCategorias.Size = new System.Drawing.Size(626, 224);
             this.dgListaCategorias.TabIndex = 70;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 57.2977F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 68;
-            // 
-            // colIdCate
-            // 
-            this.colIdCate.HeaderText = "id";
-            this.colIdCate.Name = "colIdCate";
-            this.colIdCate.ReadOnly = true;
-            this.colIdCate.Visible = false;
-            this.colIdCate.Width = 84;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Descripcion";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 101;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 101;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 101;
+            this.dgListaCategorias.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaCategorias_CellPainting);
             // 
             // btnGuardar
             // 
@@ -270,6 +230,47 @@
             this.lblDescripcion.TabIndex = 71;
             this.lblDescripcion.Text = "Descripcion";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 57.2977F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 40;
+            // 
+            // colIdCate
+            // 
+            this.colIdCate.HeaderText = "id";
+            this.colIdCate.Name = "colIdCate";
+            this.colIdCate.ReadOnly = true;
+            this.colIdCate.Visible = false;
+            this.colIdCate.Width = 84;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 84.5141F;
+            this.colNombre.HeaderText = "Descripcion";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 84.5141F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 101;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 101;
+            // 
             // formCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,11 +311,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgListaCategorias;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdCate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnEliminar;
@@ -322,5 +318,10 @@
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.TextBox txtDescrip;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdCate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
     }
 }

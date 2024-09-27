@@ -106,7 +106,7 @@
             // 
             // dgListaClientes
             // 
-            this.dgListaClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaClientes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSeleccionar,
@@ -118,11 +118,13 @@
             this.dgListaClientes.Name = "dgListaClientes";
             this.dgListaClientes.Size = new System.Drawing.Size(810, 150);
             this.dgListaClientes.TabIndex = 76;
+            this.dgListaClientes.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaClientes_CellPainting);
             // 
             // colSeleccionar
             // 
             this.colSeleccionar.HeaderText = "Seleccionar";
             this.colSeleccionar.Name = "colSeleccionar";
+            this.colSeleccionar.Width = 40;
             // 
             // colNombreDeProducto
             // 
@@ -130,11 +132,13 @@
             this.colNombreDeProducto.Name = "colNombreDeProducto";
             this.colNombreDeProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNombreDeProducto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNombreDeProducto.Width = 154;
             // 
             // colIdCategoria
             // 
             this.colIdCategoria.HeaderText = "Categoria";
             this.colIdCategoria.Name = "colIdCategoria";
+            this.colIdCategoria.Width = 153;
             // 
             // colCodigo
             // 
@@ -142,11 +146,13 @@
             this.colCodigo.Name = "colCodigo";
             this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colCodigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCodigo.Width = 154;
             // 
             // colPrecioVenta
             // 
             this.colPrecioVenta.HeaderText = "Precio venta";
             this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.Width = 153;
             // 
             // VentasListarProducto
             // 

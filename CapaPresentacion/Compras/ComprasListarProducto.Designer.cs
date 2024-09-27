@@ -106,7 +106,8 @@
             // 
             // dgListaProductos
             // 
-            this.dgListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaProductos.AllowUserToOrderColumns = true;
+            this.dgListaProductos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSeleccionar,
@@ -119,40 +120,55 @@
             this.dgListaProductos.Name = "dgListaProductos";
             this.dgListaProductos.Size = new System.Drawing.Size(810, 150);
             this.dgListaProductos.TabIndex = 88;
+            this.dgListaProductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaProductos_CellPainting);
             // 
             // colSeleccionar
             // 
-            this.colSeleccionar.HeaderText = "Seleccionar";
+            this.colSeleccionar.FillWeight = 121.8274F;
+            this.colSeleccionar.HeaderText = "";
             this.colSeleccionar.Name = "colSeleccionar";
+            this.colSeleccionar.ReadOnly = true;
+            this.colSeleccionar.Width = 40;
             // 
             // colNombreDeProducto
             // 
+            this.colNombreDeProducto.FillWeight = 95.63452F;
             this.colNombreDeProducto.HeaderText = "Nombre de producto";
             this.colNombreDeProducto.Name = "colNombreDeProducto";
             this.colNombreDeProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNombreDeProducto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNombreDeProducto.Width = 122;
             // 
             // colCodigo
             // 
+            this.colCodigo.FillWeight = 95.63452F;
             this.colCodigo.HeaderText = "Codigo";
             this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCodigo.ReadOnly = true;
+            this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colCodigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCodigo.Width = 122;
             // 
             // colCategoria
             // 
+            this.colCategoria.FillWeight = 95.63452F;
             this.colCategoria.HeaderText = "Categoria";
             this.colCategoria.Name = "colCategoria";
+            this.colCategoria.Width = 122;
             // 
             // colIdCategoria
             // 
+            this.colIdCategoria.FillWeight = 95.63452F;
             this.colIdCategoria.HeaderText = "Descripcion";
             this.colIdCategoria.Name = "colIdCategoria";
+            this.colIdCategoria.Width = 123;
             // 
             // colPrecioVenta
             // 
+            this.colPrecioVenta.FillWeight = 95.63452F;
             this.colPrecioVenta.HeaderText = "Precio venta";
             this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.Width = 122;
             // 
             // ComprasListarProducto
             // 

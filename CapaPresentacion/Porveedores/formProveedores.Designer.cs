@@ -41,18 +41,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colIdPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRazonSolcial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCodigoPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtRazonS = new System.Windows.Forms.TextBox();
@@ -67,6 +55,18 @@
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblCuidad = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colIdPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRazonSolcial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigoPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,95 +240,7 @@
             this.dgListarUsuario.Size = new System.Drawing.Size(749, 238);
             this.dgListarUsuario.TabIndex = 56;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 57.2977F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 68;
-            // 
-            // colIdPro
-            // 
-            this.colIdPro.HeaderText = "id proveedor";
-            this.colIdPro.Name = "colIdPro";
-            this.colIdPro.ReadOnly = true;
-            this.colIdPro.Visible = false;
-            this.colIdPro.Width = 84;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 101;
-            // 
-            // colRazonSolcial
-            // 
-            this.colRazonSolcial.FillWeight = 84.5141F;
-            this.colRazonSolcial.HeaderText = "Razon Social";
-            this.colRazonSolcial.Name = "colRazonSolcial";
-            this.colRazonSolcial.ReadOnly = true;
-            this.colRazonSolcial.Width = 101;
-            // 
-            // colEmail
-            // 
-            this.colEmail.FillWeight = 84.5141F;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 101;
-            // 
-            // colTel
-            // 
-            this.colTel.HeaderText = "Telefono";
-            this.colTel.Name = "colTel";
-            this.colTel.ReadOnly = true;
-            this.colTel.Visible = false;
-            this.colTel.Width = 96;
-            // 
-            // colEstado
-            // 
-            this.colEstado.FillWeight = 84.5141F;
-            this.colEstado.HeaderText = "Estado";
-            this.colEstado.Name = "colEstado";
-            this.colEstado.ReadOnly = true;
-            this.colEstado.Width = 101;
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 84.5141F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.ReadOnly = true;
-            this.colEstadoValor.Visible = false;
-            this.colEstadoValor.Width = 101;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
-            // 
-            // colDireccion
-            // 
-            this.colDireccion.HeaderText = "Direccion";
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.ReadOnly = true;
-            // 
-            // colCiudad
-            // 
-            this.colCiudad.HeaderText = "Ciudad";
-            this.colCiudad.Name = "colCiudad";
-            this.colCiudad.ReadOnly = true;
-            // 
-            // colCodigoPostal
-            // 
-            this.colCodigoPostal.HeaderText = "Codigo postal";
-            this.colCodigoPostal.Name = "colCodigoPostal";
-            this.colCodigoPostal.ReadOnly = true;
+            this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
             // 
             // txtEmail
             // 
@@ -468,6 +380,95 @@
             this.lblCuidad.Size = new System.Drawing.Size(49, 17);
             this.lblCuidad.TabIndex = 79;
             this.lblCuidad.Text = "Ciudad";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 57.2977F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 40;
+            // 
+            // colIdPro
+            // 
+            this.colIdPro.HeaderText = "id proveedor";
+            this.colIdPro.Name = "colIdPro";
+            this.colIdPro.ReadOnly = true;
+            this.colIdPro.Visible = false;
+            this.colIdPro.Width = 84;
+            // 
+            // colDNI
+            // 
+            this.colDNI.FillWeight = 84.5141F;
+            this.colDNI.HeaderText = "DNI";
+            this.colDNI.Name = "colDNI";
+            this.colDNI.ReadOnly = true;
+            this.colDNI.Width = 101;
+            // 
+            // colRazonSolcial
+            // 
+            this.colRazonSolcial.FillWeight = 84.5141F;
+            this.colRazonSolcial.HeaderText = "Razon Social";
+            this.colRazonSolcial.Name = "colRazonSolcial";
+            this.colRazonSolcial.ReadOnly = true;
+            this.colRazonSolcial.Width = 101;
+            // 
+            // colEmail
+            // 
+            this.colEmail.FillWeight = 84.5141F;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 101;
+            // 
+            // colTel
+            // 
+            this.colTel.HeaderText = "Telefono";
+            this.colTel.Name = "colTel";
+            this.colTel.ReadOnly = true;
+            this.colTel.Visible = false;
+            this.colTel.Width = 96;
+            // 
+            // colEstado
+            // 
+            this.colEstado.FillWeight = 84.5141F;
+            this.colEstado.HeaderText = "Estado";
+            this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
+            this.colEstado.Width = 101;
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 84.5141F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.ReadOnly = true;
+            this.colEstadoValor.Visible = false;
+            this.colEstadoValor.Width = 101;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.HeaderText = "Direccion";
+            this.colDireccion.Name = "colDireccion";
+            this.colDireccion.ReadOnly = true;
+            // 
+            // colCiudad
+            // 
+            this.colCiudad.HeaderText = "Ciudad";
+            this.colCiudad.Name = "colCiudad";
+            this.colCiudad.ReadOnly = true;
+            // 
+            // colCodigoPostal
+            // 
+            this.colCodigoPostal.HeaderText = "Codigo postal";
+            this.colCodigoPostal.Name = "colCodigoPostal";
+            this.colCodigoPostal.ReadOnly = true;
             // 
             // formProveedores
             // 
