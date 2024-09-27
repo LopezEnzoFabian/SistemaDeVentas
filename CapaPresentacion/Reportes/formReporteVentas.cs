@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaPresentacion.Ventas;
+using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,11 @@ namespace CapaPresentacion.Reportes
             InitializeComponent();
         }
 
+        private void AbrirFormulario(Button menu, Form formulario)
+        {
+            formulario.Show();
+        }
+
         private void lblRepoCompras_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +32,11 @@ namespace CapaPresentacion.Reportes
         private void lblRV_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((Button)sender, new GraficosForm());
         }
     }
 }
