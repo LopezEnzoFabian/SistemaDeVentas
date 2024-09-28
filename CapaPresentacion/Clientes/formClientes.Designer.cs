@@ -64,13 +64,13 @@
             this.colSelec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDomicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCuidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
@@ -379,13 +379,13 @@
             this.colSelec,
             this.colUsuario,
             this.colDNI,
-            this.Estado,
             this.colNombre,
             this.colEmail,
             this.colTelefono,
             this.colDomicilio,
             this.colCuidad,
             this.colLocalidad,
+            this.Estado,
             this.EstadoValor});
             this.dgListarUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgListarUsuario.GridColor = System.Drawing.SystemColors.AppWorkspace;
@@ -495,12 +495,6 @@
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
             // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 93.29999F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
             // colNombre
             // 
             this.colNombre.FillWeight = 93.29999F;
@@ -536,6 +530,12 @@
             this.colLocalidad.FillWeight = 110.3958F;
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 93.29999F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // EstadoValor
             // 
@@ -622,13 +622,13 @@
         private System.Windows.Forms.DataGridViewButtonColumn colSelec;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDomicilio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCuidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
     }
 }
