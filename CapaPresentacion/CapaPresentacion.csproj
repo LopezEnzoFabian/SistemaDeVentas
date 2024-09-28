@@ -144,12 +144,6 @@
     <Compile Include="Reportes\formReportes.Designer.cs">
       <DependentUpon>formReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\GraficosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\GraficosForm.Designer.cs">
-      <DependentUpon>GraficosForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuarios\formUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,9 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\formReportes.resx">
       <DependentUpon>formReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\GraficosForm.resx">
-      <DependentUpon>GraficosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\formUsuarios.resx">
       <DependentUpon>formUsuarios.cs</DependentUpon>

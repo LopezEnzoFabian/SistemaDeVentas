@@ -58,7 +58,8 @@ namespace CapaPresentacion
                 dgListarUsuario.Rows[fila].Cells[3].Value = textInfo.ToTitleCase(txtNombre.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[4].Value = textInfo.ToTitleCase(txtEmail.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower()); 
-                dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(txtLocalidad.Text.ToLower());
+                dgListarUsuario.Rows[fila].Cells[7].Value = textInfo.ToTitleCase(txtDireccion.Text.ToLower());
+                dgListarUsuario.Rows[fila].Cells[8].Value = textInfo.ToTitleCase(txtCiudad.Text.ToLower());
                 string estado = cbEstado.SelectedItem?.ToString();
                 if (estado != null)
                     dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(estado.ToLower());

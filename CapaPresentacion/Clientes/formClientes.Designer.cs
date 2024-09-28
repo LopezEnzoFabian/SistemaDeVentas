@@ -56,6 +56,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.lblListaCliente = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.lblLocalidad = new System.Windows.Forms.Label();
             this.colSelec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +72,6 @@
             this.colCuidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.lblListaCliente = new System.Windows.Forms.Label();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.lblLocalidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -411,75 +411,6 @@
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick_1);
             this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
             // 
-            // colSelec
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.colSelec.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colSelec.HeaderText = "";
-            this.colSelec.Name = "colSelec";
-            this.colSelec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSelec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colUsuario
-            // 
-            this.colUsuario.HeaderText = "id";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.Visible = false;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Nombre completo";
-            this.colNombre.Name = "colNombre";
-            // 
-            // colEmail
-            // 
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.Name = "colTelefono";
-            // 
-            // colDomicilio
-            // 
-            this.colDomicilio.HeaderText = "Domicilio";
-            this.colDomicilio.Name = "colDomicilio";
-            // 
-            // colCuidad
-            // 
-            this.colCuidad.HeaderText = "Cuidad";
-            this.colCuidad.Name = "colCuidad";
-            // 
-            // colLocalidad
-            // 
-            this.colLocalidad.HeaderText = "Localidad";
-            this.colLocalidad.Name = "colLocalidad";
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.Visible = false;
-            // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
@@ -537,6 +468,81 @@
             this.lblLocalidad.Size = new System.Drawing.Size(67, 16);
             this.lblLocalidad.TabIndex = 88;
             this.lblLocalidad.Text = "Localidad";
+            // 
+            // colSelec
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.colSelec.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colSelec.FillWeight = 40F;
+            this.colSelec.HeaderText = "";
+            this.colSelec.Name = "colSelec";
+            this.colSelec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSelec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colUsuario
+            // 
+            this.colUsuario.HeaderText = "id";
+            this.colUsuario.Name = "colUsuario";
+            this.colUsuario.Visible = false;
+            // 
+            // colDNI
+            // 
+            this.colDNI.FillWeight = 93.29999F;
+            this.colDNI.HeaderText = "DNI";
+            this.colDNI.Name = "colDNI";
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 93.29999F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 93.29999F;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
+            // 
+            // colEmail
+            // 
+            this.colEmail.FillWeight = 110.3958F;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.FillWeight = 110.3958F;
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            // 
+            // colDomicilio
+            // 
+            this.colDomicilio.FillWeight = 110.3958F;
+            this.colDomicilio.HeaderText = "Domicilio";
+            this.colDomicilio.Name = "colDomicilio";
+            // 
+            // colCuidad
+            // 
+            this.colCuidad.FillWeight = 110.3958F;
+            this.colCuidad.HeaderText = "Cuidad";
+            this.colCuidad.Name = "colCuidad";
+            // 
+            // colLocalidad
+            // 
+            this.colLocalidad.FillWeight = 110.3958F;
+            this.colLocalidad.HeaderText = "Localidad";
+            this.colLocalidad.Name = "colLocalidad";
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.Visible = false;
             // 
             // formClientes
             // 
@@ -611,6 +617,8 @@
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label lblListaCliente;
         private System.Windows.Forms.DataGridView dgListarUsuario;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.DataGridViewButtonColumn colSelec;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
@@ -622,7 +630,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCuidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.TextBox txtLocalidad;
-        private System.Windows.Forms.Label lblLocalidad;
     }
 }

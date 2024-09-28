@@ -54,7 +54,6 @@
             this.lblRV = new System.Windows.Forms.Label();
             this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
             this.icbtnBuscarFecha = new FontAwesome.Sharp.IconButton();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,14 +61,14 @@
             // 
             this.dtFechaFin.Location = new System.Drawing.Point(90, 81);
             this.dtFechaFin.Name = "dtFechaFin";
-            this.dtFechaFin.Size = new System.Drawing.Size(204, 20);
+            this.dtFechaFin.Size = new System.Drawing.Size(229, 20);
             this.dtFechaFin.TabIndex = 55;
             // 
             // dtFechaInicio
             // 
             this.dtFechaInicio.Location = new System.Drawing.Point(90, 55);
             this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(204, 20);
+            this.dtFechaInicio.Size = new System.Drawing.Size(229, 20);
             this.dtFechaInicio.TabIndex = 54;
             // 
             // lblFechaFin
@@ -109,9 +108,9 @@
             this.colNomPro,
             this.colCate,
             this.colPrecioCom});
-            this.dgReporteVentas.Location = new System.Drawing.Point(-1, 232);
+            this.dgReporteVentas.Location = new System.Drawing.Point(-1, 194);
             this.dgReporteVentas.Name = "dgReporteVentas";
-            this.dgReporteVentas.Size = new System.Drawing.Size(651, 215);
+            this.dgReporteVentas.Size = new System.Drawing.Size(651, 253);
             this.dgReporteVentas.TabIndex = 51;
             // 
             // colFechaDeRegistro
@@ -202,14 +201,14 @@
             "Fecha de registro",
             "Tipo de documento",
             "Numero de factura"});
-            this.cbBuscarPor.Location = new System.Drawing.Point(8, 201);
+            this.cbBuscarPor.Location = new System.Drawing.Point(9, 148);
             this.cbBuscarPor.Name = "cbBuscarPor";
-            this.cbBuscarPor.Size = new System.Drawing.Size(121, 21);
+            this.cbBuscarPor.Size = new System.Drawing.Size(160, 21);
             this.cbBuscarPor.TabIndex = 61;
             // 
             // txtBuscarPor
             // 
-            this.txtBuscarPor.Location = new System.Drawing.Point(145, 202);
+            this.txtBuscarPor.Location = new System.Drawing.Point(195, 148);
             this.txtBuscarPor.Name = "txtBuscarPor";
             this.txtBuscarPor.Size = new System.Drawing.Size(124, 20);
             this.txtBuscarPor.TabIndex = 62;
@@ -222,7 +221,7 @@
             this.ibtnBuscarPor.IconColor = System.Drawing.Color.Cyan;
             this.ibtnBuscarPor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnBuscarPor.IconSize = 20;
-            this.ibtnBuscarPor.Location = new System.Drawing.Point(278, 196);
+            this.ibtnBuscarPor.Location = new System.Drawing.Point(342, 139);
             this.ibtnBuscarPor.Name = "ibtnBuscarPor";
             this.ibtnBuscarPor.Size = new System.Drawing.Size(40, 30);
             this.ibtnBuscarPor.TabIndex = 63;
@@ -242,7 +241,7 @@
             // 
             this.lblRV.AutoSize = true;
             this.lblRV.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRV.Location = new System.Drawing.Point(5, 175);
+            this.lblRV.Location = new System.Drawing.Point(6, 122);
             this.lblRV.Name = "lblRV";
             this.lblRV.Size = new System.Drawing.Size(64, 13);
             this.lblRV.TabIndex = 65;
@@ -260,7 +259,7 @@
             this.ibtnDescargaExcel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ibtnDescargaExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnDescargaExcel.IconSize = 30;
-            this.ibtnDescargaExcel.Location = new System.Drawing.Point(324, 190);
+            this.ibtnDescargaExcel.Location = new System.Drawing.Point(560, 143);
             this.ibtnDescargaExcel.Name = "ibtnDescargaExcel";
             this.ibtnDescargaExcel.Size = new System.Drawing.Size(73, 36);
             this.ibtnDescargaExcel.TabIndex = 66;
@@ -276,24 +275,11 @@
             this.icbtnBuscarFecha.IconColor = System.Drawing.Color.Cyan;
             this.icbtnBuscarFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnBuscarFecha.IconSize = 20;
-            this.icbtnBuscarFecha.Location = new System.Drawing.Point(311, 75);
+            this.icbtnBuscarFecha.Location = new System.Drawing.Point(342, 71);
             this.icbtnBuscarFecha.Name = "icbtnBuscarFecha";
             this.icbtnBuscarFecha.Size = new System.Drawing.Size(40, 30);
             this.icbtnBuscarFecha.TabIndex = 67;
             this.icbtnBuscarFecha.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.Location = new System.Drawing.Point(421, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 36);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Ver Datos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // formReporteVentas
             // 
@@ -301,7 +287,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(645, 447);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.icbtnBuscarFecha);
             this.Controls.Add(this.ibtnDescargaExcel);
             this.Controls.Add(this.lblRV);
@@ -351,6 +336,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
         private FontAwesome.Sharp.IconButton icbtnBuscarFecha;
-        private System.Windows.Forms.Button button1;
     }
 }
