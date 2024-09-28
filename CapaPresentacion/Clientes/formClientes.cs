@@ -50,21 +50,21 @@ namespace CapaPresentacion
             {
                 // Si el usuario hizo clic en "Sí"
                 MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                
                 int fila = dgListarUsuario.Rows.Add();
                 TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
                 dgListarUsuario.Rows[fila].Cells[2].Value = textInfo.ToTitleCase(txtDNI.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[3].Value = textInfo.ToTitleCase(txtNombre.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[4].Value = textInfo.ToTitleCase(txtEmail.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower());
-
+                dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower()); 
+                dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(txtLocalidad.Text.ToLower());
                 string estado = cbEstado.SelectedItem?.ToString();
                 if (estado != null)
                     dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(estado.ToLower());
-            }
 
-            limpiarCampos();
+                limpiarCampos();
+            }
 
         }
 
@@ -102,8 +102,9 @@ namespace CapaPresentacion
             txtNombre.Clear();
             txtTel.Clear();
             txtEmail.Clear();
-            cbEstado.Items.Clear();
-
+            txtCiudad.Clear();
+            txtDireccion.Clear();
+            txtCodPostal.Clear();
         }
 
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -197,6 +198,11 @@ namespace CapaPresentacion
         private void dgListarUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtCodPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
     }
 }

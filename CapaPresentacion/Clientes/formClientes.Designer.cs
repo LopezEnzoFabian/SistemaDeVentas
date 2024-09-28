@@ -70,28 +70,34 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.lblListaCliente = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.lblLocalidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Cyan;
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnGuardar.IconColor = System.Drawing.Color.Cyan;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
-            this.btnGuardar.Location = new System.Drawing.Point(40, 477);
+            this.btnGuardar.Location = new System.Drawing.Point(371, 265);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(84, 58);
             this.btnGuardar.TabIndex = 68;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.Cyan;
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
@@ -99,30 +105,32 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 30;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.Location = new System.Drawing.Point(130, 476);
+            this.btnEditar.Location = new System.Drawing.Point(461, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(84, 59);
             this.btnEditar.TabIndex = 67;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Cyan;
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnEliminar.IconColor = System.Drawing.Color.Cyan;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
-            this.btnEliminar.Location = new System.Drawing.Point(223, 477);
+            this.btnEliminar.Location = new System.Drawing.Point(551, 265);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(84, 58);
             this.btnEliminar.TabIndex = 66;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtID
@@ -135,159 +143,168 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(175, 358);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEmail.Location = new System.Drawing.Point(30, 123);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(131, 25);
+            this.txtEmail.Size = new System.Drawing.Size(325, 22);
             this.txtEmail.TabIndex = 53;
             // 
             // txtDNI
             // 
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDNI.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDNI.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDNI.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDNI.Location = new System.Drawing.Point(15, 359);
+            this.txtDNI.Location = new System.Drawing.Point(371, 76);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(131, 25);
+            this.txtDNI.Size = new System.Drawing.Size(261, 22);
             this.txtDNI.TabIndex = 50;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(15, 409);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNombre.Location = new System.Drawing.Point(30, 76);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(131, 25);
+            this.txtNombre.Size = new System.Drawing.Size(325, 22);
             this.txtNombre.TabIndex = 49;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(172, 339);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(27, 104);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 17);
+            this.label5.Size = new System.Drawing.Size(41, 16);
             this.label5.TabIndex = 48;
             this.label5.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(12, 339);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(370, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 17);
+            this.label3.Size = new System.Drawing.Size(30, 16);
             this.label3.TabIndex = 47;
             this.label3.Text = "DNI";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(12, 389);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(27, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 46;
             this.label1.Text = "Nombre completo";
             // 
             // txtTel
             // 
             this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTel.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(175, 409);
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtTel.Location = new System.Drawing.Point(373, 127);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(131, 25);
+            this.txtTel.Size = new System.Drawing.Size(259, 22);
             this.txtTel.TabIndex = 72;
             this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
-            this.lblTel.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTel.Location = new System.Drawing.Point(172, 389);
+            this.lblTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTel.Location = new System.Drawing.Point(370, 107);
             this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(59, 17);
+            this.lblTel.Size = new System.Drawing.Size(61, 16);
             this.lblTel.TabIndex = 71;
-            this.lblTel.Text = "Telefono";
+            this.lblTel.Text = "Teléfono";
             // 
             // txtDireccion
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDireccion.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDireccion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDireccion.Location = new System.Drawing.Point(334, 409);
+            this.txtDireccion.Location = new System.Drawing.Point(30, 173);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(131, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(325, 22);
             this.txtDireccion.TabIndex = 76;
             // 
             // txtCiudad
             // 
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCiudad.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(334, 359);
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCiudad.Location = new System.Drawing.Point(30, 227);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(131, 25);
+            this.txtCiudad.Size = new System.Drawing.Size(325, 22);
             this.txtCiudad.TabIndex = 75;
             // 
             // lblDomicilio
             // 
             this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDomicilio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDomicilio.Location = new System.Drawing.Point(331, 389);
+            this.lblDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDomicilio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDomicilio.Location = new System.Drawing.Point(27, 153);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(62, 17);
+            this.lblDomicilio.Size = new System.Drawing.Size(64, 16);
             this.lblDomicilio.TabIndex = 74;
-            this.lblDomicilio.Text = "Direccion";
+            this.lblDomicilio.Text = "Dirección";
             // 
             // lblCuidad
             // 
             this.lblCuidad.AutoSize = true;
-            this.lblCuidad.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCuidad.Location = new System.Drawing.Point(331, 339);
+            this.lblCuidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCuidad.Location = new System.Drawing.Point(27, 208);
             this.lblCuidad.Name = "lblCuidad";
-            this.lblCuidad.Size = new System.Drawing.Size(49, 17);
+            this.lblCuidad.Size = new System.Drawing.Size(50, 16);
             this.lblCuidad.TabIndex = 73;
             this.lblCuidad.Text = "Ciudad";
             // 
             // txtCodPostal
             // 
             this.txtCodPostal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodPostal.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodPostal.Location = new System.Drawing.Point(482, 409);
+            this.txtCodPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodPostal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCodPostal.Location = new System.Drawing.Point(373, 173);
             this.txtCodPostal.Name = "txtCodPostal";
-            this.txtCodPostal.Size = new System.Drawing.Size(131, 25);
+            this.txtCodPostal.Size = new System.Drawing.Size(259, 22);
             this.txtCodPostal.TabIndex = 78;
+            this.txtCodPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodPostal_KeyPress);
             // 
             // lblCodigoPostal
             // 
             this.lblCodigoPostal.AutoSize = true;
-            this.lblCodigoPostal.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPostal.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodigoPostal.Location = new System.Drawing.Point(479, 389);
+            this.lblCodigoPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCodigoPostal.Location = new System.Drawing.Point(370, 153);
             this.lblCodigoPostal.Name = "lblCodigoPostal";
-            this.lblCodigoPostal.Size = new System.Drawing.Size(91, 17);
+            this.lblCodigoPostal.Size = new System.Drawing.Size(91, 16);
             this.lblCodigoPostal.TabIndex = 77;
-            this.lblCodigoPostal.Text = "Codigo postal";
+            this.lblCodigoPostal.Text = "Código postal";
             // 
             // btnsearch
             // 
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnsearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.btnsearch.IconColor = System.Drawing.Color.White;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(460, 16);
+            this.btnsearch.Location = new System.Drawing.Point(555, 10);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(32, 30);
             this.btnsearch.TabIndex = 85;
@@ -295,12 +312,13 @@
             // 
             // btnclean
             // 
+            this.btnclean.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
             this.btnclean.IconColor = System.Drawing.Color.White;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(497, 18);
+            this.btnclean.Location = new System.Drawing.Point(592, 12);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(40, 28);
             this.btnclean.TabIndex = 84;
@@ -316,25 +334,25 @@
             "Nombre",
             "Email",
             "Estado"});
-            this.cbFiltro.Location = new System.Drawing.Point(185, 20);
+            this.cbFiltro.Location = new System.Drawing.Point(158, 17);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Size = new System.Drawing.Size(122, 25);
+            this.cbFiltro.Size = new System.Drawing.Size(197, 25);
             this.cbFiltro.TabIndex = 82;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(324, 20);
+            this.txtBuscar.Location = new System.Drawing.Point(371, 17);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(122, 25);
+            this.txtBuscar.Size = new System.Drawing.Size(178, 25);
             this.txtBuscar.TabIndex = 81;
             // 
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltrar.Location = new System.Drawing.Point(99, 24);
+            this.lblFiltrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblFiltrar.Location = new System.Drawing.Point(86, 23);
             this.lblFiltrar.Name = "lblFiltrar";
             this.lblFiltrar.Size = new System.Drawing.Size(66, 17);
             this.lblFiltrar.TabIndex = 80;
@@ -343,6 +361,7 @@
             // dgListarUsuario
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
+            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -368,8 +387,9 @@
             this.colCuidad,
             this.colLocalidad,
             this.EstadoValor});
+            this.dgListarUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgListarUsuario.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgListarUsuario.Location = new System.Drawing.Point(8, 99);
+            this.dgListarUsuario.Location = new System.Drawing.Point(0, 348);
             this.dgListarUsuario.MultiSelect = false;
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -386,7 +406,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgListarUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgListarUsuario.Size = new System.Drawing.Size(624, 223);
+            this.dgListarUsuario.Size = new System.Drawing.Size(644, 223);
             this.dgListarUsuario.TabIndex = 78;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick_1);
             this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
@@ -403,65 +423,55 @@
             this.colSelec.Name = "colSelec";
             this.colSelec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colSelec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colSelec.Width = 35;
             // 
             // colUsuario
             // 
             this.colUsuario.HeaderText = "id";
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.Visible = false;
-            this.colUsuario.Width = 44;
             // 
             // colDNI
             // 
             this.colDNI.FillWeight = 84.5141F;
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
-            this.colDNI.Width = 58;
             // 
             // Estado
             // 
             this.Estado.FillWeight = 84.5141F;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
-            this.Estado.Width = 59;
             // 
             // colNombre
             // 
             this.colNombre.FillWeight = 84.5141F;
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 59;
             // 
             // colEmail
             // 
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
-            this.colEmail.Width = 70;
             // 
             // colTelefono
             // 
             this.colTelefono.HeaderText = "Telefono";
             this.colTelefono.Name = "colTelefono";
-            this.colTelefono.Width = 69;
             // 
             // colDomicilio
             // 
             this.colDomicilio.HeaderText = "Domicilio";
             this.colDomicilio.Name = "colDomicilio";
-            this.colDomicilio.Width = 70;
             // 
             // colCuidad
             // 
             this.colCuidad.HeaderText = "Cuidad";
             this.colCuidad.Name = "colCuidad";
-            this.colCuidad.Width = 69;
             // 
             // colLocalidad
             // 
             this.colLocalidad.HeaderText = "Localidad";
             this.colLocalidad.Name = "colLocalidad";
-            this.colLocalidad.Width = 70;
             // 
             // EstadoValor
             // 
@@ -469,50 +479,73 @@
             this.EstadoValor.HeaderText = "EstadoValor";
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 93;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEstado.Location = new System.Drawing.Point(479, 339);
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEstado.Location = new System.Drawing.Point(27, 258);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(48, 17);
+            this.lblEstado.Size = new System.Drawing.Size(50, 16);
             this.lblEstado.TabIndex = 87;
             this.lblEstado.Text = "Estado";
             // 
             // cbEstado
             // 
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstado.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(482, 360);
+            this.cbEstado.Location = new System.Drawing.Point(30, 279);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(131, 25);
+            this.cbEstado.Size = new System.Drawing.Size(325, 24);
             this.cbEstado.TabIndex = 86;
             // 
             // lblListaCliente
             // 
             this.lblListaCliente.AutoEllipsis = true;
-            this.lblListaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.lblListaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.lblListaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCliente.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblListaCliente.Location = new System.Drawing.Point(4, 68);
+            this.lblListaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblListaCliente.Location = new System.Drawing.Point(11, 314);
             this.lblListaCliente.Name = "lblListaCliente";
             this.lblListaCliente.Size = new System.Drawing.Size(148, 28);
             this.lblListaCliente.TabIndex = 83;
             this.lblListaCliente.Text = "Lista de clientes";
             // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLocalidad.Location = new System.Drawing.Point(373, 227);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(259, 22);
+            this.txtLocalidad.TabIndex = 89;
+            // 
+            // lblLocalidad
+            // 
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblLocalidad.Location = new System.Drawing.Point(370, 208);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(67, 16);
+            this.lblLocalidad.TabIndex = 88;
+            this.lblLocalidad.Text = "Localidad";
+            // 
             // formClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(644, 571);
+            this.Controls.Add(this.txtLocalidad);
+            this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.btnsearch);
@@ -589,5 +622,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCuidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.Label lblLocalidad;
     }
 }
