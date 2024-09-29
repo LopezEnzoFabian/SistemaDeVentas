@@ -277,6 +277,9 @@
     <EmbeddedResource Include="Reportes\formReporteVentas.resx">
       <DependentUpon>formReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\RegistrarVenta.aa.resx">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\RegistrarVenta.resx">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +318,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

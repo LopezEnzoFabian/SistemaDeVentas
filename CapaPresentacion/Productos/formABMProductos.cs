@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,21 +16,6 @@ namespace CapaPresentacion
         public formABMProductos()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblListaPorducto_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgListarPorductos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -60,5 +46,126 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+    
+
+            DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Los datos han sido guardados correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Gancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarCampos();
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+
+            DialogResult resultado = MessageBox.Show("¿Esta seguro que desea eliminar este producto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                //EliminarUsuario();
+                // Mensaje de éxito
+                MessageBox.Show("Producto eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            limpiarCampos();
+        }
+ 
+        private void txtCodigoPro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            if (ValidarFiltro()){
+                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea editar este producto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Producto editado correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarCampos();
+        }
+
+        public bool ValidarCampos()
+        {
+            // Verifica si alguno de los campos está vacío o nulo
+            return string.IsNullOrEmpty(txtNombre.Text) ||
+                   string.IsNullOrEmpty(txtCodigoPro.Text) ||
+                   string.IsNullOrEmpty(txtDescri.Text) ||
+                   string.IsNullOrEmpty(cbCategoria.Text) ||
+                   string.IsNullOrEmpty(cbEstado.Text);
+        }
+
+        private void limpiarCampos()
+        {
+            txtNombre.Clear();
+            txtCodigoPro.Clear();
+            txtDescri.Clear();
+            cbCategoria.SelectedItem = null;
+            cbEstado.SelectedItem = null;
+        }
+
+        public bool ValidarFiltro()
+        {
+            return string.IsNullOrEmpty(cbFiltro.Text);
+        }
+
     }
 }
+

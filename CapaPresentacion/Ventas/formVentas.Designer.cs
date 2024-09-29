@@ -35,9 +35,9 @@
             // 
             // panelVentas
             // 
-            this.panelVentas.Location = new System.Drawing.Point(0, 50);
+            this.panelVentas.Location = new System.Drawing.Point(1, 50);
             this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(661, 486);
+            this.panelVentas.Size = new System.Drawing.Size(658, 496);
             this.panelVentas.TabIndex = 6;
             // 
             // ibtnDetalleVenta

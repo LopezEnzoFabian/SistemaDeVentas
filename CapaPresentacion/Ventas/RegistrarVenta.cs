@@ -26,12 +26,14 @@ namespace CapaPresentacion.Ventas
             formulario.Show();
         }
 
-
-        private void RegistrarVenta_Load(object sender, EventArgs e)
+        private void ibtnRegistrarCompra_Click(object sender, EventArgs e)
         {
-
+            if (dgRegistrarVenta.Rows.Count == 1)
+            {
+                MessageBox.Show("No hay productos para registrar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
-
         private void btnsearch_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconButton) sender, new VentasListarCliente());

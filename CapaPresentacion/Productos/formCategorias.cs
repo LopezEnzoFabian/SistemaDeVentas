@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,104 @@ namespace CapaPresentacion
                 }
                 e.Handled = true;
             }
+        }
+
+
+        public bool ValidarCampos()
+        {
+            // Verifica si alguno de los campos está vacío o nulo
+            return string.IsNullOrEmpty(txtDescrip.Text) ||                 
+                   string.IsNullOrEmpty(cbEstado.Text);
+        }
+
+        private void ibtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+
+
+            DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Los datos han sido guardados correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            limpiarCampos();
+        }
+
+        private void limpiarCampos()
+        {
+            txtDescrip.Clear();
+            cbEstado.SelectedItem = null;
+
+        }
+
+        private void ibtnEditar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea editar esta categoria?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Categoria editada correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarCampos();
+        }
+
+        private void ibtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea eliminar esta categoria?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Categoria eliminada correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarCampos();
         }
     }
 }

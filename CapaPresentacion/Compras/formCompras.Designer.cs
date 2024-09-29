@@ -68,9 +68,9 @@
             // 
             // panelCompras
             // 
-            this.panelCompras.Location = new System.Drawing.Point(12, 57);
+            this.panelCompras.Location = new System.Drawing.Point(2, 50);
             this.panelCompras.Name = "panelCompras";
-            this.panelCompras.Size = new System.Drawing.Size(784, 463);
+            this.panelCompras.Size = new System.Drawing.Size(641, 489);
             this.panelCompras.TabIndex = 3;
             // 
             // formCompras
@@ -78,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(762, 404);
+            this.ClientSize = new System.Drawing.Size(646, 539);
             this.Controls.Add(this.panelCompras);
             this.Controls.Add(this.ibtnVerDetalle);
             this.Controls.Add(this.ibtnRegistrarCom);
