@@ -23,47 +23,18 @@ namespace CapaPresentacion
 
         }
 
-        private class Validaciones
-        {
-
-            public static bool ValidarSoloNumeros(KeyPressEventArgs e)
-            {
-                if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-                {
-                    e.Handled = true;
-                    return false;
-                }
-                return true;
-            }
-
-            public static bool ValidarSoloLetras(KeyPressEventArgs e)
-            {
-                if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-                {
-                    e.Handled = true;
-                    return false;
-                }
-                return true;
-            }
-
-            public static bool EsEmailValido(string email)
-            {
-                try
-                {
-                    var mail = new System.Net.Mail.MailAddress(email);
-                    return mail.Address == email;
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-
-        }
-
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.ValidarSoloLetras((KeyPressEventArgs)e);
+        }
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -181,11 +152,6 @@ namespace CapaPresentacion
 
         }
 
-        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-        }
-
         private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
 
@@ -213,5 +179,7 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
+
+
     }
 }

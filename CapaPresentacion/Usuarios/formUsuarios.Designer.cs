@@ -205,9 +205,9 @@ namespace CapaPresentacion
             // 
             this.lblListaUsuarios.AutoEllipsis = true;
             this.lblListaUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.lblListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaUsuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaUsuarios.Location = new System.Drawing.Point(12, 298);
+            this.lblListaUsuarios.Location = new System.Drawing.Point(15, 298);
             this.lblListaUsuarios.Name = "lblListaUsuarios";
             this.lblListaUsuarios.Size = new System.Drawing.Size(160, 26);
             this.lblListaUsuarios.TabIndex = 38;
@@ -240,6 +240,7 @@ namespace CapaPresentacion
             // dgListarUsuario
             // 
             this.dgListarUsuario.AllowUserToOrderColumns = true;
+            this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -257,14 +258,15 @@ namespace CapaPresentacion
             this.colRol,
             this.Estado,
             this.EstadoValor});
+            this.dgListarUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgListarUsuario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgListarUsuario.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dgListarUsuario.Location = new System.Drawing.Point(11, 327);
+            this.dgListarUsuario.Location = new System.Drawing.Point(0, 327);
             this.dgListarUsuario.MultiSelect = false;
             this.dgListarUsuario.Name = "dgListarUsuario";
             this.dgListarUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgListarUsuario.RowHeadersWidth = 30;
-            this.dgListarUsuario.Size = new System.Drawing.Size(640, 212);
+            this.dgListarUsuario.Size = new System.Drawing.Size(654, 244);
             this.dgListarUsuario.TabIndex = 28;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
@@ -285,7 +287,6 @@ namespace CapaPresentacion
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.ReadOnly = true;
             this.colUsuario.Visible = false;
-            this.colUsuario.Width = 80;
             // 
             // colDNI
             // 
@@ -293,7 +294,6 @@ namespace CapaPresentacion
             this.colDNI.HeaderText = "DNI";
             this.colDNI.Name = "colDNI";
             this.colDNI.ReadOnly = true;
-            this.colDNI.Width = 73;
             // 
             // colEmail
             // 
@@ -301,7 +301,6 @@ namespace CapaPresentacion
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 73;
             // 
             // colContraseña
             // 
@@ -309,7 +308,6 @@ namespace CapaPresentacion
             this.colContraseña.Name = "colContraseña";
             this.colContraseña.ReadOnly = true;
             this.colContraseña.Visible = false;
-            this.colContraseña.Width = 87;
             // 
             // colNombre
             // 
@@ -317,21 +315,18 @@ namespace CapaPresentacion
             this.colNombre.HeaderText = "Nombre completo";
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 73;
             // 
             // colTelefono
             // 
             this.colTelefono.HeaderText = "Telefono";
             this.colTelefono.Name = "colTelefono";
             this.colTelefono.ReadOnly = true;
-            this.colTelefono.Width = 87;
             // 
             // colDireccion
             // 
             this.colDireccion.HeaderText = "Direccion";
             this.colDireccion.Name = "colDireccion";
             this.colDireccion.ReadOnly = true;
-            this.colDireccion.Width = 86;
             // 
             // idRol
             // 
@@ -339,7 +334,6 @@ namespace CapaPresentacion
             this.idRol.Name = "idRol";
             this.idRol.ReadOnly = true;
             this.idRol.Visible = false;
-            this.idRol.Width = 56;
             // 
             // colRol
             // 
@@ -347,7 +341,6 @@ namespace CapaPresentacion
             this.colRol.HeaderText = "Rol";
             this.colRol.Name = "colRol";
             this.colRol.ReadOnly = true;
-            this.colRol.Width = 73;
             // 
             // Estado
             // 
@@ -355,7 +348,6 @@ namespace CapaPresentacion
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 73;
             // 
             // EstadoValor
             // 
@@ -364,7 +356,6 @@ namespace CapaPresentacion
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 88;
             // 
             // label1
             // 
@@ -485,6 +476,7 @@ namespace CapaPresentacion
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(320, 22);
             this.txtDNI.TabIndex = 57;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtEmail
             // 
@@ -519,6 +511,7 @@ namespace CapaPresentacion
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(285, 22);
             this.txtTelefono.TabIndex = 61;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 

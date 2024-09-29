@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSalir = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -45,18 +50,77 @@
             this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuProductosVer = new FontAwesome.Sharp.IconMenuItem();
+            this.menuEstadisticas = new FontAwesome.Sharp.IconMenuItem();
+            this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contenedor
             // 
-            this.contenedor.BackColor = System.Drawing.Color.White;
+            this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.contenedor.Controls.Add(this.pictureBox2);
+            this.contenedor.Controls.Add(this.label5);
+            this.contenedor.Controls.Add(this.label4);
+            this.contenedor.Controls.Add(this.label3);
+            this.contenedor.Controls.Add(this.label2);
             this.contenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.contenedor.Location = new System.Drawing.Point(172, 31);
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(662, 578);
             this.contenedor.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(221, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(216, 184);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(207, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(240, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = " productos, ventas y mucho más.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(97, 292);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(453, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Simplificando la gestión para que te enfoques en lo importante.";
+            // 
+            // label3
+            // 
+            this.label3.AllowDrop = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(97, 238);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(478, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "El sistema de ventas que permite gestionar fácilmente tus clientes,";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(191, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(291, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "¡Bienvenido a ElectroHub!";
             // 
             // pictureBox1
             // 
@@ -105,22 +169,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Aqua;
             this.label1.Location = new System.Drawing.Point(16, 455);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bienvenido:";
             // 
             // lblUSER
             // 
             this.lblUSER.AutoSize = true;
-            this.lblUSER.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUSER.ForeColor = System.Drawing.Color.Lime;
             this.lblUSER.Location = new System.Drawing.Point(16, 479);
             this.lblUSER.Name = "lblUSER";
-            this.lblUSER.Size = new System.Drawing.Size(61, 16);
+            this.lblUSER.Size = new System.Drawing.Size(58, 16);
             this.lblUSER.TabIndex = 5;
             this.lblUSER.Text = "usuario";
             // 
@@ -242,11 +306,12 @@
             this.menuProveedores,
             this.menuReportes,
             this.menuAcercade,
-            this.menuProductosVer});
+            this.menuProductosVer,
+            this.menuEstadisticas});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(-4, 193);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(173, 233);
+            this.menuStrip1.Size = new System.Drawing.Size(173, 252);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -261,6 +326,15 @@
             this.menuProductosVer.Size = new System.Drawing.Size(166, 24);
             this.menuProductosVer.Text = "Ver productos";
             this.menuProductosVer.Click += new System.EventHandler(this.menuProductosVer_Click);
+            // 
+            // menuEstadisticas
+            // 
+            this.menuEstadisticas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.menuEstadisticas.IconColor = System.Drawing.Color.Black;
+            this.menuEstadisticas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuEstadisticas.Name = "menuEstadisticas";
+            this.menuEstadisticas.Size = new System.Drawing.Size(166, 24);
+            this.menuEstadisticas.Text = "Estadisticas";
             // 
             // Inicio
             // 
@@ -282,6 +356,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ElectroHub";
             this.Load += new System.EventHandler(this.Inicio_Load);
+            this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -308,6 +385,12 @@
         private FontAwesome.Sharp.IconMenuItem menuAcercade;
         private FontAwesome.Sharp.IconMenuItem menuVerProductos;
         private FontAwesome.Sharp.IconMenuItem menuProductosVer;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconMenuItem menuEstadisticas;
     }
 }
 
