@@ -95,7 +95,7 @@
             // 
             // dgRegistrarCompra
             // 
-            this.dgRegistrarCompra.AllowUserToDeleteRows = false;
+            this.dgRegistrarCompra.AllowUserToOrderColumns = true;
             this.dgRegistrarCompra.AllowUserToResizeColumns = false;
             this.dgRegistrarCompra.AllowUserToResizeRows = false;
             this.dgRegistrarCompra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -122,7 +122,6 @@
             this.dgRegistrarCompra.Location = new System.Drawing.Point(4, 285);
             this.dgRegistrarCompra.MultiSelect = false;
             this.dgRegistrarCompra.Name = "dgRegistrarCompra";
-            this.dgRegistrarCompra.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,14 +143,12 @@
             this.btnBorrar.FillWeight = 35F;
             this.btnBorrar.HeaderText = "";
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.ReadOnly = true;
             this.btnBorrar.Width = 40;
             // 
             // colIdProducto
             // 
             this.colIdProducto.HeaderText = "idProducto";
             this.colIdProducto.Name = "colIdProducto";
-            this.colIdProducto.ReadOnly = true;
             this.colIdProducto.Visible = false;
             this.colIdProducto.Width = 84;
             // 
@@ -160,7 +157,6 @@
             this.colProducto.FillWeight = 84.5141F;
             this.colProducto.HeaderText = "Producto";
             this.colProducto.Name = "colProducto";
-            this.colProducto.ReadOnly = true;
             this.colProducto.Width = 101;
             // 
             // colPrecioCompra
@@ -168,14 +164,12 @@
             this.colPrecioCompra.FillWeight = 84.5141F;
             this.colPrecioCompra.HeaderText = "Precio Compra";
             this.colPrecioCompra.Name = "colPrecioCompra";
-            this.colPrecioCompra.ReadOnly = true;
             this.colPrecioCompra.Width = 101;
             // 
             // colCPrecioVenta
             // 
             this.colCPrecioVenta.HeaderText = "Precio Venta";
             this.colCPrecioVenta.Name = "colCPrecioVenta";
-            this.colCPrecioVenta.ReadOnly = true;
             this.colCPrecioVenta.Visible = false;
             this.colCPrecioVenta.Width = 96;
             // 
@@ -184,7 +178,6 @@
             this.colCantidad.FillWeight = 84.5141F;
             this.colCantidad.HeaderText = "Cantidad";
             this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
             this.colCantidad.Width = 101;
             // 
             // colSubTotal
@@ -192,7 +185,6 @@
             this.colSubTotal.FillWeight = 84.5141F;
             this.colSubTotal.HeaderText = "SubTotal";
             this.colSubTotal.Name = "colSubTotal";
-            this.colSubTotal.ReadOnly = true;
             this.colSubTotal.Width = 101;
             // 
             // gbInfoProducto
