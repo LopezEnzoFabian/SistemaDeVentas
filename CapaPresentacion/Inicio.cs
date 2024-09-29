@@ -135,5 +135,10 @@ namespace CapaPresentacion
         {
             AbrirFormulario((IconMenuItem)sender, new VerProductos());
         }
+
+        private void contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
