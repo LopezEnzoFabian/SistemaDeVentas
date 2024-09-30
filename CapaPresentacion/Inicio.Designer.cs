@@ -58,8 +58,7 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(662, 578);
             this.contenedor.TabIndex = 1;
-            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
-            // 
+           
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -267,12 +266,16 @@
             // 
             // menuEstadisticas
             // 
-            this.menuEstadisticas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.menuEstadisticas.IconColor = System.Drawing.Color.Black;
+            this.menuEstadisticas.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuEstadisticas.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.menuEstadisticas.IconColor = System.Drawing.Color.WhiteSmoke;
             this.menuEstadisticas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menuEstadisticas.Name = "menuEstadisticas";
             this.menuEstadisticas.Size = new System.Drawing.Size(166, 24);
             this.menuEstadisticas.Text = "Estadisticas";
+            this.menuEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuEstadisticas.Click += new System.EventHandler(this.menuEstadisticas_Click);
             // 
             // Inicio
             // 

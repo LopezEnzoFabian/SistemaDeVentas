@@ -26,9 +26,23 @@ namespace CapaPresentacion
         {
             usuarioActual = objusuario;
             InitializeComponent();
+            //CargarFormulario(new PresentacionForm());
+        }
+        private void CargarFormulario(Form formulario)
+        {
+            // Limpiar el panel para evitar que se superpongan formularios
+            if (contenedor.Controls.Count > 0)
+                contenedor.Controls.RemoveAt(0);
+
+            // Configurar el formulario a cargar
+            formulario.TopLevel = false; // Indica que no será una ventana independiente
+            formulario.Dock = DockStyle.Fill; // El formulario llenará el panel
+            contenedor.Controls.Add(formulario); // Agregar el formulario al panel
+            contenedor.Tag = formulario; // Etiquetar el formulario dentro del panel
+
+            formulario.Show(); // Mostrar el formulario
         }
 
-      
 
         private void Inicio_Load(object sender, EventArgs e)
         {
@@ -136,9 +150,9 @@ namespace CapaPresentacion
             AbrirFormulario((IconMenuItem)sender, new VerProductos());
         }
 
-        private void contenedor_Paint(object sender, PaintEventArgs e)
+        private void menuEstadisticas_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario((IconMenuItem)sender, new formEstadisticas());
         }
     }
 }
