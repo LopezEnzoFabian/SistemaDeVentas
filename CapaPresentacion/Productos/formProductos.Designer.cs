@@ -31,6 +31,7 @@
             this.panelProductos = new System.Windows.Forms.Panel();
             this.ibtnCategorias = new FontAwesome.Sharp.IconButton();
             this.ibtnProductos = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panelProductos
@@ -43,9 +44,10 @@
             // 
             // ibtnCategorias
             // 
-            this.ibtnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnCategorias.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnCategorias.ForeColor = System.Drawing.Color.White;
+            this.ibtnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnCategorias.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ibtnCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ibtnCategorias.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnCategorias.IconColor = System.Drawing.Color.Black;
             this.ibtnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -60,9 +62,10 @@
             // 
             // ibtnProductos
             // 
-            this.ibtnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnProductos.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnProductos.ForeColor = System.Drawing.Color.White;
+            this.ibtnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnProductos.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ibtnProductos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnProductos.IconColor = System.Drawing.Color.Black;
             this.ibtnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -75,12 +78,23 @@
             this.ibtnProductos.UseVisualStyleBackColor = true;
             this.ibtnProductos.Click += new System.EventHandler(this.ibtnProductos_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Seleccione una opcion";
+            // 
             // formProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(644, 571);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.ibtnCategorias);
             this.Controls.Add(this.ibtnProductos);
@@ -89,6 +103,7 @@
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -97,5 +112,6 @@
         private System.Windows.Forms.Panel panelProductos;
         private FontAwesome.Sharp.IconButton ibtnCategorias;
         private FontAwesome.Sharp.IconButton ibtnProductos;
+        private System.Windows.Forms.Label label1;
     }
 }

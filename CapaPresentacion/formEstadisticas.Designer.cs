@@ -53,6 +53,7 @@
             this.GBCategorias = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -70,7 +71,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 12);
+            this.chart1.Location = new System.Drawing.Point(12, 50);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -88,7 +89,7 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(304, 238);
+            this.chart2.Location = new System.Drawing.Point(304, 264);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -105,7 +106,7 @@
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1d";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(12, 238);
+            this.chart3.Location = new System.Drawing.Point(12, 276);
             this.chart3.Name = "chart3";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
@@ -121,7 +122,7 @@
             this.GBTotalVentas.Controls.Add(this.LBVentas);
             this.GBTotalVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBTotalVentas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBTotalVentas.Location = new System.Drawing.Point(313, 12);
+            this.GBTotalVentas.Location = new System.Drawing.Point(313, 50);
             this.GBTotalVentas.Name = "GBTotalVentas";
             this.GBTotalVentas.Size = new System.Drawing.Size(101, 90);
             this.GBTotalVentas.TabIndex = 3;
@@ -142,7 +143,7 @@
             // 
             this.GBClientes.Controls.Add(this.label3);
             this.GBClientes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBClientes.Location = new System.Drawing.Point(420, 12);
+            this.GBClientes.Location = new System.Drawing.Point(420, 50);
             this.GBClientes.Name = "GBClientes";
             this.GBClientes.Size = new System.Drawing.Size(104, 90);
             this.GBClientes.TabIndex = 4;
@@ -163,7 +164,7 @@
             // 
             this.GBEmpleados.Controls.Add(this.label4);
             this.GBEmpleados.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBEmpleados.Location = new System.Drawing.Point(530, 12);
+            this.GBEmpleados.Location = new System.Drawing.Point(530, 50);
             this.GBEmpleados.Name = "GBEmpleados";
             this.GBEmpleados.Size = new System.Drawing.Size(104, 90);
             this.GBEmpleados.TabIndex = 5;
@@ -184,7 +185,7 @@
             // 
             this.BGCaja.Controls.Add(this.label7);
             this.BGCaja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BGCaja.Location = new System.Drawing.Point(530, 125);
+            this.BGCaja.Location = new System.Drawing.Point(530, 163);
             this.BGCaja.Name = "BGCaja";
             this.BGCaja.Size = new System.Drawing.Size(104, 77);
             this.BGCaja.TabIndex = 9;
@@ -205,7 +206,7 @@
             // 
             this.GBProductos.Controls.Add(this.label6);
             this.GBProductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBProductos.Location = new System.Drawing.Point(420, 125);
+            this.GBProductos.Location = new System.Drawing.Point(420, 163);
             this.GBProductos.Name = "GBProductos";
             this.GBProductos.Size = new System.Drawing.Size(104, 77);
             this.GBProductos.TabIndex = 8;
@@ -226,7 +227,7 @@
             // 
             this.GBCategorias.Controls.Add(this.label5);
             this.GBCategorias.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBCategorias.Location = new System.Drawing.Point(313, 125);
+            this.GBCategorias.Location = new System.Drawing.Point(313, 163);
             this.GBCategorias.Name = "GBCategorias";
             this.GBCategorias.Size = new System.Drawing.Size(101, 77);
             this.GBCategorias.TabIndex = 7;
@@ -252,7 +253,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(592, 458);
+            this.iconButton1.Location = new System.Drawing.Point(592, 496);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(57, 58);
             this.iconButton1.TabIndex = 10;
@@ -262,12 +263,23 @@
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Estadisticas generales.";
+            // 
             // formEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(661, 528);
+            this.ClientSize = new System.Drawing.Size(662, 578);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.BGCaja);
             this.Controls.Add(this.GBProductos);
@@ -297,6 +309,7 @@
             this.GBCategorias.ResumeLayout(false);
             this.GBCategorias.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,5 +331,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label1;
     }
 }

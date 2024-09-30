@@ -176,7 +176,7 @@ namespace CapaPresentacion
             "Inactivo"});
             this.cbEstado.Location = new System.Drawing.Point(357, 210);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(285, 24);
+            this.cbEstado.Size = new System.Drawing.Size(121, 24);
             this.cbEstado.TabIndex = 34;
             // 
             // lblEstado
@@ -234,14 +234,16 @@ namespace CapaPresentacion
             "Supervisor"});
             this.cbRol.Location = new System.Drawing.Point(357, 161);
             this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(285, 24);
+            this.cbRol.Size = new System.Drawing.Size(121, 24);
             this.cbRol.TabIndex = 40;
             // 
             // dgListarUsuario
             // 
-            this.dgListarUsuario.AllowUserToOrderColumns = true;
+            this.dgListarUsuario.AllowUserToDeleteRows = false;
+            this.dgListarUsuario.AllowUserToResizeColumns = false;
+            this.dgListarUsuario.AllowUserToResizeRows = false;
             this.dgListarUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.White;
+            this.dgListarUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgListarUsuario.ColumnHeadersHeight = 35;
@@ -379,12 +381,12 @@ namespace CapaPresentacion
             // 
             // btnsearch
             // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.White;
+            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
             this.btnsearch.Location = new System.Drawing.Point(493, 18);
@@ -396,70 +398,75 @@ namespace CapaPresentacion
             // 
             // btnclean
             // 
+            this.btnclean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnclean.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.btnclean.IconColor = System.Drawing.Color.White;
+            this.btnclean.IconColor = System.Drawing.Color.Aqua;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
             this.btnclean.Location = new System.Drawing.Point(530, 18);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(34, 30);
             this.btnclean.TabIndex = 44;
-            this.btnclean.UseVisualStyleBackColor = true;
+            this.btnclean.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnGuardar.IconColor = System.Drawing.Color.Black;
+            this.btnGuardar.IconColor = System.Drawing.Color.Aqua;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.IconSize = 20;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(364, 267);
+            this.btnGuardar.IconSize = 30;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(372, 255);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 37);
+            this.btnGuardar.Size = new System.Drawing.Size(87, 54);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconColor = System.Drawing.Color.Aqua;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 20;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(465, 267);
+            this.btnEditar.IconSize = 30;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(465, 255);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(87, 37);
+            this.btnEditar.Size = new System.Drawing.Size(87, 54);
             this.btnEditar.TabIndex = 42;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconColor = System.Drawing.Color.Aqua;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 20;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(558, 267);
+            this.btnEliminar.IconSize = 30;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(558, 255);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(84, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(84, 54);
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtNombre
@@ -558,6 +565,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.lblDNI);
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
             this.Name = "formUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

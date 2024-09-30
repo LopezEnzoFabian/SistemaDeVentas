@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblListaCate = new System.Windows.Forms.Label();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
@@ -52,6 +52,8 @@
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +71,11 @@
             this.lblListaCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.lblListaCate.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaCate.ForeColor = System.Drawing.Color.Black;
-            this.lblListaCate.Location = new System.Drawing.Point(12, 48);
+            this.lblListaCate.Location = new System.Drawing.Point(12, 60);
             this.lblListaCate.Name = "lblListaCate";
-            this.lblListaCate.Size = new System.Drawing.Size(206, 28);
+            this.lblListaCate.Size = new System.Drawing.Size(222, 28);
             this.lblListaCate.TabIndex = 62;
-            this.lblListaCate.Text = "Lista de categorias";
+            this.lblListaCate.Text = "Lista de categorias.";
             // 
             // cbFiltro
             // 
@@ -99,11 +101,11 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.ForeColor = System.Drawing.Color.Black;
-            this.lblFiltro.Location = new System.Drawing.Point(104, 27);
+            this.lblFiltro.Location = new System.Drawing.Point(93, 27);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(68, 16);
+            this.lblFiltro.Size = new System.Drawing.Size(79, 16);
             this.lblFiltro.TabIndex = 56;
             this.lblFiltro.Text = "Filtrar por";
             // 
@@ -112,20 +114,20 @@
             this.dgListaCategorias.AllowUserToDeleteRows = false;
             this.dgListaCategorias.AllowUserToResizeColumns = false;
             this.dgListaCategorias.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            this.dgListaCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            this.dgListaCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgListaCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListaCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListaCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgListaCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgListaCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgListaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
@@ -134,14 +136,14 @@
             this.Estado,
             this.EstadoValor});
             this.dgListaCategorias.GridColor = System.Drawing.SystemColors.Control;
-            this.dgListaCategorias.Location = new System.Drawing.Point(6, 79);
+            this.dgListaCategorias.Location = new System.Drawing.Point(-2, 119);
             this.dgListaCategorias.MultiSelect = false;
             this.dgListaCategorias.Name = "dgListaCategorias";
             this.dgListaCategorias.ReadOnly = true;
             this.dgListaCategorias.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgListaCategorias.Size = new System.Drawing.Size(634, 206);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgListaCategorias.Size = new System.Drawing.Size(652, 206);
             this.dgListaCategorias.TabIndex = 70;
             this.dgListaCategorias.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaCategorias_CellPainting);
             // 
@@ -191,7 +193,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(22, 421);
+            this.lblEstado.Location = new System.Drawing.Point(40, 446);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(52, 16);
             this.lblEstado.TabIndex = 74;
@@ -205,7 +207,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(25, 442);
+            this.cbEstado.Location = new System.Drawing.Point(43, 467);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(146, 25);
             this.cbEstado.TabIndex = 73;
@@ -213,7 +215,7 @@
             // txtDescrip
             // 
             this.txtDescrip.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescrip.Location = new System.Drawing.Point(25, 392);
+            this.txtDescrip.Location = new System.Drawing.Point(43, 417);
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(146, 25);
             this.txtDescrip.TabIndex = 72;
@@ -223,7 +225,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(22, 372);
+            this.lblDescripcion.Location = new System.Drawing.Point(40, 397);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(82, 16);
             this.lblDescripcion.TabIndex = 71;
@@ -239,7 +241,7 @@
             this.ibtnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ibtnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnGuardar.IconSize = 30;
-            this.ibtnGuardar.Location = new System.Drawing.Point(257, 385);
+            this.ibtnGuardar.Location = new System.Drawing.Point(288, 428);
             this.ibtnGuardar.Name = "ibtnGuardar";
             this.ibtnGuardar.Size = new System.Drawing.Size(76, 52);
             this.ibtnGuardar.TabIndex = 91;
@@ -260,7 +262,7 @@
             this.ibtnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ibtnEditar.IconSize = 30;
             this.ibtnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibtnEditar.Location = new System.Drawing.Point(373, 385);
+            this.ibtnEditar.Location = new System.Drawing.Point(404, 428);
             this.ibtnEditar.Name = "ibtnEditar";
             this.ibtnEditar.Size = new System.Drawing.Size(76, 52);
             this.ibtnEditar.TabIndex = 90;
@@ -280,7 +282,7 @@
             this.ibtnEliminar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ibtnEliminar.IconSize = 30;
-            this.ibtnEliminar.Location = new System.Drawing.Point(482, 385);
+            this.ibtnEliminar.Location = new System.Drawing.Point(513, 428);
             this.ibtnEliminar.Name = "ibtnEliminar";
             this.ibtnEliminar.Size = new System.Drawing.Size(76, 52);
             this.ibtnEliminar.TabIndex = 89;
@@ -321,19 +323,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 328);
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 341);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(194, 24);
             this.label1.TabIndex = 95;
-            this.label1.Text = "Categoria";
+            this.label1.Text = "ABM de categorias.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 365);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(449, 15);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "puedes dar de alta,modificar o eliminar una categoria desde aqui.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 15);
+            this.label3.TabIndex = 97;
+            this.label3.Text = "selecciona una categoria";
             // 
             // formCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(643, 520);
+            this.ClientSize = new System.Drawing.Size(662, 578);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
@@ -382,5 +406,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

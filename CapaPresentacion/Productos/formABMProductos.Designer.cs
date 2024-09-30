@@ -62,6 +62,8 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +81,7 @@
             this.lblListaPorducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.lblListaPorducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaPorducto.ForeColor = System.Drawing.Color.Black;
-            this.lblListaPorducto.Location = new System.Drawing.Point(2, 48);
+            this.lblListaPorducto.Location = new System.Drawing.Point(11, 48);
             this.lblListaPorducto.Name = "lblListaPorducto";
             this.lblListaPorducto.Size = new System.Drawing.Size(199, 28);
             this.lblListaPorducto.TabIndex = 63;
@@ -116,7 +118,7 @@
             this.colEstadoValor,
             this.colID});
             this.dgListarPorductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgListarPorductos.Location = new System.Drawing.Point(6, 79);
+            this.dgListarPorductos.Location = new System.Drawing.Point(6, 107);
             this.dgListarPorductos.MultiSelect = false;
             this.dgListarPorductos.Name = "dgListarPorductos";
             this.dgListarPorductos.ReadOnly = true;
@@ -125,7 +127,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgListarPorductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgListarPorductos.RowTemplate.Height = 30;
-            this.dgListarPorductos.Size = new System.Drawing.Size(619, 199);
+            this.dgListarPorductos.Size = new System.Drawing.Size(634, 197);
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarPorductos_CellPainting);
             // 
@@ -245,7 +247,7 @@
             "teclados",
             "mouses",
             "gabinetes"});
-            this.cbCategoria.Location = new System.Drawing.Point(180, 349);
+            this.cbCategoria.Location = new System.Drawing.Point(246, 391);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(158, 21);
             this.cbCategoria.TabIndex = 85;
@@ -255,7 +257,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(177, 326);
+            this.lblCategoria.Location = new System.Drawing.Point(235, 368);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(70, 16);
             this.lblCategoria.TabIndex = 84;
@@ -266,7 +268,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(177, 375);
+            this.lblEstado.Location = new System.Drawing.Point(243, 417);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(52, 16);
             this.lblEstado.TabIndex = 83;
@@ -281,7 +283,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(180, 396);
+            this.cbEstado.Location = new System.Drawing.Point(246, 438);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(158, 25);
             this.cbEstado.TabIndex = 82;
@@ -289,7 +291,7 @@
             // txtDescri
             // 
             this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescri.Location = new System.Drawing.Point(5, 445);
+            this.txtDescri.Location = new System.Drawing.Point(71, 487);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(335, 25);
             this.txtDescri.TabIndex = 81;
@@ -297,7 +299,7 @@
             // txtCodigoPro
             // 
             this.txtCodigoPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPro.Location = new System.Drawing.Point(5, 395);
+            this.txtCodigoPro.Location = new System.Drawing.Point(71, 437);
             this.txtCodigoPro.Name = "txtCodigoPro";
             this.txtCodigoPro.Size = new System.Drawing.Size(158, 25);
             this.txtCodigoPro.TabIndex = 80;
@@ -306,7 +308,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(5, 346);
+            this.txtNombre.Location = new System.Drawing.Point(71, 388);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(158, 25);
             this.txtNombre.TabIndex = 79;
@@ -316,7 +318,7 @@
             this.lblDescri.AutoSize = true;
             this.lblDescri.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblDescri.ForeColor = System.Drawing.Color.Black;
-            this.lblDescri.Location = new System.Drawing.Point(2, 424);
+            this.lblDescri.Location = new System.Drawing.Point(68, 466);
             this.lblDescri.Name = "lblDescri";
             this.lblDescri.Size = new System.Drawing.Size(82, 16);
             this.lblDescri.TabIndex = 78;
@@ -327,7 +329,7 @@
             this.lblCodPro.AutoSize = true;
             this.lblCodPro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblCodPro.ForeColor = System.Drawing.Color.Black;
-            this.lblCodPro.Location = new System.Drawing.Point(2, 375);
+            this.lblCodPro.Location = new System.Drawing.Point(68, 417);
             this.lblCodPro.Name = "lblCodPro";
             this.lblCodPro.Size = new System.Drawing.Size(51, 16);
             this.lblCodPro.TabIndex = 77;
@@ -338,7 +340,7 @@
             this.lblNomPro.AutoSize = true;
             this.lblNomPro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomPro.ForeColor = System.Drawing.Color.Black;
-            this.lblNomPro.Location = new System.Drawing.Point(2, 326);
+            this.lblNomPro.Location = new System.Drawing.Point(60, 368);
             this.lblNomPro.Name = "lblNomPro";
             this.lblNomPro.Size = new System.Drawing.Size(141, 16);
             this.lblNomPro.TabIndex = 76;
@@ -348,11 +350,11 @@
             // 
             this.lblInfodeproducto.AutoSize = true;
             this.lblInfodeproducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfodeproducto.Location = new System.Drawing.Point(2, 294);
+            this.lblInfodeproducto.Location = new System.Drawing.Point(11, 317);
             this.lblInfodeproducto.Name = "lblInfodeproducto";
-            this.lblInfodeproducto.Size = new System.Drawing.Size(248, 24);
+            this.lblInfodeproducto.Size = new System.Drawing.Size(184, 24);
             this.lblInfodeproducto.TabIndex = 89;
-            this.lblInfodeproducto.Text = "Información de producto";
+            this.lblInfodeproducto.Text = "ABM de productos";
             // 
             // btnGuardar
             // 
@@ -364,7 +366,7 @@
             this.btnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
-            this.btnGuardar.Location = new System.Drawing.Point(465, 309);
+            this.btnGuardar.Location = new System.Drawing.Point(517, 343);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(76, 52);
             this.btnGuardar.TabIndex = 88;
@@ -385,7 +387,7 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnEditar.IconSize = 30;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.Location = new System.Drawing.Point(465, 367);
+            this.btnEditar.Location = new System.Drawing.Point(517, 401);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(76, 52);
             this.btnEditar.TabIndex = 87;
@@ -405,7 +407,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Aqua;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnEliminar.IconSize = 30;
-            this.btnEliminar.Location = new System.Drawing.Point(465, 424);
+            this.btnEliminar.Location = new System.Drawing.Point(517, 458);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(76, 52);
             this.btnEliminar.TabIndex = 86;
@@ -443,12 +445,34 @@
             this.btnclean.TabIndex = 74;
             this.btnclean.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 15);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "selecciona un producto.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(442, 15);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "puedes dar de alta, modificar o eliminar un producto desde aqui.";
+            // 
             // formABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(627, 481);
+            this.ClientSize = new System.Drawing.Size(643, 520);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInfodeproducto);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditar);
@@ -471,6 +495,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblListaPorducto);
             this.Controls.Add(this.dgListarPorductos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formABMProductos";
             this.Text = "ABM_productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).EndInit();
@@ -511,5 +536,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEstad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

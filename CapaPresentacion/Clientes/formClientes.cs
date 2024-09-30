@@ -99,6 +99,8 @@ namespace CapaPresentacion
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
 
+
+
         private void limpiarCampos()
         {
             txtDNI.Clear();
