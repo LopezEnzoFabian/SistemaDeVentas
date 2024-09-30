@@ -95,7 +95,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(324, 199);
+            this.chart2.Size = new System.Drawing.Size(345, 226);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
@@ -112,7 +112,7 @@
             series3.Legend = "Legend1d";
             series3.Name = "Series1";
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(286, 199);
+            this.chart3.Size = new System.Drawing.Size(286, 226);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "Cantidad de productos por categoria";
             // 
@@ -245,22 +245,29 @@
             // 
             // iconButton1
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(553, 443);
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(592, 458);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(81, 43);
+            this.iconButton1.Size = new System.Drawing.Size(57, 58);
             this.iconButton1.TabIndex = 10;
             this.iconButton1.Text = "Excel";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // formEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(646, 487);
+            this.ClientSize = new System.Drawing.Size(661, 528);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.BGCaja);
             this.Controls.Add(this.GBProductos);
@@ -271,6 +278,7 @@
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formEstadisticas";
             this.Text = "formEstadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

@@ -56,11 +56,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.lblListaCliente = new System.Windows.Forms.Label();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.lblLocalidad = new System.Windows.Forms.Label();
             this.colSelec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +67,11 @@
             this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.lblListaCliente = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.lblLocalidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -309,6 +309,7 @@
             this.btnsearch.Size = new System.Drawing.Size(32, 30);
             this.btnsearch.TabIndex = 85;
             this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // btnclean
             // 
@@ -411,64 +412,6 @@
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick_1);
             this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEstado.Location = new System.Drawing.Point(27, 258);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(50, 16);
-            this.lblEstado.TabIndex = 87;
-            this.lblEstado.Text = "Estado";
-            // 
-            // cbEstado
-            // 
-            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(30, 279);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(325, 24);
-            this.cbEstado.TabIndex = 86;
-            // 
-            // lblListaCliente
-            // 
-            this.lblListaCliente.AutoEllipsis = true;
-            this.lblListaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.lblListaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaCliente.Location = new System.Drawing.Point(11, 314);
-            this.lblListaCliente.Name = "lblListaCliente";
-            this.lblListaCliente.Size = new System.Drawing.Size(148, 28);
-            this.lblListaCliente.TabIndex = 83;
-            this.lblListaCliente.Text = "Lista de clientes";
-            // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtLocalidad.Location = new System.Drawing.Point(373, 227);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(259, 22);
-            this.txtLocalidad.TabIndex = 89;
-            // 
-            // lblLocalidad
-            // 
-            this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLocalidad.Location = new System.Drawing.Point(370, 208);
-            this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(67, 16);
-            this.lblLocalidad.TabIndex = 88;
-            this.lblLocalidad.Text = "Localidad";
-            // 
             // colSelec
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -543,6 +486,64 @@
             this.EstadoValor.HeaderText = "EstadoValor";
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.Visible = false;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEstado.Location = new System.Drawing.Point(27, 258);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(50, 16);
+            this.lblEstado.TabIndex = 87;
+            this.lblEstado.Text = "Estado";
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cbEstado.Location = new System.Drawing.Point(30, 279);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(325, 24);
+            this.cbEstado.TabIndex = 86;
+            // 
+            // lblListaCliente
+            // 
+            this.lblListaCliente.AutoEllipsis = true;
+            this.lblListaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.lblListaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblListaCliente.Location = new System.Drawing.Point(11, 314);
+            this.lblListaCliente.Name = "lblListaCliente";
+            this.lblListaCliente.Size = new System.Drawing.Size(148, 28);
+            this.lblListaCliente.TabIndex = 83;
+            this.lblListaCliente.Text = "Lista de clientes";
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLocalidad.Location = new System.Drawing.Point(373, 227);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(259, 22);
+            this.txtLocalidad.TabIndex = 89;
+            // 
+            // lblLocalidad
+            // 
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblLocalidad.Location = new System.Drawing.Point(370, 208);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(67, 16);
+            this.lblLocalidad.TabIndex = 88;
+            this.lblLocalidad.Text = "Localidad";
             // 
             // formClientes
             // 

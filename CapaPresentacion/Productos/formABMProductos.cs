@@ -106,13 +106,7 @@ namespace CapaPresentacion
 
         }
 
-        private void btnsearch_Click(object sender, EventArgs e)
-        {
-            if (ValidarFiltro()){
-                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-        }
+  
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -159,6 +153,15 @@ namespace CapaPresentacion
             txtDescri.Clear();
             cbCategoria.SelectedItem = null;
             cbEstado.SelectedItem = null;
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            if (ValidarFiltro())
+            {
+                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         public bool ValidarFiltro()

@@ -37,6 +37,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.dgListaCategorias = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
@@ -47,11 +52,6 @@
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,6 +144,47 @@
             this.dgListaCategorias.Size = new System.Drawing.Size(634, 206);
             this.dgListaCategorias.TabIndex = 70;
             this.dgListaCategorias.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaCategorias_CellPainting);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // colIdCate
+            // 
+            this.colIdCate.HeaderText = "id";
+            this.colIdCate.Name = "colIdCate";
+            this.colIdCate.ReadOnly = true;
+            this.colIdCate.Visible = false;
+            this.colIdCate.Width = 84;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 84.5141F;
+            this.colNombre.HeaderText = "Descripcion";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 84.5141F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 101;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 101;
             // 
             // lblEstado
             // 
@@ -261,6 +302,7 @@
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 94;
             this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // btnclean
             // 
@@ -285,47 +327,6 @@
             this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 95;
             this.label1.Text = "Categoria";
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 35F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // colIdCate
-            // 
-            this.colIdCate.HeaderText = "id";
-            this.colIdCate.Name = "colIdCate";
-            this.colIdCate.ReadOnly = true;
-            this.colIdCate.Visible = false;
-            this.colIdCate.Width = 84;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Descripcion";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 101;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 101;
             // 
             // formCategorias
             // 

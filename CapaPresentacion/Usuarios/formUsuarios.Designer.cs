@@ -274,12 +274,12 @@ namespace CapaPresentacion
             // btnSeleccionar
             // 
             this.btnSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnSeleccionar.FillWeight = 57.2977F;
+            this.btnSeleccionar.FillWeight = 35F;
             this.btnSeleccionar.HeaderText = "";
             this.btnSeleccionar.MinimumWidth = 10;
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 40;
+            this.btnSeleccionar.Width = 30;
             // 
             // colUsuario
             // 
@@ -392,6 +392,7 @@ namespace CapaPresentacion
             this.btnsearch.Size = new System.Drawing.Size(31, 30);
             this.btnsearch.TabIndex = 45;
             this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // btnclean
             // 
@@ -592,6 +593,13 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridView dgListarUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txt_Confirmpass;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
@@ -604,12 +612,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn colRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDNI;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txt_Confirmpass;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDireccion;
     }
 }

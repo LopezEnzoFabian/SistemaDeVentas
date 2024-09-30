@@ -35,6 +35,7 @@
             // 
             // panelProductos
             // 
+            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.panelProductos.Location = new System.Drawing.Point(1, 50);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(643, 520);
@@ -48,11 +49,11 @@
             this.ibtnCategorias.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtnCategorias.IconColor = System.Drawing.Color.Black;
             this.ibtnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnCategorias.Location = new System.Drawing.Point(352, 4);
+            this.ibtnCategorias.Location = new System.Drawing.Point(341, 4);
             this.ibtnCategorias.Name = "ibtnCategorias";
-            this.ibtnCategorias.Size = new System.Drawing.Size(151, 40);
+            this.ibtnCategorias.Size = new System.Drawing.Size(191, 40);
             this.ibtnCategorias.TabIndex = 5;
-            this.ibtnCategorias.Text = "Categorias";
+            this.ibtnCategorias.Text = "ABM categorias";
             this.ibtnCategorias.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ibtnCategorias.UseVisualStyleBackColor = true;
             this.ibtnCategorias.Click += new System.EventHandler(this.ibtnCategorias_Click);
@@ -67,9 +68,9 @@
             this.ibtnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProductos.Location = new System.Drawing.Point(150, 4);
             this.ibtnProductos.Name = "ibtnProductos";
-            this.ibtnProductos.Size = new System.Drawing.Size(151, 40);
+            this.ibtnProductos.Size = new System.Drawing.Size(185, 40);
             this.ibtnProductos.TabIndex = 4;
-            this.ibtnProductos.Text = "Productos";
+            this.ibtnProductos.Text = "ABM productos";
             this.ibtnProductos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ibtnProductos.UseVisualStyleBackColor = true;
             this.ibtnProductos.Click += new System.EventHandler(this.ibtnProductos_Click);

@@ -68,9 +68,10 @@
             // 
             // panelReportes
             // 
+            this.panelReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.panelReportes.Location = new System.Drawing.Point(0, 50);
             this.panelReportes.Name = "panelReportes";
-            this.panelReportes.Size = new System.Drawing.Size(661, 486);
+            this.panelReportes.Size = new System.Drawing.Size(661, 528);
             this.panelReportes.TabIndex = 8;
             // 
             // btnVentasRepo
@@ -112,12 +113,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(661, 539);
+            this.ClientSize = new System.Drawing.Size(662, 578);
             this.Controls.Add(this.panelReportes);
             this.Controls.Add(this.btnVentasRepo);
             this.Controls.Add(this.btnComprasRepo);
             this.Controls.Add(this.ibtnVerDetalle);
             this.Controls.Add(this.ibtnRegis);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formReportes";
             this.Text = "formReportes";
             this.Load += new System.EventHandler(this.formReportes_Load);

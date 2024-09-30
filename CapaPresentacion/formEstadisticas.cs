@@ -62,5 +62,14 @@ namespace CapaPresentacion
             chart3.Titles.Add("Cantidad de productos por categoria");
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea generar la tabla en Excel de estas compras?", "Generar PDF", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Aquí llamas a tu método para generar el excel
+            }
+        }
     }
 }

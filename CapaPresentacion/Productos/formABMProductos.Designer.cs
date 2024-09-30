@@ -34,6 +34,15 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblListaPorducto = new System.Windows.Forms.Label();
             this.dgListarPorductos = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
@@ -53,15 +62,6 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             this.lblListaPorducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.lblListaPorducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaPorducto.ForeColor = System.Drawing.Color.Black;
-            this.lblListaPorducto.Location = new System.Drawing.Point(11, 48);
+            this.lblListaPorducto.Location = new System.Drawing.Point(2, 48);
             this.lblListaPorducto.Name = "lblListaPorducto";
             this.lblListaPorducto.Size = new System.Drawing.Size(199, 28);
             this.lblListaPorducto.TabIndex = 63;
@@ -129,6 +129,76 @@
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarPorductos_CellPainting);
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // colCod
+            // 
+            this.colCod.FillWeight = 52.41989F;
+            this.colCod.HeaderText = "Codigo";
+            this.colCod.Name = "colCod";
+            this.colCod.ReadOnly = true;
+            this.colCod.Width = 80;
+            // 
+            // colNom
+            // 
+            this.colNom.FillWeight = 130F;
+            this.colNom.HeaderText = "Nombre de producto";
+            this.colNom.Name = "colNom";
+            this.colNom.ReadOnly = true;
+            this.colNom.Width = 130;
+            // 
+            // colDes
+            // 
+            this.colDes.HeaderText = "Descripcion";
+            this.colDes.Name = "colDes";
+            this.colDes.ReadOnly = true;
+            this.colDes.Width = 150;
+            // 
+            // colIdcategoria
+            // 
+            this.colIdcategoria.HeaderText = "Categoria";
+            this.colIdcategoria.Name = "colIdcategoria";
+            this.colIdcategoria.ReadOnly = true;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
+            this.colCategoria.Visible = false;
+            this.colCategoria.Width = 96;
+            // 
+            // ColEstad
+            // 
+            this.ColEstad.FillWeight = 62.02502F;
+            this.ColEstad.HeaderText = "Estado";
+            this.ColEstad.Name = "ColEstad";
+            this.ColEstad.ReadOnly = true;
+            this.ColEstad.Width = 80;
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 62.02502F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.ReadOnly = true;
+            this.colEstadoValor.Visible = false;
+            this.colEstadoValor.Width = 80;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Visible = false;
+            this.colID.Width = 84;
+            // 
             // cbFiltro
             // 
             this.cbFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -175,7 +245,7 @@
             "teclados",
             "mouses",
             "gabinetes"});
-            this.cbCategoria.Location = new System.Drawing.Point(190, 349);
+            this.cbCategoria.Location = new System.Drawing.Point(180, 349);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(158, 21);
             this.cbCategoria.TabIndex = 85;
@@ -185,7 +255,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(187, 326);
+            this.lblCategoria.Location = new System.Drawing.Point(177, 326);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(70, 16);
             this.lblCategoria.TabIndex = 84;
@@ -196,7 +266,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(187, 375);
+            this.lblEstado.Location = new System.Drawing.Point(177, 375);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(52, 16);
             this.lblEstado.TabIndex = 83;
@@ -211,7 +281,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(190, 396);
+            this.cbEstado.Location = new System.Drawing.Point(180, 396);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(158, 25);
             this.cbEstado.TabIndex = 82;
@@ -219,7 +289,7 @@
             // txtDescri
             // 
             this.txtDescri.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescri.Location = new System.Drawing.Point(15, 445);
+            this.txtDescri.Location = new System.Drawing.Point(5, 445);
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.Size = new System.Drawing.Size(335, 25);
             this.txtDescri.TabIndex = 81;
@@ -227,7 +297,7 @@
             // txtCodigoPro
             // 
             this.txtCodigoPro.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPro.Location = new System.Drawing.Point(15, 395);
+            this.txtCodigoPro.Location = new System.Drawing.Point(5, 395);
             this.txtCodigoPro.Name = "txtCodigoPro";
             this.txtCodigoPro.Size = new System.Drawing.Size(158, 25);
             this.txtCodigoPro.TabIndex = 80;
@@ -236,7 +306,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(15, 346);
+            this.txtNombre.Location = new System.Drawing.Point(5, 346);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(158, 25);
             this.txtNombre.TabIndex = 79;
@@ -246,7 +316,7 @@
             this.lblDescri.AutoSize = true;
             this.lblDescri.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblDescri.ForeColor = System.Drawing.Color.Black;
-            this.lblDescri.Location = new System.Drawing.Point(12, 424);
+            this.lblDescri.Location = new System.Drawing.Point(2, 424);
             this.lblDescri.Name = "lblDescri";
             this.lblDescri.Size = new System.Drawing.Size(82, 16);
             this.lblDescri.TabIndex = 78;
@@ -257,7 +327,7 @@
             this.lblCodPro.AutoSize = true;
             this.lblCodPro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.lblCodPro.ForeColor = System.Drawing.Color.Black;
-            this.lblCodPro.Location = new System.Drawing.Point(12, 375);
+            this.lblCodPro.Location = new System.Drawing.Point(2, 375);
             this.lblCodPro.Name = "lblCodPro";
             this.lblCodPro.Size = new System.Drawing.Size(51, 16);
             this.lblCodPro.TabIndex = 77;
@@ -268,7 +338,7 @@
             this.lblNomPro.AutoSize = true;
             this.lblNomPro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomPro.ForeColor = System.Drawing.Color.Black;
-            this.lblNomPro.Location = new System.Drawing.Point(12, 326);
+            this.lblNomPro.Location = new System.Drawing.Point(2, 326);
             this.lblNomPro.Name = "lblNomPro";
             this.lblNomPro.Size = new System.Drawing.Size(141, 16);
             this.lblNomPro.TabIndex = 76;
@@ -278,7 +348,7 @@
             // 
             this.lblInfodeproducto.AutoSize = true;
             this.lblInfodeproducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfodeproducto.Location = new System.Drawing.Point(12, 294);
+            this.lblInfodeproducto.Location = new System.Drawing.Point(2, 294);
             this.lblInfodeproducto.Name = "lblInfodeproducto";
             this.lblInfodeproducto.Size = new System.Drawing.Size(248, 24);
             this.lblInfodeproducto.TabIndex = 89;
@@ -372,76 +442,6 @@
             this.btnclean.Size = new System.Drawing.Size(31, 30);
             this.btnclean.TabIndex = 74;
             this.btnclean.UseVisualStyleBackColor = false;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 35F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // colCod
-            // 
-            this.colCod.FillWeight = 52.41989F;
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.ReadOnly = true;
-            this.colCod.Width = 80;
-            // 
-            // colNom
-            // 
-            this.colNom.FillWeight = 130F;
-            this.colNom.HeaderText = "Nombre de producto";
-            this.colNom.Name = "colNom";
-            this.colNom.ReadOnly = true;
-            this.colNom.Width = 130;
-            // 
-            // colDes
-            // 
-            this.colDes.HeaderText = "Descripcion";
-            this.colDes.Name = "colDes";
-            this.colDes.ReadOnly = true;
-            this.colDes.Width = 150;
-            // 
-            // colIdcategoria
-            // 
-            this.colIdcategoria.HeaderText = "Categoria";
-            this.colIdcategoria.Name = "colIdcategoria";
-            this.colIdcategoria.ReadOnly = true;
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.ReadOnly = true;
-            this.colCategoria.Visible = false;
-            this.colCategoria.Width = 96;
-            // 
-            // ColEstad
-            // 
-            this.ColEstad.FillWeight = 62.02502F;
-            this.ColEstad.HeaderText = "Estado";
-            this.ColEstad.Name = "ColEstad";
-            this.ColEstad.ReadOnly = true;
-            this.ColEstad.Width = 80;
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 62.02502F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.ReadOnly = true;
-            this.colEstadoValor.Visible = false;
-            this.colEstadoValor.Width = 80;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "id";
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Visible = false;
-            this.colID.Width = 84;
             // 
             // formABMProductos
             // 

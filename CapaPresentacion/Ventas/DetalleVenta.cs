@@ -65,5 +65,19 @@ namespace CapaPresentacion.Ventas
                 // Aquí llamas a tu método para generar el PDF
             }
         }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            if (ValidarFiltro())
+            {
+                MessageBox.Show("Por favor, ingrese el numero de la factura para iniciar la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        public bool ValidarFiltro()
+        {
+            return string.IsNullOrEmpty(txtBuscarNumFactura.Text);
+        }
     }
 }

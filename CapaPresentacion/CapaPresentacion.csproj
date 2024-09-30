@@ -331,7 +331,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
-    <Folder Include="Estadisticas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />

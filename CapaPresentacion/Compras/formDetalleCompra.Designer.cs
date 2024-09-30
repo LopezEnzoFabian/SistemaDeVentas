@@ -44,7 +44,7 @@
             this.lblDetalleCompra = new System.Windows.Forms.Label();
             this.ibtnBuscar = new FontAwesome.Sharp.IconButton();
             this.ibtnLimpiar = new FontAwesome.Sharp.IconButton();
-            this.txtDocNum = new System.Windows.Forms.TextBox();
+            this.txtNumeroFactura = new System.Windows.Forms.TextBox();
             this.lblDocNum = new System.Windows.Forms.Label();
             this.dgDetalleCompra = new System.Windows.Forms.DataGridView();
             this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -207,6 +207,7 @@
             this.ibtnBuscar.Size = new System.Drawing.Size(31, 30);
             this.ibtnBuscar.TabIndex = 48;
             this.ibtnBuscar.UseVisualStyleBackColor = false;
+            this.ibtnBuscar.Click += new System.EventHandler(this.ibtnBuscar_Click);
             // 
             // ibtnLimpiar
             // 
@@ -223,14 +224,14 @@
             this.ibtnLimpiar.TabIndex = 47;
             this.ibtnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // txtDocNum
+            // txtNumeroFactura
             // 
-            this.txtDocNum.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocNum.Location = new System.Drawing.Point(281, 15);
-            this.txtDocNum.Name = "txtDocNum";
-            this.txtDocNum.Size = new System.Drawing.Size(130, 25);
-            this.txtDocNum.TabIndex = 46;
-            this.txtDocNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocNum_KeyPress);
+            this.txtNumeroFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroFactura.Location = new System.Drawing.Point(281, 15);
+            this.txtNumeroFactura.Name = "txtNumeroFactura";
+            this.txtNumeroFactura.Size = new System.Drawing.Size(130, 25);
+            this.txtNumeroFactura.TabIndex = 46;
+            this.txtNumeroFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocNum_KeyPress);
             // 
             // lblDocNum
             // 
@@ -393,7 +394,7 @@
             this.Controls.Add(this.lblDocNum);
             this.Controls.Add(this.ibtnBuscar);
             this.Controls.Add(this.ibtnLimpiar);
-            this.Controls.Add(this.txtDocNum);
+            this.Controls.Add(this.txtNumeroFactura);
             this.Controls.Add(this.lblDetalleCompra);
             this.Controls.Add(this.gbInfoProve);
             this.Controls.Add(this.gbInfoCompra);
@@ -426,7 +427,7 @@
         private System.Windows.Forms.TextBox txtUsuariocompra;
         private FontAwesome.Sharp.IconButton ibtnBuscar;
         private FontAwesome.Sharp.IconButton ibtnLimpiar;
-        private System.Windows.Forms.TextBox txtDocNum;
+        private System.Windows.Forms.TextBox txtNumeroFactura;
         private System.Windows.Forms.Label lblDocNum;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.DataGridView dgDetalleCompra;
