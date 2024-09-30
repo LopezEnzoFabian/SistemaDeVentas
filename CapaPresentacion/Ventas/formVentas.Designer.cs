@@ -35,9 +35,9 @@
             // 
             // panelVentas
             // 
-            this.panelVentas.Location = new System.Drawing.Point(1, 50);
+            this.panelVentas.Location = new System.Drawing.Point(0, 50);
             this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(658, 496);
+            this.panelVentas.Size = new System.Drawing.Size(662, 526);
             this.panelVentas.TabIndex = 6;
             // 
             // ibtnDetalleVenta
@@ -77,10 +77,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(661, 539);
+            this.ClientSize = new System.Drawing.Size(662, 578);
             this.Controls.Add(this.ibtnDetalleVenta);
             this.Controls.Add(this.panelVentas);
             this.Controls.Add(this.ibtnRegistrarVenta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formVentas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.formVentas_Load);

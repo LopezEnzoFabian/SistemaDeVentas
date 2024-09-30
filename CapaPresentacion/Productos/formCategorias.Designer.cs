@@ -46,12 +46,12 @@
             this.ibtnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colIdCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +141,7 @@
             this.dgListaCategorias.RowHeadersVisible = false;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgListaCategorias.Size = new System.Drawing.Size(617, 206);
+            this.dgListaCategorias.Size = new System.Drawing.Size(634, 206);
             this.dgListaCategorias.TabIndex = 70;
             this.dgListaCategorias.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaCategorias_CellPainting);
             // 
@@ -150,7 +150,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(180, 402);
+            this.lblEstado.Location = new System.Drawing.Point(22, 421);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(52, 16);
             this.lblEstado.TabIndex = 74;
@@ -164,7 +164,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(183, 423);
+            this.cbEstado.Location = new System.Drawing.Point(25, 442);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(146, 25);
             this.cbEstado.TabIndex = 73;
@@ -172,7 +172,7 @@
             // txtDescrip
             // 
             this.txtDescrip.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescrip.Location = new System.Drawing.Point(183, 373);
+            this.txtDescrip.Location = new System.Drawing.Point(25, 392);
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(146, 25);
             this.txtDescrip.TabIndex = 72;
@@ -182,7 +182,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(180, 353);
+            this.lblDescripcion.Location = new System.Drawing.Point(22, 372);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(82, 16);
             this.lblDescripcion.TabIndex = 71;
@@ -198,7 +198,7 @@
             this.ibtnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ibtnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnGuardar.IconSize = 30;
-            this.ibtnGuardar.Location = new System.Drawing.Point(465, 309);
+            this.ibtnGuardar.Location = new System.Drawing.Point(257, 385);
             this.ibtnGuardar.Name = "ibtnGuardar";
             this.ibtnGuardar.Size = new System.Drawing.Size(76, 52);
             this.ibtnGuardar.TabIndex = 91;
@@ -219,7 +219,7 @@
             this.ibtnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ibtnEditar.IconSize = 30;
             this.ibtnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibtnEditar.Location = new System.Drawing.Point(465, 367);
+            this.ibtnEditar.Location = new System.Drawing.Point(373, 385);
             this.ibtnEditar.Name = "ibtnEditar";
             this.ibtnEditar.Size = new System.Drawing.Size(76, 52);
             this.ibtnEditar.TabIndex = 90;
@@ -239,7 +239,7 @@
             this.ibtnEliminar.IconColor = System.Drawing.Color.Aqua;
             this.ibtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ibtnEliminar.IconSize = 30;
-            this.ibtnEliminar.Location = new System.Drawing.Point(465, 425);
+            this.ibtnEliminar.Location = new System.Drawing.Point(482, 385);
             this.ibtnEliminar.Name = "ibtnEliminar";
             this.ibtnEliminar.Size = new System.Drawing.Size(76, 52);
             this.ibtnEliminar.TabIndex = 89;
@@ -276,13 +276,23 @@
             this.btnclean.TabIndex = 93;
             this.btnclean.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 328);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Categoria";
+            // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.FillWeight = 40F;
+            this.btnSeleccionar.FillWeight = 35F;
             this.btnSeleccionar.HeaderText = "";
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 40;
+            this.btnSeleccionar.Width = 30;
             // 
             // colIdCate
             // 
@@ -317,22 +327,12 @@
             this.EstadoValor.Visible = false;
             this.EstadoValor.Width = 101;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 309);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Categoria";
-            // 
             // formCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(627, 481);
+            this.ClientSize = new System.Drawing.Size(643, 520);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.btnclean);
@@ -349,6 +349,7 @@
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblFiltro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.formCategorias_Load);
@@ -374,11 +375,11 @@
         private FontAwesome.Sharp.IconButton ibtnEliminar;
         private FontAwesome.Sharp.IconButton btnsearch;
         private FontAwesome.Sharp.IconButton btnclean;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdCate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.Label label1;
     }
 }

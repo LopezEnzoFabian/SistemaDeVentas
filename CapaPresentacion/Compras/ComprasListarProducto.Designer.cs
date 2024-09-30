@@ -48,7 +48,7 @@
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.White;
+            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
             this.btnsearch.Location = new System.Drawing.Point(551, 7);
@@ -61,7 +61,7 @@
             // 
             this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.btnclean.IconColor = System.Drawing.Color.White;
+            this.btnclean.IconColor = System.Drawing.Color.Aqua;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
             this.btnclean.Location = new System.Drawing.Point(588, 9);
@@ -96,18 +96,19 @@
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFiltrar.Location = new System.Drawing.Point(190, 15);
+            this.lblFiltrar.Location = new System.Drawing.Point(189, 21);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(66, 17);
+            this.lblFiltrar.Size = new System.Drawing.Size(71, 16);
             this.lblFiltrar.TabIndex = 89;
             this.lblFiltrar.Text = "Filtrar por";
             // 
             // dgListaProductos
             // 
             this.dgListaProductos.AllowUserToOrderColumns = true;
-            this.dgListaProductos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgListaProductos.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSeleccionar,
@@ -124,11 +125,11 @@
             // 
             // colSeleccionar
             // 
-            this.colSeleccionar.FillWeight = 121.8274F;
+            this.colSeleccionar.FillWeight = 35F;
             this.colSeleccionar.HeaderText = "";
             this.colSeleccionar.Name = "colSeleccionar";
             this.colSeleccionar.ReadOnly = true;
-            this.colSeleccionar.Width = 40;
+            this.colSeleccionar.Width = 30;
             // 
             // colNombreDeProducto
             // 

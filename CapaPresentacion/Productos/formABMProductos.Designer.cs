@@ -34,23 +34,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblListaPorducto = new System.Windows.Forms.Label();
             this.dgListarPorductos = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnsearch = new FontAwesome.Sharp.IconButton();
-            this.btnclean = new FontAwesome.Sharp.IconButton();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -62,6 +48,20 @@
             this.lblCodPro = new System.Windows.Forms.Label();
             this.lblNomPro = new System.Windows.Forms.Label();
             this.lblInfodeproducto = new System.Windows.Forms.Label();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnsearch = new FontAwesome.Sharp.IconButton();
+            this.btnclean = new FontAwesome.Sharp.IconButton();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarPorductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@
             this.ColEstad,
             this.colEstadoValor,
             this.colID});
-            this.dgListarPorductos.GridColor = System.Drawing.SystemColors.Control;
+            this.dgListarPorductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListarPorductos.Location = new System.Drawing.Point(6, 79);
             this.dgListarPorductos.MultiSelect = false;
             this.dgListarPorductos.Name = "dgListarPorductos";
@@ -128,105 +128,6 @@
             this.dgListarPorductos.Size = new System.Drawing.Size(619, 199);
             this.dgListarPorductos.TabIndex = 56;
             this.dgListarPorductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarPorductos_CellPainting);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 40F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 40;
-            // 
-            // colCod
-            // 
-            this.colCod.FillWeight = 52.41989F;
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.ReadOnly = true;
-            this.colCod.Width = 80;
-            // 
-            // colNom
-            // 
-            this.colNom.FillWeight = 130F;
-            this.colNom.HeaderText = "Nombre de producto";
-            this.colNom.Name = "colNom";
-            this.colNom.ReadOnly = true;
-            this.colNom.Width = 130;
-            // 
-            // colDes
-            // 
-            this.colDes.HeaderText = "Descripcion";
-            this.colDes.Name = "colDes";
-            this.colDes.ReadOnly = true;
-            this.colDes.Width = 150;
-            // 
-            // colIdcategoria
-            // 
-            this.colIdcategoria.HeaderText = "Categoria";
-            this.colIdcategoria.Name = "colIdcategoria";
-            this.colIdcategoria.ReadOnly = true;
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.ReadOnly = true;
-            this.colCategoria.Visible = false;
-            this.colCategoria.Width = 96;
-            // 
-            // ColEstad
-            // 
-            this.ColEstad.FillWeight = 62.02502F;
-            this.ColEstad.HeaderText = "Estado";
-            this.ColEstad.Name = "ColEstad";
-            this.ColEstad.ReadOnly = true;
-            this.ColEstad.Width = 80;
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 62.02502F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.ReadOnly = true;
-            this.colEstadoValor.Visible = false;
-            this.colEstadoValor.Width = 80;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "id";
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Visible = false;
-            this.colID.Width = 84;
-            // 
-            // btnsearch
-            // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
-            this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(456, 12);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(31, 30);
-            this.btnsearch.TabIndex = 75;
-            this.btnsearch.UseVisualStyleBackColor = false;
-            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
-            // 
-            // btnclean
-            // 
-            this.btnclean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.btnclean.IconColor = System.Drawing.Color.Aqua;
-            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(493, 12);
-            this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(31, 30);
-            this.btnclean.TabIndex = 74;
-            this.btnclean.UseVisualStyleBackColor = false;
             // 
             // cbFiltro
             // 
@@ -262,66 +163,6 @@
             this.lblFiltro.Size = new System.Drawing.Size(71, 16);
             this.lblFiltro.TabIndex = 71;
             this.lblFiltro.Text = "Filtrar por";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.IconSize = 30;
-            this.btnGuardar.Location = new System.Drawing.Point(465, 309);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(76, 52);
-            this.btnGuardar.TabIndex = 88;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditar.IconColor = System.Drawing.Color.Aqua;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEditar.IconSize = 30;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.Location = new System.Drawing.Point(465, 367);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(76, 52);
-            this.btnEditar.TabIndex = 87;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Aqua;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEliminar.IconSize = 30;
-            this.btnEliminar.Location = new System.Drawing.Point(465, 424);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(76, 52);
-            this.btnEliminar.TabIndex = 86;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // cbCategoria
             // 
@@ -442,6 +283,165 @@
             this.lblInfodeproducto.Size = new System.Drawing.Size(248, 24);
             this.lblInfodeproducto.TabIndex = 89;
             this.lblInfodeproducto.Text = "Información de producto";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.IconSize = 30;
+            this.btnGuardar.Location = new System.Drawing.Point(465, 309);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(76, 52);
+            this.btnGuardar.TabIndex = 88;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditar.IconColor = System.Drawing.Color.Aqua;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnEditar.IconSize = 30;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.Location = new System.Drawing.Point(465, 367);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(76, 52);
+            this.btnEditar.TabIndex = 87;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Aqua;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnEliminar.IconSize = 30;
+            this.btnEliminar.Location = new System.Drawing.Point(465, 424);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(76, 52);
+            this.btnEliminar.TabIndex = 86;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.btnsearch.IconColor = System.Drawing.Color.Aqua;
+            this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnsearch.IconSize = 20;
+            this.btnsearch.Location = new System.Drawing.Point(456, 12);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(31, 30);
+            this.btnsearch.TabIndex = 75;
+            this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            // 
+            // btnclean
+            // 
+            this.btnclean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.btnclean.IconColor = System.Drawing.Color.Aqua;
+            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnclean.IconSize = 20;
+            this.btnclean.Location = new System.Drawing.Point(493, 12);
+            this.btnclean.Name = "btnclean";
+            this.btnclean.Size = new System.Drawing.Size(31, 30);
+            this.btnclean.TabIndex = 74;
+            this.btnclean.UseVisualStyleBackColor = false;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // colCod
+            // 
+            this.colCod.FillWeight = 52.41989F;
+            this.colCod.HeaderText = "Codigo";
+            this.colCod.Name = "colCod";
+            this.colCod.ReadOnly = true;
+            this.colCod.Width = 80;
+            // 
+            // colNom
+            // 
+            this.colNom.FillWeight = 130F;
+            this.colNom.HeaderText = "Nombre de producto";
+            this.colNom.Name = "colNom";
+            this.colNom.ReadOnly = true;
+            this.colNom.Width = 130;
+            // 
+            // colDes
+            // 
+            this.colDes.HeaderText = "Descripcion";
+            this.colDes.Name = "colDes";
+            this.colDes.ReadOnly = true;
+            this.colDes.Width = 150;
+            // 
+            // colIdcategoria
+            // 
+            this.colIdcategoria.HeaderText = "Categoria";
+            this.colIdcategoria.Name = "colIdcategoria";
+            this.colIdcategoria.ReadOnly = true;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
+            this.colCategoria.Visible = false;
+            this.colCategoria.Width = 96;
+            // 
+            // ColEstad
+            // 
+            this.ColEstad.FillWeight = 62.02502F;
+            this.ColEstad.HeaderText = "Estado";
+            this.ColEstad.Name = "ColEstad";
+            this.ColEstad.ReadOnly = true;
+            this.ColEstad.Width = 80;
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 62.02502F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.ReadOnly = true;
+            this.colEstadoValor.Visible = false;
+            this.colEstadoValor.Width = 80;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Visible = false;
+            this.colID.Width = 84;
             // 
             // formABMProductos
             // 

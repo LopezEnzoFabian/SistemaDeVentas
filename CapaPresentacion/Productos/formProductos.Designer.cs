@@ -83,6 +83,7 @@
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.ibtnCategorias);
             this.Controls.Add(this.ibtnProductos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);

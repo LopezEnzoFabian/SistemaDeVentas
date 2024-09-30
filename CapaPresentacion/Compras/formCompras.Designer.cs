@@ -70,7 +70,7 @@
             // 
             this.panelCompras.Location = new System.Drawing.Point(2, 50);
             this.panelCompras.Name = "panelCompras";
-            this.panelCompras.Size = new System.Drawing.Size(641, 489);
+            this.panelCompras.Size = new System.Drawing.Size(657, 528);
             this.panelCompras.TabIndex = 3;
             // 
             // formCompras
@@ -78,12 +78,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(646, 539);
+            this.ClientSize = new System.Drawing.Size(662, 578);
             this.Controls.Add(this.panelCompras);
             this.Controls.Add(this.ibtnVerDetalle);
             this.Controls.Add(this.ibtnRegistrarCom);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formCompras";
             this.Text = "formCompras";
             this.Load += new System.EventHandler(this.formCompras_Load);

@@ -31,16 +31,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTotalPag = new System.Windows.Forms.Label();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
             this.dgRegistrarCompra = new System.Windows.Forms.DataGridView();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbInfoProducto = new System.Windows.Forms.GroupBox();
             this.lblCant = new System.Windows.Forms.Label();
             this.lblPrecioVen = new System.Windows.Forms.Label();
@@ -79,7 +81,7 @@
             this.lblTotalPag.AutoSize = true;
             this.lblTotalPag.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPag.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalPag.Location = new System.Drawing.Point(528, 285);
+            this.lblTotalPag.Location = new System.Drawing.Point(541, 346);
             this.lblTotalPag.Name = "lblTotalPag";
             this.lblTotalPag.Size = new System.Drawing.Size(96, 15);
             this.lblTotalPag.TabIndex = 51;
@@ -87,10 +89,11 @@
             // 
             // txtTotalPagar
             // 
-            this.txtTotalPagar.Location = new System.Drawing.Point(531, 303);
+            this.txtTotalPagar.Location = new System.Drawing.Point(544, 364);
+            this.txtTotalPagar.Multiline = true;
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.ReadOnly = true;
-            this.txtTotalPagar.Size = new System.Drawing.Size(79, 20);
+            this.txtTotalPagar.Size = new System.Drawing.Size(93, 30);
             this.txtTotalPagar.TabIndex = 50;
             // 
             // dgRegistrarCompra
@@ -100,41 +103,50 @@
             this.dgRegistrarCompra.AllowUserToResizeRows = false;
             this.dgRegistrarCompra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgRegistrarCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgRegistrarCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgRegistrarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgRegistrarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnBorrar,
-            this.colIdProducto,
             this.colProducto,
+            this.colCodigo,
+            this.colCantidad,
             this.colPrecioCompra,
             this.colCPrecioVenta,
-            this.colCantidad,
-            this.colSubTotal});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgRegistrarCompra.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgRegistrarCompra.EnableHeadersVisualStyles = false;
-            this.dgRegistrarCompra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgRegistrarCompra.Location = new System.Drawing.Point(4, 285);
-            this.dgRegistrarCompra.MultiSelect = false;
-            this.dgRegistrarCompra.Name = "dgRegistrarCompra";
+            this.colSubTotal,
+            this.colIdProducto});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgRegistrarCompra.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgRegistrarCompra.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgRegistrarCompra.EnableHeadersVisualStyles = false;
+            this.dgRegistrarCompra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgRegistrarCompra.Location = new System.Drawing.Point(1, 285);
+            this.dgRegistrarCompra.MultiSelect = false;
+            this.dgRegistrarCompra.Name = "dgRegistrarCompra";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgRegistrarCompra.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgRegistrarCompra.RowHeadersVisible = false;
             this.dgRegistrarCompra.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgRegistrarCompra.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgRegistrarCompra.Size = new System.Drawing.Size(514, 171);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgRegistrarCompra.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgRegistrarCompra.Size = new System.Drawing.Size(529, 240);
             this.dgRegistrarCompra.TabIndex = 47;
             this.dgRegistrarCompra.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgRegistrarCompra_CellPainting);
             // 
@@ -143,14 +155,7 @@
             this.btnBorrar.FillWeight = 35F;
             this.btnBorrar.HeaderText = "";
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Width = 40;
-            // 
-            // colIdProducto
-            // 
-            this.colIdProducto.HeaderText = "idProducto";
-            this.colIdProducto.Name = "colIdProducto";
-            this.colIdProducto.Visible = false;
-            this.colIdProducto.Width = 84;
+            this.btnBorrar.Width = 30;
             // 
             // colProducto
             // 
@@ -158,6 +163,18 @@
             this.colProducto.HeaderText = "Producto";
             this.colProducto.Name = "colProducto";
             this.colProducto.Width = 101;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.FillWeight = 84.5141F;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.Width = 101;
             // 
             // colPrecioCompra
             // 
@@ -170,15 +187,7 @@
             // 
             this.colCPrecioVenta.HeaderText = "Precio Venta";
             this.colCPrecioVenta.Name = "colCPrecioVenta";
-            this.colCPrecioVenta.Visible = false;
             this.colCPrecioVenta.Width = 96;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.FillWeight = 84.5141F;
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.Width = 101;
             // 
             // colSubTotal
             // 
@@ -186,6 +195,13 @@
             this.colSubTotal.HeaderText = "SubTotal";
             this.colSubTotal.Name = "colSubTotal";
             this.colSubTotal.Width = 101;
+            // 
+            // colIdProducto
+            // 
+            this.colIdProducto.HeaderText = "idProducto";
+            this.colIdProducto.Name = "colIdProducto";
+            this.colIdProducto.Visible = false;
+            this.colIdProducto.Width = 84;
             // 
             // gbInfoProducto
             // 
@@ -205,7 +221,7 @@
             this.gbInfoProducto.ForeColor = System.Drawing.Color.Black;
             this.gbInfoProducto.Location = new System.Drawing.Point(12, 135);
             this.gbInfoProducto.Name = "gbInfoProducto";
-            this.gbInfoProducto.Size = new System.Drawing.Size(612, 85);
+            this.gbInfoProducto.Size = new System.Drawing.Size(633, 85);
             this.gbInfoProducto.TabIndex = 46;
             this.gbInfoProducto.TabStop = false;
             this.gbInfoProducto.Text = "información de producto";
@@ -329,7 +345,7 @@
             this.txtCodProd.Location = new System.Drawing.Point(11, 48);
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.ReadOnly = true;
-            this.txtCodProd.Size = new System.Drawing.Size(128, 21);
+            this.txtCodProd.Size = new System.Drawing.Size(134, 21);
             this.txtCodProd.TabIndex = 2;
             // 
             // gbInfoProve
@@ -344,17 +360,17 @@
             this.gbInfoProve.ForeColor = System.Drawing.Color.Black;
             this.gbInfoProve.Location = new System.Drawing.Point(331, 40);
             this.gbInfoProve.Name = "gbInfoProve";
-            this.gbInfoProve.Size = new System.Drawing.Size(293, 89);
+            this.gbInfoProve.Size = new System.Drawing.Size(314, 89);
             this.gbInfoProve.TabIndex = 45;
             this.gbInfoProve.TabStop = false;
             this.gbInfoProve.Text = "información de proveedor";
             // 
             // txtNumDoc
             // 
-            this.txtNumDoc.Location = new System.Drawing.Point(130, 51);
+            this.txtNumDoc.Location = new System.Drawing.Point(130, 54);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.ReadOnly = true;
-            this.txtNumDoc.Size = new System.Drawing.Size(115, 21);
+            this.txtNumDoc.Size = new System.Drawing.Size(134, 21);
             this.txtNumDoc.TabIndex = 50;
             // 
             // lblNumDoc
@@ -377,7 +393,7 @@
             this.btnBuscarProveedor.IconColor = System.Drawing.Color.Aqua;
             this.btnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarProveedor.IconSize = 20;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(255, 51);
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(270, 54);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
             this.btnBuscarProveedor.Size = new System.Drawing.Size(31, 20);
             this.btnBuscarProveedor.TabIndex = 46;
@@ -386,7 +402,7 @@
             // 
             // txtRazonSoc
             // 
-            this.txtRazonSoc.Location = new System.Drawing.Point(6, 51);
+            this.txtRazonSoc.Location = new System.Drawing.Point(9, 54);
             this.txtRazonSoc.Name = "txtRazonSoc";
             this.txtRazonSoc.ReadOnly = true;
             this.txtRazonSoc.Size = new System.Drawing.Size(118, 21);
@@ -479,7 +495,7 @@
             this.ibtnRegistrarCompra.IconColor = System.Drawing.Color.Aqua;
             this.ibtnRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnRegistrarCompra.IconSize = 40;
-            this.ibtnRegistrarCompra.Location = new System.Drawing.Point(537, 355);
+            this.ibtnRegistrarCompra.Location = new System.Drawing.Point(552, 434);
             this.ibtnRegistrarCompra.Name = "ibtnRegistrarCompra";
             this.ibtnRegistrarCompra.Size = new System.Drawing.Size(80, 65);
             this.ibtnRegistrarCompra.TabIndex = 40;
@@ -513,7 +529,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(625, 450);
+            this.ClientSize = new System.Drawing.Size(657, 528);
             this.Controls.Add(this.lblTotalPag);
             this.Controls.Add(this.txtTotalPagar);
             this.Controls.Add(this.ibtnRegistrarCompra);
@@ -523,6 +539,7 @@
             this.Controls.Add(this.gbInfoProve);
             this.Controls.Add(this.gbInfoCompra);
             this.Controls.Add(this.lblRegistrarCompra);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formRegistrarCompra";
             this.Text = "Registrar Compra";
             this.Load += new System.EventHandler(this.formRegistrarCompra_Load);
@@ -571,11 +588,12 @@
         private System.Windows.Forms.TextBox txtNumDoc;
         private System.Windows.Forms.Label lblNumDoc;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCPrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdProducto;
     }
 }
