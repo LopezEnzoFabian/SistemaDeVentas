@@ -50,6 +50,8 @@ namespace CapaPresentacion
 
             if (usuarioActual.oRol.Id_rol == 1) //administrador
             {
+               menuVentas.Visible = false;
+               menuEstadisticas.Visible = false;
                
             }
             if (usuarioActual.oRol.Id_rol == 2) //vendedor
@@ -59,12 +61,17 @@ namespace CapaPresentacion
                 menuReportes.Visible = false;
                 menuProveedores.Visible = false;
                 menuProductos.Visible = false;
+                menuEstadisticas.Visible =false;
             }
             if (usuarioActual.oRol.Id_rol == 3)//supervisor
             {
                 menuCompras.Visible=false;
                 menuVentas.Visible=false;
                 menuProductos.Visible=false;
+                menuReportes.Visible=false;
+                menuProveedores.Visible=false;
+                menuClientes.Visible=false;
+                menuProductosVer.Visible=false;
             }
         }
 
@@ -137,7 +144,19 @@ namespace CapaPresentacion
 
         private void ibtnSalir_Click(object sender, EventArgs e)
         {
-         this.Close(); 
+            DialogResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Lógica para cerrar sesión               
+                this.Close();
+            }
+            else
+            {
+                // Lógica si el usuario no desea cerrar sesión
+                MessageBox.Show("Permanecerás en sesión.");
+            }        
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

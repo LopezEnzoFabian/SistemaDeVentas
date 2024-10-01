@@ -415,6 +415,7 @@ namespace CapaPresentacion
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
@@ -422,9 +423,9 @@ namespace CapaPresentacion
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(372, 255);
+            this.btnGuardar.Location = new System.Drawing.Point(381, 255);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(87, 54);
+            this.btnGuardar.Size = new System.Drawing.Size(78, 54);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -434,6 +435,7 @@ namespace CapaPresentacion
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
@@ -443,7 +445,7 @@ namespace CapaPresentacion
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEditar.Location = new System.Drawing.Point(465, 255);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(87, 54);
+            this.btnEditar.Size = new System.Drawing.Size(76, 54);
             this.btnEditar.TabIndex = 42;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -453,6 +455,7 @@ namespace CapaPresentacion
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
@@ -460,9 +463,9 @@ namespace CapaPresentacion
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(558, 255);
+            this.btnEliminar.Location = new System.Drawing.Point(547, 255);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(84, 54);
+            this.btnEliminar.Size = new System.Drawing.Size(76, 54);
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

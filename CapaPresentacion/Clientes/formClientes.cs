@@ -55,7 +55,7 @@ namespace CapaPresentacion
                 TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
                 dgListarUsuario.Rows[fila].Cells[2].Value = textInfo.ToTitleCase(txtDNI.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[3].Value = textInfo.ToTitleCase(txtNombre.Text.ToLower());
+                dgListarUsuario.Rows[fila].Cells[3].Value = textInfo.ToTitleCase(txtNombrecliente.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[4].Value = textInfo.ToTitleCase(txtEmail.Text.ToLower());
                 dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower()); 
                 dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(txtDireccion.Text.ToLower());
@@ -75,7 +75,7 @@ namespace CapaPresentacion
         {
             // Verifica si alguno de los campos está vacío o nulo
             return string.IsNullOrEmpty(txtDNI.Text) ||
-                   string.IsNullOrEmpty(txtNombre.Text) ||
+                   string.IsNullOrEmpty(txtNombrecliente.Text) ||
                    string.IsNullOrEmpty(txtEmail.Text) ||
                    string.IsNullOrEmpty(txtTel.Text) ||
                    string.IsNullOrEmpty(cbEstado.Text) ||
@@ -104,7 +104,7 @@ namespace CapaPresentacion
         private void limpiarCampos()
         {
             txtDNI.Clear();
-            txtNombre.Clear();
+            txtNombrecliente.Clear();
             txtTel.Clear();
             txtEmail.Clear();
             txtCiudad.Clear();
@@ -135,7 +135,7 @@ namespace CapaPresentacion
             {
                 //EliminarUsuario();
                 // Mensaje de éxito
-                MessageBox.Show("Usuario eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cliente eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -224,5 +224,7 @@ namespace CapaPresentacion
         {
             return string.IsNullOrEmpty(cbFiltro.Text);
         }
+
+     
     }
 }

@@ -23,10 +23,6 @@ namespace CapaPresentacion
 
         }
 
-        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -57,6 +53,102 @@ namespace CapaPresentacion
             }
         }
 
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            if (!Validaciones.EsEmailValido(txtEmail.Text))
+            {
+                // Mostrar un mensaje de error
+                MessageBox.Show("El formato de email no es valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // Tomar decisiones basadas en la respuesta del usuario
+            if (ask == DialogResult.Yes)
+            {
+                // Si el usuario hizo clic en "Sí"
+                MessageBox.Show("Proveedor guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                limpiarCampos();
+            }
+        }
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete los campos del proveedor", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea editar este proveedor?", "Editar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Lógica para editar el cliente
+                //EditarCliente();
+                // Mensaje de éxito
+                MessageBox.Show("Proveedor editado correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Está a punto de eliminar un proveedor. ¿Está seguro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                //EliminarUsuario();
+                // Mensaje de éxito
+                MessageBox.Show("Proveedor eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+
+        }
+
+        private void txtRazonS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloLetras((KeyPressEventArgs)e);
+
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+        private void txtCodPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+
         private void btnsearch_Click(object sender, EventArgs e)
         {
             if (ValidarFiltro())
@@ -71,6 +163,31 @@ namespace CapaPresentacion
             return string.IsNullOrEmpty(cbFiltro.Text);
         }
 
-      
+        private void limpiarCampos()
+        {
+            txtDNI.Clear();
+            txtRazonS.Clear();
+            txtTel.Clear();
+            txtEmail.Clear();
+            txtCiudad.Clear();
+            txtDireccion.Clear();
+            txtCodPostal.Clear();
+            cbEstado.SelectedItem = null;
+        }
+
+        public bool ValidarCampos()
+        {
+            // Verifica si alguno de los campos está vacío o nulo
+            return string.IsNullOrEmpty(txtDNI.Text) ||
+                   string.IsNullOrEmpty(txtRazonS.Text) ||
+                   string.IsNullOrEmpty(txtTel.Text) ||
+                   string.IsNullOrEmpty(txtEmail.Text) ||
+                   string.IsNullOrEmpty(txtCiudad.Text) ||
+                   string.IsNullOrEmpty(cbEstado.Text) ||
+                   string.IsNullOrEmpty(txtDireccion.Text) ||
+                   string.IsNullOrEmpty(txtCodPostal.Text);
+        }
+
+   
     }
 }
