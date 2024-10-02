@@ -20,3 +20,8 @@ VALUES('Vendedor')
 
 INSERT INTO Rol(descripcion)
 VALUES('Supervisor')
+
+
+--consulta para llevar todos los usuario a la cd_usuarios
+select u.id_usuario,u.DNI,u.Nombre_completo,u.Email,u.Pass,u.telefono,u.direccion,u.estado,r.id_rol,r.descripcion from Usuario u
+inner join Rol r on r.id_rol = u.id_rol
