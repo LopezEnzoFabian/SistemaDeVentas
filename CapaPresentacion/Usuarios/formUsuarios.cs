@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion;
+using Capa_Entidad;
+using CapaNegocio;
 
 
 namespace CapaPresentacion
@@ -20,25 +23,55 @@ namespace CapaPresentacion
 
         private void formUsuarios_Load(object sender, EventArgs e)
         {
+            //agregar estado para mostrar en los cb
+            cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
+            cbEstado.Items.Add(new OpcionCombo() { Valor = 2, Texto = "No Activo" });
+            cbEstado.DisplayMember = "Texto";
+            cbEstado.ValueMember = "Valor";
+            cbEstado.SelectedIndex = 0;
 
-        }
+            //Agregar rol para mostrar en los cb
+            List<Rol> listaRol = new CN_Rol().Listar();
+            foreach (Rol item in listaRol)
+            {
+                cbRol.Items.Add(new OpcionCombo() { Valor = item.Id_rol,Texto = item.Descripcion});
+            }
+            cbRol.DisplayMember = "Texto";
+            cbRol.ValueMember = "Valor";
+            cbRol.SelectedIndex = 0;
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.ValidarSoloLetras((KeyPressEventArgs)e);
-        }
-        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-        }
 
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+            //buscar en nuestro boton de busqueda
+            foreach (DataGridViewColumn column in dgListarUsuario.Columns) { 
+                if(column.Visible == true && column.Name != "btnSeleccionar")
+                {
+                    cbFiltroTipoUsuario.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
+                 }
+            }
+            cbFiltroTipoUsuario.DisplayMember = "Texto";
+            cbFiltroTipoUsuario.ValueMember = "Valor";
+            cbFiltroTipoUsuario.SelectedIndex = 0;
+
+
+            //mostrar usuarios en dgListaUsuarios
+            List<Usuario> listausuario = new CN_usuario().Listar();
+            foreach (Usuario item in listausuario)
+            {
+                dgListarUsuario.Rows.Add(new object[] {"",item.Id_usuario,item.DNI,item.Nombre_completo,item.Email,txt_Confirmpass,item.Direccion,item.Telefono,
+                    item.oRol.Id_rol,
+                    item.oRol.Descripcion,
+                    item.Estado == true ? 1 : 0,
+                    item.Estado == true ? "Activo" : "No Activo",
+                    });
+            }
         }
+    
+        
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
                      string.IsNullOrWhiteSpace(txtNombre.Text) ||
                      string.IsNullOrWhiteSpace(cbRol.Text) ||
@@ -75,9 +108,17 @@ namespace CapaPresentacion
                 // Tomar decisiones basadas en la respuesta del usuario
                 if (ask == DialogResult.Yes)
                 {
-                    // Si el usuario hizo clic en "Sí"
-                    MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Si el usuario hizo clic en "Sí"
+                MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //guarda los datos en el datagrid
+                    dgListarUsuario.Rows.Add(new object[] {"",txtID,txtDNI.Text,txtNombre.Text,txtEmail.Text,txt_Confirmpass,txtDireccion.Text,txtTelefono.Text,
+                    ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
+                    });
                 }
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -142,11 +183,6 @@ namespace CapaPresentacion
             }
         }
 
-        //private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-        //}
-
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -195,5 +231,18 @@ namespace CapaPresentacion
         }
 
 
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloLetras((KeyPressEventArgs)e);
+        }
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
     }
 }

@@ -45,18 +45,6 @@ namespace CapaPresentacion
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.dgListarUsuario = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colContraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
@@ -71,6 +59,18 @@ namespace CapaPresentacion
             this.txt_Confirmpass = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,9 +171,6 @@ namespace CapaPresentacion
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
             this.cbEstado.Location = new System.Drawing.Point(357, 210);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(121, 24);
@@ -228,10 +225,6 @@ namespace CapaPresentacion
             this.cbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Items.AddRange(new object[] {
-            "Vendedor",
-            "Administrador",
-            "Supervisor"});
             this.cbRol.Location = new System.Drawing.Point(357, 161);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(121, 24);
@@ -251,15 +244,15 @@ namespace CapaPresentacion
             this.btnSeleccionar,
             this.colUsuario,
             this.colDNI,
+            this.colNombre,
             this.colEmail,
             this.colContraseña,
-            this.colNombre,
-            this.colTelefono,
             this.colDireccion,
+            this.colTelefono,
             this.idRol,
             this.colRol,
-            this.Estado,
-            this.EstadoValor});
+            this.EstadoValor,
+            this.Estado});
             this.dgListarUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgListarUsuario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgListarUsuario.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -272,92 +265,6 @@ namespace CapaPresentacion
             this.dgListarUsuario.TabIndex = 28;
             this.dgListarUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListarUsuario_CellContentClick);
             this.dgListarUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListarUsuario_CellPainting);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnSeleccionar.FillWeight = 35F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.MinimumWidth = 10;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // colUsuario
-            // 
-            this.colUsuario.HeaderText = "id Usuario";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.ReadOnly = true;
-            this.colUsuario.Visible = false;
-            // 
-            // colDNI
-            // 
-            this.colDNI.FillWeight = 84.5141F;
-            this.colDNI.HeaderText = "DNI";
-            this.colDNI.Name = "colDNI";
-            this.colDNI.ReadOnly = true;
-            // 
-            // colEmail
-            // 
-            this.colEmail.FillWeight = 84.5141F;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            // 
-            // colContraseña
-            // 
-            this.colContraseña.HeaderText = "Contraseña";
-            this.colContraseña.Name = "colContraseña";
-            this.colContraseña.ReadOnly = true;
-            this.colContraseña.Visible = false;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 84.5141F;
-            this.colNombre.HeaderText = "Nombre completo";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
-            // 
-            // colDireccion
-            // 
-            this.colDireccion.HeaderText = "Direccion";
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.ReadOnly = true;
-            // 
-            // idRol
-            // 
-            this.idRol.HeaderText = "idRol";
-            this.idRol.Name = "idRol";
-            this.idRol.ReadOnly = true;
-            this.idRol.Visible = false;
-            // 
-            // colRol
-            // 
-            this.colRol.FillWeight = 84.5141F;
-            this.colRol.HeaderText = "Rol";
-            this.colRol.Name = "colRol";
-            this.colRol.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 84.5141F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 84.5141F;
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
             // 
             // label1
             // 
@@ -532,6 +439,92 @@ namespace CapaPresentacion
             this.txtDireccion.Size = new System.Drawing.Size(285, 22);
             this.txtDireccion.TabIndex = 62;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnSeleccionar.FillWeight = 35F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.MinimumWidth = 10;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // colUsuario
+            // 
+            this.colUsuario.HeaderText = "id Usuario";
+            this.colUsuario.Name = "colUsuario";
+            this.colUsuario.ReadOnly = true;
+            this.colUsuario.Visible = false;
+            // 
+            // colDNI
+            // 
+            this.colDNI.FillWeight = 84.5141F;
+            this.colDNI.HeaderText = "DNI";
+            this.colDNI.Name = "colDNI";
+            this.colDNI.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 84.5141F;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colEmail
+            // 
+            this.colEmail.FillWeight = 84.5141F;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colContraseña
+            // 
+            this.colContraseña.HeaderText = "Contraseña";
+            this.colContraseña.Name = "colContraseña";
+            this.colContraseña.ReadOnly = true;
+            this.colContraseña.Visible = false;
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.HeaderText = "Direccion";
+            this.colDireccion.Name = "colDireccion";
+            this.colDireccion.ReadOnly = true;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            // 
+            // idRol
+            // 
+            this.idRol.HeaderText = "idRol";
+            this.idRol.Name = "idRol";
+            this.idRol.ReadOnly = true;
+            this.idRol.Visible = false;
+            // 
+            // colRol
+            // 
+            this.colRol.FillWeight = 84.5141F;
+            this.colRol.HeaderText = "Rol";
+            this.colRol.Name = "colRol";
+            this.colRol.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.5141F;
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 84.5141F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // formUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -614,14 +607,14 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colContraseña;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn idRol;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

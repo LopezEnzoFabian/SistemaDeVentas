@@ -82,6 +82,7 @@
     <Compile Include="formEstadisticas.Designer.cs">
       <DependentUpon>formEstadisticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpcionCombo.cs" />
     <Compile Include="PresentacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
