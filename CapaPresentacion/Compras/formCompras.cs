@@ -16,6 +16,8 @@ namespace CapaPresentacion
     {
         private static IconButton MenuActivo = null;
         private static Form FormularioActivo = null;
+        private static Form presentacionForm;
+
         public formCompras()
         {
             InitializeComponent();
@@ -23,10 +25,16 @@ namespace CapaPresentacion
 
         private void formCompras_Load(object sender, EventArgs e)
         {
+            MostrarFormularioPresentacion();
 
         }
         private void AbrirFormulario(IconButton menu, Form formulario)
         {
+            if (presentacionForm != null && presentacionForm.Visible)
+            {
+                presentacionForm.Hide(); // Ocultar el formulario de presentación
+            }
+
             if (MenuActivo != null)
             {
                 MenuActivo.BackColor = Color.Transparent;
@@ -58,6 +66,16 @@ namespace CapaPresentacion
         private void ibtnVerDetalle_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconButton)sender, new formDetalleCompra());
+        }
+
+        private void MostrarFormularioPresentacion()
+        {
+            presentacionForm = new formRegistrarCompra();
+            presentacionForm.TopLevel = false;
+            presentacionForm.FormBorderStyle = FormBorderStyle.None;
+            presentacionForm.Dock = DockStyle.Fill;
+            panelCompras.Controls.Add(presentacionForm);
+            presentacionForm.Show();
         }
     }
 }

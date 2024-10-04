@@ -22,31 +22,19 @@ namespace CapaPresentacion
         private static IconMenuItem MenuActivo = null;
         private static Form FormularioActivo = null;
         private static Usuario usuarioActual;
+        private static Form presentacionForm;
         public Inicio(Usuario objusuario)
         {
             usuarioActual = objusuario;
             InitializeComponent();
-            //CargarFormulario(new PresentacionForm());
         }
-        private void CargarFormulario(Form formulario)
-        {
-            // Limpiar el panel para evitar que se superpongan formularios
-            if (contenedor.Controls.Count > 0)
-                contenedor.Controls.RemoveAt(0);
-
-            // Configurar el formulario a cargar
-            formulario.TopLevel = false; // Indica que no será una ventana independiente
-            formulario.Dock = DockStyle.Fill; // El formulario llenará el panel
-            contenedor.Controls.Add(formulario); // Agregar el formulario al panel
-            contenedor.Tag = formulario; // Etiquetar el formulario dentro del panel
-
-            formulario.Show(); // Mostrar el formulario
-        }
-
+    
 
         private void Inicio_Load(object sender, EventArgs e)
         {
             lblUSER.Text = usuarioActual.Nombre_completo;
+
+            MostrarFormularioPresentacion();
 
             if (usuarioActual.oRol.Id_rol == 1) //administrador
             {
@@ -77,7 +65,12 @@ namespace CapaPresentacion
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
         {
-            if(MenuActivo != null)
+            if (presentacionForm != null && presentacionForm.Visible)
+            {
+                presentacionForm.Hide(); // Ocultar el formulario de presentación
+            }
+
+            if (MenuActivo != null)
             {
                 MenuActivo.BackColor = Color.Transparent;
             }
@@ -172,6 +165,16 @@ namespace CapaPresentacion
         private void menuEstadisticas_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new formEstadisticas());
+        }
+
+        private void MostrarFormularioPresentacion()
+        {
+            presentacionForm = new PresentacionForm();
+            presentacionForm.TopLevel = false;
+            presentacionForm.FormBorderStyle = FormBorderStyle.None;
+            presentacionForm.Dock = DockStyle.Fill;
+            contenedor.Controls.Add(presentacionForm);
+            presentacionForm.Show();
         }
     }
 }
