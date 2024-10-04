@@ -57,7 +57,7 @@ namespace CapaPresentacion
             List<Usuario> listausuario = new CN_usuario().Listar();
             foreach (Usuario item in listausuario)
             {
-                dgListarUsuario.Rows.Add(new object[] {"",item.Id_usuario,item.DNI,item.Nombre_completo,item.Email,txt_Confirmpass,item.Direccion,item.Telefono,
+                dgListarUsuario.Rows.Add(new object[] {"",item.Id_usuario,item.DNI,item.Nombre_completo,item.Email,item.Pass,item.Direccion,item.Telefono,
                     item.oRol.Id_rol,
                     item.oRol.Descripcion,
                     item.Estado == true ? 1 : 0,
@@ -182,9 +182,44 @@ namespace CapaPresentacion
                 
             }
         }
-
+        
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgListarUsuario.Columns[e.ColumnIndex].Name == "btnSeleccionar")
+            {
+                int indice = e.RowIndex;
+
+                if(indice >= 0)
+                {
+                    txtNombre.Text = dgListarUsuario.Rows[indice].Cells["colNombre"].Value.ToString();
+                    txtDNI.Text = dgListarUsuario.Rows[indice].Cells["colDNI"].Value.ToString();
+                    txtEmail.Text = dgListarUsuario.Rows[indice].Cells["colEmail"].Value.ToString();
+                    txtPass.Text = dgListarUsuario.Rows[indice].Cells["colPass"].Value.ToString();
+                    txt_Confirmpass.Text = dgListarUsuario.Rows[indice].Cells["colPass"].Value.ToString();
+                    txtDireccion.Text = dgListarUsuario.Rows[indice].Cells["colDireccion"].Value.ToString();
+                    txtTelefono.Text = dgListarUsuario.Rows[indice].Cells["colTelefono"].Value.ToString();
+
+                    foreach (OpcionCombo oc in cbRol.Items)
+                    {
+                        if(Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgListarUsuario.Rows[indice].Cells["idRol"].Value))
+                        {
+                            int indice_combo = cbRol.Items.IndexOf(oc);
+                            cbRol.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+
+                    foreach (OpcionCombo oc in cbEstado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgListarUsuario.Rows[indice].Cells["EstadoValor"].Value))
+                        {
+                            int indice_combo = cbEstado.Items.IndexOf(oc);
+                            cbEstado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                }
+            }
 
         }
 
