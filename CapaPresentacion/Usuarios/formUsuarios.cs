@@ -57,7 +57,7 @@ namespace CapaPresentacion
             List<Usuario> listausuario = new CN_usuario().Listar();
             foreach (Usuario item in listausuario)
             {
-                dgListarUsuario.Rows.Add(new object[] {"",item.Id_usuario,item.DNI,item.Nombre_completo,item.Email,item.Pass,item.Direccion,item.Telefono,
+                dgListarUsuario.Rows.Add(new object[] {"",item.Id_usuario,item.Nombre_completo,item.DNI,item.Email,item.Pass,item.Direccion,item.Telefono,
                     item.oRol.Id_rol,
                     item.oRol.Descripcion,
                     item.Estado == true ? 1 : 0,
@@ -74,6 +74,8 @@ namespace CapaPresentacion
 
             if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
                      string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                     string.IsNullOrWhiteSpace(txtDireccion.Text) ||
+                     string.IsNullOrWhiteSpace(txtTelefono.Text) ||
                      string.IsNullOrWhiteSpace(cbRol.Text) ||
                      string.IsNullOrWhiteSpace(cbEstado.Text) ||
                      string.IsNullOrWhiteSpace(txtPass.Text) ||
@@ -106,19 +108,40 @@ namespace CapaPresentacion
             DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 // Tomar decisiones basadas en la respuesta del usuario
-                if (ask == DialogResult.Yes)
+            if (ask == DialogResult.Yes)
                 {
-                // Si el usuario hizo clic en "Sí"
-                MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = string.Empty;
+                Usuario objusuario = new Usuario() {
+                    DNI = txtDNI.Text,
+                    Nombre_completo = txtNombre.Text,
+                    Email = txtEmail.Text,
+                    Pass = txtPass.Text,
+                    Telefono = txtTelefono.Text,
+                    Direccion = txtDireccion.Text,
+                    oRol = new Rol() { Id_rol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor)},
+                    Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
+                };
+
+                //envia nuestros datos a la CN Y CD para ejecutar nuestro PROCEDIMIENTO ALMACENADO EN LA BD
+                int idusuarioGen = new CN_usuario().Registrar(objusuario, out mensaje);
+
                 //guarda los datos en el datagrid
-                    dgListarUsuario.Rows.Add(new object[] {"",txtID,txtDNI.Text,txtNombre.Text,txtEmail.Text,txt_Confirmpass,txtDireccion.Text,txtTelefono.Text,
+                if (idusuarioGen != 0)
+                {
+                    dgListarUsuario.Rows.Add(new object[] {"",idusuarioGen,txtNombre.Text,txtDNI.Text,txtEmail.Text,txt_Confirmpass,txtDireccion.Text,txtTelefono.Text,
                     ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
                     });
+                    MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
                 }
-
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -278,6 +301,19 @@ namespace CapaPresentacion
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+        }
+
+        private void Limpiar()
+        {
+            txtDNI.Clear();
+            txtNombre.Clear();
+            txtEmail.Clear();
+            txtPass.Clear();
+            txt_Confirmpass.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            cbEstado.SelectedItem = null;
+            cbRol.SelectedItem = null;
         }
     }
 }

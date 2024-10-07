@@ -30,6 +30,7 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -72,6 +73,8 @@ namespace CapaPresentacion
             this.txt_Confirmpass = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +83,7 @@ namespace CapaPresentacion
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNombre.Location = new System.Drawing.Point(16, 61);
+            this.lblNombre.Location = new System.Drawing.Point(16, 58);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(115, 16);
             this.lblNombre.TabIndex = 0;
@@ -91,7 +94,7 @@ namespace CapaPresentacion
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDNI.Location = new System.Drawing.Point(16, 101);
+            this.lblDNI.Location = new System.Drawing.Point(16, 102);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(30, 16);
             this.lblDNI.TabIndex = 2;
@@ -133,11 +136,11 @@ namespace CapaPresentacion
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(132, 26);
+            this.label11.Location = new System.Drawing.Point(141, 30);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 16);
+            this.label11.Size = new System.Drawing.Size(71, 16);
             this.label11.TabIndex = 29;
             this.label11.Text = "Filtrar por";
             // 
@@ -203,19 +206,20 @@ namespace CapaPresentacion
             // 
             this.lblListaUsuarios.AutoEllipsis = true;
             this.lblListaUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.lblListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaUsuarios.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaUsuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblListaUsuarios.Location = new System.Drawing.Point(15, 298);
             this.lblListaUsuarios.Name = "lblListaUsuarios";
-            this.lblListaUsuarios.Size = new System.Drawing.Size(160, 26);
+            this.lblListaUsuarios.Size = new System.Drawing.Size(179, 26);
             this.lblListaUsuarios.TabIndex = 38;
             this.lblListaUsuarios.Text = "Lista de usuarios";
+            this.toolTip1.SetToolTip(this.lblListaUsuarios, "selecciona un usuario de la tabla para poder editar");
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtID.Location = new System.Drawing.Point(51, 22);
+            this.txtID.Location = new System.Drawing.Point(611, 9);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 23);
             this.txtID.TabIndex = 39;
@@ -376,7 +380,7 @@ namespace CapaPresentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(354, 59);
+            this.label2.Location = new System.Drawing.Point(354, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 53;
@@ -411,7 +415,7 @@ namespace CapaPresentacion
             this.btnclean.IconSize = 20;
             this.btnclean.Location = new System.Drawing.Point(530, 18);
             this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(34, 30);
+            this.btnclean.Size = new System.Drawing.Size(32, 30);
             this.btnclean.TabIndex = 44;
             this.btnclean.UseVisualStyleBackColor = false;
             // 
@@ -426,7 +430,7 @@ namespace CapaPresentacion
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(381, 255);
+            this.btnGuardar.Location = new System.Drawing.Point(530, 180);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(78, 54);
             this.btnGuardar.TabIndex = 43;
@@ -439,19 +443,19 @@ namespace CapaPresentacion
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Brush;
             this.btnEditar.IconColor = System.Drawing.Color.Aqua;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 30;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(465, 255);
+            this.btnEditar.Location = new System.Drawing.Point(399, 248);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(76, 54);
+            this.btnEditar.Size = new System.Drawing.Size(40, 37);
             this.btnEditar.TabIndex = 42;
-            this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnEditar, "limpiar campos");
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -466,7 +470,7 @@ namespace CapaPresentacion
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(547, 255);
+            this.btnEliminar.Location = new System.Drawing.Point(530, 255);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(76, 54);
             this.btnEliminar.TabIndex = 41;
@@ -535,12 +539,24 @@ namespace CapaPresentacion
             this.txtDireccion.Size = new System.Drawing.Size(285, 22);
             this.txtDireccion.TabIndex = 62;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 19);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "ABM usuarios";
+            this.toolTip1.SetToolTip(this.label3, "completa los campos o seleccionar un usuario de la tabla");
+            // 
             // formUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(654, 571);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txt_Confirmpass);
@@ -627,5 +643,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConfirmarPass;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -16,5 +16,21 @@ namespace CapaNegocio
             return ocd_usuario.Listar();
         }
 
+        //metodos para hacer el llamado desde nuestra capa de presentacion
+        public int Registrar(Usuario obj,out string Mensaje)
+        {
+            return ocd_usuario.Registrar(obj,out Mensaje);
+        }
+
+        public bool Editar(Usuario obj, out string Mensaje)
+        {
+            return ocd_usuario.Editar(obj, out Mensaje);
+        }
+
+        public bool Eliminar(Usuario obj, out string Mensaje)
+        {
+            return ocd_usuario.Eliminar(obj, out Mensaje);
+        }
+
     }
 }
