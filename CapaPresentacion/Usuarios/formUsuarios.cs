@@ -107,103 +107,108 @@ namespace CapaPresentacion
 
             DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                // Tomar decisiones basadas en la respuesta del usuario
+            // Tomar decisiones basadas en la respuesta del usuario
             if (ask == DialogResult.Yes)
-                {
+            {
                 string mensaje = string.Empty;
-                Usuario objusuario = new Usuario() {
+
+                Usuario objusuario = new Usuario()
+                {
+                    Id_usuario = Convert.ToInt32(txtid.Text),
                     DNI = txtDNI.Text,
                     Nombre_completo = txtNombre.Text,
                     Email = txtEmail.Text,
                     Pass = txtPass.Text,
                     Telefono = txtTelefono.Text,
                     Direccion = txtDireccion.Text,
-                    oRol = new Rol() { Id_rol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor)},
+                    oRol = new Rol() { Id_rol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor) },
                     Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
                 };
-
-                //envia nuestros datos a la CN Y CD para ejecutar nuestro PROCEDIMIENTO ALMACENADO EN LA BD
-                int idusuarioGen = new CN_usuario().Registrar(objusuario, out mensaje);
-
-                //guarda los datos en el datagrid
-                if (idusuarioGen != 0)
+            
+                //REGISTRAR USUARIO NUEVO
+                if (objusuario.Id_usuario == 0)
                 {
+                    //METODO REGISTRAR envia nuestros datos a la CN Y CD para ejecutar nuestro PROCEDIMIENTO ALMACENADO EN LA BD
+                    int idusuarioGen = new CN_usuario().Registrar(objusuario, out mensaje);
+                    //guarda los datos en el datagrid
+                    if (idusuarioGen != 0)
+                    {
                     dgListarUsuario.Rows.Add(new object[] {"",idusuarioGen,txtNombre.Text,txtDNI.Text,txtEmail.Text,txt_Confirmpass,txtDireccion.Text,txtTelefono.Text,
                     ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
                     });
-                    MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
+                        MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
                 }
+                //SI NO ES UN USUARIO NUEVO EL QUE SE A SELECCIONADO VAMOS A EDITAR
                 else
                 {
-                    MessageBox.Show(mensaje);
+                    bool resultado = new CN_usuario().Editar(objusuario, out mensaje);
+                    if (resultado)
+                    {
+                        DataGridViewRow row = dgListarUsuario.Rows[Convert.ToInt32(txtIndice.Text)];
+                        row.Cells["colid"].Value = txtid.Text;
+                        row.Cells["colNombre"].Value = txtNombre.Text;
+                        row.Cells["colDNI"].Value = txtDNI.Text;
+                        row.Cells["colEmail"].Value = txtEmail.Text;
+                        row.Cells["colPass"].Value = txtPass.Text;
+                        row.Cells["colDireccion"].Value = txtDireccion.Text;
+                        row.Cells["colTelefono"].Value = txtTelefono.Text;
+                        row.Cells["idRol"].Value = ((OpcionCombo)cbRol.SelectedItem).Valor.ToString();
+                        row.Cells["colRol"].Value = ((OpcionCombo)cbRol.SelectedItem).Texto.ToString();
+                        row.Cells["EstadoValor"].Value = ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString();
+                        row.Cells["Estado"].Value = ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString();
+
+                        MessageBox.Show("Se han editado los datos correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
                 }
             }
         }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (  string.IsNullOrWhiteSpace(txtDNI.Text) ||
-                  string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                  string.IsNullOrWhiteSpace(cbRol.Text) ||
-                  string.IsNullOrWhiteSpace(cbEstado.Text) ||
-                  string.IsNullOrWhiteSpace(txtPass.Text) ||
-                  string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                  string.IsNullOrWhiteSpace(txt_Confirmpass.Text))
-            {
-                // Mostrar un mensaje de error
-                MessageBox.Show("Debe seleccionar un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-           if(txtPass.Text != txt_Confirmpass.Text)
-            {
-                // Mostrar un mensaje de error
-                MessageBox.Show("Las contraseñas deben coincidir.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!Validaciones.EsEmailValido(txtEmail.Text))
-            {
-                // Mostrar un mensaje de error
-                MessageBox.Show("El email no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            
-            
-                DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                // Tomar decisiones basadas en la respuesta del usuario
-                if (ask == DialogResult.Yes)
-                {
-                    // Si el usuario hizo clic en "Sí"
-                    MessageBox.Show("Cambios guardados correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            
-        }
+   
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string mensaje = "Seguro que desea eliminar este usuario";
-            string titulo = "Confirmar Eliminación";
-            DialogResult resultado = MessageBox.Show(mensaje, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-
-            if (resultado == DialogResult.Yes)
+ 
+            if (Convert.ToInt32(txtid.Text) != 0)
             {
-                string msj = "Usuario eliminado con exito";
-                string titulo2 = "Eliminar";
-                MessageBox.Show(msj, titulo2, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                txtDNI.Clear();
-                txtNombre.Clear();
-                cbEstado.Items.Clear();
-                cbRol.Items.Clear();
-                txtEmail.Clear();
-                txtPass.Clear();
-                txt_Confirmpass.Clear();
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar este usuario", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                 
+                if (resultado == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+                    Usuario objusuario = new Usuario()
+                    {
+                        Id_usuario = Convert.ToInt32(txtid.Text)
+                    };
+
+                    bool respuesta = new CN_usuario().Eliminar(objusuario, out mensaje);
+
+                    MessageBox.Show("Usuario eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    if(respuesta)
+                    {
+                        dgListarUsuario.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                }
             }
+
+           
         }
         
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -214,6 +219,8 @@ namespace CapaPresentacion
 
                 if(indice >= 0)
                 {
+                    txtIndice.Text = indice.ToString();
+                    txtid.Text = dgListarUsuario.Rows[indice].Cells["colid"].Value.ToString();
                     txtNombre.Text = dgListarUsuario.Rows[indice].Cells["colNombre"].Value.ToString();
                     txtDNI.Text = dgListarUsuario.Rows[indice].Cells["colDNI"].Value.ToString();
                     txtEmail.Text = dgListarUsuario.Rows[indice].Cells["colEmail"].Value.ToString();
@@ -281,6 +288,19 @@ namespace CapaPresentacion
                 MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string columnaFiltro = ((OpcionCombo)cbFiltroTipoUsuario.SelectedItem).Valor.ToString();
+            if(dgListarUsuario.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgListarUsuario.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscarUsuario.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+
         }
 
         public bool ValidarFiltro()
@@ -305,6 +325,7 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
+            txtIndice.Text = "-1";
             txtDNI.Clear();
             txtNombre.Clear();
             txtEmail.Clear();
@@ -314,6 +335,22 @@ namespace CapaPresentacion
             txtDireccion.Clear();
             cbEstado.SelectedItem = null;
             cbRol.SelectedItem = null;
+
+            txtNombre.Select();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnclean_Click(object sender, EventArgs e)
+        {
+            txtBuscarUsuario.Text = "";
+            foreach (DataGridViewRow row in dgListarUsuario.Rows)
+            {
+                    row.Visible = true;
+            }
         }
     }
 }

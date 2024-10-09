@@ -8,11 +8,11 @@ namespace Capa_Entidad
 {
     public class Usuario
     {
-        public int Id_usuario {  get; set; }
+        public int Id_usuario { get; set; }
         public string DNI { get; set; }
         public string Nombre_completo { get; set; }
-        public string Email {  get; set; }
-        public string Pass {  get; set; }
+        public string Email { get; set; }
+        public string Pass { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public Rol oRol { get; set; }

@@ -126,6 +126,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("DNI", obj.DNI);
                     cmd.Parameters.AddWithValue("Nombre_completo", obj.Nombre_completo);
                     cmd.Parameters.AddWithValue("Email", obj.Email);
+                    cmd.Parameters.AddWithValue("Pass", obj.Pass);
                     cmd.Parameters.AddWithValue("telefono", obj.Telefono);
                     cmd.Parameters.AddWithValue("direccion", obj.Direccion);
                     cmd.Parameters.AddWithValue("id_rol", obj.oRol.Id_rol);
