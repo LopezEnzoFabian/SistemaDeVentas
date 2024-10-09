@@ -185,7 +185,7 @@ namespace CapaPresentacion
             if (Convert.ToInt32(txtid.Text) != 0)
             {
                 DialogResult resultado = MessageBox.Show("Seguro que desea eliminar este usuario", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-                
+
                 if (resultado == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
@@ -197,8 +197,8 @@ namespace CapaPresentacion
                     bool respuesta = new CN_usuario().Eliminar(objusuario, out mensaje);
 
                     MessageBox.Show("Usuario eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    if(respuesta)
+
+                    if (respuesta)
                     {
                         dgListarUsuario.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
                     }
@@ -206,6 +206,7 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show(mensaje);
                     }
+                    Limpiar();
                 }
             }
 
