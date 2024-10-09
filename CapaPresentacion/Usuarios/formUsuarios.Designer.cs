@@ -218,7 +218,6 @@ namespace CapaPresentacion
             this.txtIndice.Name = "txtIndice";
             this.txtIndice.Size = new System.Drawing.Size(25, 23);
             this.txtIndice.TabIndex = 39;
-            this.txtIndice.Visible = false;
             // 
             // cbRol
             // 
@@ -433,6 +432,7 @@ namespace CapaPresentacion
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnGuardar, "guardar cambios");
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -473,6 +473,7 @@ namespace CapaPresentacion
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnEliminar, "eliminar usuario de la tabla");
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -555,7 +556,6 @@ namespace CapaPresentacion
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(25, 23);
             this.txtid.TabIndex = 64;
-            this.txtid.Visible = false;
             // 
             // formUsuarios
             // 

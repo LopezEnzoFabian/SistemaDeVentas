@@ -140,12 +140,13 @@ namespace CapaPresentacion
                     ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
                     });
                         MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Limpiar();
+                  
                     }
                     else
                     {
                         MessageBox.Show(mensaje);
                     }
+                    Limpiar();
                 }
                 //SI NO ES UN USUARIO NUEVO EL QUE SE A SELECCIONADO VAMOS A EDITAR
                 else
@@ -326,6 +327,7 @@ namespace CapaPresentacion
         private void Limpiar()
         {
             txtIndice.Text = "-1";
+            txtid.Text = "0";
             txtDNI.Clear();
             txtNombre.Clear();
             txtEmail.Clear();
@@ -335,6 +337,7 @@ namespace CapaPresentacion
             txtDireccion.Clear();
             cbEstado.SelectedItem = null;
             cbRol.SelectedItem = null;
+
 
             txtNombre.Select();
         }
