@@ -120,10 +120,10 @@ namespace CapaPresentacion
 
         private void formClientes_Load(object sender, EventArgs e)
         {
-            if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
-            {
-                btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
-            }
+            //if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
+            //{
+            //    btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
+            //}
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -215,7 +215,7 @@ namespace CapaPresentacion
         {
             if (ValidarFiltro())
             {
-                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No haz seleccionado un filtro!", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
