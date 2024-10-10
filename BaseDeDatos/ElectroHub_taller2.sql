@@ -47,9 +47,10 @@ CREATE TABLE categoria
   id_categoria INT IDENTITY,
   descripcion VARCHAR(100) NOT NULL,
   estado bit,
-  fecha_registro DATE NOT NULL,
+  fecha_registro DATETIME DEFAULT GETDATE(),
   CONSTRAINT PK_id_categoria PRIMARY KEY (id_categoria)
 );
+
 
 CREATE TABLE producto
 (
@@ -66,6 +67,7 @@ CREATE TABLE producto
   CONSTRAINT PK_id_producto PRIMARY KEY (id_producto),
   CONSTRAINT FK_id_categoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
 );
+
 
 
 CREATE TABLE Cliente

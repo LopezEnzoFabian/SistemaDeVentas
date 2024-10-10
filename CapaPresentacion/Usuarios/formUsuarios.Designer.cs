@@ -106,7 +106,7 @@ namespace CapaPresentacion
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(16, 144);
+            this.lblEmail.Location = new System.Drawing.Point(16, 145);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(41, 16);
             this.lblEmail.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace CapaPresentacion
             this.lblConfContra.AutoSize = true;
             this.lblConfContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblConfContra.Location = new System.Drawing.Point(16, 236);
+            this.lblConfContra.Location = new System.Drawing.Point(16, 237);
             this.lblConfContra.Name = "lblConfContra";
             this.lblConfContra.Size = new System.Drawing.Size(134, 16);
             this.lblConfContra.TabIndex = 16;
@@ -180,7 +180,7 @@ namespace CapaPresentacion
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEstado.Location = new System.Drawing.Point(361, 191);
+            this.lblEstado.Location = new System.Drawing.Point(354, 191);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(50, 16);
             this.lblEstado.TabIndex = 35;
@@ -191,7 +191,7 @@ namespace CapaPresentacion
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRol.Location = new System.Drawing.Point(354, 142);
+            this.lblRol.Location = new System.Drawing.Point(354, 144);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(28, 16);
             this.lblRol.TabIndex = 36;
@@ -364,7 +364,7 @@ namespace CapaPresentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(354, 99);
+            this.label1.Location = new System.Drawing.Point(354, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 52;
@@ -374,7 +374,7 @@ namespace CapaPresentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(354, 56);
+            this.label2.Location = new System.Drawing.Point(354, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 53;
@@ -390,9 +390,9 @@ namespace CapaPresentacion
             this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(493, 15);
+            this.btnsearch.Location = new System.Drawing.Point(493, 22);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(31, 30);
+            this.btnsearch.Size = new System.Drawing.Size(31, 23);
             this.btnsearch.TabIndex = 45;
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
@@ -407,9 +407,9 @@ namespace CapaPresentacion
             this.btnclean.IconColor = System.Drawing.Color.Aqua;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(530, 15);
+            this.btnclean.Location = new System.Drawing.Point(530, 22);
             this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(32, 30);
+            this.btnclean.Size = new System.Drawing.Size(29, 23);
             this.btnclean.TabIndex = 44;
             this.toolTip1.SetToolTip(this.btnclean, "limpiar filtro");
             this.btnclean.UseVisualStyleBackColor = false;
@@ -426,7 +426,7 @@ namespace CapaPresentacion
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(530, 180);
+            this.btnGuardar.Location = new System.Drawing.Point(462, 255);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(78, 54);
             this.btnGuardar.TabIndex = 43;
@@ -440,17 +440,18 @@ namespace CapaPresentacion
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
             this.btnLimpiar.IconColor = System.Drawing.Color.Aqua;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 30;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(395, 255);
+            this.btnLimpiar.Location = new System.Drawing.Point(364, 255);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(50, 37);
+            this.btnLimpiar.Size = new System.Drawing.Size(78, 54);
             this.btnLimpiar.TabIndex = 42;
+            this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTip1.SetToolTip(this.btnLimpiar, "limpiar campos");
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -467,9 +468,9 @@ namespace CapaPresentacion
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(530, 255);
+            this.btnEliminar.Location = new System.Drawing.Point(557, 255);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(76, 54);
+            this.btnEliminar.Size = new System.Drawing.Size(78, 54);
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

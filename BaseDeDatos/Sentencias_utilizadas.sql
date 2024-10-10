@@ -33,6 +33,9 @@
 
 --SELECT * FROM Usuario
 
+
+/*PRCEDIMIENTOS ALMACENADOS PARA USUARIOS*/
+
 create PROC SP_RegistrarUsuario(
 @DNI varchar(50),
 @Nombre_completo varchar(100),
@@ -160,6 +163,75 @@ BEGIN
  END
 
 
+ /*PRCEDIMIENTOS ALMACENADOS PARA CATEGORIAS*/
+
+ --REGISTRAR CATEGORIA
+
+ create PROC SP_RegistrarCategoria(
+ @Descripcion varchar(100),
+ @Estado bit,
+ @Resultado int output,
+ @mensaje varchar(100) output
+ )as
+ begin 
+      SET @Resultado = 0
+	  IF NOT EXISTS (SELECT * FROM categoria WHERE descripcion = @Descripcion)
+	  begin 
+	       insert into categoria(descripcion,estado) values (@Descripcion,@Estado)
+		   set @Resultado = SCOPE_IDENTITY()
+	  end
+	  ElSE
+	     set @mensaje = 'Esta categoria ya existe'
+end
+
+--Editar una cateogria
+
+create PROC SP_SP_EditarCategoria(
+ @id_categoria int,
+ @Descripcion varchar(100),
+ @Estado bit,
+ @Resultado int output,
+ @mensaje varchar(100) output
+ )as
+ begin 
+      SET @Resultado = 1
+	  IF NOT EXISTS (SELECT * FROM categoria WHERE descripcion = @Descripcion and id_categoria != @id_categoria)
+	  update categoria set 
+	      descripcion = @Descripcion,
+		  estado = @Estado
+		  where id_categoria = @id_categoria
+	  ElSE
+	     begin
+		 set @Resultado = 0
+	     set @mensaje = 'Esta categoria ya existe'
+		 end
+end
+
+--Eliminar CATEGORIA
+
+ create PROC SP_EliminarCategoria(
+ @id_categoria int,
+ @Descripcion varchar(100),
+ @Resultado int output,
+ @mensaje varchar(100) output
+ )as
+ begin 
+      SET @Resultado = 1
+	  IF NOT EXISTS (
+	  SELECT * FROM categoria c
+	  inner join producto p on p.id_categoria = c.id_categoria
+	  WHERE c.id_categoria = @id_categoria
+	  )
+	  begin
+	      delete top(1) from categoria
+		  where id_categoria = @id_categoria
+	  end
+	  ELSE
+	     begin
+		 set @Resultado = 0
+	     set @mensaje = 'No se puede realizar esta accion porque la categoria esta asignada a un producto'
+		 end
+end
 
 
-
+select * from categoria
