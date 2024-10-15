@@ -190,7 +190,7 @@ namespace CapaPresentacion
 
                 bool respuesta = new CN_categoria().Eliminar(obj, out mensaje);
 
-                MessageBox.Show("Usuario eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Categoria eliminada con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (respuesta)
                 {
@@ -200,6 +200,7 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show(mensaje);
                 }
+                Limpiar();
             }
             else
             {

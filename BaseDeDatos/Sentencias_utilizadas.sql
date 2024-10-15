@@ -235,3 +235,109 @@ end
 
 
 select * from categoria
+
+/*PRODUCTOS*/
+
+---AGREGAR UN PRODUCTO---
+
+CREATE PROCEDURE sp_alta_producto
+    @codigo VARCHAR(100),
+    @nombre VARCHAR(100),
+    @descripcion VARCHAR(100),
+    @id_categoria INT,
+	@estado BIT,
+	@Resultado int output,
+	@mensaje varchar(100) output
+AS
+BEGIN
+    SET @Resultado = 0;
+
+    -- Verificar si el producto ya existe
+    IF NOT EXISTS (SELECT 1 FROM producto WHERE codigo = @codigo)
+	    -- Inserción del nuevo producto
+		BEGIN
+    INSERT INTO producto (codigo,Nombre,descripcion,estado,id_categoria)
+    VALUES (@codigo, @nombre, @descripcion,@estado, @id_categoria);
+	SET @Resultado = SCOPE_IDENTITY();
+	    END
+	ELSE
+    SET @mensaje = 'Ya existe un producto con el mismo codigo'
+    
+END;
+
+---EDITAR UN PRODCUTO---
+
+CREATE PROCEDURE sp_modificar_producto
+    @id_producto int,
+    @codigo VARCHAR(100),
+    @nombre VARCHAR(100),
+    @descripcion VARCHAR(100),
+    @estado BIT,
+    @id_categoria INT,
+	@Resultado int output,
+	@mensaje varchar(100) output
+AS
+BEGIN
+    SET @Resultado = 1;
+
+    IF NOT EXISTS (SELECT 1 FROM producto WHERE codigo = @codigo and id_producto != @id_producto)
+	   UPDATE producto SET
+	   codigo = @codigo,
+	   Nombre = @nombre,
+	   descripcion =@descripcion,
+	   id_categoria = @id_categoria
+	   WHERE id_producto = @id_producto
+	ELSE
+	    BEGIN
+		SET @Resultado = 0;
+		SET @mensaje = 'Ya existe un producto con el mismo codigo';
+		END
+END;
+
+
+---ELIMINAR UN PRODCUTO---
+
+CREATE PROCEDURE sp_eliminar_producto
+    @id_producto int,
+	@Resultado int output,
+	@mensaje varchar(100) output
+AS
+BEGIN
+    SET @Resultado = 0;
+	SET @mensaje = '';
+    DECLARE @validacion bit = 1
+
+	--SI EL PRODUCTO ESTA RELACIONADO A UNA COMPRA--
+	IF EXISTS (SELECT * FROM Detalle_Compra dc
+	INNER JOIN producto p ON p.id_producto = dc.id_producto
+	WHERE p.id_producto = @id_producto)
+
+	  BEGIN
+	  SET @validacion = 0
+	  SET @Resultado = 0
+	  SET @mensaje = 'Esta producto esta relacionado a una Compra!'
+	  END
+    --SI EL PRODUCTO ESTA RELACIONADO A UNA VENTA--
+	IF EXISTS (SELECT * FROM Detalle_Venta dv
+	INNER JOIN producto p ON p.id_producto = dv.id_producto
+	WHERE p.id_producto = @id_producto)
+
+	  BEGIN
+	  SET @validacion = 0
+	  SET @Resultado = 0
+	  SET @mensaje = 'Esta producto esta relacionado a una venta!'
+	  END
+	  --SI PASO LAS VALIDACIONES---
+	  IF (@validacion = 1)
+	  BEGIN
+	     DELETE FROM producto
+		 WHERE id_producto = @id_producto
+		 SET @Resultado = 1
+	  END
+END;
+
+--select * from producto
+--select id_producto,codigo,Nombre,p.descripcion,c.id_categoria,c.descripcion[descripcion],stock,precio_compra,precio_venta,p.estado from producto p
+--inner join categoria c on c.id_categoria = p.id_categoria
+
+--insert into producto (codigo,Nombre,descripcion,id_categoria,estado) values(1,'Rizen 5','4.5ghz 8 nucleos 8 hilos',4,1)

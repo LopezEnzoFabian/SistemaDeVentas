@@ -58,16 +58,15 @@ CREATE TABLE producto
   codigo VARCHAR(100),
   Nombre VARCHAR(100) NOT NULL,
   descripcion VARCHAR(100) NOT NULL,
-  stock INT NOT NULL DEFAULT 0,
+  stock INT DEFAULT 0,
   precio_compra DECIMAL(10,2) DEFAULT 0,
   precio_venta DECIMAL(10,2) DEFAULT 0,
   estado bit,
   fecha_registro DATETIME DEFAULT GETDATE(),
-  id_categoria INT NOT NULL,
+  id_categoria INT,
   CONSTRAINT PK_id_producto PRIMARY KEY (id_producto),
-  CONSTRAINT FK_id_categoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+  CONSTRAINT FK_prod_id_categoria FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
 );
-
 
 
 CREATE TABLE Cliente
@@ -146,8 +145,8 @@ CREATE TABLE Detalle_Compra
   id_compra INT NOT NULL,
   id_producto INT NOT NULL,
   CONSTRAINT PK_id_detalle_compra PRIMARY KEY (id_detalle_compra),
-  CONSTRAINT FK_id_compra FOREIGN KEY (id_compra) REFERENCES Compra(id_compra),
-  CONSTRAINT FK_id_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+  CONSTRAINT FK_DC_id_compra FOREIGN KEY (id_compra) REFERENCES Compra(id_compra),
+  CONSTRAINT FK_DC_id_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
 CREATE TABLE Detalle_Venta
@@ -160,6 +159,6 @@ CREATE TABLE Detalle_Venta
   id_venta INT NOT NULL,
   id_producto INT NOT NULL,
   CONSTRAINT PK_id_detalle_venta PRIMARY KEY (id_detalle_venta),
-  CONSTRAINT FK_id_venta FOREIGN KEY (id_venta) REFERENCES Venta(id_venta),
-  CONSTRAINT FK_id_prodcuto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+  CONSTRAINT FK_DV_id_venta FOREIGN KEY (id_venta) REFERENCES Venta(id_venta),
+  CONSTRAINT FK_DV_id_prodcuto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );

@@ -38,6 +38,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.dgListaCategorias = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
@@ -51,11 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtindice = new System.Windows.Forms.TextBox();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +113,16 @@
             this.dgListaCategorias.AllowUserToDeleteRows = false;
             this.dgListaCategorias.AllowUserToResizeColumns = false;
             this.dgListaCategorias.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MintCream;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgListaCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgListaCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgListaCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgListaCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListaCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgListaCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgListaCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,7 +131,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgListaCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgListaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.colid,
@@ -146,7 +149,6 @@
             this.dgListaCategorias.Location = new System.Drawing.Point(-2, 119);
             this.dgListaCategorias.MultiSelect = false;
             this.dgListaCategorias.Name = "dgListaCategorias";
-            this.dgListaCategorias.ReadOnly = true;
             this.dgListaCategorias.RowHeadersVisible = false;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             this.dgListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle4;
@@ -154,6 +156,41 @@
             this.dgListaCategorias.TabIndex = 70;
             this.dgListaCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaCategorias_CellContentClick);
             this.dgListaCategorias.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgListaCategorias_CellPainting);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FillWeight = 35F;
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Width = 5;
+            // 
+            // colid
+            // 
+            this.colid.HeaderText = "id";
+            this.colid.Name = "colid";
+            this.colid.Visible = false;
+            this.colid.Width = 42;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.FillWeight = 84.5141F;
+            this.colDescripcion.HeaderText = "Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.Width = 98;
+            // 
+            // colEstadoValor
+            // 
+            this.colEstadoValor.FillWeight = 84.5141F;
+            this.colEstadoValor.HeaderText = "EstadoValor";
+            this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.Visible = false;
+            // 
+            // colEstado
+            // 
+            this.colEstado.FillWeight = 84.5141F;
+            this.colEstado.HeaderText = "Estado";
+            this.colEstado.Name = "colEstado";
+            this.colEstado.Width = 70;
             // 
             // lblEstado
             // 
@@ -321,47 +358,6 @@
             this.txtindice.Name = "txtindice";
             this.txtindice.Size = new System.Drawing.Size(31, 20);
             this.txtindice.TabIndex = 98;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FillWeight = 35F;
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // colid
-            // 
-            this.colid.HeaderText = "id";
-            this.colid.Name = "colid";
-            this.colid.ReadOnly = true;
-            this.colid.Visible = false;
-            this.colid.Width = 84;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.FillWeight = 84.5141F;
-            this.colDescripcion.HeaderText = "Descripcion";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
-            this.colDescripcion.Width = 150;
-            // 
-            // colEstadoValor
-            // 
-            this.colEstadoValor.FillWeight = 84.5141F;
-            this.colEstadoValor.HeaderText = "EstadoValor";
-            this.colEstadoValor.Name = "colEstadoValor";
-            this.colEstadoValor.ReadOnly = true;
-            this.colEstadoValor.Visible = false;
-            this.colEstadoValor.Width = 101;
-            // 
-            // colEstado
-            // 
-            this.colEstado.FillWeight = 84.5141F;
-            this.colEstado.HeaderText = "Estado";
-            this.colEstado.Name = "colEstado";
-            this.colEstado.ReadOnly = true;
-            this.colEstado.Width = 101;
             // 
             // formCategorias
             // 
