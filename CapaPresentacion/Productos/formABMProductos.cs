@@ -22,6 +22,7 @@ namespace CapaPresentacion
 
         private void formABMProductos_Load(object sender, EventArgs e)
         {
+            //Agregar estado para mostrar en los cb
             cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cbEstado.Items.Add(new OpcionCombo() { Valor = 2, Texto = "No Activo" });
             cbEstado.DisplayMember = "Texto";
@@ -52,7 +53,7 @@ namespace CapaPresentacion
             cbFiltro.SelectedIndex = 0;
 
 
-            //mostrar productos en dgListaUsuarios
+            //mostrar productos en el data grid
             List<Producto> listaProducto = new CN_productos().Listar();
             foreach (Producto item in listaProducto)
             {
