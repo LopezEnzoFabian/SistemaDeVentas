@@ -81,8 +81,6 @@ namespace CapaPresentacion
                 MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Sale del método si hay campos vacíos
             }
-    
-
             DialogResult ask = MessageBox.Show("¿Desea guardar los datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (ask == DialogResult.Yes)
@@ -119,7 +117,6 @@ namespace CapaPresentacion
                             "0.00",
                             ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
                             ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString(),
-                           
                     });
                         MessageBox.Show("Producto guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -146,7 +143,6 @@ namespace CapaPresentacion
                 MessageBox.Show("Por favor, complete todos los campos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Sale del método si hay campos vacíos
             }
-
             DialogResult resultado = MessageBox.Show("¿Esta seguro que desea eliminar este producto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             // Comprobar la respuesta del usuario
@@ -159,7 +155,6 @@ namespace CapaPresentacion
                 };
 
                 bool respuesta = new CN_productos().Eliminar(obj, out mensaje);
-
                 MessageBox.Show("Producto eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (respuesta)
@@ -188,7 +183,6 @@ namespace CapaPresentacion
                 return; // Sale del método si hay campos vacíos
             }
             // Mensaje de confirmación para editar
-
             DialogResult resultado = MessageBox.Show(
                 "¿Está seguro que desea editar este producto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -209,7 +203,6 @@ namespace CapaPresentacion
 
                 if (obj.Id_producto != 0)
                 {
-
                     bool resultadoEdicion = new CN_productos().Editar(obj, out mensaje);
 
                     if (resultadoEdicion)
@@ -264,7 +257,6 @@ namespace CapaPresentacion
             txtDescri.Clear();
             cbCategoria.SelectedItem = null;
             cbEstado.SelectedItem = null;
-
             txtID.Text = "0";
             txtindice.Text = "-1";
         }
@@ -272,7 +264,6 @@ namespace CapaPresentacion
         private void txtCodigoPro_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-
         }
 
         private void btnsearch_Click(object sender, EventArgs e)

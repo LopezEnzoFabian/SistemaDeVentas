@@ -373,5 +373,35 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
+
+        private void btnsearch_Click_1(object sender, EventArgs e)
+        {
+            if (ValidarFiltro())
+            {
+                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string columnaFiltro = ((OpcionCombo)cbFiltro.SelectedItem).Valor.ToString();
+            if (dgListaCliente.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgListaCliente.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnclean_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+            foreach (DataGridViewRow row in dgListaCliente.Rows)
+            {
+                row.Visible = true;
+            }
+        }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -398,6 +398,7 @@
             this.btnsearch.Size = new System.Drawing.Size(32, 30);
             this.btnsearch.TabIndex = 100;
             this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click_1);
             // 
             // btnclean
             // 
@@ -413,6 +414,7 @@
             this.btnclean.Size = new System.Drawing.Size(30, 30);
             this.btnclean.TabIndex = 99;
             this.btnclean.UseVisualStyleBackColor = false;
+            this.btnclean.Click += new System.EventHandler(this.btnclean_Click);
             // 
             // cbFiltro
             // 
@@ -449,9 +451,9 @@
             this.dgListaCliente.AllowUserToDeleteRows = false;
             this.dgListaCliente.AllowUserToResizeColumns = false;
             this.dgListaCliente.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgListaCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgListaCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgListaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgListaCliente.BackgroundColor = System.Drawing.Color.Silver;
             this.dgListaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -479,8 +481,8 @@
             this.dgListaCliente.Name = "dgListaCliente";
             this.dgListaCliente.RowHeadersVisible = false;
             this.dgListaCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgListaCliente.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgListaCliente.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgListaCliente.Size = new System.Drawing.Size(662, 208);
             this.dgListaCliente.TabIndex = 102;
             this.dgListaCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaCliente_CellContentClick_2);

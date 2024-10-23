@@ -91,7 +91,7 @@ namespace CapaPresentacion
             }
         }
 
-
+        //REGISTRAR UN PROVEEDOR
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (ValidarCampos())
@@ -110,7 +110,7 @@ namespace CapaPresentacion
             if (ask == DialogResult.Yes)
             {
                 // Si el usuario hizo clic en "Sí"
-                string mensaje = string.Empty;
+                string mensaje = string.Empty; //NECESITAMOS UNA VARIABLE MENSAJE PARA RETORNAR QUE NOS AYUDE A DETECTAR ALGUN EN ERROR
 
                 Proveedor obj = new Proveedor()
                 {
@@ -157,8 +157,7 @@ namespace CapaPresentacion
             }
         }
         
-
-
+        //EDITAR UN PROVEEDOR
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (ValidarCampos())
@@ -309,7 +308,6 @@ namespace CapaPresentacion
             txtDireccion.Clear();
             txtCodPostal.Clear();
             cbEstado.SelectedItem = null;
-
             txtID.Text = "0";
             txtindice.Text = "-1";
         }
@@ -329,7 +327,11 @@ namespace CapaPresentacion
 
         private void btnclean_Click(object sender, EventArgs e)
         {
-
+            txtBuscar.Text = "";
+            foreach (DataGridViewRow row in dgListaProveedores.Rows)
+            {
+                row.Visible = true;
+            }
         }
 
         private void dgListaProveedoreses_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -390,6 +392,27 @@ namespace CapaPresentacion
                             break;
                         }
                     }
+                }
+            }
+        }
+
+        private void btnsearch_Click_1(object sender, EventArgs e)
+        {
+            if (ValidarFiltro())
+            {
+                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string columnaFiltro = ((OpcionCombo)cbFiltro.SelectedItem).Valor.ToString();
+            if (dgListaProveedores.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgListaProveedores.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
                 }
             }
         }
