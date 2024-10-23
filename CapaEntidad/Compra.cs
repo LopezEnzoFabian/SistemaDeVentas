@@ -10,7 +10,7 @@ namespace Capa_Entidad
     {
         public int Id_compra {  get; set; }
         public Usuario oUsuario { get; set; }
-        public Porveedor oProveedor { get; set; }
+        public Proveedor oProveedor { get; set; }
         public string Tipo_factura { get; set; }
         public string Numero_factura { get; set; }
         public  decimal Monto_total { get; set; }

@@ -204,13 +204,11 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        MessageBox.Show(mensaje);
+                        MessageBox.Show(mensaje,"ERROR");
                     }
                     Limpiar();
                 }
-            }
-
-           
+            }      
         }
         
         private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -252,7 +250,6 @@ namespace CapaPresentacion
                     }
                 }
             }
-
         }
 
         private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)

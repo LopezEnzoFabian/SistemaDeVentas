@@ -84,6 +84,7 @@ CREATE TABLE Cliente
   CONSTRAINT PK_id_cliente PRIMARY KEY (id_cliente),
 );
 
+
 CREATE TABLE Usuario
 (
   id_usuario INT IDENTITY,

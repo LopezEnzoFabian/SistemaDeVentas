@@ -1,4 +1,5 @@
 ﻿using Capa_Entidad;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,54 @@ namespace CapaPresentacion
         }
 
 
+        private void formClientes_Load(object sender, EventArgs e)
+        {
+            //if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
+            //{
+            //    btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
+            //}
+
+            //agregar estado para mostrar en los cb
+            cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
+            cbEstado.Items.Add(new OpcionCombo() { Valor = 2, Texto = "No Activo" });
+            cbEstado.DisplayMember = "Texto";
+            cbEstado.ValueMember = "Valor";
+            cbEstado.SelectedIndex = 0;
+
+            //buscar en nuestro boton de busqueda
+            foreach (DataGridViewColumn column in dgListaCliente.Columns)
+            {
+                if (column.Visible == true && column.Name != "btnSeleccionar")
+                {
+                    cbFiltro.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
+                }
+            }
+            cbFiltro.DisplayMember = "Texto";
+            cbFiltro.ValueMember = "Valor";
+            cbFiltro.SelectedIndex = 0;
+
+            //mostrar usuarios en dgListaUsuarios
+            List<Cliente> listacliente = new CN_cliente().Listar();
+            foreach (Cliente item in listacliente)
+            {
+                dgListaCliente.Rows.Add(new object[] {
+                    "",
+                    item.Id_cliente,
+                    item.DNI,
+                    item.Nombre_completo,
+                    item.Email,
+                    item.Telefono,
+                    item.Direccion,
+                    item.Codigo_postal,
+                    item.Ciudad,
+                    item.Localidad,
+                    item.Estado == true ? 1 : 0,
+                    item.Estado == true ? "Activo" : "No Activo",
+                 });
+            }
+
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
@@ -48,27 +97,53 @@ namespace CapaPresentacion
             // Tomar decisiones basadas en la respuesta del usuario
             if (ask == DialogResult.Yes)
             {
-                // Si el usuario hizo clic en "Sí"
-                MessageBox.Show("Usuario guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                int fila = dgListarUsuario.Rows.Add();
-                TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+                string mensaje = string.Empty;
 
-                dgListarUsuario.Rows[fila].Cells[2].Value = textInfo.ToTitleCase(txtDNI.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[3].Value = textInfo.ToTitleCase(txtNombrecliente.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[4].Value = textInfo.ToTitleCase(txtEmail.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[5].Value = textInfo.ToTitleCase(txtTel.Text.ToLower()); 
-                dgListarUsuario.Rows[fila].Cells[6].Value = textInfo.ToTitleCase(txtDireccion.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[7].Value = textInfo.ToTitleCase(txtCiudad.Text.ToLower());
-                dgListarUsuario.Rows[fila].Cells[8].Value = textInfo.ToTitleCase(txtLocalidad.Text.ToLower());
+                Cliente objcliente = new Cliente()
+                {
+                    DNI = txtDNI.Text,
+                    Nombre_completo = txtNombrecliente.Text,
+                    Email = txtEmail.Text,
+                    Telefono = txtTel.Text,
+                    Direccion = txtDireccion.Text,
+                    Codigo_postal = txtCodPostal.Text,
+                    Ciudad = txtCiudad.Text,
+                    Localidad = txtLocalidad.Text,
+                    Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
+                };
 
-                string estado = cbEstado.SelectedItem?.ToString();
-                if (estado != null)
-                    dgListarUsuario.Rows[fila].Cells[9].Value = textInfo.ToTitleCase(estado.ToLower());
-
-                limpiarCampos();
+                //REGISTRAR CLIENTE NUEVO
+                if (objcliente.Id_cliente == 0)
+                {
+                    //METODO REGISTRAR envia nuestros datos a la CN Y CD para ejecutar nuestro PROCEDIMIENTO ALMACENADO EN LA BD
+                    int idusuarioGen = new CN_cliente().Registrar(objcliente, out mensaje);
+                    //guarda los datos en el datagrid
+                    if (idusuarioGen != 0)
+                    {
+                    dgListaCliente.Rows.Add(new object[] {
+                            "",
+                            idusuarioGen,
+                            txtDNI.Text,
+                            txtNombrecliente.Text,
+                            txtEmail.Text,
+                            txtTel.Text,
+                            txtDireccion.Text,
+                            txtCodPostal.Text,
+                            txtCiudad.Text,
+                            txtLocalidad.Text,
+                            ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
+                            ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
+                    });
+                        MessageBox.Show("Cliente guardado correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                    limpiarCampos();
+                }
             }
-
         }
 
         public bool ValidarCampos()
@@ -81,6 +156,7 @@ namespace CapaPresentacion
                    string.IsNullOrEmpty(cbEstado.Text) ||
                    string.IsNullOrEmpty(txtCiudad.Text) ||
                    string.IsNullOrEmpty(txtDireccion.Text) ||
+                   string.IsNullOrEmpty(txtLocalidad.Text) ||
                    string.IsNullOrEmpty(txtCodPostal.Text);
         }
 
@@ -99,48 +175,52 @@ namespace CapaPresentacion
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
         }
 
-
-
         private void limpiarCampos()
         {
             txtDNI.Clear();
             txtNombrecliente.Clear();
-            txtTel.Clear();
             txtEmail.Clear();
-            txtCiudad.Clear();
+            txtTel.Clear();
             txtDireccion.Clear();
-            txtLocalidad.Clear();
             txtCodPostal.Clear();
+            txtCiudad.Clear();
+            txtLocalidad.Clear();
+
+            txtID.Text = "0";
+            txtindice.Text = "-1";
         }
-
-        private void dgListarUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void formClientes_Load(object sender, EventArgs e)
-        {
-            //if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
-            //{
-            //    btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
-            //}
-        }
-
+       
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Está a punto de eliminar un cliente. ¿Está seguro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
             // Comprobar la respuesta del usuario
-            if (resultado == DialogResult.Yes)
+
+            if (Convert.ToInt32(txtID.Text) != 0)
             {
-                //EliminarUsuario();
-                // Mensaje de éxito
-                MessageBox.Show("Cliente eliminado correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                // Acción cancelada
-                MessageBox.Show("Operación cancelada", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar este cliente", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+                    Cliente objcliente = new Cliente()
+                    {
+                        Id_cliente = Convert.ToInt32(txtID.Text)
+                    };
+
+                    bool respuesta = new CN_cliente().Eliminar(objcliente, out mensaje);
+
+                    MessageBox.Show("Cliente eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (respuesta)
+                    {
+                        dgListaCliente.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                        dgListaCliente.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                    limpiarCampos();
+                }
             }
         }
 
@@ -152,59 +232,67 @@ namespace CapaPresentacion
                 return; // Sale del método si hay campos vacíos
             }
             // Mensaje de confirmación para editar
-
             DialogResult resultado = MessageBox.Show(
-                "¿Está seguro que desea editar este cliente?", "Editar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            "¿Está seguro que desea editar este cliente?", "Editar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Comprobar la respuesta del usuario
+            // Comprobar la respuesta del cliente
             if (resultado == DialogResult.Yes)
             {
-                // Lógica para editar el cliente
-                //EditarCliente();
-                // Mensaje de éxito
-                MessageBox.Show("Cliente editado correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = string.Empty;
+
+                Cliente obj = new Cliente()
+                {
+                    Id_cliente = Convert.ToInt32(txtID.Text),
+                    DNI = txtDNI.Text,
+                    Nombre_completo = txtNombrecliente.Text,
+                    Email = txtEmail.Text,
+                    Telefono = txtTel.Text,
+                    Direccion = txtDireccion.Text,
+                    Codigo_postal = txtCodPostal.Text,
+                    Ciudad = txtCiudad.Text,
+                    Localidad = txtLocalidad.Text,
+                    Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
+                };
+
+                if (obj.Id_cliente != 0)
+                {
+                    bool resultadoEdicion = new CN_cliente().Editar(obj, out mensaje);
+
+                    if (resultadoEdicion)
+                    {
+                        DataGridViewRow row = dgListaCliente.Rows[Convert.ToInt32(txtindice.Text)];
+                        row.Cells["colID"].Value = txtID.Text;
+                        row.Cells["colDNI"].Value = txtDNI.Text;
+                        row.Cells["colNombre"].Value = txtNombrecliente.Text;
+                        row.Cells["colEmail"].Value = txtEmail.Text;
+                        row.Cells["colTelefono"].Value = txtTel.Text;
+                        row.Cells["colDireccion"].Value = txtDireccion.Text;
+                        row.Cells["colCodigoPostal"].Value = txtCodPostal.Text;
+                        row.Cells["colCiudad"].Value = txtCiudad.Text;
+                        row.Cells["colLocalidad"].Value = txtLocalidad.Text;
+                        row.Cells["EstadoValor"].Value = ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString();
+                        row.Cells["Estado"].Value = ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString();
+
+                        MessageBox.Show("Se han editado los datos correctamente", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
             else
             {
                 // Acción cancelada
                 MessageBox.Show("Operación cancelada", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarCampos();
         }
 
-        private void dgListarUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0)  
-                return;  
-
-            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-           
-                var cellWidth = e.CellBounds.Width;
-                var cellHeight = e.CellBounds.Height;
-                // Dimensiones de la imagen original
-                var originalImage = Properties.Resources.check;
-                // Reducir el tamaño de la imagen
-                int margin = 4; // Ajusta este margen según lo necesites
-                var newWidth = cellWidth - margin;
-                var newHeight = cellHeight - margin;
-                // Calcular la posición centrada
-                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
-                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
-                // Redimensionar la imagen
-                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
-                {
-                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
-                }
-                e.Handled = true;
-            }
-
-        }
-
-        private void dgListarUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void txtCodPostal_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -225,6 +313,65 @@ namespace CapaPresentacion
             return string.IsNullOrEmpty(cbFiltro.Text);
         }
 
-     
+        private void dgListaCliente_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgListaCliente.Columns[e.ColumnIndex].Name == "btnSeleccionar")
+            {
+                int indice = e.RowIndex;
+
+                if (indice >= 0)
+                {
+                    txtindice.Text = indice.ToString();
+                    txtID.Text = dgListaCliente.Rows[indice].Cells["colID"].Value.ToString();
+                    txtDNI.Text = dgListaCliente.Rows[indice].Cells["colDNI"].Value.ToString();
+                    txtNombrecliente.Text = dgListaCliente.Rows[indice].Cells["colNombre"].Value.ToString();
+                    txtEmail.Text = dgListaCliente.Rows[indice].Cells["colEmail"].Value.ToString();
+                    txtTel.Text = dgListaCliente.Rows[indice].Cells["colTelefono"].Value.ToString();
+                    txtDireccion.Text = dgListaCliente.Rows[indice].Cells["colDireccion"].Value.ToString();
+                    txtCodPostal.Text = dgListaCliente.Rows[indice].Cells["colCodigoPostal"].Value.ToString();
+                    txtCiudad.Text = dgListaCliente.Rows[indice].Cells["colCiudad"].Value.ToString();
+                    txtLocalidad.Text = dgListaCliente.Rows[indice].Cells["colLocalidad"].Value.ToString();
+
+                    foreach (OpcionCombo oc in cbEstado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgListaCliente.Rows[indice].Cells["EstadoValor"].Value))
+                        {
+                            int indice_combo = cbEstado.Items.IndexOf(oc);
+                            cbEstado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void dgListaCliente_CellPainting_1(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var cellWidth = e.CellBounds.Width;
+                var cellHeight = e.CellBounds.Height;
+                // Dimensiones de la imagen original
+                var originalImage = Properties.Resources.check;
+                // Reducir el tamaño de la imagen
+                int margin = 4; // Ajusta este margen según lo necesites
+                var newWidth = cellWidth - margin;
+                var newHeight = cellHeight - margin;
+                // Calcular la posición centrada
+                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
+                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
+                // Redimensionar la imagen
+                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
+                {
+                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
+                }
+                e.Handled = true;
+            }
+        }
     }
 }

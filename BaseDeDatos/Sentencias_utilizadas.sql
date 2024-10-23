@@ -341,3 +341,195 @@ END;
 --inner join categoria c on c.id_categoria = p.id_categoria
 
 --insert into producto (codigo,Nombre,descripcion,id_categoria,estado) values(1,'Rizen 5','4.5ghz 8 nucleos 8 hilos',4,1)
+
+
+/**********************CLIENTES*************************/
+
+---REGISTRAR CIENTES
+
+CREATE PROCEDURE sp_registrar_cliente(
+@DNI int,
+@NombreCompleto varchar(100),
+@Email varchar(100),
+@Telefono varchar(100),
+@Direccion varchar(100),
+@CodigoPostal varchar(100),
+@Ciudad varchar(100),
+@Localidad varchar(100),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(100) output
+
+)as
+
+BEGIN 
+     SET @Resultado = 0
+	 DECLARE @idpersona INT 
+	 IF NOT EXISTS (SELECT * FROM Cliente WHERE DNI = @DNI)
+	 BEGIN
+	      INSERT INTO Cliente (DNI,Nombre_completo,Email,telefono,direccion,codigo_postal,ciudad,estado,localidad)
+		  VALUES(@DNI,@NombreCompleto,@Email,@Telefono,@Direccion,@CodigoPostal,@Ciudad,@Estado,@Localidad)
+
+		  SET @Resultado = SCOPE_IDENTITY()
+		  END
+		  ELSE
+		      SET @Mensaje = 'El  numero de DNI ya existe'
+END
+
+
+---MOIDIFICAR CLIENTES
+
+CREATE PROCEDURE sp_modificar_cliente(
+@id_cliente int,
+@DNI int,
+@NombreCompleto varchar(100),
+@Email varchar(100),
+@Telefono varchar(100),
+@Direccion varchar(100),
+@CodigoPostal varchar(100),
+@Ciudad varchar(100),
+@Localidad varchar(100),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(100) output
+)as
+BEGIN 
+     SET @Resultado = 1
+	 DECLARE @idpersona int
+	 IF NOT EXISTS(SELECT * FROM Cliente WHERE DNI = @DNI AND id_cliente != @id_cliente)
+	 BEGIN 
+	      UPDATE Cliente SET
+		  DNI = @DNI,
+		  Nombre_completo = @NombreCompleto,
+		  Email = @Email,
+		  telefono = @Telefono,
+		  direccion = @Direccion,
+		  codigo_postal = @CodigoPostal,
+		  ciudad = @Ciudad,
+		  localidad = @Localidad,
+		  estado = @Estado
+		  WHERE id_cliente = @id_cliente
+	END
+	ELSE
+	BEGIN
+	     SET @Resultado = 0
+		 SET @Mensaje = 'El numero de DNI ya existe'
+    END
+END
+
+
+--insert into Cliente(DNI,Nombre_completo,Email,telefono,direccion,codigo_postal,ciudad,estado,localidad)
+--values(50555666,'Jorge Luis','jorch@gmail.comn','3794685739','calle543','3400','Corrientes',1,'Mercedes')
+
+
+/*************************PROVEEDORES**************************/
+
+---REGISTRAR PROVEEDOR
+
+CREATE PROCEDURE sp_registrar_proveedor(
+@DNI int,
+@RazonSocial varchar(100),
+@Email varchar(100),
+@Telefono varchar(100),
+@Direccion varchar(100),
+@CodigoPostal varchar(100),
+@Ciudad varchar(100),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(100) output
+)as
+BEGIN 
+     SET @Resultado = 0
+	 DECLARE @idpersona INT
+	 IF NOT EXISTS (SELECT  * FROM Proveedor WHERE DNI = @DNI)
+	 BEGIN 
+	      INSERT INTO Proveedor(DNI,Razon_social,Email,Telefono,direccion,ciudad,codigo_postal,estado)
+		  VALUES (@DNI,@RazonSocial,@Email,@Telefono,@Direccion,@Ciudad,@CodigoPostal,@Estado)
+
+		  SET @Resultado = SCOPE_IDENTITY()
+     END
+	 ELSE
+	     SET @Mensaje = 'El número de documento ya existe'
+END
+
+---EDITAR PROVEEDOR
+
+CREATE PROCEDURE sp_editar_proveedor(
+@Idproveedor int,
+@DNI int,
+@RazonSocial varchar(100),
+@Email varchar(100),
+@Telefono varchar(100),
+@Direccion varchar(100),
+@CodigoPostal varchar(100),
+@Ciudad varchar(100),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(100) output
+)as
+BEGIN 
+     SET @Resultado = 1
+	 DECLARE @idpersona INT
+	 IF NOT EXISTS (SELECT  * FROM Proveedor WHERE DNI = @DNI AND id_proveedor != @Idproveedor)
+	 BEGIN 
+	      UPDATE Proveedor SET
+		  DNI = @DNI,
+		  Razon_social = @RazonSocial,
+		  Email = @Email,
+		  Telefono = @Telefono,
+		  direccion = @Direccion,
+		  codigo_postal = @CodigoPostal,
+		  ciudad = @Ciudad,
+		  estado = @Estado
+		  WHERE id_proveedor = @Idproveedor
+	 END
+	 ELSE
+	    BEGIN
+		  SET @Resultado = 0
+	      SET @Mensaje = 'El número de documento ya existe'
+	    END
+END
+
+
+---ELIMINAR PROVEEDOR
+
+CREATE PROCEDURE sp_eliminar_proveedor(
+@Idproveedor int,
+@Resultado bit output,
+@Mensaje varchar(100)
+)
+as
+BEGIN 
+     SET @Resultado = 1
+	 IF NOT EXISTS (
+	 SELECT * FROM Proveedor p
+	 inner join Compra c on p.id_proveedor = c.id_proveedor
+	 WHERE p.id_proveedor = c.id_proveedor
+	 )
+	 BEGIN 
+	      DELETE TOP (1) FROM  Proveedor 
+		  WHERE id_proveedor = @Idproveedor
+	 END
+	 ELSE
+	     BEGIN
+		      SET @Resultado = 0
+			  SET @Mensaje = 'No es posible eliminar este proveedor'
+		 END
+END
+
+
+select * from Proveedor
+
+INSERT INTO Proveedor(DNI,Razon_social,Email,Telefono,direccion,ciudad,codigo_postal,estado)
+VALUES (40222333,'AMD,inc','admsuppots@gmail.com','0800-xxx-xxx','calle000','Corrientes Capital','4444',1)
+
+
+
+
+
+
+
+
+
+
+

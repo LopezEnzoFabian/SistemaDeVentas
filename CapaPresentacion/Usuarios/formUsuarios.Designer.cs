@@ -240,6 +240,7 @@ namespace CapaPresentacion
             this.dgListarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListarUsuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgListarUsuario.ColumnHeadersHeight = 35;
+            this.dgListarUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgListarUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.colid,
@@ -258,8 +259,8 @@ namespace CapaPresentacion
             this.dgListarUsuario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgListarUsuario.ImeMode = System.Windows.Forms.ImeMode.On;
             this.dgListarUsuario.Location = new System.Drawing.Point(0, 327);
-            this.dgListarUsuario.MultiSelect = false;
             this.dgListarUsuario.Name = "dgListarUsuario";
+            this.dgListarUsuario.ReadOnly = true;
             this.dgListarUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgListarUsuario.RowHeadersVisible = false;
             this.dgListarUsuario.RowHeadersWidth = 30;
@@ -358,6 +359,7 @@ namespace CapaPresentacion
             // 
             this.colConfirmarPass.HeaderText = "ConfirmarPass";
             this.colConfirmarPass.Name = "colConfirmarPass";
+            this.colConfirmarPass.ReadOnly = true;
             this.colConfirmarPass.Visible = false;
             // 
             // label1
@@ -390,9 +392,9 @@ namespace CapaPresentacion
             this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(493, 22);
+            this.btnsearch.Location = new System.Drawing.Point(495, 23);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(31, 23);
+            this.btnsearch.Size = new System.Drawing.Size(29, 23);
             this.btnsearch.TabIndex = 45;
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
@@ -407,7 +409,7 @@ namespace CapaPresentacion
             this.btnclean.IconColor = System.Drawing.Color.Aqua;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(530, 22);
+            this.btnclean.Location = new System.Drawing.Point(530, 23);
             this.btnclean.Name = "btnclean";
             this.btnclean.Size = new System.Drawing.Size(29, 23);
             this.btnclean.TabIndex = 44;

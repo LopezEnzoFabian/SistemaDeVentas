@@ -35,7 +35,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.dgListarProductos = new System.Windows.Forms.DataGridView();
-            this.lblListaProductos = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreDeProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +45,7 @@
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblListaProductos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListarProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +57,9 @@
             this.btnsearch.IconColor = System.Drawing.Color.Aqua;
             this.btnsearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnsearch.IconSize = 20;
-            this.btnsearch.Location = new System.Drawing.Point(461, 22);
+            this.btnsearch.Location = new System.Drawing.Point(461, 24);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(32, 30);
+            this.btnsearch.Size = new System.Drawing.Size(32, 28);
             this.btnsearch.TabIndex = 87;
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
@@ -72,9 +72,9 @@
             this.btnclean.IconColor = System.Drawing.Color.Aqua;
             this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnclean.IconSize = 20;
-            this.btnclean.Location = new System.Drawing.Point(498, 24);
+            this.btnclean.Location = new System.Drawing.Point(499, 24);
             this.btnclean.Name = "btnclean";
-            this.btnclean.Size = new System.Drawing.Size(40, 28);
+            this.btnclean.Size = new System.Drawing.Size(33, 28);
             this.btnclean.TabIndex = 86;
             this.btnclean.UseVisualStyleBackColor = false;
             this.btnclean.Click += new System.EventHandler(this.btnclean_Click);
@@ -142,17 +142,6 @@
             this.dgListarProductos.TabIndex = 82;
             this.dgListarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaClientes_CellContentClick);
             // 
-            // lblListaProductos
-            // 
-            this.lblListaProductos.AutoSize = true;
-            this.lblListaProductos.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaProductos.ForeColor = System.Drawing.Color.Black;
-            this.lblListaProductos.Location = new System.Drawing.Point(12, 73);
-            this.lblListaProductos.Name = "lblListaProductos";
-            this.lblListaProductos.Size = new System.Drawing.Size(205, 24);
-            this.lblListaProductos.TabIndex = 88;
-            this.lblListaProductos.Text = "Lista de productos";
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -218,6 +207,17 @@
             // 
             this.colEstado.HeaderText = "Estado";
             this.colEstado.Name = "colEstado";
+            // 
+            // lblListaProductos
+            // 
+            this.lblListaProductos.AutoSize = true;
+            this.lblListaProductos.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaProductos.ForeColor = System.Drawing.Color.Black;
+            this.lblListaProductos.Location = new System.Drawing.Point(12, 73);
+            this.lblListaProductos.Name = "lblListaProductos";
+            this.lblListaProductos.Size = new System.Drawing.Size(205, 24);
+            this.lblListaProductos.TabIndex = 88;
+            this.lblListaProductos.Text = "Lista de productos";
             // 
             // VerProductos
             // 

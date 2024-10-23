@@ -18,6 +18,8 @@ namespace Capa_Entidad
         public string Codigo_postal { get; set; }
         public bool Estado {  get; set; }
         public string Fecha_registro { get; set; }
+        public string Localidad { get; set; }
+
 
     }
 }

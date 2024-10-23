@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    public class Porveedor
+    public class Proveedor
     {
         public int Id_proveedor {  get; set; }
         public string DNI { get; set; }
