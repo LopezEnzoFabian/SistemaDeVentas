@@ -12,44 +12,38 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.Compras
 {
-    public partial class ComprasListarProducto : Form
+    public partial class ComprasListarProveedores : Form
     {
-        public Producto Oproducto { get; set; }
-        public ComprasListarProducto()
+        public Proveedor Oproveedor { get; set; }
+        public ComprasListarProveedores()
         {
             InitializeComponent();
         }
-        private void ComprasListarProducto_Load(object sender, EventArgs e)
-        {
 
-            foreach (DataGridViewColumn column in dgListaProductos.Columns)
+        private void ComprasListarProveedorcs_Load(object sender, EventArgs e)
+        {
+            foreach (DataGridViewColumn column in dgListaProveedores.Columns)
             {
                 if (column.Visible == true)
                 {
                     cbFiltro.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
                 }
             }
-
             cbFiltro.DisplayMember = "Texto";
             cbFiltro.ValueMember = "Valor";
             cbFiltro.SelectedIndex = 0;
 
-            List<Producto> lista = new CN_productos().Listar();
-            foreach (Producto item in lista)
+            List<Proveedor> lista = new CN_proveedor().Listar();
+            foreach (Proveedor item in lista)
             {
-                dgListaProductos.Rows.Add(new object[] {
-                    item.Id_producto,
-                    item.Codigo_prod,
-                    item.Nombre,
-                    item.oCategoria.Descripcion,
-                    item.Descripcion,
-                    item.Stock,
-                    item.Precio_compra,
-                    item.Precio_venta,
+                dgListaProveedores.Rows.Add(new object[] {
+                    item.Id_proveedor,
+                    item.DNI,
+                    item.RazonSocial,
                  });
             }
         }
-  
+
         private void btnsearch_Click(object sender, EventArgs e)
         {
             if (ValidarFiltro())
@@ -58,9 +52,9 @@ namespace CapaPresentacion.Compras
                 return;
             }
             string columnaFiltro = ((OpcionCombo)cbFiltro.SelectedItem).Valor.ToString();
-            if (dgListaProductos.Rows.Count > 0)
+            if (dgListaProveedores.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in dgListaProductos.Rows)
+                foreach (DataGridViewRow row in dgListaProveedores.Rows)
                 {
                     if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
                         row.Visible = true;
@@ -75,32 +69,29 @@ namespace CapaPresentacion.Compras
             return string.IsNullOrEmpty(cbFiltro.Text);
         }
 
+
         private void btnclean_Click(object sender, EventArgs e)
         {
             txtBuscar.Text = "";
-            foreach (DataGridViewRow row in dgListaProductos.Rows)
+            foreach (DataGridViewRow row in dgListaProveedores.Rows)
             {
                 row.Visible = true;
             }
         }
 
-        private void dgListaProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgListaProveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int irow = e.RowIndex;
             int icolum = e.ColumnIndex;
 
             if (irow >= 0 && icolum > 0)
             {
-                Oproducto = new Producto()
-                {
-                    Id_producto = Convert.ToInt32(dgListaProductos.Rows[irow].Cells["ID"].Value.ToString()),
-                    Codigo_prod = dgListaProductos.Rows[irow].Cells["colCodigo"].Value.ToString(),
-                    Nombre = dgListaProductos.Rows[irow].Cells["colNombre"].Value.ToString(),
-                    Descripcion = dgListaProductos.Rows[irow].Cells["colDescripcion"].Value.ToString(),
-                    Stock = Convert.ToInt32(dgListaProductos.Rows[irow].Cells["colStock"].Value.ToString()),
-                    Precio_compra = Convert.ToDecimal(dgListaProductos.Rows[irow].Cells["colPrecioCompra"].Value.ToString()),
-                    Precio_venta = Convert.ToDecimal(dgListaProductos.Rows[irow].Cells["colPrecioVenta"].Value.ToString()),
 
+                Oproveedor = new Proveedor()
+                {
+                    Id_proveedor = Convert.ToInt32(dgListaProveedores.Rows[irow].Cells["ID"].Value.ToString()),
+                    DNI = dgListaProveedores.Rows[irow].Cells["colDNI"].Value.ToString(),
+                    RazonSocial = dgListaProveedores.Rows[irow].Cells["colRazonSocial"].Value.ToString()
                 };
                 this.DialogResult = DialogResult.OK;
                 this.Close();

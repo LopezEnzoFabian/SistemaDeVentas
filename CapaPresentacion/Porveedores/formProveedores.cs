@@ -29,7 +29,6 @@ namespace CapaPresentacion
             cbEstado.ValueMember = "Valor";
             cbEstado.SelectedIndex = 0;
 
-            //buscar en nuestro boton de busqueda
             foreach (DataGridViewColumn column in dgListaProveedores.Columns)
             {
                 if (column.Visible == true && column.Name != "btnSeleccionar")
@@ -41,7 +40,6 @@ namespace CapaPresentacion
             cbFiltro.ValueMember = "Valor";
             cbFiltro.SelectedIndex = 0;
 
-            //mostrar usuarios en dgListaUsuarios
             List<Proveedor> lista = new CN_proveedor().Listar();
             foreach (Proveedor item in lista)
             {

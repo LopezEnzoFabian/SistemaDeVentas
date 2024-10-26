@@ -99,7 +99,7 @@ namespace CapaPresentacion
 
         private void iconMenuItem3_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new formCompras());
+            AbrirFormulario((IconMenuItem)sender, new formCompras(usuarioActual));
         }
 
         private void iconMenuItem4_Click(object sender, EventArgs e)

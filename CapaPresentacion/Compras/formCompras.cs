@@ -1,4 +1,5 @@
-﻿using CapaPresentacion.Compras;
+﻿using Capa_Entidad;
+using CapaPresentacion.Compras;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,11 @@ namespace CapaPresentacion
         private static IconButton MenuActivo = null;
         private static Form FormularioActivo = null;
         private static Form presentacionForm;
+        private Usuario User;
 
-        public formCompras()
+        public formCompras(Usuario ousuario)
         {
+            User = ousuario;
             InitializeComponent();
         }
 
@@ -60,7 +63,7 @@ namespace CapaPresentacion
 
         private void ibtnRegis_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new formRegistrarCompra());
+            AbrirFormulario((IconButton)sender, new formRegistrarCompra(User));
         }
 
         private void ibtnVerDetalle_Click(object sender, EventArgs e)

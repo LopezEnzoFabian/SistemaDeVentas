@@ -517,11 +517,12 @@ BEGIN
 		 END
 END
 
-
 --select * from Proveedor
 
 --INSERT INTO Proveedor(DNI,Razon_social,Email,Telefono,direccion,ciudad,codigo_postal,estado)
 --VALUES (40222333,'AMD,inc','admsuppots@gmail.com','0800-xxx-xxx','calle000','Corrientes Capital','4444',1)
+
+
 
 
 

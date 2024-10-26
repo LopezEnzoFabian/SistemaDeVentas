@@ -64,11 +64,11 @@
     <Compile Include="Compras\ComprasListarProducto.Designer.cs">
       <DependentUpon>ComprasListarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\ComprasListarProveedorcs.cs">
+    <Compile Include="Compras\ComprasListarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compras\ComprasListarProveedorcs.Designer.cs">
-      <DependentUpon>ComprasListarProveedorcs.cs</DependentUpon>
+    <Compile Include="Compras\ComprasListarProveedores.Designer.cs">
+      <DependentUpon>ComprasListarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Compras\formRegistrarCompra.cs">
       <SubType>Form</SubType>
@@ -224,8 +224,8 @@
     <EmbeddedResource Include="Compras\ComprasListarProducto.resx">
       <DependentUpon>ComprasListarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Compras\ComprasListarProveedorcs.resx">
-      <DependentUpon>ComprasListarProveedorcs.cs</DependentUpon>
+    <EmbeddedResource Include="Compras\ComprasListarProveedores.resx">
+      <DependentUpon>ComprasListarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
