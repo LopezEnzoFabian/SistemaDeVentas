@@ -125,7 +125,7 @@ CREATE TABLE Compra
 (
   id_compra INT IDENTITY,
   tipoDe_factura VARCHAR(50) NOT NULL, --Factura ordinaria ,Factura rectificativa,Factura recapitulativa,Factura proforma,Factura electrónica
-  numeroDe_factura INT NOT NULL,
+  numeroDe_factura VARCHAR(50),
   montoTotal DECIMAL(10,2),
   fecha_registro DATETIME DEFAULT GETDATE(),
   id_proveedor INT NOT NULL,
@@ -134,6 +134,7 @@ CREATE TABLE Compra
   CONSTRAINT FK_id_proveedor FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor),
   CONSTRAINT FK_compra_id_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
+
 
 CREATE TABLE Detalle_Compra
 (

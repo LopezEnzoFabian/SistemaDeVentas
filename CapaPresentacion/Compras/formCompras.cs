@@ -20,7 +20,7 @@ namespace CapaPresentacion
         private static Form presentacionForm;
         private Usuario User;
 
-        public formCompras(Usuario ousuario)
+        public formCompras(Usuario ousuario = null)
         {
             User = ousuario;
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace CapaPresentacion
 
         private void MostrarFormularioPresentacion()
         {
-            presentacionForm = new formRegistrarCompra();
+            presentacionForm = new formRegistrarCompra(User);
             presentacionForm.TopLevel = false;
             presentacionForm.FormBorderStyle = FormBorderStyle.None;
             presentacionForm.Dock = DockStyle.Fill;

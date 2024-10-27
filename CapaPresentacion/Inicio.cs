@@ -26,7 +26,7 @@ namespace CapaPresentacion
         public Inicio(Usuario objusuario = null)
         {
             //opcion para no loguear y entrar como un usuario predefinido ELIMINAR AL TERMINAR EL PROYECTO
-            if (objusuario == null) usuarioActual = new Usuario() { Nombre_completo = "Admin predeterminado", Id_usuario = 2 };
+            if (objusuario == null) usuarioActual = new Usuario() { Nombre_completo = "Admin predeterminado", Id_usuario = 1};
             else
                 usuarioActual = objusuario;
             InitializeComponent();

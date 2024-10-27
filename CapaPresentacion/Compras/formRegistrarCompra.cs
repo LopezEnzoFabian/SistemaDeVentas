@@ -1,4 +1,5 @@
 ﻿using Capa_Entidad;
+using CapaNegocio;
 using CapaPresentacion.Ventas;
 using FontAwesome.Sharp;
 using System;
@@ -15,15 +16,18 @@ namespace CapaPresentacion.Compras
 {
     public partial class formRegistrarCompra : Form
     {
-        private Usuario User;
+        private Usuario Eusuario;
+      
         public formRegistrarCompra(Usuario ousuario = null)
         {
-            User = ousuario;
+            Eusuario = ousuario;
             InitializeComponent();
         }
 
         private void formRegistrarCompra_Load(object sender, EventArgs e)
         {
+
+            MessageBox.Show(Eusuario.Nombre_completo);
             //combo box tipo de factura
             cbfactura.Items.Add(new OpcionCombo() { Valor = "Factura A", Texto = "Factura A" });
             cbfactura.Items.Add(new OpcionCombo() { Valor = "Factura B", Texto = "Factura B" });
@@ -31,6 +35,9 @@ namespace CapaPresentacion.Compras
             cbfactura.ValueMember = "Valor";
             cbfactura.SelectedIndex = 0;
             txtFecha.Text = DateTime.Now.ToString("yyyy/MM/dd");
+
+            txtidproveedor.Text = "0";
+            txtidproducto.Text = "0";
 
         }
 
@@ -97,6 +104,14 @@ namespace CapaPresentacion.Compras
                 return;
             }
 
+
+            if (!decimal.TryParse(txtPrecioVen.Text, out precioVenta))
+            {
+                MessageBox.Show("Precio de Compra - Formato incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtPrecioVen.Select();
+                return;
+            }
+
             //foreach (DataGridViewRow fila in dgRegistrarCompra.Rows)
             //{
             //    if (fila.Cells["ID"].Value.ToString() == txtidproducto.Text)
@@ -106,14 +121,18 @@ namespace CapaPresentacion.Compras
             //    }
             //}
 
+
+
             DialogResult resultado = MessageBox.Show(
             "¿Está seguro que desea agregar su compra?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            
             // Comprobar la respuesta del usuario
             if (resultado == DialogResult.Yes){
 
                 if (!producto_existe)
                 {
+
                     dgRegistrarCompra.Rows.Add(new object[]
                     {
                         txtidproducto.Text,
@@ -131,8 +150,8 @@ namespace CapaPresentacion.Compras
                 MessageBox.Show("Operación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             calcularTOTAL();
-            limpiarCampos();
             txtCantidad.Select();
+            limpiarCampos();
         }
 
         public bool ValidarCampos()
@@ -151,7 +170,6 @@ namespace CapaPresentacion.Compras
 
         private void limpiarCampos()
         {
-            cbfactura.SelectedItem = null;
             txtRazonSoc.Clear();
             txtNumDoc.Clear();
             txtCodProd.Clear();
@@ -160,8 +178,7 @@ namespace CapaPresentacion.Compras
             txtPrecioCom.Clear();
             txtPrecioVen.Clear();
             txtCantidad.Value = 1;
-            txtidproducto.Text = "0";
-            txtidproveedor.Text = "0";
+
         }
 
         private void calcularTOTAL()
@@ -175,19 +192,19 @@ namespace CapaPresentacion.Compras
             txtTotalPagar.Text = total.ToString("0.00");
         }
 
-        private void ibtnRegistrarCompra_Click(object sender, EventArgs e)
-        {
-            if (dgRegistrarCompra.Rows.Count == 1)
-            {
-                MessageBox.Show("No hay productos para registrar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-        }
-
-
         private void txtPrecioVen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
+            // Permitir solo dígitos, y la coma decimal y la tecla de retroceso
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true; // Ignorar la entrada
+            }
+
+            // Permitir solo un punto decimal
+            if (e.KeyChar == ',' && ((TextBox)sender).Text.Contains(","))
+            {
+                e.Handled = true; // Ignorar la entrada si ya hay un punto
+            }
         }
 
         private void dgRegistrarCompra_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -217,24 +234,8 @@ namespace CapaPresentacion.Compras
                 }
                 e.Handled = true;
             }
-        }
-
-        private void txtPrecioCom_TextChanged(object sender, EventArgs e)
-        {
-            decimal precioCompra;
-            decimal precioVenta;
-
-            if (decimal.TryParse(txtPrecioCom.Text, out precioCompra))
-            {
-                precioVenta = precioCompra * 1.20m; // Calcular el 20% más
-                txtPrecioVen.Text = precioVenta.ToString("0.00");
-            }
-            else
-            {
-                txtPrecioVen.Text = string.Empty; // Limpiar si el valor es inválido
-            }
-            
-        }
+        } 
+   
 
         private void txtPrecioCom_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -262,8 +263,74 @@ namespace CapaPresentacion.Compras
                 {
                     dgRegistrarCompra.Rows.RemoveAt(indice);
                     calcularTOTAL();
+                    
                 }
             }
+        }
+
+        private void ibtnRegistrarCompra_Click_1(object sender, EventArgs e)
+        {
+            if (dgRegistrarCompra.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay productos para registrar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataTable detalle_compra = new DataTable();
+
+            detalle_compra.Columns.Add("Idproducto", typeof(int));//al momento de ingresar al datatable lo convierte a este tipo de dato
+            detalle_compra.Columns.Add("PrecioCompra", typeof(decimal));
+            detalle_compra.Columns.Add("PrecioVenta", typeof(decimal));
+            detalle_compra.Columns.Add("Cantidad", typeof(int));
+            detalle_compra.Columns.Add("MontoTotal", typeof(decimal));
+
+            foreach (DataGridViewRow row in dgRegistrarCompra.Rows)
+            {
+                detalle_compra.Rows.Add(
+                    new object[]
+                    {
+                        Convert.ToInt32(row.Cells["ID"].Value.ToString()),//por ende no definimos aqui el tipo de dato
+                        row.Cells["colPrecioCompra"].Value.ToString(),
+                        row.Cells["colPrecioVenta"].Value.ToString(),
+                        row.Cells["colCantidad"].Value.ToString(),
+                        row.Cells["colSubtotal"].Value.ToString()
+
+                    });
+            }
+            int idcorrelativo = new CN_compras().OptenerCorrelativo();
+            string numerofactura = string.Format("{0:00000}", idcorrelativo);
+
+            Compra compra = new Compra()
+            {
+                Tipo_factura = ((OpcionCombo)cbfactura.SelectedItem).Texto,
+                Numero_factura = numerofactura,
+                Monto_total = Convert.ToDecimal(txtTotalPagar.Text),
+                oProveedor = new Proveedor() { Id_proveedor = Convert.ToInt32(txtidproveedor.Text) },
+                oUsuario = new Usuario() { Id_usuario = Eusuario.Id_usuario }
+            };
+
+            string mensaje = string.Empty;
+            bool respuesta = new CN_compras().Registrar(compra, detalle_compra, out mensaje);
+
+            if (respuesta)
+            {
+                var result = MessageBox.Show("Numero de compra generada:\n" + numerofactura + "\n\n¿Desea guardar la compra realizada?", "Registrar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    Clipboard.SetText(numerofactura);
+
+                    txtidproveedor.Text = "0";
+                    txtNumDoc.Clear();
+                    txtRazonSoc.Clear();
+                    dgRegistrarCompra.Rows.Clear();
+                    calcularTOTAL();
+                }
+            }
+            else {
+                MessageBox.Show("Operacion cancela","Cancelar",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
         }
     }
 }
