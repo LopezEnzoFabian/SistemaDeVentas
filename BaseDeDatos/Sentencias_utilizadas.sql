@@ -585,7 +585,21 @@ END
 --select * from Usuario
 
 
+/*********************DETALLE DE COMPRA*******************/
 
+SELECT c.id_compra,c.tipoDe_factura,c.numeroDe_factura,c.montoTotal,convert(char(10),c.fecha_registro,103)[fecha_registro],
+u.Nombre_completo,
+pr.DNI,pr.Razon_social
+FROM Compra c
+INNER JOIN Usuario u on u.id_usuario = c.id_usuario
+INNER JOIN Proveedor pr on pr.id_proveedor = c.id_proveedor
+where c.numeroDe_factura = 00001
+
+SELECT p.Nombre,
+dc.precioCompra,dc.cantidad,dc.monto_total
+FROM Detalle_Compra dc
+INNER JOIN producto p on p.id_producto = dc.id_producto 
+where dc.id_compra = 15
 
 
 

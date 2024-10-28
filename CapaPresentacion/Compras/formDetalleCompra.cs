@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Entidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,10 +24,6 @@ namespace CapaPresentacion
 
         }
 
-        private void txtDocNum_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-        }
 
         private void dgDetalleCompra_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -68,16 +66,24 @@ namespace CapaPresentacion
 
         private void ibtnBuscar_Click(object sender, EventArgs e)
         {
-            if (ValidarFiltro())
+            Compra ocompra = new CN_compras().SeleccionarCompra(txtBuscarFactura.Text);
+
+            if (ocompra.Id_compra != 0)
             {
-                MessageBox.Show("Por favor,ingrese el numero de una factura poder realizar la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                txtnumerofactura.Text = ocompra.Numero_factura;
+
+                txtFecha.Text = ocompra.Fecha_registro;
+                txtTIpofactura.Text = ocompra.Tipo_factura;
+                txtUsuariocompra.Text = ocompra.oUsuario.Nombre_completo;
+                txtDNIproveedor.Text = ocompra.oProveedor.DNI;
+                txtRazonSoc.Text = ocompra.oProveedor.RazonSocial;
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontró la compra con el número de factura proporcionado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        public bool ValidarFiltro()
-        {
-            return string.IsNullOrEmpty(txtNumeroFactura.Text);
-        }
+   
     }
 }

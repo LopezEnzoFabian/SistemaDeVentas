@@ -42,9 +42,9 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblDetalleCompra = new System.Windows.Forms.Label();
-            this.ibtnBuscar = new FontAwesome.Sharp.IconButton();
-            this.ibtnLimpiar = new FontAwesome.Sharp.IconButton();
-            this.txtNumeroFactura = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtLimpiar = new FontAwesome.Sharp.IconButton();
+            this.txtBuscarFactura = new System.Windows.Forms.TextBox();
             this.lblDocNum = new System.Windows.Forms.Label();
             this.dgDetalleCompra = new System.Windows.Forms.DataGridView();
             this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -58,6 +58,7 @@
             this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
             this.lblDetallePago = new System.Windows.Forms.Label();
+            this.txtnumerofactura = new System.Windows.Forms.TextBox();
             this.gbInfoProve.SuspendLayout();
             this.gbInfoCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).BeginInit();
@@ -193,45 +194,44 @@
             this.lblDetalleCompra.TabIndex = 5;
             this.lblDetalleCompra.Text = "Detalle de la compra";
             // 
-            // ibtnBuscar
+            // txtBuscar
             // 
-            this.ibtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscar.IconColor = System.Drawing.Color.Aqua;
-            this.ibtnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscar.IconSize = 20;
-            this.ibtnBuscar.Location = new System.Drawing.Point(426, 11);
-            this.ibtnBuscar.Name = "ibtnBuscar";
-            this.ibtnBuscar.Size = new System.Drawing.Size(31, 30);
-            this.ibtnBuscar.TabIndex = 48;
-            this.ibtnBuscar.UseVisualStyleBackColor = false;
-            this.ibtnBuscar.Click += new System.EventHandler(this.ibtnBuscar_Click);
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.txtBuscar.IconColor = System.Drawing.Color.Aqua;
+            this.txtBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.txtBuscar.IconSize = 20;
+            this.txtBuscar.Location = new System.Drawing.Point(426, 11);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(31, 30);
+            this.txtBuscar.TabIndex = 48;
+            this.txtBuscar.UseVisualStyleBackColor = false;
+            this.txtBuscar.Click += new System.EventHandler(this.ibtnBuscar_Click);
             // 
-            // ibtnLimpiar
+            // txtLimpiar
             // 
-            this.ibtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.ibtnLimpiar.IconColor = System.Drawing.Color.Aqua;
-            this.ibtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnLimpiar.IconSize = 20;
-            this.ibtnLimpiar.Location = new System.Drawing.Point(463, 13);
-            this.ibtnLimpiar.Name = "ibtnLimpiar";
-            this.ibtnLimpiar.Size = new System.Drawing.Size(39, 28);
-            this.ibtnLimpiar.TabIndex = 47;
-            this.ibtnLimpiar.UseVisualStyleBackColor = false;
+            this.txtLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.txtLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.txtLimpiar.IconColor = System.Drawing.Color.Aqua;
+            this.txtLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.txtLimpiar.IconSize = 20;
+            this.txtLimpiar.Location = new System.Drawing.Point(463, 13);
+            this.txtLimpiar.Name = "txtLimpiar";
+            this.txtLimpiar.Size = new System.Drawing.Size(39, 28);
+            this.txtLimpiar.TabIndex = 47;
+            this.txtLimpiar.UseVisualStyleBackColor = false;
             // 
-            // txtNumeroFactura
+            // txtBuscarFactura
             // 
-            this.txtNumeroFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroFactura.Location = new System.Drawing.Point(281, 15);
-            this.txtNumeroFactura.Name = "txtNumeroFactura";
-            this.txtNumeroFactura.Size = new System.Drawing.Size(130, 25);
-            this.txtNumeroFactura.TabIndex = 46;
-            this.txtNumeroFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocNum_KeyPress);
+            this.txtBuscarFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarFactura.Location = new System.Drawing.Point(281, 15);
+            this.txtBuscarFactura.Name = "txtBuscarFactura";
+            this.txtBuscarFactura.Size = new System.Drawing.Size(130, 25);
+            this.txtBuscarFactura.TabIndex = 46;
             // 
             // lblDocNum
             // 
@@ -379,6 +379,18 @@
             this.lblDetallePago.TabIndex = 54;
             this.lblDetallePago.Text = "Detalle de pago";
             // 
+            // txtnumerofactura
+            // 
+            this.txtnumerofactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtnumerofactura.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtnumerofactura.Location = new System.Drawing.Point(511, 186);
+            this.txtnumerofactura.Multiline = true;
+            this.txtnumerofactura.Name = "txtnumerofactura";
+            this.txtnumerofactura.ReadOnly = true;
+            this.txtnumerofactura.Size = new System.Drawing.Size(40, 19);
+            this.txtnumerofactura.TabIndex = 55;
+            this.txtnumerofactura.Text = "0";
+            // 
             // formDetalleCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,15 +398,16 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(662, 526);
+            this.Controls.Add(this.txtnumerofactura);
             this.Controls.Add(this.lblDetallePago);
             this.Controls.Add(this.ibtnPDFDetalleCompra);
             this.Controls.Add(this.lblMontoTotal);
             this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.dgDetalleCompra);
             this.Controls.Add(this.lblDocNum);
-            this.Controls.Add(this.ibtnBuscar);
-            this.Controls.Add(this.ibtnLimpiar);
-            this.Controls.Add(this.txtNumeroFactura);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.txtLimpiar);
+            this.Controls.Add(this.txtBuscarFactura);
             this.Controls.Add(this.lblDetalleCompra);
             this.Controls.Add(this.gbInfoProve);
             this.Controls.Add(this.gbInfoCompra);
@@ -425,9 +438,9 @@
         private System.Windows.Forms.Label lblDetalleCompra;
         private System.Windows.Forms.TextBox txtTIpofactura;
         private System.Windows.Forms.TextBox txtUsuariocompra;
-        private FontAwesome.Sharp.IconButton ibtnBuscar;
-        private FontAwesome.Sharp.IconButton ibtnLimpiar;
-        private System.Windows.Forms.TextBox txtNumeroFactura;
+        private FontAwesome.Sharp.IconButton txtBuscar;
+        private FontAwesome.Sharp.IconButton txtLimpiar;
+        private System.Windows.Forms.TextBox txtBuscarFactura;
         private System.Windows.Forms.Label lblDocNum;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.DataGridView dgDetalleCompra;
@@ -443,5 +456,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private System.Windows.Forms.TextBox txtnumerofactura;
     }
 }
