@@ -42,23 +42,21 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblDetalleCompra = new System.Windows.Forms.Label();
-            this.txtBuscar = new FontAwesome.Sharp.IconButton();
-            this.txtLimpiar = new FontAwesome.Sharp.IconButton();
             this.txtBuscarFactura = new System.Windows.Forms.TextBox();
             this.lblDocNum = new System.Windows.Forms.Label();
             this.dgDetalleCompra = new System.Windows.Forms.DataGridView();
-            this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.txtMontoTotal = new System.Windows.Forms.TextBox();
-            this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
             this.lblDetallePago = new System.Windows.Forms.Label();
             this.txtnumerofactura = new System.Windows.Forms.TextBox();
+            this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ibtnPDFDetalleCompra = new FontAwesome.Sharp.IconButton();
+            this.txtBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtLimpiar = new FontAwesome.Sharp.IconButton();
             this.gbInfoProve.SuspendLayout();
             this.gbInfoCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetalleCompra)).BeginInit();
@@ -194,37 +192,6 @@
             this.lblDetalleCompra.TabIndex = 5;
             this.lblDetalleCompra.Text = "Detalle de la compra";
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.txtBuscar.IconColor = System.Drawing.Color.Aqua;
-            this.txtBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.txtBuscar.IconSize = 20;
-            this.txtBuscar.Location = new System.Drawing.Point(426, 11);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(31, 30);
-            this.txtBuscar.TabIndex = 48;
-            this.txtBuscar.UseVisualStyleBackColor = false;
-            this.txtBuscar.Click += new System.EventHandler(this.ibtnBuscar_Click);
-            // 
-            // txtLimpiar
-            // 
-            this.txtLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.txtLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
-            this.txtLimpiar.IconColor = System.Drawing.Color.Aqua;
-            this.txtLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.txtLimpiar.IconSize = 20;
-            this.txtLimpiar.Location = new System.Drawing.Point(463, 13);
-            this.txtLimpiar.Name = "txtLimpiar";
-            this.txtLimpiar.Size = new System.Drawing.Size(39, 28);
-            this.txtLimpiar.TabIndex = 47;
-            this.txtLimpiar.UseVisualStyleBackColor = false;
-            // 
             // txtBuscarFactura
             // 
             this.txtBuscarFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,8 +213,12 @@
             // 
             // dgDetalleCompra
             // 
-            this.dgDetalleCompra.AllowUserToOrderColumns = true;
+            this.dgDetalleCompra.AllowUserToAddRows = false;
+            this.dgDetalleCompra.AllowUserToDeleteRows = false;
+            this.dgDetalleCompra.AllowUserToResizeColumns = false;
+            this.dgDetalleCompra.AllowUserToResizeRows = false;
             this.dgDetalleCompra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgDetalleCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,71 +229,23 @@
             this.dgDetalleCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDetalleCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgDetalleCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colEliminar,
             this.colProducto,
-            this.colDescripcion,
-            this.colCodigo,
-            this.colCant,
             this.colPrecioCompra,
-            this.colSubTotal});
+            this.colCant,
+            this.colSubTotal,
+            this.colEliminar});
+            this.dgDetalleCompra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgDetalleCompra.Location = new System.Drawing.Point(0, 265);
             this.dgDetalleCompra.Name = "dgDetalleCompra";
             this.dgDetalleCompra.ReadOnly = true;
             this.dgDetalleCompra.RowHeadersVisible = false;
-            this.dgDetalleCompra.Size = new System.Drawing.Size(661, 187);
+            this.dgDetalleCompra.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgDetalleCompra.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgDetalleCompra.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgDetalleCompra.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgDetalleCompra.Size = new System.Drawing.Size(662, 197);
             this.dgDetalleCompra.TabIndex = 50;
             this.dgDetalleCompra.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgDetalleCompra_CellPainting);
-            // 
-            // colEliminar
-            // 
-            this.colEliminar.FillWeight = 35F;
-            this.colEliminar.HeaderText = "";
-            this.colEliminar.Name = "colEliminar";
-            this.colEliminar.ReadOnly = true;
-            this.colEliminar.Width = 30;
-            // 
-            // colProducto
-            // 
-            this.colProducto.FillWeight = 84.5141F;
-            this.colProducto.HeaderText = "Producto";
-            this.colProducto.Name = "colProducto";
-            this.colProducto.ReadOnly = true;
-            this.colProducto.Width = 101;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.HeaderText = "Descripcion";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.ReadOnly = true;
-            // 
-            // colCant
-            // 
-            this.colCant.HeaderText = "Cantidad";
-            this.colCant.Name = "colCant";
-            this.colCant.ReadOnly = true;
-            this.colCant.Width = 96;
-            // 
-            // colPrecioCompra
-            // 
-            this.colPrecioCompra.FillWeight = 84.5141F;
-            this.colPrecioCompra.HeaderText = "Precio Compra";
-            this.colPrecioCompra.Name = "colPrecioCompra";
-            this.colPrecioCompra.ReadOnly = true;
-            this.colPrecioCompra.Width = 101;
-            // 
-            // colSubTotal
-            // 
-            this.colSubTotal.FillWeight = 84.5141F;
-            this.colSubTotal.HeaderText = "SubTotal";
-            this.colSubTotal.Name = "colSubTotal";
-            this.colSubTotal.ReadOnly = true;
-            this.colSubTotal.Width = 101;
             // 
             // lblMontoTotal
             // 
@@ -343,30 +266,9 @@
             this.txtMontoTotal.Multiline = true;
             this.txtMontoTotal.Name = "txtMontoTotal";
             this.txtMontoTotal.ReadOnly = true;
-            this.txtMontoTotal.Size = new System.Drawing.Size(75, 30);
+            this.txtMontoTotal.Size = new System.Drawing.Size(81, 20);
             this.txtMontoTotal.TabIndex = 51;
             this.txtMontoTotal.Text = "0";
-            // 
-            // ibtnPDFDetalleCompra
-            // 
-            this.ibtnPDFDetalleCompra.AutoSize = true;
-            this.ibtnPDFDetalleCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnPDFDetalleCompra.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Red;
-            this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnPDFDetalleCompra.IconSize = 30;
-            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(303, 458);
-            this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
-            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(83, 56);
-            this.ibtnPDFDetalleCompra.TabIndex = 53;
-            this.ibtnPDFDetalleCompra.Text = "Descargar";
-            this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = false;
-            this.ibtnPDFDetalleCompra.Click += new System.EventHandler(this.ibtnPDFDetalleCompra_Click);
             // 
             // lblDetallePago
             // 
@@ -390,6 +292,98 @@
             this.txtnumerofactura.Size = new System.Drawing.Size(40, 19);
             this.txtnumerofactura.TabIndex = 55;
             this.txtnumerofactura.Text = "0";
+            // 
+            // colProducto
+            // 
+            this.colProducto.FillWeight = 84.5141F;
+            this.colProducto.HeaderText = "Producto";
+            this.colProducto.Name = "colProducto";
+            this.colProducto.ReadOnly = true;
+            this.colProducto.Width = 101;
+            // 
+            // colPrecioCompra
+            // 
+            this.colPrecioCompra.FillWeight = 84.5141F;
+            this.colPrecioCompra.HeaderText = "Precio Compra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            this.colPrecioCompra.ReadOnly = true;
+            this.colPrecioCompra.Width = 101;
+            // 
+            // colCant
+            // 
+            this.colCant.HeaderText = "Cantidad";
+            this.colCant.Name = "colCant";
+            this.colCant.ReadOnly = true;
+            this.colCant.Width = 96;
+            // 
+            // colSubTotal
+            // 
+            this.colSubTotal.FillWeight = 84.5141F;
+            this.colSubTotal.HeaderText = "SubTotal";
+            this.colSubTotal.Name = "colSubTotal";
+            this.colSubTotal.ReadOnly = true;
+            this.colSubTotal.Width = 101;
+            // 
+            // colEliminar
+            // 
+            this.colEliminar.FillWeight = 35F;
+            this.colEliminar.HeaderText = "";
+            this.colEliminar.Name = "colEliminar";
+            this.colEliminar.ReadOnly = true;
+            this.colEliminar.Width = 30;
+            // 
+            // ibtnPDFDetalleCompra
+            // 
+            this.ibtnPDFDetalleCompra.AutoSize = true;
+            this.ibtnPDFDetalleCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnPDFDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnPDFDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnPDFDetalleCompra.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnPDFDetalleCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.ibtnPDFDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.ibtnPDFDetalleCompra.IconColor = System.Drawing.Color.Red;
+            this.ibtnPDFDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnPDFDetalleCompra.IconSize = 30;
+            this.ibtnPDFDetalleCompra.Location = new System.Drawing.Point(294, 468);
+            this.ibtnPDFDetalleCompra.Name = "ibtnPDFDetalleCompra";
+            this.ibtnPDFDetalleCompra.Size = new System.Drawing.Size(81, 56);
+            this.ibtnPDFDetalleCompra.TabIndex = 53;
+            this.ibtnPDFDetalleCompra.Text = "Descargar";
+            this.ibtnPDFDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ibtnPDFDetalleCompra.UseVisualStyleBackColor = false;
+            this.ibtnPDFDetalleCompra.Click += new System.EventHandler(this.ibtnPDFDetalleCompra_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtBuscar.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.txtBuscar.IconColor = System.Drawing.Color.Aqua;
+            this.txtBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.txtBuscar.IconSize = 20;
+            this.txtBuscar.Location = new System.Drawing.Point(426, 13);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(31, 28);
+            this.txtBuscar.TabIndex = 48;
+            this.txtBuscar.UseVisualStyleBackColor = false;
+            this.txtBuscar.Click += new System.EventHandler(this.ibtnBuscar_Click);
+            // 
+            // txtLimpiar
+            // 
+            this.txtLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.txtLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtLimpiar.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.txtLimpiar.IconColor = System.Drawing.Color.Aqua;
+            this.txtLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.txtLimpiar.IconSize = 20;
+            this.txtLimpiar.Location = new System.Drawing.Point(463, 13);
+            this.txtLimpiar.Name = "txtLimpiar";
+            this.txtLimpiar.Size = new System.Drawing.Size(33, 28);
+            this.txtLimpiar.TabIndex = 47;
+            this.txtLimpiar.UseVisualStyleBackColor = false;
+            this.txtLimpiar.Click += new System.EventHandler(this.txtLimpiar_Click);
             // 
             // formDetalleCompra
             // 
@@ -449,13 +443,11 @@
         private FontAwesome.Sharp.IconButton ibtnPDFDetalleCompra;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lblDetallePago;
-        private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
         private System.Windows.Forms.TextBox txtnumerofactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
     }
 }

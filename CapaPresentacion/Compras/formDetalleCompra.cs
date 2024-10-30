@@ -1,14 +1,18 @@
 ﻿using Capa_Entidad;
 using CapaNegocio;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.tool.xml;
 
 namespace CapaPresentacion
 {
@@ -30,7 +34,7 @@ namespace CapaPresentacion
             if (e.RowIndex < 0)
                 return;
 
-            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
+            if (e.ColumnIndex == 4) // Suponiendo que el botón está en la primera columna
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -48,7 +52,7 @@ namespace CapaPresentacion
                 // Redimensionar la imagen
                 using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
                 {
-                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
+                    e.Graphics.DrawImage(resizedImage, new System.Drawing.Rectangle(x, y, newWidth, newHeight));
                 }
                 e.Handled = true;
             }
@@ -61,6 +65,58 @@ namespace CapaPresentacion
             if (result == DialogResult.Yes)
             {
                 // Aquí llamas a tu método para generar el PDF
+                if(txtTIpofactura.Text == "")
+                {
+                    MessageBox.Show("No se encontraron datos", "Mensaje",MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                string texto_html = Properties.Resources.PlantillaCompra.ToString();
+
+                texto_html = texto_html.Replace("@tipodocumento", txtTIpofactura.Text);
+                texto_html = texto_html.Replace("@numerodocumento", txtnumerofactura.Text);
+
+                texto_html = texto_html.Replace("@docproveedor", txtDNIproveedor.Text);
+                texto_html = texto_html.Replace("@nombreproveedor", txtRazonSoc.Text);
+                texto_html = texto_html.Replace("@fecharegistro", txtFecha.Text);
+                texto_html = texto_html.Replace("@usuarioregistro", txtUsuariocompra.Text);
+
+                string filas = string.Empty;
+                foreach(DataGridViewRow row in dgDetalleCompra.Rows){
+                    filas += "<tr>";
+                    filas += "<td>" + row.Cells["colProducto"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["colPrecioCompra"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["colCant"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["colSubtotal"].Value.ToString() + "</td>";
+                    filas += "</tr>";
+                }
+                texto_html = texto_html.Replace("@filas", filas);
+                texto_html = texto_html.Replace("@montototal", txtMontoTotal.Text);
+
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("Compra_{0}.pdf", txtnumerofactura.Text);
+                savefile.Filter = "Pdf Files|* .pdf";
+
+                if(savefile.ShowDialog() == DialogResult.OK)
+                {
+                    using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                    {
+                        Document pdfdoc = new Document(PageSize.A4,25,25,25,25);
+
+                        PdfWriter writer = PdfWriter.GetInstance(pdfdoc, stream);
+                        pdfdoc.Open();
+
+                        //aca funcion para agregar logo de resource
+
+                        //pasar el texto html a doc pdf
+                        using (StringReader sr = new StringReader(texto_html)) {
+                            XMLWorkerHelper.GetInstance().ParseXHtml(writer,pdfdoc,sr);
+                        }
+                    pdfdoc.Close();//cerrar nuestro documento pdf
+                    stream.Close(); //cerrar archivo de memoria
+                    MessageBox.Show("Documento generado","Aviso",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
@@ -78,12 +134,28 @@ namespace CapaPresentacion
                 txtDNIproveedor.Text = ocompra.oProveedor.DNI;
                 txtRazonSoc.Text = ocompra.oProveedor.RazonSocial;
 
+                dgDetalleCompra.Rows.Clear();
+                foreach(Detalle_compra dc in ocompra.oDetalle_compra) { 
+                       dgDetalleCompra.Rows.Add(new object [] { dc.oProducto.Nombre, dc.Precio_compra,dc.Cantidad, dc.Monto_total });
+                }
+                txtMontoTotal.Text = ocompra.Monto_total.ToString("0.00");
             }
             else
             {
                 MessageBox.Show("No se encontró la compra con el número de factura proporcionado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-   
+
+        private void txtLimpiar_Click(object sender, EventArgs e)
+        {
+            txtFecha.Text = "";
+            txtTIpofactura.Text = "";
+            txtUsuariocompra.Text = "";
+            txtDNIproveedor.Text = "";
+            txtRazonSoc.Text = "";
+
+            dgDetalleCompra.Rows.Clear();
+            txtMontoTotal.Text="0.00";
+        }
     }
 }
