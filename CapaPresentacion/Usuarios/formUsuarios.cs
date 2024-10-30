@@ -114,7 +114,6 @@ namespace CapaPresentacion
 
                 Usuario objusuario = new Usuario()
                 {
-                    Id_usuario = Convert.ToInt32(txtid.Text),
                     DNI = txtDNI.Text,
                     Nombre_completo = txtNombre.Text,
                     Email = txtEmail.Text,
