@@ -73,6 +73,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconoELETROHUB {
+            get {
+                object obj = ResourceManager.GetObject("iconoELETROHUB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_32", resourceCulture);
@@ -84,7 +94,7 @@ namespace CapaPresentacion.Properties {
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html&gt;
         ///&lt;head&gt;
-        ///    &lt;title&gt;Web Page Design&lt;/title&gt;
+        ///    &lt;title&gt;ElectroHub&lt;/title&gt;
         ///    &lt;style&gt;
         ///        table.border {
         ///            border-collapse: collapse;
@@ -104,7 +114,7 @@ namespace CapaPresentacion.Properties {
         ///    &lt;/style&gt;
         ///&lt;/head&gt;
         ///&lt;body&gt;
-        ///    &lt;tab [resto de la cadena truncado]&quot;;.
+        ///    &lt;table bo [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PlantillaCompra {
             get {

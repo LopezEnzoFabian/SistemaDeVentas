@@ -121,8 +121,6 @@ namespace CapaPresentacion.Compras
             //    }
             //}
 
-
-
             DialogResult resultado = MessageBox.Show(
             "¿Está seguro que desea agregar su compra?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

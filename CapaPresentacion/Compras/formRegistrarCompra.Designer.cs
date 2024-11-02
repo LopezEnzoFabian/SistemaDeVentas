@@ -230,9 +230,9 @@
             this.lblProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.Location = new System.Drawing.Point(99, 29);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(58, 15);
+            this.lblProducto.Size = new System.Drawing.Size(65, 15);
             this.lblProducto.TabIndex = 69;
-            this.lblProducto.Text = "Nombre";
+            this.lblProducto.Text = "Producto";
             // 
             // txtProducto
             // 
@@ -424,11 +424,11 @@
             // 
             this.lblNumDoc.AutoSize = true;
             this.lblNumDoc.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumDoc.Location = new System.Drawing.Point(127, 33);
+            this.lblNumDoc.Location = new System.Drawing.Point(127, 36);
             this.lblNumDoc.Name = "lblNumDoc";
-            this.lblNumDoc.Size = new System.Drawing.Size(156, 15);
+            this.lblNumDoc.Size = new System.Drawing.Size(105, 15);
             this.lblNumDoc.TabIndex = 49;
-            this.lblNumDoc.Text = "Numero de documento";
+            this.lblNumDoc.Text = "DNI proveedor";
             // 
             // btnBuscarProveedor
             // 
@@ -468,7 +468,7 @@
             // 
             this.lblRazonSoc.AutoSize = true;
             this.lblRazonSoc.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazonSoc.Location = new System.Drawing.Point(6, 33);
+            this.lblRazonSoc.Location = new System.Drawing.Point(6, 36);
             this.lblRazonSoc.Name = "lblRazonSoc";
             this.lblRazonSoc.Size = new System.Drawing.Size(90, 15);
             this.lblRazonSoc.TabIndex = 1;
@@ -502,7 +502,7 @@
             // 
             this.lblTipoFac.AutoSize = true;
             this.lblTipoFac.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoFac.Location = new System.Drawing.Point(154, 33);
+            this.lblTipoFac.Location = new System.Drawing.Point(154, 36);
             this.lblTipoFac.Name = "lblTipoFac";
             this.lblTipoFac.Size = new System.Drawing.Size(108, 15);
             this.lblTipoFac.TabIndex = 3;
@@ -512,7 +512,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(6, 33);
+            this.lblFecha.Location = new System.Drawing.Point(8, 37);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(45, 15);
             this.lblFecha.TabIndex = 2;

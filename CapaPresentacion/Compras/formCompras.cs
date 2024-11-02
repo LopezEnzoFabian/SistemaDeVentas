@@ -29,7 +29,6 @@ namespace CapaPresentacion
         private void formCompras_Load(object sender, EventArgs e)
         {
             MostrarFormularioPresentacion();
-
         }
         private void AbrirFormulario(IconButton menu, Form formulario)
         {

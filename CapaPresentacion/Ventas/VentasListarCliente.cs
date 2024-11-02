@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Entidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,37 +14,34 @@ namespace CapaPresentacion.Ventas
 {
     public partial class VentasListarCliente : Form
     {
+        public Cliente Ocliente { get; set; }
+
         public VentasListarCliente()
         {
             InitializeComponent();
         }
 
-        private void dgListaClientes_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        private void VentasListarCliente_Load(object sender, EventArgs e)
         {
-            if (e.RowIndex < 0)
-                return;
-
-            if (e.ColumnIndex == 0) // Suponiendo que el botón está en la primera columna
+            foreach (DataGridViewColumn column in dgListaClientes.Columns)
             {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var cellWidth = e.CellBounds.Width;
-                var cellHeight = e.CellBounds.Height;
-                // Dimensiones de la imagen original
-                var originalImage = Properties.Resources.check;
-                // Reducir el tamaño de la imagen
-                int margin = 4; // Ajusta este margen según lo necesites
-                var newWidth = cellWidth - margin;
-                var newHeight = cellHeight - margin;
-                // Calcular la posición centrada
-                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
-                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
-                // Redimensionar la imagen
-                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
+                if (column.Visible == true)
                 {
-                    e.Graphics.DrawImage(resizedImage, new Rectangle(x, y, newWidth, newHeight));
+                    cbFiltro.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
                 }
-                e.Handled = true;
+            }
+            cbFiltro.DisplayMember = "Texto";
+            cbFiltro.ValueMember = "Valor";
+            cbFiltro.SelectedIndex = 0;
+
+            List<Cliente> lista = new CN_cliente().Listar();
+            foreach (Cliente item in lista)
+            {
+                dgListaClientes.Rows.Add(new object[] {
+                    item.Id_cliente,
+                    item.DNI,
+                    item.Nombre_completo,
+                 });
             }
         }
 
@@ -53,11 +52,50 @@ namespace CapaPresentacion.Ventas
                 MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            string columnaFiltro = ((OpcionCombo)cbFiltro.SelectedItem).Valor.ToString();
+            if (dgListaClientes.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgListaClientes.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
         }
 
         public bool ValidarFiltro()
         {
             return string.IsNullOrEmpty(cbFiltro.Text);
+        }
+
+        private void btnclean_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+            foreach (DataGridViewRow row in dgListaClientes.Rows)
+            {
+                row.Visible = true;
+            }
+        }
+
+        private void dgListaClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int irow = e.RowIndex;
+            int icolum = e.ColumnIndex;
+
+            if (irow >= 0 && icolum > 0)
+            {
+
+                Ocliente = new Cliente()
+                {
+                    Id_cliente = Convert.ToInt32(dgListaClientes.Rows[irow].Cells["ID"].Value.ToString()),
+                    DNI = dgListaClientes.Rows[irow].Cells["colDNI"].Value.ToString(),
+                    Nombre_completo = dgListaClientes.Rows[irow].Cells["colNombreCompleto"].Value.ToString()
+                };
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
     }
 }

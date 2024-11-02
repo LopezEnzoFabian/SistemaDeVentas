@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprasListarProducto));
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
@@ -211,6 +212,7 @@
             this.Controls.Add(this.lblFiltrar);
             this.Controls.Add(this.dgListaProductos);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ComprasListarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

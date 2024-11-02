@@ -602,8 +602,59 @@ END
 --where dc.id_compra = 15
 
 
+/*********PROCEDIMIENTO PARA REGISTRAR UNA VENTA**************/
+--DROP TYPE dbo.EDetalleVenta;
+
+CREATE TYPE[dbo].[EDetalleVenta] AS TABLE(
+[Idproducto] int NULL,
+[PrecioVenta] decimal (10,2) null,
+[Cantidad] int null,
+[MontoTotal] decimal (10,2) null
+)
+CREATE PROCEDURE sp_registrar_venta(
+@Idusuario int,
+@Tipofactura varchar(50),
+@Numerofactura varchar(100),
+@DNIcliente varchar(100),
+@NombreCliente varchar(100),
+@MontoPago decimal (10,2),
+@MontoCambio decimal(10,2),
+@MontoTotal decimal (10,2),
+@DetalleVenta [EDetalleVenta] READONLY,
+@Resultado bit output,
+@Mensaje varchar(100) output		
+)
+AS BEGIN
+
+        BEGIN TRY
+		         DECLARE @Idventa int = 0
+				 SET @Resultado = 1
+				 SET @Mensaje = ''
+
+				 begin transaction registro
+
+				 insert into Venta(tipoDe_factura,DNI_cliente,Nombre_cliente,Monto_pago,Monto_cambio,Monto_Total,id_usuario,numeroDe_factura)
+				 values(@Tipofactura,@DNIcliente,@NombreCliente,@MontoPago,@MontoCambio,@MontoTotal,@Idusuario,@Numerofactura)
+
+				 set @Idventa = SCOPE_IDENTITY()--devuelve el ultimo id generado en tabla venta 
+
+				 insert into Detalle_Venta(precioVenta,cantidad,subTotal,id_venta,id_producto)
+				 select PrecioVenta,Cantidad,MontoTotal,@Idventa,Idproducto from @DetalleVenta
+
+				 commit transaction registro
+		END TRY
+
+		BEGIN CATCH
+		           SET @Resultado = 0 
+				   SET @Mensaje = ERROR_MESSAGE()
+		           rollback transaction registro
+		END CATCH
+END
 
 
+--select * from Venta
+--select * from Detalle_Venta
 
 
-
+--update producto set stock = stock - @Cantidad where id_producto = @Idproducto
+--select * from Venta
