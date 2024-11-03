@@ -28,36 +28,6 @@ namespace CapaPresentacion
 
         }
 
-
-        private void dgDetalleCompra_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0)
-                return;
-
-            if (e.ColumnIndex == 4) // Suponiendo que el botón está en la primera columna
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var cellWidth = e.CellBounds.Width;
-                var cellHeight = e.CellBounds.Height;
-                // Dimensiones de la imagen original
-                var originalImage = Properties.Resources.icons8_delete_32;
-                // Reducir el tamaño de la imagen
-                int margin = 4; // Ajusta este margen según lo necesites
-                var newWidth = cellWidth - margin;
-                var newHeight = cellHeight - margin;
-                // Calcular la posición centrada
-                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
-                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
-                // Redimensionar la imagen
-                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
-                {
-                    e.Graphics.DrawImage(resizedImage, new System.Drawing.Rectangle(x, y, newWidth, newHeight));
-                }
-                e.Handled = true;
-            }
-        }
-
         private void ibtnPDFDetalleCompra_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Desea generar un documento PDF de esta compra?", "Generar PDF", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -85,9 +55,9 @@ namespace CapaPresentacion
                 foreach(DataGridViewRow row in dgDetalleCompra.Rows){
                     filas += "<tr>";
                     filas += "<td>" + row.Cells["colProducto"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["colPrecioCompra"].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells["colPrecioCompra"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["colCant"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["colSubtotal"].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells["colSubtotal"].Value.ToString() + "</td>";
                     filas += "</tr>";
                 }
                 texto_html = texto_html.Replace("@filas", filas);
@@ -156,6 +126,35 @@ namespace CapaPresentacion
 
             dgDetalleCompra.Rows.Clear();
             txtMontoTotal.Text="0.00";
+        }
+
+        private void dgDetalleCompra_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (e.ColumnIndex == 4) // Suponiendo que el botón está en la primera columna
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var cellWidth = e.CellBounds.Width;
+                var cellHeight = e.CellBounds.Height;
+                // Dimensiones de la imagen original
+                var originalImage = Properties.Resources.icons8_delete_32;
+                // Reducir el tamaño de la imagen
+                int margin = 4; // Ajusta este margen según lo necesites
+                var newWidth = cellWidth - margin;
+                var newHeight = cellHeight - margin;
+                // Calcular la posición centrada
+                var x = e.CellBounds.Left + (cellWidth - newWidth) / 2;
+                var y = e.CellBounds.Top + (cellHeight - newHeight) / 2;
+                // Redimensionar la imagen
+                using (var resizedImage = new Bitmap(originalImage, new Size(newWidth, newHeight)))
+                {
+                    e.Graphics.DrawImage(resizedImage, new System.Drawing.Rectangle(x, y, newWidth, newHeight));
+                }
+                e.Handled = true;
+            }
         }
     }
 }

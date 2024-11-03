@@ -71,5 +71,10 @@ namespace CapaPresentacion
                 // Aquí llamas a tu método para generar el excel
             }
         }
+
+        private void formEstadisticas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

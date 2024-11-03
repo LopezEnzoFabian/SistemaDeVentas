@@ -56,9 +56,9 @@ namespace CapaPresentacion.Ventas
                 {
                     filas += "<tr>";
                     filas += "<td>" + row.Cells["colProducto"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["colPrecioVenta"].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells["colPrecioVenta"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["colCantidad"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["colSubtotal"].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells["colSubtotal"].Value.ToString() + "</td>";
                     filas += "</tr>";
                 }
                 texto_html = texto_html.Replace("@filas", filas);
