@@ -119,8 +119,8 @@ CREATE TABLE Venta
   CONSTRAINT FK_id_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
 
-ALTER TABLE Venta
-add numeroDe_factura VARCHAR(50) NULL
+--ALTER TABLE Venta
+--add numeroDe_factura VARCHAR(50) NULL
 
 CREATE TABLE Compra
 (

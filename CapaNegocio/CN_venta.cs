@@ -26,15 +26,26 @@ namespace CapaNegocio
         }
 
 
-        public int OptenerCorrelativo()
+        public int ObtenerCorrelativo()
         {
-            return objcd_venta.OptenerCorrelativo();
+            return objcd_venta.ObtenerCorrelativo();
         }
 
         //metodos para hacer el llamado desde nuestra capa de presentacion
         public bool Registrar(Venta obj, DataTable DetalleVenta, out string Mensaje)
         {
             return objcd_venta.Registrar(obj, DetalleVenta, out Mensaje);
+        }
+
+        public Venta SeleccionarVenta(string numero)
+        {
+            Venta Oventa = objcd_venta.SeleccionarVenta(numero);
+            if (Oventa.Id_venta != 0)
+            {
+                List<Detalle_venta> Odetalle_venta = objcd_venta.SeleccionarDetalleVenta(Oventa.Id_venta);
+                Oventa.oDetalle_venta = Odetalle_venta;
+            }
+            return Oventa;
         }
 
     }

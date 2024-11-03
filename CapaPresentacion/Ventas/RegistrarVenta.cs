@@ -198,7 +198,7 @@ namespace CapaPresentacion.Ventas
 
 
             //OBTENER CORRELATIVO
-            int idcorrelativo = new CN_venta().OptenerCorrelativo();
+            int idcorrelativo = new CN_venta().ObtenerCorrelativo();
             string numerofactura = string.Format("{0:00000}", idcorrelativo);
 
             calcularCambio();//actualizar antes de crear una venta

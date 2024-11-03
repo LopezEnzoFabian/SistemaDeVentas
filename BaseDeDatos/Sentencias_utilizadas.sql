@@ -655,6 +655,19 @@ END
 --select * from Venta
 --select * from Detalle_Venta
 
-
 --update producto set stock = stock - @Cantidad where id_producto = @Idproducto
 --select * from Venta
+
+select V.id_venta,u.Nombre_completo,v.Nombre_cliente,v.DNI_cliente,v.tipoDe_factura,v.numeroDe_factura,
+v.Monto_pago,v.Monto_cambio,v.Monto_Total,CONVERT(char(10),v.fecha_registro,103)[fecha_registro]
+from Venta v
+INNER JOIN Usuario u ON u.id_usuario = v.id_usuario
+where v.numeroDe_factura = '00001'
+
+select p.Nombre,dv.precioVenta,dv.cantidad, dv.subTotal,dv.fecha_registro
+from Detalle_Venta dv
+inner join producto p ON p.id_producto = dv.id_producto
+WHERE dv.id_venta = 3
+
+
+select * from Detalle_Venta
