@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRepoCompras = new System.Windows.Forms.Label();
             this.dgReporteCompras = new System.Windows.Forms.DataGridView();
-            this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUsuarioRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumentoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtFechainicio = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +45,20 @@
             this.cbBuscarPor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ibtnBuscaFecha = new FontAwesome.Sharp.IconButton();
+            this.colFechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoDFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumeroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUsuarioRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDNIProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,122 +75,47 @@
             // 
             // dgReporteCompras
             // 
+            this.dgReporteCompras.AllowUserToAddRows = false;
             this.dgReporteCompras.AllowUserToDeleteRows = false;
             this.dgReporteCompras.AllowUserToResizeColumns = false;
             this.dgReporteCompras.AllowUserToResizeRows = false;
             this.dgReporteCompras.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgReporteCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgReporteCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgReporteCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgReporteCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgReporteCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colFechaDeRegistro,
-            this.colNomPro,
-            this.colCate,
-            this.colCodProd,
-            this.colPrecioCom,
+            this.colFechaRegistro,
+            this.colTipoDFactura,
+            this.colNumeroFactura,
             this.colMontoTotal,
-            this.colNumeroDocumento,
-            this.colTipoDocumento,
             this.colUsuarioRegistro,
-            this.colDocumentoProveedor,
-            this.colRazonSocial});
-            this.dgReporteCompras.Location = new System.Drawing.Point(2, 219);
+            this.colDNIProveedor,
+            this.colRazonSocial,
+            this.colCodigoProducto,
+            this.colNombreProducto,
+            this.colCategoria,
+            this.colPrecioCompra,
+            this.colPrecioVenta,
+            this.colCantidad,
+            this.colSubTotal});
+            this.dgReporteCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgReporteCompras.Location = new System.Drawing.Point(0, 219);
             this.dgReporteCompras.Name = "dgReporteCompras";
             this.dgReporteCompras.ReadOnly = true;
             this.dgReporteCompras.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgReporteCompras.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgReporteCompras.Size = new System.Drawing.Size(656, 218);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgReporteCompras.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgReporteCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgReporteCompras.Size = new System.Drawing.Size(658, 236);
             this.dgReporteCompras.TabIndex = 1;
-            // 
-            // colFechaDeRegistro
-            // 
-            this.colFechaDeRegistro.FillWeight = 150F;
-            this.colFechaDeRegistro.HeaderText = "Fecha de registro";
-            this.colFechaDeRegistro.Name = "colFechaDeRegistro";
-            this.colFechaDeRegistro.ReadOnly = true;
-            this.colFechaDeRegistro.Width = 150;
-            // 
-            // colNomPro
-            // 
-            this.colNomPro.FillWeight = 150F;
-            this.colNomPro.HeaderText = "Nombre de producto";
-            this.colNomPro.Name = "colNomPro";
-            this.colNomPro.ReadOnly = true;
-            this.colNomPro.Width = 150;
-            // 
-            // colCate
-            // 
-            this.colCate.HeaderText = "Categoria";
-            this.colCate.Name = "colCate";
-            this.colCate.ReadOnly = true;
-            // 
-            // colCodProd
-            // 
-            this.colCodProd.FillWeight = 150F;
-            this.colCodProd.HeaderText = "Codigo de producto";
-            this.colCodProd.Name = "colCodProd";
-            this.colCodProd.ReadOnly = true;
-            this.colCodProd.Width = 150;
-            // 
-            // colPrecioCom
-            // 
-            this.colPrecioCom.FillWeight = 150F;
-            this.colPrecioCom.HeaderText = "Precio compra";
-            this.colPrecioCom.Name = "colPrecioCom";
-            this.colPrecioCom.ReadOnly = true;
-            this.colPrecioCom.Width = 150;
-            // 
-            // colMontoTotal
-            // 
-            this.colMontoTotal.HeaderText = "Monto Total";
-            this.colMontoTotal.Name = "colMontoTotal";
-            this.colMontoTotal.ReadOnly = true;
-            // 
-            // colNumeroDocumento
-            // 
-            this.colNumeroDocumento.FillWeight = 150F;
-            this.colNumeroDocumento.HeaderText = "Numero de factura";
-            this.colNumeroDocumento.Name = "colNumeroDocumento";
-            this.colNumeroDocumento.ReadOnly = true;
-            this.colNumeroDocumento.Width = 150;
-            // 
-            // colTipoDocumento
-            // 
-            this.colTipoDocumento.FillWeight = 150F;
-            this.colTipoDocumento.HeaderText = "TIpo  de factura";
-            this.colTipoDocumento.Name = "colTipoDocumento";
-            this.colTipoDocumento.ReadOnly = true;
-            this.colTipoDocumento.Width = 150;
-            // 
-            // colUsuarioRegistro
-            // 
-            this.colUsuarioRegistro.FillWeight = 150F;
-            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
-            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
-            this.colUsuarioRegistro.ReadOnly = true;
-            this.colUsuarioRegistro.Width = 150;
-            // 
-            // colDocumentoProveedor
-            // 
-            this.colDocumentoProveedor.FillWeight = 150F;
-            this.colDocumentoProveedor.HeaderText = "DNI del proveedor";
-            this.colDocumentoProveedor.Name = "colDocumentoProveedor";
-            this.colDocumentoProveedor.ReadOnly = true;
-            this.colDocumentoProveedor.Width = 150;
-            // 
-            // colRazonSocial
-            // 
-            this.colRazonSocial.HeaderText = "Razon Social";
-            this.colRazonSocial.Name = "colRazonSocial";
-            this.colRazonSocial.ReadOnly = true;
             // 
             // label2
             // 
@@ -213,16 +141,20 @@
             // 
             // dtFechainicio
             // 
+            this.dtFechainicio.CustomFormat = "dd/MM/yyyy";
+            this.dtFechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechainicio.Location = new System.Drawing.Point(261, 73);
             this.dtFechainicio.Name = "dtFechainicio";
-            this.dtFechainicio.Size = new System.Drawing.Size(198, 20);
+            this.dtFechainicio.Size = new System.Drawing.Size(100, 20);
             this.dtFechainicio.TabIndex = 4;
             // 
             // dtFechafin
             // 
+            this.dtFechafin.CustomFormat = "dd/MM/yyyy";
+            this.dtFechafin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechafin.Location = new System.Drawing.Point(261, 99);
             this.dtFechafin.Name = "dtFechafin";
-            this.dtFechafin.Size = new System.Drawing.Size(198, 20);
+            this.dtFechafin.Size = new System.Drawing.Size(100, 20);
             this.dtFechafin.TabIndex = 5;
             // 
             // lblProveedor
@@ -281,14 +213,17 @@
             // 
             this.ibtnBuscarPor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ibtnBuscarPor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnBuscarPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ibtnBuscarPor.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.ibtnBuscarPor.IconColor = System.Drawing.Color.Cyan;
             this.ibtnBuscarPor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnBuscarPor.IconSize = 20;
-            this.ibtnBuscarPor.Location = new System.Drawing.Point(282, 186);
+            this.ibtnBuscarPor.Location = new System.Drawing.Point(290, 186);
             this.ibtnBuscarPor.Name = "ibtnBuscarPor";
-            this.ibtnBuscarPor.Size = new System.Drawing.Size(32, 27);
+            this.ibtnBuscarPor.Size = new System.Drawing.Size(71, 27);
             this.ibtnBuscarPor.TabIndex = 70;
+            this.ibtnBuscarPor.Text = "Buscar";
+            this.ibtnBuscarPor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnBuscarPor.UseVisualStyleBackColor = false;
             this.ibtnBuscarPor.Click += new System.EventHandler(this.ibtnBuscarPor_Click);
             // 
@@ -302,12 +237,6 @@
             // cbBuscarPor
             // 
             this.cbBuscarPor.FormattingEnabled = true;
-            this.cbBuscarPor.Items.AddRange(new object[] {
-            "Fecha de registro",
-            "Nombre de producto",
-            "DNI proveedor",
-            "Usuario",
-            "Categoria"});
             this.cbBuscarPor.Location = new System.Drawing.Point(12, 192);
             this.cbBuscarPor.Name = "cbBuscarPor";
             this.cbBuscarPor.Size = new System.Drawing.Size(134, 21);
@@ -328,16 +257,119 @@
             // 
             this.ibtnBuscaFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.ibtnBuscaFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnBuscaFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ibtnBuscaFecha.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.ibtnBuscaFecha.IconColor = System.Drawing.Color.Cyan;
             this.ibtnBuscaFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnBuscaFecha.IconSize = 20;
-            this.ibtnBuscaFecha.Location = new System.Drawing.Point(478, 78);
+            this.ibtnBuscaFecha.Location = new System.Drawing.Point(401, 92);
             this.ibtnBuscaFecha.Name = "ibtnBuscaFecha";
-            this.ibtnBuscaFecha.Size = new System.Drawing.Size(32, 27);
+            this.ibtnBuscaFecha.Size = new System.Drawing.Size(71, 27);
             this.ibtnBuscaFecha.TabIndex = 73;
+            this.ibtnBuscaFecha.Text = "Buscar";
+            this.ibtnBuscaFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnBuscaFecha.UseVisualStyleBackColor = false;
             this.ibtnBuscaFecha.Click += new System.EventHandler(this.ibtnBuscaFecha_Click);
+            // 
+            // colFechaRegistro
+            // 
+            this.colFechaRegistro.FillWeight = 150F;
+            this.colFechaRegistro.HeaderText = "Fecha de registro";
+            this.colFechaRegistro.Name = "colFechaRegistro";
+            this.colFechaRegistro.ReadOnly = true;
+            this.colFechaRegistro.Width = 150;
+            // 
+            // colTipoDFactura
+            // 
+            this.colTipoDFactura.FillWeight = 150F;
+            this.colTipoDFactura.HeaderText = "TIpo de factura";
+            this.colTipoDFactura.Name = "colTipoDFactura";
+            this.colTipoDFactura.ReadOnly = true;
+            this.colTipoDFactura.Width = 150;
+            // 
+            // colNumeroFactura
+            // 
+            this.colNumeroFactura.FillWeight = 150F;
+            this.colNumeroFactura.HeaderText = "Numero de factura";
+            this.colNumeroFactura.Name = "colNumeroFactura";
+            this.colNumeroFactura.ReadOnly = true;
+            this.colNumeroFactura.Width = 150;
+            // 
+            // colMontoTotal
+            // 
+            this.colMontoTotal.HeaderText = "Monto Total";
+            this.colMontoTotal.Name = "colMontoTotal";
+            this.colMontoTotal.ReadOnly = true;
+            // 
+            // colUsuarioRegistro
+            // 
+            this.colUsuarioRegistro.FillWeight = 150F;
+            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
+            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
+            this.colUsuarioRegistro.ReadOnly = true;
+            this.colUsuarioRegistro.Width = 150;
+            // 
+            // colDNIProveedor
+            // 
+            this.colDNIProveedor.FillWeight = 150F;
+            this.colDNIProveedor.HeaderText = "DNI del proveedor";
+            this.colDNIProveedor.Name = "colDNIProveedor";
+            this.colDNIProveedor.ReadOnly = true;
+            this.colDNIProveedor.Width = 150;
+            // 
+            // colRazonSocial
+            // 
+            this.colRazonSocial.HeaderText = "Razon Social";
+            this.colRazonSocial.Name = "colRazonSocial";
+            this.colRazonSocial.ReadOnly = true;
+            // 
+            // colCodigoProducto
+            // 
+            this.colCodigoProducto.FillWeight = 150F;
+            this.colCodigoProducto.HeaderText = "Codigo de producto";
+            this.colCodigoProducto.Name = "colCodigoProducto";
+            this.colCodigoProducto.ReadOnly = true;
+            this.colCodigoProducto.Width = 150;
+            // 
+            // colNombreProducto
+            // 
+            this.colNombreProducto.FillWeight = 150F;
+            this.colNombreProducto.HeaderText = "Nombre de producto";
+            this.colNombreProducto.Name = "colNombreProducto";
+            this.colNombreProducto.ReadOnly = true;
+            this.colNombreProducto.Width = 150;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
+            // 
+            // colPrecioCompra
+            // 
+            this.colPrecioCompra.FillWeight = 150F;
+            this.colPrecioCompra.HeaderText = "Precio compra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            this.colPrecioCompra.ReadOnly = true;
+            this.colPrecioCompra.Width = 150;
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.HeaderText = "Precio venta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
+            // colSubTotal
+            // 
+            this.colSubTotal.HeaderText = "Sub total";
+            this.colSubTotal.Name = "colSubTotal";
+            this.colSubTotal.ReadOnly = true;
             // 
             // formReporteCompra
             // 
@@ -363,6 +395,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formReporteCompra";
             this.Text = "Reporte de Compras";
+            this.Load += new System.EventHandler(this.formReporteCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -386,16 +419,19 @@
         private System.Windows.Forms.ComboBox cbBuscarPor;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton ibtnBuscaFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNomPro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumeroFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMontoTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumeroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuarioRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDocumentoProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDNIProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigoProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
     }
 }

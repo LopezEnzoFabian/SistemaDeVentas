@@ -658,16 +658,89 @@ END
 --update producto set stock = stock - @Cantidad where id_producto = @Idproducto
 --select * from Venta
 
-select V.id_venta,u.Nombre_completo,v.Nombre_cliente,v.DNI_cliente,v.tipoDe_factura,v.numeroDe_factura,
-v.Monto_pago,v.Monto_cambio,v.Monto_Total,CONVERT(char(10),v.fecha_registro,103)[fecha_registro]
-from Venta v
-INNER JOIN Usuario u ON u.id_usuario = v.id_usuario
-where v.numeroDe_factura = '00001'
 
-select p.Nombre,dv.precioVenta,dv.cantidad, dv.subTotal,dv.fecha_registro
-from Detalle_Venta dv
-inner join producto p ON p.id_producto = dv.id_producto
-WHERE dv.id_venta = 3
+/**************CONSULTAS PARA VENTAS Y DETALLE DE VENTAS***************/
+
+--select V.id_venta,u.Nombre_completo,v.Nombre_cliente,v.DNI_cliente,v.tipoDe_factura,v.numeroDe_factura,
+--v.Monto_pago,v.Monto_cambio,v.Monto_Total,CONVERT(char(10),v.fecha_registro,103)[fecha_registro]
+--from Venta v
+--INNER JOIN Usuario u ON u.id_usuario = v.id_usuario
+--where v.numeroDe_factura = '00001'
+
+--select p.Nombre,dv.precioVenta,dv.cantidad, dv.subTotal,dv.fecha_registro
+--from Detalle_Venta dv
+--inner join producto p ON p.id_producto = dv.id_producto
+--WHERE dv.id_venta = 3
 
 
-select * from Detalle_Venta
+--select * from Detalle_Venta
+
+
+
+/**************CONSULTAS PARA REPORTES DE COMPRAS Y REPORTES DE VENTAS***************/
+
+
+--select CONVERT(char (10),c.fecha_registro,103)[fecha_registro],c.tipoDe_factura,c.numeroDe_factura,c.montoTotal,
+--u.Nombre_completo,
+--p.DNI,p.Razon_social,
+--pr.codigo,pr.Nombre,
+--ct.descripcion,dc.precioCompra,dc.precioVenta,dc.monto_total
+--from Compra c
+--inner join Usuario u on u.id_usuario = c.id_usuario
+--inner join Proveedor p on p.id_proveedor = c.id_proveedor
+--inner join Detalle_Compra dc on dc.id_compra = c.id_compra
+--inner join producto pr on pr.id_producto = dc.id_producto
+--inner join categoria ct on ct.id_categoria = pr.id_categoria
+--where TRY_CONVERT(date, c.fecha_registro, 103) BETWEEN '2024-10-27' AND '2024-11-02' 
+
+---PROCEDIMIENTO ALMACENADO PARA REPORTES DE COMPRAS
+
+CREATE PROCEDURE sp_reporte_compra(
+@fechainicio varchar (50),
+@fechafin varchar (50),
+@idproveedor int
+)
+as 
+begin
+    set dateformat dmy;
+    select 
+    CONVERT(char (10),c.fecha_registro,103)[fecha_registro],c.tipoDe_factura,c.numeroDe_factura,c.montoTotal,
+    u.Nombre_completo,
+    p.DNI,p.Razon_social,
+    pr.codigo,pr.Nombre,
+    ct.descripcion,dc.precioCompra,dc.precioVenta,dc.cantidad,dc.monto_total
+    from Compra c
+       inner join Usuario u on u.id_usuario = c.id_usuario
+       inner join Proveedor p on p.id_proveedor = c.id_proveedor
+       inner join Detalle_Compra dc on dc.id_compra = c.id_compra
+       inner join producto pr on pr.id_producto = dc.id_producto
+       inner join categoria ct on ct.id_categoria = pr.id_categoria
+    where TRY_CONVERT(date, c.fecha_registro, 103) BETWEEN @fechainicio AND @fechafin
+	and p.id_proveedor = iif(@idproveedor = 0,p.id_proveedor,@idproveedor)
+end
+
+--prueba
+--execute sp_reporte_compra '2024-10-27','2024-11-02',1
+
+CREATE PROCEDURE sp_reporte_venta(
+@fechainicio varchar (50),
+@fechafin varchar (50)
+)
+as 
+begin
+    set dateformat dmy;
+    select 
+    CONVERT(char (10),v.fecha_registro,103)[fecha_registro],v.tipoDe_factura,v.numeroDe_factura,v.Monto_Total,
+    u.Nombre_completo,
+    v.DNI_cliente,v.Nombre_cliente,
+    pr.codigo,pr.Nombre,ct.descripcion,dv.precioVenta,dv.cantidad,dv.subTotal
+    from Venta v
+       inner join Usuario u on u.id_usuario = v.id_usuario
+       inner join Detalle_Venta dv on dv.id_venta = v.id_venta
+       inner join producto pr on pr.id_producto = dv.id_producto
+       inner join categoria ct on ct.id_categoria = pr.id_categoria
+    where TRY_CONVERT(date, v.fecha_registro, 103) BETWEEN @fechainicio AND @fechafin
+end
+
+--prueba
+--execute sp_reporte_venta '2024-10-27','2024-11-02'
