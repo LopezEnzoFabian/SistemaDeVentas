@@ -107,7 +107,6 @@ CREATE TABLE Venta
 (
   id_venta INT IDENTITY,
   tipoDe_factura VARCHAR(50) NULL,
-  numeroDe_factura VARCHAR(50) NULL,
   DNI_cliente VARCHAR(100),
   Nombre_cliente VARCHAR(100) NOT NULL,
   Monto_pago DECIMAL(10,2),
@@ -115,12 +114,11 @@ CREATE TABLE Venta
   Monto_Total DECIMAL(10,2),
   fecha_registro DATETIME DEFAULT GETDATE(),
   id_usuario INT NOT NULL,
+  numeroDe_factura VARCHAR(50) NULL,
   CONSTRAINT PK_id_venta PRIMARY KEY (id_venta),
   CONSTRAINT FK_id_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
 
---ALTER TABLE Venta
---add numeroDe_factura VARCHAR(50) NULL
 
 CREATE TABLE Compra
 (

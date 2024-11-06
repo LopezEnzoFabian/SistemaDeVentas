@@ -744,3 +744,8 @@ end
 
 --prueba
 --execute sp_reporte_venta '2024-10-27','2024-11-02'
+
+delete * from Compra
+where numeroDe_factura = null
+
+
