@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Entidad;
 using CapaNegocio;
-using CapaPresentacion.Backup;
+
 
 
 namespace CapaPresentacion
@@ -185,7 +185,7 @@ namespace CapaPresentacion
 
         private void menuBackup_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new formBackup());
+            AbrirFormulario((IconMenuItem)sender, new formBackUP());
         }
     }
 }

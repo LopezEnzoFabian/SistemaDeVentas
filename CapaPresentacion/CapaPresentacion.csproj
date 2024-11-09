@@ -236,12 +236,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backup\formBackup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Backup\formBackup.Designer.cs">
-      <DependentUpon>formBackup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Compras\ComprasListarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +253,12 @@
     </Compile>
     <Compile Include="Compras\formRegistrarCompra.Designer.cs">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBackUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBackUP.Designer.cs">
+      <DependentUpon>formBackUP.cs</DependentUpon>
     </Compile>
     <Compile Include="formEstadisticas.cs">
       <SubType>Form</SubType>
@@ -405,9 +405,6 @@
     <Compile Include="Ventas\VentasListarProducto.Designer.cs">
       <DependentUpon>VentasListarProducto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Backup\formBackup.resx">
-      <DependentUpon>formBackup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Compras\ComprasListarProducto.resx">
       <DependentUpon>ComprasListarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\formRegistrarCompra.resx">
       <DependentUpon>formRegistrarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBackUP.resx">
+      <DependentUpon>formBackUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formEstadisticas.resx">
       <DependentUpon>formEstadisticas.cs</DependentUpon>
