@@ -46,6 +46,7 @@
             this.barraDeMenus = new System.Windows.Forms.MenuStrip();
             this.menuProductosVer = new FontAwesome.Sharp.IconMenuItem();
             this.menuEstadisticas = new FontAwesome.Sharp.IconMenuItem();
+            this.menuBackup = new FontAwesome.Sharp.IconMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.barraDeMenus.SuspendLayout();
             this.SuspendLayout();
@@ -108,7 +109,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(16, 455);
+            this.label1.Location = new System.Drawing.Point(12, 475);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 4;
@@ -119,7 +120,7 @@
             this.lblUSER.AutoSize = true;
             this.lblUSER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUSER.ForeColor = System.Drawing.Color.Lime;
-            this.lblUSER.Location = new System.Drawing.Point(16, 479);
+            this.lblUSER.Location = new System.Drawing.Point(12, 499);
             this.lblUSER.Name = "lblUSER";
             this.lblUSER.Size = new System.Drawing.Size(58, 16);
             this.lblUSER.TabIndex = 5;
@@ -225,7 +226,7 @@
             // menuAcercade
             // 
             this.menuAcercade.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.menuAcercade.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.menuAcercade.IconChar = FontAwesome.Sharp.IconChar.Image;
             this.menuAcercade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.menuAcercade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuAcercade.IconSize = 55;
@@ -252,11 +253,12 @@
             this.menuReportes,
             this.menuProductosVer,
             this.menuEstadisticas,
-            this.menuAcercade});
+            this.menuAcercade,
+            this.menuBackup});
             this.barraDeMenus.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.barraDeMenus.Location = new System.Drawing.Point(-4, 193);
             this.barraDeMenus.Name = "barraDeMenus";
-            this.barraDeMenus.Size = new System.Drawing.Size(173, 252);
+            this.barraDeMenus.Size = new System.Drawing.Size(173, 274);
             this.barraDeMenus.TabIndex = 2;
             // 
             // menuProductosVer
@@ -283,6 +285,18 @@
             this.menuEstadisticas.Text = "Estadisticas";
             this.menuEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menuEstadisticas.Click += new System.EventHandler(this.menuEstadisticas_Click);
+            // 
+            // menuBackup
+            // 
+            this.menuBackup.ForeColor = System.Drawing.Color.White;
+            this.menuBackup.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.menuBackup.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.menuBackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuBackup.Name = "menuBackup";
+            this.menuBackup.Size = new System.Drawing.Size(166, 24);
+            this.menuBackup.Text = "Back up";
+            this.menuBackup.Click += new System.EventHandler(this.menuBackup_Click);
             // 
             // Inicio
             // 
@@ -331,6 +345,7 @@
         private FontAwesome.Sharp.IconMenuItem menuVerProductos;
         private FontAwesome.Sharp.IconMenuItem menuProductosVer;
         private FontAwesome.Sharp.IconMenuItem menuEstadisticas;
+        private FontAwesome.Sharp.IconMenuItem menuBackup;
     }
 }
 

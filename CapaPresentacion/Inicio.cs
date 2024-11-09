@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Entidad;
 using CapaNegocio;
+using CapaPresentacion.Backup;
 
 
 namespace CapaPresentacion
@@ -43,7 +44,8 @@ namespace CapaPresentacion
             //{
             //   menuVentas.Visible = false;
             //   menuEstadisticas.Visible = false;
-               
+            //   menuBackup.Visible=false;
+
             //}
             //if (usuarioActual.oRol.Id_rol == 2) //vendedor
             //{
@@ -53,6 +55,7 @@ namespace CapaPresentacion
             //    menuProveedores.Visible = false;
             //    menuProductos.Visible = false;
             //    menuEstadisticas.Visible =false;
+            //    menuBackup.Visible=false;
             //}
             //if (usuarioActual.oRol.Id_rol == 3)//supervisor
             //{
@@ -178,6 +181,11 @@ namespace CapaPresentacion
             presentacionForm.Dock = DockStyle.Fill;
             contenedor.Controls.Add(presentacionForm);
             presentacionForm.Show();
+        }
+
+        private void menuBackup_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new formBackup());
         }
     }
 }

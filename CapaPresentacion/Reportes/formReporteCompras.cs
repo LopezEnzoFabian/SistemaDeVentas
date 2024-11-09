@@ -29,7 +29,7 @@ namespace CapaPresentacion.Reportes
             cbProveedor.Items.Add(new OpcionCombo() { Valor = 0, Texto = "TODOS" }); //0 es el valor que va a ser enviado a nuestro sp_compra nos permite traer todas la comprar con idproveedor 0
 
             //traer datos a combo box 
-            foreach(Proveedor item in lista)
+            foreach (Proveedor item in lista)
             {
                 cbProveedor.Items.Add(new OpcionCombo() { Valor = item.Id_proveedor, Texto = item.RazonSocial });
             }

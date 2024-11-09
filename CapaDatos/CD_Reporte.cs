@@ -96,7 +96,7 @@ namespace CapaDatos
                                 Fecha_registro = dr["fecha_registro"].ToString(),
                                 Tipo_factura = dr["tipoDe_factura"].ToString(),
                                 Numero_factura = dr["numeroDe_factura"].ToString(),
-                                Monto_total = dr["montoTotal"].ToString(),
+                                Monto_total = dr["Monto_Total"].ToString(),
                                 Usuario_registro = dr["Nombre_completo"].ToString(),
                                 Dni_cliente= dr["DNI_cliente"].ToString(),
                                 Nombre_cliente = dr["Nombre_cliente"].ToString(),
