@@ -32,20 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRepoCompras = new System.Windows.Forms.Label();
             this.dgReporteCompras = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtFechainicio = new System.Windows.Forms.DateTimePicker();
-            this.dtFechafin = new System.Windows.Forms.DateTimePicker();
-            this.lblProveedor = new System.Windows.Forms.Label();
-            this.cbProveedor = new System.Windows.Forms.ComboBox();
-            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
-            this.lblRV = new System.Windows.Forms.Label();
-            this.ibtnBuscarPor = new FontAwesome.Sharp.IconButton();
-            this.txtBuscarPor = new System.Windows.Forms.TextBox();
-            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ibtnBuscaFecha = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.colFechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +46,21 @@
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtFechainicio = new System.Windows.Forms.DateTimePicker();
+            this.dtFechafin = new System.Windows.Forms.DateTimePicker();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.cbProveedor = new System.Windows.Forms.ComboBox();
+            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
+            this.lblRV = new System.Windows.Forms.Label();
+            this.ibtnBuscarPor = new FontAwesome.Sharp.IconButton();
+            this.txtBuscarPor = new System.Windows.Forms.TextBox();
+            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ibtnBuscaFecha = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnclean = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteCompras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,106 @@
             this.dgReporteCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgReporteCompras.Size = new System.Drawing.Size(658, 309);
             this.dgReporteCompras.TabIndex = 1;
+            // 
+            // colFechaRegistro
+            // 
+            this.colFechaRegistro.FillWeight = 150F;
+            this.colFechaRegistro.HeaderText = "Fecha de registro";
+            this.colFechaRegistro.Name = "colFechaRegistro";
+            this.colFechaRegistro.ReadOnly = true;
+            this.colFechaRegistro.Width = 150;
+            // 
+            // colTipoDFactura
+            // 
+            this.colTipoDFactura.FillWeight = 150F;
+            this.colTipoDFactura.HeaderText = "TIpo de factura";
+            this.colTipoDFactura.Name = "colTipoDFactura";
+            this.colTipoDFactura.ReadOnly = true;
+            this.colTipoDFactura.Width = 150;
+            // 
+            // colNumeroFactura
+            // 
+            this.colNumeroFactura.FillWeight = 150F;
+            this.colNumeroFactura.HeaderText = "Numero de factura";
+            this.colNumeroFactura.Name = "colNumeroFactura";
+            this.colNumeroFactura.ReadOnly = true;
+            this.colNumeroFactura.Width = 150;
+            // 
+            // colMontoTotal
+            // 
+            this.colMontoTotal.HeaderText = "Monto Total";
+            this.colMontoTotal.Name = "colMontoTotal";
+            this.colMontoTotal.ReadOnly = true;
+            // 
+            // colUsuarioRegistro
+            // 
+            this.colUsuarioRegistro.FillWeight = 150F;
+            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
+            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
+            this.colUsuarioRegistro.ReadOnly = true;
+            this.colUsuarioRegistro.Width = 150;
+            // 
+            // colDNIProveedor
+            // 
+            this.colDNIProveedor.FillWeight = 150F;
+            this.colDNIProveedor.HeaderText = "DNI del proveedor";
+            this.colDNIProveedor.Name = "colDNIProveedor";
+            this.colDNIProveedor.ReadOnly = true;
+            this.colDNIProveedor.Width = 150;
+            // 
+            // colRazonSocial
+            // 
+            this.colRazonSocial.HeaderText = "Razon Social";
+            this.colRazonSocial.Name = "colRazonSocial";
+            this.colRazonSocial.ReadOnly = true;
+            // 
+            // colCodigoProducto
+            // 
+            this.colCodigoProducto.FillWeight = 150F;
+            this.colCodigoProducto.HeaderText = "Codigo de producto";
+            this.colCodigoProducto.Name = "colCodigoProducto";
+            this.colCodigoProducto.ReadOnly = true;
+            this.colCodigoProducto.Width = 150;
+            // 
+            // colNombreProducto
+            // 
+            this.colNombreProducto.FillWeight = 150F;
+            this.colNombreProducto.HeaderText = "Nombre de producto";
+            this.colNombreProducto.Name = "colNombreProducto";
+            this.colNombreProducto.ReadOnly = true;
+            this.colNombreProducto.Width = 150;
+            // 
+            // colCategoria
+            // 
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
+            // 
+            // colPrecioCompra
+            // 
+            this.colPrecioCompra.FillWeight = 150F;
+            this.colPrecioCompra.HeaderText = "Precio compra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            this.colPrecioCompra.ReadOnly = true;
+            this.colPrecioCompra.Width = 150;
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.HeaderText = "Precio venta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
+            // colSubTotal
+            // 
+            this.colSubTotal.HeaderText = "Sub total";
+            this.colSubTotal.Name = "colSubTotal";
+            this.colSubTotal.ReadOnly = true;
             // 
             // label2
             // 
@@ -283,105 +384,22 @@
             this.label4.TabIndex = 77;
             this.label4.Text = "Generar archivo";
             // 
-            // colFechaRegistro
+            // btnclean
             // 
-            this.colFechaRegistro.FillWeight = 150F;
-            this.colFechaRegistro.HeaderText = "Fecha de registro";
-            this.colFechaRegistro.Name = "colFechaRegistro";
-            this.colFechaRegistro.ReadOnly = true;
-            this.colFechaRegistro.Width = 150;
-            // 
-            // colTipoDFactura
-            // 
-            this.colTipoDFactura.FillWeight = 150F;
-            this.colTipoDFactura.HeaderText = "TIpo de factura";
-            this.colTipoDFactura.Name = "colTipoDFactura";
-            this.colTipoDFactura.ReadOnly = true;
-            this.colTipoDFactura.Width = 150;
-            // 
-            // colNumeroFactura
-            // 
-            this.colNumeroFactura.FillWeight = 150F;
-            this.colNumeroFactura.HeaderText = "Numero de factura";
-            this.colNumeroFactura.Name = "colNumeroFactura";
-            this.colNumeroFactura.ReadOnly = true;
-            this.colNumeroFactura.Width = 150;
-            // 
-            // colMontoTotal
-            // 
-            this.colMontoTotal.HeaderText = "Monto Total";
-            this.colMontoTotal.Name = "colMontoTotal";
-            this.colMontoTotal.ReadOnly = true;
-            // 
-            // colUsuarioRegistro
-            // 
-            this.colUsuarioRegistro.FillWeight = 150F;
-            this.colUsuarioRegistro.HeaderText = "Usuario Registro";
-            this.colUsuarioRegistro.Name = "colUsuarioRegistro";
-            this.colUsuarioRegistro.ReadOnly = true;
-            this.colUsuarioRegistro.Width = 150;
-            // 
-            // colDNIProveedor
-            // 
-            this.colDNIProveedor.FillWeight = 150F;
-            this.colDNIProveedor.HeaderText = "DNI del proveedor";
-            this.colDNIProveedor.Name = "colDNIProveedor";
-            this.colDNIProveedor.ReadOnly = true;
-            this.colDNIProveedor.Width = 150;
-            // 
-            // colRazonSocial
-            // 
-            this.colRazonSocial.HeaderText = "Razon Social";
-            this.colRazonSocial.Name = "colRazonSocial";
-            this.colRazonSocial.ReadOnly = true;
-            // 
-            // colCodigoProducto
-            // 
-            this.colCodigoProducto.FillWeight = 150F;
-            this.colCodigoProducto.HeaderText = "Codigo de producto";
-            this.colCodigoProducto.Name = "colCodigoProducto";
-            this.colCodigoProducto.ReadOnly = true;
-            this.colCodigoProducto.Width = 150;
-            // 
-            // colNombreProducto
-            // 
-            this.colNombreProducto.FillWeight = 150F;
-            this.colNombreProducto.HeaderText = "Nombre de producto";
-            this.colNombreProducto.Name = "colNombreProducto";
-            this.colNombreProducto.ReadOnly = true;
-            this.colNombreProducto.Width = 150;
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoria";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.ReadOnly = true;
-            // 
-            // colPrecioCompra
-            // 
-            this.colPrecioCompra.FillWeight = 150F;
-            this.colPrecioCompra.HeaderText = "Precio compra";
-            this.colPrecioCompra.Name = "colPrecioCompra";
-            this.colPrecioCompra.ReadOnly = true;
-            this.colPrecioCompra.Width = 150;
-            // 
-            // colPrecioVenta
-            // 
-            this.colPrecioVenta.HeaderText = "Precio venta";
-            this.colPrecioVenta.Name = "colPrecioVenta";
-            this.colPrecioVenta.ReadOnly = true;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            // 
-            // colSubTotal
-            // 
-            this.colSubTotal.HeaderText = "Sub total";
-            this.colSubTotal.Name = "colSubTotal";
-            this.colSubTotal.ReadOnly = true;
+            this.btnclean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnclean.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.btnclean.IconColor = System.Drawing.Color.Aqua;
+            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnclean.IconSize = 20;
+            this.btnclean.Location = new System.Drawing.Point(367, 187);
+            this.btnclean.Name = "btnclean";
+            this.btnclean.Size = new System.Drawing.Size(25, 26);
+            this.btnclean.TabIndex = 78;
+            this.btnclean.UseVisualStyleBackColor = false;
+            this.btnclean.Click += new System.EventHandler(this.btnclean_Click);
             // 
             // formReporteCompra
             // 
@@ -389,6 +407,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(661, 528);
+            this.Controls.Add(this.btnclean);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ibtnBuscaFecha);
             this.Controls.Add(this.label1);
@@ -447,5 +466,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private FontAwesome.Sharp.IconButton btnclean;
     }
 }

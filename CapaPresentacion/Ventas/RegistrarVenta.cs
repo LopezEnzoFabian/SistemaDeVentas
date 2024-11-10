@@ -27,7 +27,6 @@ namespace CapaPresentacion.Ventas
 
         private void RegistrarVenta_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Eusuario.Nombre_completo);
             //combo box tipo de factura
             cbfactura.Items.Add(new OpcionCombo() { Valor = "Factura A", Texto = "Factura A" });
             cbfactura.Items.Add(new OpcionCombo() { Valor = "Factura B", Texto = "Factura B" });

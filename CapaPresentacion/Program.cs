@@ -17,7 +17,7 @@ namespace CapaPresentacion
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-AR");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            Application.Run(new Login());
         }
     }
 }

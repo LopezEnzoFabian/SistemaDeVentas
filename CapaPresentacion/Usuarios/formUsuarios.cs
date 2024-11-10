@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaPresentacion;
 using Capa_Entidad;
 using CapaNegocio;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 
 namespace CapaPresentacion
@@ -65,22 +66,14 @@ namespace CapaPresentacion
                     });
             }
         }
-    
-        
 
+
+    
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
-                     string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                     string.IsNullOrWhiteSpace(txtDireccion.Text) ||
-                     string.IsNullOrWhiteSpace(txtTelefono.Text) ||
-                     string.IsNullOrWhiteSpace(cbRol.Text) ||
-                     string.IsNullOrWhiteSpace(cbEstado.Text) ||
-                     string.IsNullOrWhiteSpace(txtPass.Text) ||
-                     string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                     string.IsNullOrWhiteSpace(txt_Confirmpass.Text))
+            if (ValidarCampos())
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,11 +140,44 @@ namespace CapaPresentacion
                     }
                     Limpiar();
                 }
-                //SI NO ES UN USUARIO NUEVO EL QUE SE A SELECCIONADO VAMOS A EDITAR
-                else
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                MessageBox.Show("Por favor, complete los campos del usuario", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si hay campos vacíos
+            }
+            // Mensaje de confirmación para editar
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro que desea editar este usuario?", "Editar usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Comprobar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                string mensaje = string.Empty;
+
+                Usuario obj = new Usuario()
                 {
-                    bool resultado = new CN_usuario().Editar(objusuario, out mensaje);
-                    if (resultado)
+                    Id_usuario = Convert.ToInt32(txtid.Text),
+                    DNI = txtDNI.Text,
+                    Nombre_completo = txtNombre.Text,
+                    Email = txtEmail.Text,
+                    Pass = txtPass.Text,
+                    Telefono = txtTelefono.Text,
+                    Direccion = txtDireccion.Text,
+                    oRol = new Rol() { Id_rol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor) },
+                    Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
+                };
+
+                if (obj.Id_usuario != 0)
+                {
+                    bool resultadoEdicion = new CN_usuario().Editar(obj, out mensaje);
+
+                    if (resultadoEdicion)
                     {
                         DataGridViewRow row = dgListarUsuario.Rows[Convert.ToInt32(txtIndice.Text)];
                         row.Cells["colid"].Value = txtid.Text;
@@ -174,9 +200,18 @@ namespace CapaPresentacion
                         MessageBox.Show(mensaje);
                     }
                 }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
+            else
+            {
+                // Acción cancelada
+                MessageBox.Show("Operación cancelada", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            Limpiar();
         }
-   
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -298,12 +333,24 @@ namespace CapaPresentacion
                         row.Visible = false;
                 }
             }
-
         }
 
         public bool ValidarFiltro()
         {
             return string.IsNullOrEmpty(cbFiltroTipoUsuario.Text);
+        }
+
+        public bool ValidarCampos()
+        {
+            return string.IsNullOrWhiteSpace(txtDNI.Text) ||
+                     string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                     string.IsNullOrWhiteSpace(txtDireccion.Text) ||
+                     string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+                     string.IsNullOrWhiteSpace(cbRol.Text) ||
+                     string.IsNullOrWhiteSpace(cbEstado.Text) ||
+                     string.IsNullOrWhiteSpace(txtPass.Text) ||
+                     string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                     string.IsNullOrWhiteSpace(txt_Confirmpass.Text);
         }
 
 
@@ -334,15 +381,9 @@ namespace CapaPresentacion
             txtDireccion.Clear();
             cbEstado.SelectedItem = null;
             cbRol.SelectedItem = null;
-
-
             txtNombre.Select();
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
 
         private void btnclean_Click(object sender, EventArgs e)
         {
@@ -353,6 +394,34 @@ namespace CapaPresentacion
             }
         }
 
-      
+        private void btnsearch_Click_1(object sender, EventArgs e)
+        {
+            if (ValidarFiltro())
+            {
+                MessageBox.Show("Por favor, seleccione un filtro para la busqueda", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string columnaFiltro = ((OpcionCombo)cbFiltroTipoUsuario.SelectedItem).Valor.ToString();
+            if (dgListarUsuario.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgListarUsuario.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscarUsuario.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnclean_Click_1(object sender, EventArgs e)
+        {
+            txtBuscarUsuario.Text = "";
+            foreach (DataGridViewRow row in dgListarUsuario.Rows)
+            {
+                row.Visible = true;
+            }
+        }
     }
 }

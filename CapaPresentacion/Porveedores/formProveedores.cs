@@ -241,12 +241,11 @@ namespace CapaPresentacion
 
                     bool respuesta = new CN_proveedor().Eliminar(obj, out mensaje);
 
-                    MessageBox.Show("Proveedor eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     if (respuesta)
                     {
                         dgListaProveedores.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
                         dgListaProveedores.Refresh();
+                        MessageBox.Show("Proveedor eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -262,7 +261,6 @@ namespace CapaPresentacion
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.ValidarSoloNumeros((KeyPressEventArgs)e);
-
         }
 
         private void txtRazonS_KeyPress(object sender, KeyPressEventArgs e)

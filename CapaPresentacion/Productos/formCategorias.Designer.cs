@@ -65,6 +65,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 20);
             this.txtID.TabIndex = 63;
+            this.txtID.Visible = false;
             // 
             // lblListaCate
             // 
@@ -118,8 +119,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgListaCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgListaCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgListaCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgListaCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListaCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgListaCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -131,6 +130,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgListaCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgListaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.colid,
@@ -145,13 +145,17 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgListaCategorias.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgListaCategorias.GridColor = System.Drawing.SystemColors.Control;
+            this.dgListaCategorias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListaCategorias.Location = new System.Drawing.Point(-2, 119);
             this.dgListaCategorias.MultiSelect = false;
             this.dgListaCategorias.Name = "dgListaCategorias";
             this.dgListaCategorias.RowHeadersVisible = false;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             this.dgListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgListaCategorias.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgListaCategorias.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgListaCategorias.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgListaCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgListaCategorias.Size = new System.Drawing.Size(665, 206);
             this.dgListaCategorias.TabIndex = 70;
             this.dgListaCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaCategorias_CellContentClick);
@@ -358,6 +362,7 @@
             this.txtindice.Name = "txtindice";
             this.txtindice.Size = new System.Drawing.Size(31, 20);
             this.txtindice.TabIndex = 98;
+            this.txtindice.Visible = false;
             // 
             // formCategorias
             // 

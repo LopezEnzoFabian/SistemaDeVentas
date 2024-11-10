@@ -253,8 +253,8 @@
             this.menuReportes,
             this.menuProductosVer,
             this.menuEstadisticas,
-            this.menuAcercade,
-            this.menuBackup});
+            this.menuBackup,
+            this.menuAcercade});
             this.barraDeMenus.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.barraDeMenus.Location = new System.Drawing.Point(-4, 193);
             this.barraDeMenus.Name = "barraDeMenus";

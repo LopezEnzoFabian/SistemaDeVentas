@@ -97,7 +97,7 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.btnEditar.IconColor = System.Drawing.Color.Aqua;
@@ -141,6 +141,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(31, 22);
             this.txtID.TabIndex = 64;
+            this.txtID.Visible = false;
             // 
             // lblListaPorveedor
             // 
@@ -475,6 +476,7 @@
             this.txtindice.Name = "txtindice";
             this.txtindice.Size = new System.Drawing.Size(31, 22);
             this.txtindice.TabIndex = 88;
+            this.txtindice.Visible = false;
             // 
             // btnsearch
             // 

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnsearch = new FontAwesome.Sharp.IconButton();
             this.btnclean = new FontAwesome.Sharp.IconButton();
             this.txtBuscarNumFactura = new System.Windows.Forms.TextBox();
@@ -56,12 +56,11 @@
             this.lblDetalleVenta = new System.Windows.Forms.Label();
             this.ibtnPDFDetalleVenta = new FontAwesome.Sharp.IconButton();
             this.lblDetallepago = new System.Windows.Forms.Label();
+            this.txtnumerofactura = new System.Windows.Forms.TextBox();
             this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtnumerofactura = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDetalleVenta)).BeginInit();
             this.gbInformacionVenta.SuspendLayout();
             this.gbInformacionCliente.SuspendLayout();
@@ -99,10 +98,12 @@
             // 
             // txtBuscarNumFactura
             // 
+            this.txtBuscarNumFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscarNumFactura.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarNumFactura.Location = new System.Drawing.Point(278, 12);
+            this.txtBuscarNumFactura.Location = new System.Drawing.Point(278, 17);
+            this.txtBuscarNumFactura.Multiline = true;
             this.txtBuscarNumFactura.Name = "txtBuscarNumFactura";
-            this.txtBuscarNumFactura.Size = new System.Drawing.Size(121, 25);
+            this.txtBuscarNumFactura.Size = new System.Drawing.Size(121, 20);
             this.txtBuscarNumFactura.TabIndex = 72;
             this.txtBuscarNumFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarNumFactura_KeyPress);
             // 
@@ -119,10 +120,12 @@
             // 
             // txtTotalcambio
             // 
+            this.txtTotalcambio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalcambio.Location = new System.Drawing.Point(532, 206);
+            this.txtTotalcambio.Multiline = true;
             this.txtTotalcambio.Name = "txtTotalcambio";
             this.txtTotalcambio.ReadOnly = true;
-            this.txtTotalcambio.Size = new System.Drawing.Size(77, 20);
+            this.txtTotalcambio.Size = new System.Drawing.Size(89, 20);
             this.txtTotalcambio.TabIndex = 84;
             // 
             // lblTotalCambio
@@ -138,10 +141,12 @@
             // 
             // txtTotalpago
             // 
+            this.txtTotalpago.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalpago.Location = new System.Drawing.Point(533, 153);
+            this.txtTotalpago.Multiline = true;
             this.txtTotalpago.Name = "txtTotalpago";
             this.txtTotalpago.ReadOnly = true;
-            this.txtTotalpago.Size = new System.Drawing.Size(77, 20);
+            this.txtTotalpago.Size = new System.Drawing.Size(88, 20);
             this.txtTotalpago.TabIndex = 82;
             // 
             // lblTotalPago
@@ -168,10 +173,12 @@
             // 
             // txtTotalmonto
             // 
+            this.txtTotalmonto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalmonto.Location = new System.Drawing.Point(532, 103);
+            this.txtTotalmonto.Multiline = true;
             this.txtTotalmonto.Name = "txtTotalmonto";
             this.txtTotalmonto.ReadOnly = true;
-            this.txtTotalmonto.Size = new System.Drawing.Size(75, 20);
+            this.txtTotalmonto.Size = new System.Drawing.Size(89, 20);
             this.txtTotalmonto.TabIndex = 79;
             // 
             // dgListaDetalleVenta
@@ -182,21 +189,20 @@
             this.dgListaDetalleVenta.AllowUserToResizeRows = false;
             this.dgListaDetalleVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListaDetalleVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgListaDetalleVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgListaDetalleVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgListaDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgListaDetalleVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colProducto,
             this.colPrecioVenta,
             this.colCantidad,
-            this.colSubTotal,
-            this.colEliminar});
+            this.colSubTotal});
             this.dgListaDetalleVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgListaDetalleVenta.Location = new System.Drawing.Point(2, 261);
             this.dgListaDetalleVenta.MultiSelect = false;
@@ -204,9 +210,12 @@
             this.dgListaDetalleVenta.ReadOnly = true;
             this.dgListaDetalleVenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgListaDetalleVenta.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgListaDetalleVenta.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgListaDetalleVenta.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgListaDetalleVenta.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgListaDetalleVenta.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgListaDetalleVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgListaDetalleVenta.Size = new System.Drawing.Size(658, 181);
             this.dgListaDetalleVenta.TabIndex = 77;
             // 
@@ -256,7 +265,9 @@
             // 
             // txtNombreVendedor
             // 
+            this.txtNombreVendedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreVendedor.Location = new System.Drawing.Point(280, 48);
+            this.txtNombreVendedor.Multiline = true;
             this.txtNombreVendedor.Name = "txtNombreVendedor";
             this.txtNombreVendedor.ReadOnly = true;
             this.txtNombreVendedor.Size = new System.Drawing.Size(152, 21);
@@ -264,7 +275,9 @@
             // 
             // txtTipofactura
             // 
+            this.txtTipofactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTipofactura.Location = new System.Drawing.Point(149, 48);
+            this.txtTipofactura.Multiline = true;
             this.txtTipofactura.Name = "txtTipofactura";
             this.txtTipofactura.ReadOnly = true;
             this.txtTipofactura.Size = new System.Drawing.Size(122, 21);
@@ -272,7 +285,9 @@
             // 
             // txtFechaVenta
             // 
+            this.txtFechaVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFechaVenta.Location = new System.Drawing.Point(11, 48);
+            this.txtFechaVenta.Multiline = true;
             this.txtFechaVenta.Name = "txtFechaVenta";
             this.txtFechaVenta.ReadOnly = true;
             this.txtFechaVenta.Size = new System.Drawing.Size(124, 21);
@@ -313,7 +328,9 @@
             // 
             // txtNombreCliente
             // 
+            this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Location = new System.Drawing.Point(234, 46);
+            this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(195, 21);
@@ -321,7 +338,9 @@
             // 
             // txtDNIcliente
             // 
+            this.txtDNIcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNIcliente.Location = new System.Drawing.Point(11, 46);
+            this.txtDNIcliente.Multiline = true;
             this.txtDNIcliente.Name = "txtDNIcliente";
             this.txtDNIcliente.ReadOnly = true;
             this.txtDNIcliente.Size = new System.Drawing.Size(217, 21);
@@ -369,6 +388,19 @@
             this.lblDetallepago.TabIndex = 89;
             this.lblDetallepago.Text = "Detalle de pago";
             // 
+            // txtnumerofactura
+            // 
+            this.txtnumerofactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtnumerofactura.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtnumerofactura.Location = new System.Drawing.Point(79, 15);
+            this.txtnumerofactura.Multiline = true;
+            this.txtnumerofactura.Name = "txtnumerofactura";
+            this.txtnumerofactura.ReadOnly = true;
+            this.txtnumerofactura.Size = new System.Drawing.Size(40, 19);
+            this.txtnumerofactura.TabIndex = 90;
+            this.txtnumerofactura.Text = "0";
+            this.txtnumerofactura.Visible = false;
+            // 
             // colProducto
             // 
             this.colProducto.FillWeight = 84.5141F;
@@ -399,25 +431,6 @@
             this.colSubTotal.Name = "colSubTotal";
             this.colSubTotal.ReadOnly = true;
             this.colSubTotal.Width = 101;
-            // 
-            // colEliminar
-            // 
-            this.colEliminar.HeaderText = "";
-            this.colEliminar.Name = "colEliminar";
-            this.colEliminar.ReadOnly = true;
-            this.colEliminar.Visible = false;
-            // 
-            // txtnumerofactura
-            // 
-            this.txtnumerofactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtnumerofactura.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtnumerofactura.Location = new System.Drawing.Point(79, 15);
-            this.txtnumerofactura.Multiline = true;
-            this.txtnumerofactura.Name = "txtnumerofactura";
-            this.txtnumerofactura.ReadOnly = true;
-            this.txtnumerofactura.Size = new System.Drawing.Size(40, 19);
-            this.txtnumerofactura.TabIndex = 90;
-            this.txtnumerofactura.Text = "0";
             // 
             // DetalleVenta
             // 
@@ -484,11 +497,10 @@
         private System.Windows.Forms.Label lblDetalleVenta;
         private FontAwesome.Sharp.IconButton ibtnPDFDetalleVenta;
         private System.Windows.Forms.Label lblDetallepago;
+        private System.Windows.Forms.TextBox txtnumerofactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEliminar;
-        private System.Windows.Forms.TextBox txtnumerofactura;
     }
 }

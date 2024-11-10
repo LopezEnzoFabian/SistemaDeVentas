@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.dgReporteVentas = new System.Windows.Forms.DataGridView();
-            this.lblReporteVentas = new System.Windows.Forms.Label();
-            this.lblBuscarPor = new System.Windows.Forms.Label();
-            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
-            this.txtBuscarPor = new System.Windows.Forms.TextBox();
-            this.lblRV2 = new System.Windows.Forms.Label();
-            this.lblRV = new System.Windows.Forms.Label();
-            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
-            this.ibtnBuscaFecha = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.colFechaDeRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +47,17 @@
             this.colPrecioCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblReporteVentas = new System.Windows.Forms.Label();
+            this.lblBuscarPor = new System.Windows.Forms.Label();
+            this.cbBuscarPor = new System.Windows.Forms.ComboBox();
+            this.txtBuscarPor = new System.Windows.Forms.TextBox();
+            this.lblRV2 = new System.Windows.Forms.Label();
+            this.lblRV = new System.Windows.Forms.Label();
+            this.ibtnDescargaExcel = new FontAwesome.Sharp.IconButton();
+            this.ibtnBuscaFecha = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnclean = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgReporteVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,143 +129,14 @@
             this.dgReporteVentas.Name = "dgReporteVentas";
             this.dgReporteVentas.ReadOnly = true;
             this.dgReporteVentas.RowHeadersVisible = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgReporteVentas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgReporteVentas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgReporteVentas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgReporteVentas.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgReporteVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgReporteVentas.Size = new System.Drawing.Size(661, 307);
             this.dgReporteVentas.TabIndex = 51;
-            // 
-            // lblReporteVentas
-            // 
-            this.lblReporteVentas.AutoSize = true;
-            this.lblReporteVentas.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReporteVentas.ForeColor = System.Drawing.Color.Black;
-            this.lblReporteVentas.Location = new System.Drawing.Point(255, 9);
-            this.lblReporteVentas.Name = "lblReporteVentas";
-            this.lblReporteVentas.Size = new System.Drawing.Size(202, 24);
-            this.lblReporteVentas.TabIndex = 50;
-            this.lblReporteVentas.Text = "Reporte de Ventas";
-            // 
-            // lblBuscarPor
-            // 
-            this.lblBuscarPor.AutoSize = true;
-            this.lblBuscarPor.ForeColor = System.Drawing.Color.Cyan;
-            this.lblBuscarPor.Location = new System.Drawing.Point(12, 151);
-            this.lblBuscarPor.Name = "lblBuscarPor";
-            this.lblBuscarPor.Size = new System.Drawing.Size(0, 13);
-            this.lblBuscarPor.TabIndex = 60;
-            // 
-            // cbBuscarPor
-            // 
-            this.cbBuscarPor.FormattingEnabled = true;
-            this.cbBuscarPor.Items.AddRange(new object[] {
-            "Fecha de registro",
-            "Tipo de documento",
-            "Numero de factura"});
-            this.cbBuscarPor.Location = new System.Drawing.Point(12, 190);
-            this.cbBuscarPor.Name = "cbBuscarPor";
-            this.cbBuscarPor.Size = new System.Drawing.Size(132, 21);
-            this.cbBuscarPor.TabIndex = 61;
-            // 
-            // txtBuscarPor
-            // 
-            this.txtBuscarPor.Location = new System.Drawing.Point(153, 191);
-            this.txtBuscarPor.Name = "txtBuscarPor";
-            this.txtBuscarPor.Size = new System.Drawing.Size(124, 20);
-            this.txtBuscarPor.TabIndex = 62;
-            // 
-            // lblRV2
-            // 
-            this.lblRV2.AutoSize = true;
-            this.lblRV2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRV2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRV2.Location = new System.Drawing.Point(139, 43);
-            this.lblRV2.Name = "lblRV2";
-            this.lblRV2.Size = new System.Drawing.Size(295, 15);
-            this.lblRV2.TabIndex = 64;
-            this.lblRV2.Text = "Buscar una venta por intervalos de fechas.";
-            // 
-            // lblRV
-            // 
-            this.lblRV.AutoSize = true;
-            this.lblRV.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblRV.ForeColor = System.Drawing.Color.Black;
-            this.lblRV.Location = new System.Drawing.Point(12, 172);
-            this.lblRV.Name = "lblRV";
-            this.lblRV.Size = new System.Drawing.Size(90, 15);
-            this.lblRV.TabIndex = 65;
-            this.lblRV.Text = "Buscar por :";
-            // 
-            // ibtnDescargaExcel
-            // 
-            this.ibtnDescargaExcel.AutoSize = true;
-            this.ibtnDescargaExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnDescargaExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ibtnDescargaExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnDescargaExcel.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.ibtnDescargaExcel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ibtnDescargaExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
-            this.ibtnDescargaExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.ibtnDescargaExcel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ibtnDescargaExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnDescargaExcel.IconSize = 20;
-            this.ibtnDescargaExcel.Location = new System.Drawing.Point(567, 186);
-            this.ibtnDescargaExcel.Name = "ibtnDescargaExcel";
-            this.ibtnDescargaExcel.Size = new System.Drawing.Size(82, 27);
-            this.ibtnDescargaExcel.TabIndex = 66;
-            this.ibtnDescargaExcel.Text = "Excel";
-            this.ibtnDescargaExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnDescargaExcel.UseVisualStyleBackColor = false;
-            this.ibtnDescargaExcel.Click += new System.EventHandler(this.ibtnDescargaExcel_Click);
-            // 
-            // ibtnBuscaFecha
-            // 
-            this.ibtnBuscaFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.ibtnBuscaFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ibtnBuscaFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ibtnBuscaFecha.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.ibtnBuscaFecha.IconColor = System.Drawing.Color.Cyan;
-            this.ibtnBuscaFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscaFecha.IconSize = 20;
-            this.ibtnBuscaFecha.Location = new System.Drawing.Point(297, 126);
-            this.ibtnBuscaFecha.Name = "ibtnBuscaFecha";
-            this.ibtnBuscaFecha.Size = new System.Drawing.Size(109, 27);
-            this.ibtnBuscaFecha.TabIndex = 74;
-            this.ibtnBuscaFecha.Text = "Buscar";
-            this.ibtnBuscaFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ibtnBuscaFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnBuscaFecha.UseVisualStyleBackColor = false;
-            this.ibtnBuscaFecha.Click += new System.EventHandler(this.ibtnBuscaFecha_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.iconButton1.IconColor = System.Drawing.Color.Cyan;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(290, 186);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(71, 27);
-            this.iconButton1.TabIndex = 75;
-            this.iconButton1.Text = "Buscar";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(446, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 15);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "Generar archivo";
             // 
             // colFechaDeRegistro
             // 
@@ -358,12 +230,157 @@
             this.colSubTotal.Name = "colSubTotal";
             this.colSubTotal.ReadOnly = true;
             // 
+            // lblReporteVentas
+            // 
+            this.lblReporteVentas.AutoSize = true;
+            this.lblReporteVentas.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReporteVentas.ForeColor = System.Drawing.Color.Black;
+            this.lblReporteVentas.Location = new System.Drawing.Point(255, 9);
+            this.lblReporteVentas.Name = "lblReporteVentas";
+            this.lblReporteVentas.Size = new System.Drawing.Size(202, 24);
+            this.lblReporteVentas.TabIndex = 50;
+            this.lblReporteVentas.Text = "Reporte de Ventas";
+            // 
+            // lblBuscarPor
+            // 
+            this.lblBuscarPor.AutoSize = true;
+            this.lblBuscarPor.ForeColor = System.Drawing.Color.Cyan;
+            this.lblBuscarPor.Location = new System.Drawing.Point(12, 151);
+            this.lblBuscarPor.Name = "lblBuscarPor";
+            this.lblBuscarPor.Size = new System.Drawing.Size(0, 13);
+            this.lblBuscarPor.TabIndex = 60;
+            // 
+            // cbBuscarPor
+            // 
+            this.cbBuscarPor.FormattingEnabled = true;
+            this.cbBuscarPor.Location = new System.Drawing.Point(12, 190);
+            this.cbBuscarPor.Name = "cbBuscarPor";
+            this.cbBuscarPor.Size = new System.Drawing.Size(132, 21);
+            this.cbBuscarPor.TabIndex = 61;
+            // 
+            // txtBuscarPor
+            // 
+            this.txtBuscarPor.Location = new System.Drawing.Point(153, 191);
+            this.txtBuscarPor.Multiline = true;
+            this.txtBuscarPor.Name = "txtBuscarPor";
+            this.txtBuscarPor.Size = new System.Drawing.Size(124, 20);
+            this.txtBuscarPor.TabIndex = 62;
+            // 
+            // lblRV2
+            // 
+            this.lblRV2.AutoSize = true;
+            this.lblRV2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRV2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRV2.Location = new System.Drawing.Point(139, 43);
+            this.lblRV2.Name = "lblRV2";
+            this.lblRV2.Size = new System.Drawing.Size(295, 15);
+            this.lblRV2.TabIndex = 64;
+            this.lblRV2.Text = "Buscar una venta por intervalos de fechas.";
+            // 
+            // lblRV
+            // 
+            this.lblRV.AutoSize = true;
+            this.lblRV.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblRV.ForeColor = System.Drawing.Color.Black;
+            this.lblRV.Location = new System.Drawing.Point(12, 172);
+            this.lblRV.Name = "lblRV";
+            this.lblRV.Size = new System.Drawing.Size(90, 15);
+            this.lblRV.TabIndex = 65;
+            this.lblRV.Text = "Buscar por :";
+            // 
+            // ibtnDescargaExcel
+            // 
+            this.ibtnDescargaExcel.AutoSize = true;
+            this.ibtnDescargaExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnDescargaExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ibtnDescargaExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnDescargaExcel.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.ibtnDescargaExcel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ibtnDescargaExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.ibtnDescargaExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.ibtnDescargaExcel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ibtnDescargaExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnDescargaExcel.IconSize = 20;
+            this.ibtnDescargaExcel.Location = new System.Drawing.Point(567, 186);
+            this.ibtnDescargaExcel.Name = "ibtnDescargaExcel";
+            this.ibtnDescargaExcel.Size = new System.Drawing.Size(82, 27);
+            this.ibtnDescargaExcel.TabIndex = 66;
+            this.ibtnDescargaExcel.Text = "Excel";
+            this.ibtnDescargaExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnDescargaExcel.UseVisualStyleBackColor = false;
+            this.ibtnDescargaExcel.Click += new System.EventHandler(this.ibtnDescargaExcel_Click);
+            // 
+            // ibtnBuscaFecha
+            // 
+            this.ibtnBuscaFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.ibtnBuscaFecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ibtnBuscaFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ibtnBuscaFecha.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.ibtnBuscaFecha.IconColor = System.Drawing.Color.Cyan;
+            this.ibtnBuscaFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnBuscaFecha.IconSize = 20;
+            this.ibtnBuscaFecha.Location = new System.Drawing.Point(297, 126);
+            this.ibtnBuscaFecha.Name = "ibtnBuscaFecha";
+            this.ibtnBuscaFecha.Size = new System.Drawing.Size(109, 27);
+            this.ibtnBuscaFecha.TabIndex = 74;
+            this.ibtnBuscaFecha.Text = "Buscar";
+            this.ibtnBuscaFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnBuscaFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnBuscaFecha.UseVisualStyleBackColor = false;
+            this.ibtnBuscaFecha.Click += new System.EventHandler(this.ibtnBuscaFecha_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.iconButton1.IconColor = System.Drawing.Color.Cyan;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(290, 186);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(71, 27);
+            this.iconButton1.TabIndex = 75;
+            this.iconButton1.Text = "Buscar";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(446, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 15);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Generar archivo";
+            // 
+            // btnclean
+            // 
+            this.btnclean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(27)))));
+            this.btnclean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnclean.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclean.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnclean.IconChar = FontAwesome.Sharp.IconChar.Brush;
+            this.btnclean.IconColor = System.Drawing.Color.Aqua;
+            this.btnclean.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnclean.IconSize = 20;
+            this.btnclean.Location = new System.Drawing.Point(367, 186);
+            this.btnclean.Name = "btnclean";
+            this.btnclean.Size = new System.Drawing.Size(25, 26);
+            this.btnclean.TabIndex = 77;
+            this.btnclean.UseVisualStyleBackColor = false;
+            this.btnclean.Click += new System.EventHandler(this.btnclean_Click);
+            // 
             // formReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(661, 528);
+            this.Controls.Add(this.btnclean);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.ibtnBuscaFecha);
@@ -418,5 +435,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioCom;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubTotal;
+        private FontAwesome.Sharp.IconButton btnclean;
     }
 }

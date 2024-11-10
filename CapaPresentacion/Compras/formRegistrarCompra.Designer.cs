@@ -135,6 +135,9 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dgRegistrarCompra.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgRegistrarCompra.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgRegistrarCompra.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgRegistrarCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgRegistrarCompra.Size = new System.Drawing.Size(660, 181);
             this.dgRegistrarCompra.TabIndex = 47;
             this.dgRegistrarCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRegistrarCompra_CellContentClick);
@@ -236,7 +239,9 @@
             // 
             // txtProducto
             // 
+            this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProducto.Location = new System.Drawing.Point(102, 45);
+            this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(139, 21);
@@ -254,7 +259,9 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(11, 98);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(270, 21);
@@ -278,6 +285,7 @@
             this.txtidproducto.Name = "txtidproducto";
             this.txtidproducto.Size = new System.Drawing.Size(25, 23);
             this.txtidproducto.TabIndex = 65;
+            this.txtidproducto.Visible = false;
             // 
             // lblPrecioVen
             // 
@@ -388,7 +396,9 @@
             // 
             // txtCodProd
             // 
+            this.txtCodProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodProd.Location = new System.Drawing.Point(11, 45);
+            this.txtCodProd.Multiline = true;
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.ReadOnly = true;
             this.txtCodProd.Size = new System.Drawing.Size(81, 21);
@@ -414,7 +424,9 @@
             // 
             // txtNumDoc
             // 
+            this.txtNumDoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumDoc.Location = new System.Drawing.Point(130, 54);
+            this.txtNumDoc.Multiline = true;
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.ReadOnly = true;
             this.txtNumDoc.Size = new System.Drawing.Size(134, 21);
@@ -455,10 +467,13 @@
             this.txtidproveedor.Name = "txtidproveedor";
             this.txtidproveedor.Size = new System.Drawing.Size(25, 23);
             this.txtidproveedor.TabIndex = 66;
+            this.txtidproveedor.Visible = false;
             // 
             // txtRazonSoc
             // 
+            this.txtRazonSoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRazonSoc.Location = new System.Drawing.Point(9, 54);
+            this.txtRazonSoc.Multiline = true;
             this.txtRazonSoc.Name = "txtRazonSoc";
             this.txtRazonSoc.ReadOnly = true;
             this.txtRazonSoc.Size = new System.Drawing.Size(118, 21);
@@ -492,7 +507,9 @@
             // 
             // txtFecha
             // 
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFecha.Location = new System.Drawing.Point(9, 55);
+            this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(136, 21);

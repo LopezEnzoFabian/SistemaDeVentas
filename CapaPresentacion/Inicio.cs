@@ -40,33 +40,34 @@ namespace CapaPresentacion
 
             MostrarFormularioPresentacion();
 
-            //if (usuarioActual.oRol.Id_rol == 1) //administrador
-            //{
-            //   menuVentas.Visible = false;
-            //   menuEstadisticas.Visible = false;
-            //   menuBackup.Visible=false;
+            if (usuarioActual.oRol.Id_rol == 1) //administrador
+            {
+                menuUsuarios.Visible = false;
+                menuVentas.Visible = false;
+                menuEstadisticas.Visible = false;
+                menuBackup.Visible = false;
+                menuReportes.Visible = false;
 
-            //}
-            //if (usuarioActual.oRol.Id_rol == 2) //vendedor
-            //{
-            //    menuUsuarios.Visible = false;
-            //    menuCompras.Visible = false;
-            //    menuReportes.Visible = false;
-            //    menuProveedores.Visible = false;
-            //    menuProductos.Visible = false;
-            //    menuEstadisticas.Visible =false;
-            //    menuBackup.Visible=false;
-            //}
-            //if (usuarioActual.oRol.Id_rol == 3)//supervisor
-            //{
-            //    menuCompras.Visible=false;
-            //    menuVentas.Visible=false;
-            //    menuProductos.Visible=false;
-            //    menuReportes.Visible=false;
-            //    menuProveedores.Visible=false;
-            //    menuClientes.Visible=false;
-            //    menuProductosVer.Visible=false;
-            //}
+            }
+            if (usuarioActual.oRol.Id_rol == 2) //vendedor
+            {
+                menuUsuarios.Visible = false;
+                menuCompras.Visible = false;
+                menuReportes.Visible = false;
+                menuProveedores.Visible = false;
+                menuProductos.Visible = false;
+                menuEstadisticas.Visible = false;
+                menuBackup.Visible = false;
+            }
+            if (usuarioActual.oRol.Id_rol == 3)//supervisor
+            {
+                menuCompras.Visible = false;
+                menuVentas.Visible = false;
+                menuProductos.Visible = false;
+                menuProveedores.Visible = false;
+                menuClientes.Visible = false;
+                menuProductosVer.Visible = false;
+            }
         }
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)

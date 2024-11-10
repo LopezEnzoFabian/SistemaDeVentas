@@ -748,4 +748,4 @@ end
 --delete * from Compra
 --where numeroDe_factura = null
 
-
+--select* from Usuario

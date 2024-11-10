@@ -123,6 +123,18 @@ namespace CapaPresentacion.Reportes
                 return;
             }
 
+            string columnaFiltro = ((OpcionCombo)cbBuscarPor.SelectedItem).Valor.ToString();
+            if (dgReporteCompras.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgReporteCompras.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscarPor.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+
         }
 
         private void ibtnBuscaFecha_Click(object sender, EventArgs e)
@@ -180,6 +192,13 @@ namespace CapaPresentacion.Reportes
                    string.IsNullOrEmpty(cbProveedor.Text);
         }
 
-       
+        private void btnclean_Click(object sender, EventArgs e)
+        {
+            txtBuscarPor.Text = "";
+            foreach (DataGridViewRow row in dgReporteCompras.Rows)
+            {
+                row.Visible = true;
+            }
+        }
     }
 }

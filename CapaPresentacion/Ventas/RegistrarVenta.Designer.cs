@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTotalPag = new System.Windows.Forms.Label();
             this.txtPagacon = new System.Windows.Forms.TextBox();
             this.dgRegistrarVenta = new System.Windows.Forms.DataGridView();
+            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btndelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbInfoProducto = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
@@ -70,12 +76,6 @@
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCambio = new System.Windows.Forms.TextBox();
-            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btndelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarVenta)).BeginInit();
             this.gbInfoProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCant)).BeginInit();
@@ -109,18 +109,18 @@
             this.dgRegistrarVenta.AllowUserToDeleteRows = false;
             this.dgRegistrarVenta.AllowUserToResizeColumns = false;
             this.dgRegistrarVenta.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgRegistrarVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgRegistrarVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgRegistrarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgRegistrarVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgRegistrarVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgRegistrarVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgRegistrarVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgRegistrarVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdProducto,
@@ -130,32 +130,32 @@
             this.colSubTotal,
             this.btndelete});
             this.dgRegistrarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgRegistrarVenta.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgRegistrarVenta.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgRegistrarVenta.EnableHeadersVisualStyles = false;
             this.dgRegistrarVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgRegistrarVenta.Location = new System.Drawing.Point(-2, 284);
             this.dgRegistrarVenta.MultiSelect = false;
             this.dgRegistrarVenta.Name = "dgRegistrarVenta";
             this.dgRegistrarVenta.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgRegistrarVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgRegistrarVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgRegistrarVenta.RowHeadersVisible = false;
             this.dgRegistrarVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgRegistrarVenta.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgRegistrarVenta.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgRegistrarVenta.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgRegistrarVenta.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgRegistrarVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -163,6 +163,54 @@
             this.dgRegistrarVenta.TabIndex = 57;
             this.dgRegistrarVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRegistrarVenta_CellContentClick);
             this.dgRegistrarVenta.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgRegistrarVenta_CellPainting);
+            // 
+            // colIdProducto
+            // 
+            this.colIdProducto.HeaderText = "idProducto";
+            this.colIdProducto.Name = "colIdProducto";
+            this.colIdProducto.ReadOnly = true;
+            this.colIdProducto.Visible = false;
+            this.colIdProducto.Width = 84;
+            // 
+            // colProducto
+            // 
+            this.colProducto.FillWeight = 84.5141F;
+            this.colProducto.HeaderText = "Producto";
+            this.colProducto.Name = "colProducto";
+            this.colProducto.ReadOnly = true;
+            this.colProducto.Width = 101;
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.FillWeight = 84.5141F;
+            this.colPrecioVenta.HeaderText = "Precio Venta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.ReadOnly = true;
+            this.colPrecioVenta.Width = 101;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.FillWeight = 84.5141F;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            this.colCantidad.Width = 101;
+            // 
+            // colSubTotal
+            // 
+            this.colSubTotal.FillWeight = 84.5141F;
+            this.colSubTotal.HeaderText = "SubTotal";
+            this.colSubTotal.Name = "colSubTotal";
+            this.colSubTotal.ReadOnly = true;
+            this.colSubTotal.Width = 101;
+            // 
+            // btndelete
+            // 
+            this.btndelete.FillWeight = 35F;
+            this.btndelete.HeaderText = "";
+            this.btndelete.Name = "btndelete";
+            this.btndelete.ReadOnly = true;
+            this.btndelete.Width = 30;
             // 
             // gbInfoProducto
             // 
@@ -217,6 +265,7 @@
             this.txtidproducto.Name = "txtidproducto";
             this.txtidproducto.Size = new System.Drawing.Size(25, 23);
             this.txtidproducto.TabIndex = 67;
+            this.txtidproducto.Visible = false;
             // 
             // label3
             // 
@@ -386,6 +435,7 @@
             this.txtidcliente.Name = "txtidcliente";
             this.txtidcliente.Size = new System.Drawing.Size(25, 23);
             this.txtidcliente.TabIndex = 67;
+            this.txtidcliente.Visible = false;
             // 
             // txtNombre
             // 
@@ -563,54 +613,6 @@
             this.txtCambio.ReadOnly = true;
             this.txtCambio.Size = new System.Drawing.Size(95, 30);
             this.txtCambio.TabIndex = 63;
-            // 
-            // colIdProducto
-            // 
-            this.colIdProducto.HeaderText = "idProducto";
-            this.colIdProducto.Name = "colIdProducto";
-            this.colIdProducto.ReadOnly = true;
-            this.colIdProducto.Visible = false;
-            this.colIdProducto.Width = 84;
-            // 
-            // colProducto
-            // 
-            this.colProducto.FillWeight = 84.5141F;
-            this.colProducto.HeaderText = "Producto";
-            this.colProducto.Name = "colProducto";
-            this.colProducto.ReadOnly = true;
-            this.colProducto.Width = 101;
-            // 
-            // colPrecioVenta
-            // 
-            this.colPrecioVenta.FillWeight = 84.5141F;
-            this.colPrecioVenta.HeaderText = "Precio Venta";
-            this.colPrecioVenta.Name = "colPrecioVenta";
-            this.colPrecioVenta.ReadOnly = true;
-            this.colPrecioVenta.Width = 101;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.FillWeight = 84.5141F;
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            this.colCantidad.Width = 101;
-            // 
-            // colSubTotal
-            // 
-            this.colSubTotal.FillWeight = 84.5141F;
-            this.colSubTotal.HeaderText = "SubTotal";
-            this.colSubTotal.Name = "colSubTotal";
-            this.colSubTotal.ReadOnly = true;
-            this.colSubTotal.Width = 101;
-            // 
-            // btndelete
-            // 
-            this.btndelete.FillWeight = 35F;
-            this.btndelete.HeaderText = "";
-            this.btndelete.Name = "btndelete";
-            this.btndelete.ReadOnly = true;
-            this.btndelete.Width = 30;
             // 
             // formRegistrarVenta
             // 

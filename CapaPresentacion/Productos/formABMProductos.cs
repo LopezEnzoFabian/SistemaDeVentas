@@ -155,11 +155,11 @@ namespace CapaPresentacion
                 };
 
                 bool respuesta = new CN_productos().Eliminar(obj, out mensaje);
-                MessageBox.Show("Producto eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (respuesta)
                 {
                     dgListarProductos.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    MessageBox.Show("Producto eliminado con exito", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

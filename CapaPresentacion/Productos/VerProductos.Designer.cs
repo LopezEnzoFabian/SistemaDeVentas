@@ -114,6 +114,9 @@
             this.dgListarProductos.AllowUserToDeleteRows = false;
             this.dgListarProductos.AllowUserToResizeColumns = false;
             this.dgListarProductos.AllowUserToResizeRows = false;
+            this.dgListarProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.dgListarProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgListarProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,7 +140,12 @@
             this.dgListarProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgListarProductos.Location = new System.Drawing.Point(-1, 109);
             this.dgListarProductos.Name = "dgListarProductos";
+            this.dgListarProductos.ReadOnly = true;
             this.dgListarProductos.RowHeadersVisible = false;
+            this.dgListarProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgListarProductos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgListarProductos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgListarProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgListarProductos.Size = new System.Drawing.Size(664, 469);
             this.dgListarProductos.TabIndex = 82;
             this.dgListarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaClientes_CellContentClick);
@@ -146,6 +154,7 @@
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // colCodigo
@@ -153,6 +162,7 @@
             this.colCodigo.FillWeight = 50F;
             this.colCodigo.HeaderText = "Codigo";
             this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
             this.colCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colCodigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colCodigo.Width = 50;
@@ -162,6 +172,7 @@
             this.colNombreDeProducto.FillWeight = 150F;
             this.colNombreDeProducto.HeaderText = "Nombre de producto";
             this.colNombreDeProducto.Name = "colNombreDeProducto";
+            this.colNombreDeProducto.ReadOnly = true;
             this.colNombreDeProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNombreDeProducto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colNombreDeProducto.Width = 150;
@@ -171,12 +182,14 @@
             this.colDescripcion.FillWeight = 150F;
             this.colDescripcion.HeaderText = "Descripcion";
             this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
             this.colDescripcion.Width = 150;
             // 
             // Idcategoria
             // 
             this.Idcategoria.HeaderText = "Id categoria";
             this.Idcategoria.Name = "Idcategoria";
+            this.Idcategoria.ReadOnly = true;
             this.Idcategoria.Visible = false;
             // 
             // colIdCategoria
@@ -184,29 +197,34 @@
             this.colIdCategoria.FillWeight = 28.62944F;
             this.colIdCategoria.HeaderText = "Categoria";
             this.colIdCategoria.Name = "colIdCategoria";
+            this.colIdCategoria.ReadOnly = true;
             // 
             // colStock
             // 
             this.colStock.FillWeight = 50F;
             this.colStock.HeaderText = "Stock";
             this.colStock.Name = "colStock";
+            this.colStock.ReadOnly = true;
             this.colStock.Width = 50;
             // 
             // colPrecioVenta
             // 
             this.colPrecioVenta.HeaderText = "Precio venta";
             this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.ReadOnly = true;
             // 
             // colEstadoValor
             // 
             this.colEstadoValor.HeaderText = "EstadoValor";
             this.colEstadoValor.Name = "colEstadoValor";
+            this.colEstadoValor.ReadOnly = true;
             this.colEstadoValor.Visible = false;
             // 
             // colEstado
             // 
             this.colEstado.HeaderText = "Estado";
             this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
             // 
             // lblListaProductos
             // 

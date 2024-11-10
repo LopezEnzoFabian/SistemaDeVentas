@@ -20,8 +20,12 @@ namespace CapaPresentacion
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            // Configurar el cuadro de diálogo para seleccionar la ubicación del archivo de respaldo
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            DialogResult ask = MessageBox.Show("¿Seguro que desea generar respaldo de datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ask == DialogResult.Yes)
+            {
+
+                // Configurar el cuadro de diálogo para seleccionar la ubicación del archivo de respaldo
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos de respaldo (*.bak)|*.bak";
             saveFileDialog.Title = "Guardar archivo de respaldo de base de datos";
             saveFileDialog.FileName = "MiBackup.bak"; // Nombre predeterminado para el archivo de respaldo
@@ -64,18 +68,24 @@ namespace CapaPresentacion
                     MessageBox.Show("Error al generar el respaldo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            }
         }
 
         private void btnRESTAURAR_Click(object sender, EventArgs e)
         {
-            // Configurar el cuadro de diálogo para seleccionar el archivo
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            DialogResult ask = MessageBox.Show("¿Seguro que restaurar los datos del sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+
+                // Configurar el cuadro de diálogo para seleccionar el archivo
+                OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Archivos de respaldo (*.bak)|*.bak";
             openFileDialog.Title = "Seleccionar archivo de base de datos para importar";
 
             // Si el usuario selecciona un archivo
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
+              if (openFileDialog.ShowDialog() == DialogResult.OK)
+              {
                 // Obtener la ruta del archivo
                 string archivoBD = openFileDialog.FileName;
 
@@ -109,7 +119,14 @@ namespace CapaPresentacion
                     // Manejo de errores
                     MessageBox.Show("Error al importar la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+              }
             }
+
+        }
+
+        private void formBackUP_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
