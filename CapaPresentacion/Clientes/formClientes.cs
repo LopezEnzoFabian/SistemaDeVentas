@@ -29,7 +29,7 @@ namespace CapaPresentacion
 
         private void formClientes_Load(object sender, EventArgs e)
         {
-            if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "cliente"
+            if (usuarioActual.oRol.Id_rol == 2) // Cambia 2 por el ID del rol que representa a "vendedor"
             {
                 btnEliminar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
                 btnEditar.Visible = false; // Cambia 'btnBoton' por el nombre del botón que deseas ocultar
