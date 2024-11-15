@@ -37,7 +37,7 @@ namespace CapaPresentacion
                 // Aquí llamas a tu método para generar el PDF
                 if(txtTIpofactura.Text == "")
                 {
-                    MessageBox.Show("No se encontraron datos", "Mensaje",MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se encontraron datos", "Mensaje",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
